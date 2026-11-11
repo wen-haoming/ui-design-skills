@@ -1,27 +1,22 @@
-import DefaultTheme from 'vitepress/theme';
 import type { Theme } from 'vitepress';
+import DefaultTheme from 'vitepress/theme';
 import './custom.css';
-import HomeSkills from './components/HomeSkills.vue';
-import SkillToolbar from './components/SkillToolbar.vue';
-import DemoWorkflow from './components/demos/DemoWorkflow.vue';
-import DemoRiskForm from './components/demos/DemoRiskForm.vue';
-import DemoDocumentNav from './components/demos/DemoDocumentNav.vue';
-import DemoOpticalAlign from './components/demos/DemoOpticalAlign.vue';
-import DemoStatusLabels from './components/demos/DemoStatusLabels.vue';
-import DemoOpsDashboard from './components/demos/DemoOpsDashboard.vue';
-import DemoMarketingStill from './components/demos/DemoMarketingStill.vue';
+import './exhibition.css';
+import ExhibitionLayout from './ExhibitionLayout.vue';
+import GalleryHome from './components/gallery/GalleryHome.vue';
+import ComparePage from './components/gallery/ComparePage.vue';
+import WorkDetail from './components/gallery/WorkDetail.vue';
+import AggregateToolbar from './components/AggregateToolbar.vue';
+import SkillDoc from './components/SkillDoc.vue';
 
 export default {
   extends: DefaultTheme,
+  Layout: ExhibitionLayout,
   enhanceApp({ app }) {
-    app.component('HomeSkills', HomeSkills);
-    app.component('SkillToolbar', SkillToolbar);
-    app.component('DemoWorkflow', DemoWorkflow);
-    app.component('DemoRiskForm', DemoRiskForm);
-    app.component('DemoDocumentNav', DemoDocumentNav);
-    app.component('DemoOpticalAlign', DemoOpticalAlign);
-    app.component('DemoStatusLabels', DemoStatusLabels);
-    app.component('DemoOpsDashboard', DemoOpsDashboard);
-    app.component('DemoMarketingStill', DemoMarketingStill);
+    app.component('GalleryHome', GalleryHome);
+    app.component('ComparePage', ComparePage);
+    app.component('WorkDetail', WorkDetail);
+    app.component('AggregateToolbar', AggregateToolbar);
+    app.component('SkillDoc', SkillDoc);
   },
 } satisfies Theme;

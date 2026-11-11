@@ -1,41 +1,11 @@
 ---
 title: 响应式长文档导航
 description: 设计桌面与移动端长文档的章节定位、溢出提示和可靠级联菜单，保持阅读位置与键盘可达。
-category: 导航
-skillName: responsive-document-navigation
 ---
 
 # 响应式长文档导航
 
-<span class="badge">原创演示，非原作实现</span> <span class="badge">导航</span>
-
-设计桌面与移动端长文档的章节定位、溢出提示和可靠级联菜单，保持阅读位置与键盘可达。
-
-**来源：** [链接](https://x.com/Kubai087/status/2116911391437443471) · [链接](https://x.com/Kubai087/status/2114729985143677258)
-
-> 导航封面来自未审视频；级联菜单帖无可用截图，未伪造。
-
-
-
-## 第三方参考图
-
-![文档导航视频封面，视频未审，不能当作已验证交互](/assets/skills/responsive-document-navigation/document-nav-cover.jpg)
-
-*文档导航视频封面，视频未审，不能当作已验证交互*
-
-## 原创交互演示
-
-<p class="demo-note">原创演示，非原作实现。数据为示例，不代表第三方产品或真实业务结果。</p>
-
-<ClientOnly>
-  <DemoDocumentNav />
-</ClientOnly>
-
-
-
-<SkillToolbar skill-name="responsive-document-navigation" />
-
-## SKILL 原文
+> 遗留单项技能（非公开主入口）。见 [展厅首页](/)。
 
 # 响应式长文档导航
 

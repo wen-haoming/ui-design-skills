@@ -4,3 +4,5 @@ release-artifacts/
 node_modules/
 docs/.vitepress/dist/
 docs/.vitepress/cache/
+.template-staging/
+dist-templates/

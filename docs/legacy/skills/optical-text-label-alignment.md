@@ -1,41 +1,11 @@
 ---
 title: 紧凑界面文字与标签光学对齐
 description: 审查紧凑列表、数据行和状态标签，以文字锚点组织对齐，同时保留可靠点击区与焦点提示。
-category: 排版
-skillName: optical-text-label-alignment
 ---
 
 # 紧凑界面文字与标签光学对齐
 
-<span class="badge">原创演示，非原作实现</span> <span class="badge">排版</span>
-
-审查紧凑列表、数据行和状态标签，以文字锚点组织对齐，同时保留可靠点击区与焦点提示。
-
-**来源：** [链接](https://x.com/shedsgns/status/2114582799072317610)
-
-> 封面来自未审视频，不推断动画。
-
-
-
-## 第三方参考图
-
-![光学对齐视频封面，视频未审](/assets/skills/optical-text-label-alignment/optical-align-cover.jpg)
-
-*光学对齐视频封面，视频未审*
-
-## 原创交互演示
-
-<p class="demo-note">原创演示，非原作实现。数据为示例，不代表第三方产品或真实业务结果。</p>
-
-<ClientOnly>
-  <DemoOpticalAlign />
-</ClientOnly>
-
-
-
-<SkillToolbar skill-name="optical-text-label-alignment" />
-
-## SKILL 原文
+> 遗留单项技能（非公开主入口）。见 [展厅首页](/)。
 
 # 紧凑界面文字与标签光学对齐
 

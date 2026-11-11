@@ -1,39 +1,11 @@
 ---
 title: 状态标签的清晰编码
 description: 设计列表与看板中的状态标签，用简短文案、可区分图标和柔和底色同时说明状态，而不只靠颜色。
-category: 组件
-skillName: status-label-encoding
 ---
 
 # 状态标签的清晰编码
 
-<span class="badge">原创演示，非原作实现</span> <span class="badge">组件</span>
-
-设计列表与看板中的状态标签，用简短文案、可区分图标和柔和底色同时说明状态，而不只靠颜色。
-
-**来源：** [链接](https://x.com/AdityaSur11/status/2118734685207732631)
-
-
-
-## 第三方参考图
-
-![状态标签参考图，非实现效果](/assets/skills/status-label-encoding/status-labels.png)
-
-*状态标签参考图，非实现效果 · 第三方参考图，非实现效果*
-
-## 原创交互演示
-
-<p class="demo-note">原创演示，非原作实现。数据为示例，不代表第三方产品或真实业务结果。</p>
-
-<ClientOnly>
-  <DemoStatusLabels />
-</ClientOnly>
-
-
-
-<SkillToolbar skill-name="status-label-encoding" />
-
-## SKILL 原文
+> 遗留单项技能（非公开主入口）。见 [展厅首页](/)。
 
 # 状态标签的清晰编码
 

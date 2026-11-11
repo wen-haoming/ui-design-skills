@@ -1,39 +1,11 @@
 ---
 title: 高风险操作确认表单
 description: 设计涉及资金、权限、数据删除或批量变更的确认表单，让影响、限制与最终动作可核对。
-category: 表单
-skillName: risk-action-confirmation
 ---
 
 # 高风险操作确认表单
 
-<span class="badge">原创演示，非原作实现</span> <span class="badge">表单</span>
-
-设计涉及资金、权限、数据删除或批量变更的确认表单，让影响、限制与最终动作可核对。
-
-**来源：** [链接](https://x.com/nizamdesign/status/2119157942490370388)
-
-
-
-## 第三方参考图
-
-![退款确认弹窗参考图，非实现效果](/assets/skills/risk-action-confirmation/refund-dialog.jpg)
-
-*退款确认弹窗参考图，非实现效果 · 第三方参考图，非实现效果*
-
-## 原创交互演示
-
-<p class="demo-note">原创演示，非原作实现。数据为示例，不代表第三方产品或真实业务结果。</p>
-
-<ClientOnly>
-  <DemoRiskForm />
-</ClientOnly>
-
-
-
-<SkillToolbar skill-name="risk-action-confirmation" />
-
-## SKILL 原文
+> 遗留单项技能（非公开主入口）。见 [展厅首页](/)。
 
 # 高风险操作确认表单
 

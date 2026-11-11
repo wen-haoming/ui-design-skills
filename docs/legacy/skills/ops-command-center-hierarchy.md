@@ -1,39 +1,11 @@
 ---
 title: 运营指挥中心的信息层次
 description: 设计需要同时查看关键指标、异常和处理入口的运营总览，让范围、趋势和待办可在一屏内定位。
-category: 看板
-skillName: ops-command-center-hierarchy
 ---
 
 # 运营指挥中心的信息层次
 
-<span class="badge">原创演示，非原作实现</span> <span class="badge">看板</span>
-
-设计需要同时查看关键指标、异常和处理入口的运营总览，让范围、趋势和待办可在一屏内定位。
-
-**来源：** [链接](https://x.com/iliasconfidency/status/2118616144546603403)
-
-
-
-## 第三方参考图
-
-![运营指挥中心参考图，非实现效果](/assets/skills/ops-command-center-hierarchy/command-center.jpg)
-
-*运营指挥中心参考图，非实现效果 · 第三方参考图，非实现效果*
-
-## 原创交互演示
-
-<p class="demo-note">原创演示，非原作实现。数据为示例，不代表第三方产品或真实业务结果。</p>
-
-<ClientOnly>
-  <DemoOpsDashboard />
-</ClientOnly>
-
-
-
-<SkillToolbar skill-name="ops-command-center-hierarchy" />
-
-## SKILL 原文
+> 遗留单项技能（非公开主入口）。见 [展厅首页](/)。
 
 # 运营指挥中心的信息层次
 

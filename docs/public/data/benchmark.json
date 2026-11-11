@@ -1,0 +1,330 @@
+{
+  "id": "task-workbench-v1",
+  "title": "任务管理工作台",
+  "locale": "zh-CN",
+  "asOf": "2026-11-18",
+  "timezone": "Asia/Shanghai",
+  "disclaimer": "以下为固定示例数据，用于同场景多风格对比，不是真实组织、真实用户或真实业务。",
+  "workspace": {
+    "name": "样本工作台",
+    "subtitle": "内容发布与站点维护",
+    "defaultView": "list",
+    "metrics": {
+      "openTasks": 8,
+      "inProgress": 3,
+      "review": 2,
+      "doneThisWeek": 2,
+      "overdue": 1
+    }
+  },
+  "members": [
+    {
+      "id": "u-01",
+      "name": "陈可",
+      "initials": "CK",
+      "role": "编辑"
+    },
+    {
+      "id": "u-02",
+      "name": "林予",
+      "initials": "LY",
+      "role": "设计"
+    },
+    {
+      "id": "u-03",
+      "name": "Avery Lin",
+      "initials": "AL",
+      "role": "工程"
+    },
+    {
+      "id": "u-04",
+      "name": "周南",
+      "initials": "ZN",
+      "role": "审校"
+    }
+  ],
+  "statuses": [
+    {
+      "id": "todo",
+      "label": "待办"
+    },
+    {
+      "id": "doing",
+      "label": "进行中"
+    },
+    {
+      "id": "review",
+      "label": "评审"
+    },
+    {
+      "id": "done",
+      "label": "已完成"
+    }
+  ],
+  "priorities": [
+    {
+      "id": "high",
+      "label": "高"
+    },
+    {
+      "id": "medium",
+      "label": "中"
+    },
+    {
+      "id": "low",
+      "label": "低"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t-101",
+      "title": "改写首页工作台说明",
+      "status": "doing",
+      "priority": "high",
+      "assignees": [
+        "u-01"
+      ],
+      "due": "2026-11-18",
+      "estimateHours": 3,
+      "tags": [
+        "文案",
+        "站点"
+      ],
+      "description": "把首页说明改成以原创预览为主，去掉文档站口吻。",
+      "activity": [
+        "u-01 将状态改为进行中",
+        "u-04 留下审校意见"
+      ]
+    },
+    {
+      "id": "t-102",
+      "title": "校准列表与详情的字段对齐",
+      "status": "review",
+      "priority": "high",
+      "assignees": [
+        "u-02",
+        "u-03"
+      ],
+      "due": "2026-11-18",
+      "estimateHours": 5,
+      "tags": [
+        "界面",
+        "对齐"
+      ],
+      "description": "检查标题、状态和日期是否按文字锚点对齐，而不是按色块外框。",
+      "activity": [
+        "u-02 提交评审"
+      ]
+    },
+    {
+      "id": "t-103",
+      "title": "补空结果与重置路径",
+      "status": "todo",
+      "priority": "medium",
+      "assignees": [
+        "u-03"
+      ],
+      "due": "2026-11-19",
+      "estimateHours": 2,
+      "tags": [
+        "交互"
+      ],
+      "description": "无匹配时说明当前筛选，并提供一键重置到本基准。",
+      "activity": []
+    },
+    {
+      "id": "t-104",
+      "title": "核对本周已完成两项的数据卡",
+      "status": "done",
+      "priority": "low",
+      "assignees": [
+        "u-01"
+      ],
+      "due": "2026-11-16",
+      "estimateHours": 1,
+      "tags": [
+        "数据"
+      ],
+      "description": "确认已完成计数为 2，并与固定示例任务状态一致，不把示例指标写成真实业绩。",
+      "activity": [
+        "u-01 将状态改为已完成"
+      ]
+    },
+    {
+      "id": "t-105",
+      "title": "更新状态标签的文字与图标",
+      "status": "doing",
+      "priority": "medium",
+      "assignees": [
+        "u-02"
+      ],
+      "due": "2026-11-20",
+      "estimateHours": 4,
+      "tags": [
+        "界面",
+        "状态"
+      ],
+      "description": "待办、进行中、评审、已完成都要同时有短名称和图标。",
+      "activity": [
+        "u-02 开始草图"
+      ]
+    },
+    {
+      "id": "t-106",
+      "title": "整理过期的资源许可说明",
+      "status": "todo",
+      "priority": "high",
+      "assignees": [
+        "u-04"
+      ],
+      "due": "2026-11-17",
+      "estimateHours": 2,
+      "tags": [
+        "合规"
+      ],
+      "description": "这是基准中唯一过期项，用于检验过期态，不得为了某一风格删掉它。",
+      "activity": [
+        "u-04 被指派"
+      ]
+    },
+    {
+      "id": "t-107",
+      "title": "为筛选器写清状态、负责人和日期",
+      "status": "review",
+      "priority": "medium",
+      "assignees": [
+        "u-03",
+        "u-01"
+      ],
+      "due": "2026-11-21",
+      "estimateHours": 3,
+      "tags": [
+        "交互",
+        "筛选"
+      ],
+      "description": "三个筛选条件可组合，清空后回到本文件中的默认视图。",
+      "activity": [
+        "u-03 提交评审"
+      ]
+    },
+    {
+      "id": "t-108",
+      "title": "准备看板与列表的切换记忆",
+      "status": "doing",
+      "priority": "low",
+      "assignees": [
+        "u-03"
+      ],
+      "due": "2026-11-22",
+      "estimateHours": 3,
+      "tags": [
+        "界面"
+      ],
+      "description": "切换视图不得丢失当前选中的 t-101。默认仍先进入列表。",
+      "activity": []
+    },
+    {
+      "id": "t-109",
+      "title": "归档已完成的校对清单",
+      "status": "done",
+      "priority": "low",
+      "assignees": [
+        "u-04"
+      ],
+      "due": "2026-11-15",
+      "estimateHours": 1,
+      "tags": [
+        "文案"
+      ],
+      "description": "仅用于填满已完成队列。",
+      "activity": [
+        "u-04 将状态改为已完成"
+      ]
+    },
+    {
+      "id": "t-110",
+      "title": "核对成员四人是否都出现在筛选里",
+      "status": "todo",
+      "priority": "low",
+      "assignees": [
+        "u-01",
+        "u-02"
+      ],
+      "due": "2026-11-23",
+      "estimateHours": 1,
+      "tags": [
+        "数据"
+      ],
+      "description": "筛选负责人时四人都要可选，不能按风格增减成员。",
+      "activity": []
+    }
+  ],
+  "defaultSelection": "t-101",
+  "features": {
+    "search": {
+      "required": true,
+      "fields": [
+        "title",
+        "description",
+        "tags"
+      ]
+    },
+    "filters": [
+      "status",
+      "assignee",
+      "due"
+    ],
+    "views": [
+      "list",
+      "board"
+    ],
+    "detail": "selected-task",
+    "statusChange": "local-session-only",
+    "reset": "clear-filters-and-restore-benchmark",
+    "emptyResults": "show-reason-and-reset"
+  },
+  "invariants": [
+    "三个风格必须使用本文件全部成员、任务、状态、日期和数值",
+    "不得增删功能入口来制造风格差异",
+    "状态修改只留在本地会话，重置后回到本基准",
+    "空结果不能用改数据或占位任务来回避"
+  ],
+  "prompt": {
+    "id": "task-workbench-v1-prompt",
+    "text": "使用技能「多风格界面设计」，按给定风格参数实现同一个任务管理工作台。必须完整使用 benchmark.json（id: task-workbench-v1）中的工作区、成员、状态、优先级、任务、指标和功能；默认选中 t-101；默认视图为列表。允许的布局仅为 list-detail 或 board-detail。启用能力：搜索筛选、列表/看板切换、选中详情、状态本地修改、清空重置、空结果。不要增删改业务对象，不要用不同数据或不同功能表现风格差异，不要把第三方原图当作实现界面，不要使用 emoji 作为图标。输出可运行界面或等价前端代码，并注明所用风格标识。",
+    "calls": [
+      {
+        "id": "call-shallow-precise",
+        "style": "shallow-precise",
+        "styleName": "浅色精密工作台",
+        "layout": "list-detail"
+      },
+      {
+        "id": "call-dark-command",
+        "style": "dark-command",
+        "styleName": "深色指挥台",
+        "layout": "list-detail"
+      },
+      {
+        "id": "call-soft-system",
+        "style": "soft-system",
+        "styleName": "浮动系统层",
+        "layout": "list-detail"
+      }
+    ],
+    "variableOnly": "style",
+    "note": "三次调用只改变 style / styleName，其余输入保持一致。"
+  },
+  "traceTemplate": {
+    "skillName": "多风格界面设计",
+    "skillVersion": "",
+    "input": {
+      "style": "",
+      "layout": "",
+      "benchmarkId": "task-workbench-v1"
+    },
+    "outputPath": "",
+    "testTrace": "",
+    "rule": "没有真实发生的生成或测试，不要填写输出或结果。"
+  }
+}

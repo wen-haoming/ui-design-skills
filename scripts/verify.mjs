@@ -2,28 +2,29 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import http from 'node:http';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, '..');
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'docs', '.vitepress', 'dist');
-const DATA = path.join(ROOT, 'docs', '.vitepress', 'data', 'skills.json');
 
 function assert(cond, msg) {
   if (!cond) throw new Error(msg);
 }
 
-function readSkillsData() {
-  assert(fs.existsSync(DATA), 'missing docs/.vitepress/data/skills.json — run docs:gen');
-  const data = JSON.parse(fs.readFileSync(DATA, 'utf8'));
-  assert(data.skills.length === 7, `expected 7 skills, got ${data.skills.length}`);
-  for (const s of data.skills) {
-    assert(s.skillMd?.includes('#'), `skillMd invalid: ${s.name}`);
-    const disk = fs.readFileSync(path.join(ROOT, s.path, 'SKILL.md'), 'utf8');
-    assert(disk === s.skillMd, `skillMd mismatch: ${s.name}`);
-    assert(fs.existsSync(path.join(ROOT, 'docs', 'skills', `${s.name}.md`)), `missing page ${s.name}.md`);
-  }
-  return data;
+function sha256File(p) {
+  return createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+}
+
+function benchChecks() {
+  const bench = JSON.parse(fs.readFileSync(path.join(ROOT, 'benchmarks/task-workbench-v1.json'), 'utf8'));
+  assert(bench.tasks.length === 10, 'benchmark tasks');
+  const counts = { todo: 0, doing: 0, review: 0, done: 0 };
+  for (const t of bench.tasks) counts[t.status]++;
+  assert(counts.todo === 3 && counts.doing === 3 && counts.review === 2 && counts.done === 2, 'status counts');
+  const skillSha = sha256File(path.join(ROOT, 'ui-design/aggregate/multi-style-ui-design/SKILL.md'));
+  assert(skillSha.startsWith('41e89eb8'), 'canonical skill sha');
+  assert(bench.workspace.metrics.doneThisWeek === 2, 'doneThisWeek=2');
 }
 
 function startServer(root) {
@@ -38,51 +39,37 @@ function startServer(root) {
         return;
       }
       const ext = path.extname(filePath);
-      const types = {
-        '.html': 'text/html',
-        '.js': 'text/javascript',
-        '.css': 'text/css',
-        '.json': 'application/json',
-        '.jpg': 'image/jpeg',
-        '.png': 'image/png',
-        '.svg': 'image/svg+xml',
-        '.woff2': 'font/woff2',
-      };
+      const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.zip': 'application/zip', '.md': 'text/plain' };
       res.setHeader('Content-Type', types[ext] || 'application/octet-stream');
       fs.createReadStream(filePath).pipe(res);
     });
     server.listen(0, '127.0.0.1', () => {
-      const port = server.address().port;
-      resolve({
-        port,
-        // GitHub Pages 项目站 URL 含 /ui-design-skills/，但 artifact 根目录即站点文件根（VitePress base 只影响产物内链接前缀）
-        base: `http://127.0.0.1:${port}/`,
-        close: () => server.close(),
-      });
+      resolve({ base: `http://127.0.0.1:${server.address().port}/`, close: () => server.close() });
     });
   });
 }
 
 async function httpCheck(base) {
-  const index = await fetch(base);
-  assert(index.ok, `index not 200: ${index.status}`);
-  const skill = await fetch(`${base}skills/light-ai-workflow-builder.html`);
-  assert(skill.ok, `skill page not 200: ${skill.status}`);
-  const asset = await fetch(`${base}assets/skills/light-ai-workflow-builder/original.jpg`);
-  assert(asset.ok, 'asset not 200');
+  for (const p of ['index.html', 'compare.html', 'works/shallow-precise.html', 'legacy/index.html', 'data/skill-full.md', 'data/benchmark.json']) {
+    const r = await fetch(base + p);
+    assert(r.ok, `${p} ${r.status}`);
+  }
+  for (const z of ['downloads/task-workbench-shallow-precise.zip', 'downloads/task-workbench-dark-command.zip', 'downloads/task-workbench-soft-system.zip']) {
+    const r = await fetch(base + z);
+    assert(r.ok, z);
+  }
 }
 
 async function main() {
-  assert(fs.existsSync(DIST), 'missing dist — run npm run docs:build');
-  readSkillsData();
+  assert(fs.existsSync(DIST), 'run docs:build first');
+  benchChecks();
   const srv = await startServer(DIST);
   try {
     await httpCheck(srv.base);
-    console.log('verify: HTTP OK', srv.base);
+    console.log('verify OK', srv.base);
   } finally {
     srv.close();
   }
-  console.log('All verification checks passed.');
 }
 
 main().catch((e) => {

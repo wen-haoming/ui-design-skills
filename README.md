@@ -1,74 +1,27 @@
 # UI Design Skills
 
-可复用的 UI 设计方法集合：分类、中文说明、参考截图与来源。这是精选技能与参考图，不是实现项目，也不是完整点赞归档。
+仓库包含两类内容：
 
-参考截图均为第三方原作或其视频封面，不是本集合实现后的效果。版权归原作者或相关权利人，本仓库不对第三方素材授予开源许可。公开发布或再分发前应确认使用权限。
+1. **聚合 Skill「多风格界面设计」**（公开展厅主入口）：同一场景、同一 `benchmark.json` 上的三套原创任务工作台（`shallow-precise` / `dark-command` / `soft-system`）。
+2. **遗留七单项技能**（`ui-design/`）：版权与第三方参考图说明保留，入口在站内 [/legacy/](https://wen-haoming.github.io/ui-design-skills/legacy/)。
 
-## 七个技能
-
-### 1. [浅色 AI 工作流编辑器](ui-design/workflow-builders/light-ai-workflow-builder/README.md)
-
-用于设计浅色、紧凑的 B2B SaaS 节点式工作流 UI，包含流程画布、节点配置、步骤搜索、AI 修改提案和发布确认；不用于营销落地页或纯聊天界面。
-
-[![工作流参考](ui-design/workflow-builders/light-ai-workflow-builder/screenshots/original.jpg)](ui-design/workflow-builders/light-ai-workflow-builder/README.md)
-
-### 2. [高风险操作确认表单](ui-design/forms/risk-action-confirmation/README.md)
-
-设计涉及资金、权限、数据删除或批量变更的确认表单，让影响、限制与最终动作可核对。
-
-[![确认表单参考](ui-design/forms/risk-action-confirmation/screenshots/refund-dialog.jpg)](ui-design/forms/risk-action-confirmation/README.md)
-
-### 3. [响应式长文档导航](ui-design/navigation/responsive-document-navigation/README.md)
-
-设计桌面与移动端长文档的章节定位、溢出提示和可靠级联菜单，保持阅读位置与键盘可达。
-
-[![文档导航封面](ui-design/navigation/responsive-document-navigation/screenshots/document-nav-cover.jpg)](ui-design/navigation/responsive-document-navigation/README.md)
-
-上图为视频封面，视频未审。级联菜单来源帖没有可用截图，未伪造画面。
-
-### 4. [紧凑界面文字与标签光学对齐](ui-design/typography/optical-text-label-alignment/README.md)
-
-审查紧凑列表、数据行和状态标签，以文字锚点组织对齐，同时保留可靠点击区与焦点提示。
-
-[![光学对齐封面](ui-design/typography/optical-text-label-alignment/screenshots/optical-align-cover.jpg)](ui-design/typography/optical-text-label-alignment/README.md)
-
-上图为视频封面，视频未审，不推断动画。
-
-### 5. [状态标签的清晰编码](ui-design/components/status-label-encoding/README.md)
-
-设计列表与看板中的状态标签，用简短文案、可区分图标和柔和底色同时说明状态，而不只靠颜色。
-
-[![状态标签参考](ui-design/components/status-label-encoding/screenshots/status-labels.png)](ui-design/components/status-label-encoding/README.md)
-
-### 6. [运营指挥中心的信息层次](ui-design/dashboards/ops-command-center-hierarchy/README.md)
-
-设计需要同时查看关键指标、异常和处理入口的运营总览，让范围、趋势和待办可在一屏内定位。
-
-[![指挥中心参考](ui-design/dashboards/ops-command-center-hierarchy/screenshots/command-center.jpg)](ui-design/dashboards/ops-command-center-hierarchy/README.md)
-
-### 7. [营销页中的产品界面静帧](ui-design/marketing/marketing-product-ui-stills/README.md)
-
-为官网首屏、功能卡或 Bento 制作看起来像真实产品界面的静帧，控制信息密度、主次和裁切，避免一眼可辨的生成痕迹。
-
-[![产品静帧参考](ui-design/marketing/marketing-product-ui-stills/screenshots/product-ui-collage.jpg)](ui-design/marketing/marketing-product-ui-stills/README.md)
-
-## 在线技能目录（VitePress + GitHub Pages）
-
-文档站基于官方 [VitePress](https://vitepress.dev/)（Vue + Vite），源码在 [`docs/`](docs/)，由 `catalog.json` 与各技能 `SKILL.md` 生成页面（勿手写第二套正文）。设计说明见 [`docs/DESIGN.md`](docs/DESIGN.md)。
+## 在线展厅（VitePress）
 
 ```bash
 npm ci
-npm run docs:gen     # 生成 docs/skills/*.md 与 data/skills.json
-npm run docs:dev     # 本地开发
-npm run docs:build   # 输出 docs/.vitepress/dist
-npm run verify       # 构建后校验（CI 同款）
+npm run docs:gen          # 生成 public 数据与遗留页
+npm run docs:build        # 含模板 zip 打包 + VitePress 构建
+npm run verify
+npm run covers            # 需 docs:preview 在 4173 端口，截取原创封面
+npm run docs:preview
 ```
 
-- **基路径**：`/ui-design-skills/`（GitHub 项目站）
-- **预期线上 URL**：https://wen-haoming.github.io/ui-design-skills/（需仓库 Settings → Pages → Source：**GitHub Actions** 且部署成功后可达）
-- **功能**：侧栏七技能、本地搜索、首页七卡分类、参考图、原创 Vue 演示（`ClientOnly`）、复制/下载完整 `SKILL.md` 原文
-- **Gitee**：可镜像本仓库；Gitee Pages 暂停，不承诺 `gitee.io`
+- **URL**：https://wen-haoming.github.io/ui-design-skills/
+- **canonical Skill SHA256**：`41e89eb8c6eda2b16afd9587d47722d39868d4a53e0ffd31e9bb02bc475ab61e`
+- **固定基准**：`benchmarks/task-workbench-v1.json`（`asOf=2026-11-18`，`doneThisWeek=2`）
 
-## 索引与版权
+模板可独立运行：下载 `docs/public/downloads/task-workbench-*.zip`，解压后 `npm ci && npm run dev`。
 
-完整索引见 [catalog.json](catalog.json)。每条技能的 README 和 metadata 写明来源与证据边界。原作设计工具与技术栈若未写明，不得凭外观断言。
+## Gitee
+
+可镜像本仓库源码；Gitee Pages 暂停，不承诺 `gitee.io`。

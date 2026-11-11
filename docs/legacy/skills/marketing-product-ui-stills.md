@@ -1,39 +1,11 @@
 ---
 title: 营销页中的产品界面静帧
 description: 为官网首屏、功能卡或 Bento 制作看起来像真实产品界面的静帧，控制信息密度、主次和裁切，避免一眼可辨的生成痕迹。
-category: 营销
-skillName: marketing-product-ui-stills
 ---
 
 # 营销页中的产品界面静帧
 
-<span class="badge">原创演示，非原作实现</span> <span class="badge">营销</span>
-
-为官网首屏、功能卡或 Bento 制作看起来像真实产品界面的静帧，控制信息密度、主次和裁切，避免一眼可辨的生成痕迹。
-
-**来源：** [链接](https://x.com/Voxyz_ai/status/2116877927967326286)
-
-
-
-## 第三方参考图
-
-![产品界面拼贴参考图，非实现效果](/assets/skills/marketing-product-ui-stills/product-ui-collage.jpg)
-
-*产品界面拼贴参考图，非实现效果 · 第三方参考图，非实现效果*
-
-## 原创交互演示
-
-<p class="demo-note">原创演示，非原作实现。数据为示例，不代表第三方产品或真实业务结果。</p>
-
-<ClientOnly>
-  <DemoMarketingStill />
-</ClientOnly>
-
-
-
-<SkillToolbar skill-name="marketing-product-ui-stills" />
-
-## SKILL 原文
+> 遗留单项技能（非公开主入口）。见 [展厅首页](/)。
 
 # 营销页中的产品界面静帧
 

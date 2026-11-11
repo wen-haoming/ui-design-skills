@@ -1,42 +1,48 @@
 import { defineConfig } from 'vitepress';
-import skillsMeta from './skills-meta.json';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const sidebar = skillsMeta.sidebar as {
-  text: string;
-  link?: string;
-  collapsed?: boolean;
-  items?: { text: string; link: string }[];
-}[];
+const dir = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig({
   base: '/ui-design-skills/',
   lang: 'zh-CN',
-  title: 'UI Design Skills',
-  description: '七个可复用 UI 设计技能：参考图、原创演示与完整 SKILL 一键复制',
+  title: '多风格界面设计',
+  description: '聚合 Skill 作品展厅：同一基准上的三风格任务工作台',
   cleanUrls: true,
-  head: [['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }]],
   themeConfig: {
     logo: '/favicon.svg',
     nav: [
-      { text: '技能目录', link: '/' },
-      { text: '版权说明', link: '/copyright' },
-      {
-        text: '源码',
-        items: [
-          { text: 'GitHub', link: 'https://github.com/wen-haoming/ui-design-skills' },
-          { text: 'Gitee', link: 'https://gitee.com/haomingla/ui-design-skills' },
-        ],
-      },
+      { text: '展厅', link: '/' },
+      { text: '对比', link: '/compare' },
+      { text: 'Skill', link: '/skill' },
+      { text: '来源附录', link: '/sources-attribution' },
+      { text: '遗留技能', link: '/legacy/' },
     ],
-    sidebar,
+    sidebar: {
+      '/legacy/': [
+        { text: '遗留目录', link: '/legacy/' },
+        { text: '浅色工作流', link: '/legacy/skills/light-ai-workflow-builder' },
+        { text: '确认表单', link: '/legacy/skills/risk-action-confirmation' },
+        { text: '文档导航', link: '/legacy/skills/responsive-document-navigation' },
+        { text: '光学对齐', link: '/legacy/skills/optical-text-label-alignment' },
+        { text: '状态标签', link: '/legacy/skills/status-label-encoding' },
+        { text: '指挥中心', link: '/legacy/skills/ops-command-center-hierarchy' },
+        { text: '营销静帧', link: '/legacy/skills/marketing-product-ui-stills' },
+      ],
+    },
     search: { provider: 'local' },
     socialLinks: [{ icon: 'github', link: 'https://github.com/wen-haoming/ui-design-skills' }],
     footer: {
-      message: '参考图为第三方素材；站内演示均为示例数据。',
-      copyright: '见 COPYRIGHT 与各技能来源说明',
+      message: '站内预览均为原创示例数据；第三方参考见来源附录。',
+      copyright: 'COPYRIGHT 与各帖来源说明',
     },
   },
-  markdown: {
-    lineNumbers: false,
+  vite: {
+    resolve: {
+      alias: {
+        '@templates': resolve(dir, '../../templates/task-workbench'),
+      },
+    },
   },
 });

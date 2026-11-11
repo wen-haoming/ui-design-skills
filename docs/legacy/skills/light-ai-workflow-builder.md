@@ -1,55 +1,11 @@
 ---
 title: 浅色 AI 工作流编辑器
 description: 用于设计浅色、紧凑的 B2B SaaS 节点式工作流 UI，包含流程画布、节点配置、步骤搜索、AI 修改提案和发布确认；不用于营销落地页或纯聊天界面。
-category: 工作流
-skillName: light-ai-workflow-builder
 ---
 
 # 浅色 AI 工作流编辑器
 
-<span class="badge">原创演示，非原作实现</span> <span class="badge">工作流</span>
-
-用于设计浅色、紧凑的 B2B SaaS 节点式工作流 UI，包含流程画布、节点配置、步骤搜索、AI 修改提案和发布确认；不用于营销落地页或纯聊天界面。
-
-**来源：** [链接](https://x.com/jubayer6910/status/2119054545489969346)
-
-
-
-## 第三方参考图
-
-![原帖四状态拼图](/assets/skills/light-ai-workflow-builder/original.jpg)
-
-*原帖四状态拼图 · 第三方参考图，非实现效果*
-
-![编辑器与节点配置](/assets/skills/light-ai-workflow-builder/editor.png)
-
-*编辑器与节点配置*
-
-![插入步骤搜索浮层](/assets/skills/light-ai-workflow-builder/insert.png)
-
-*插入步骤搜索浮层*
-
-![发布确认弹窗](/assets/skills/light-ai-workflow-builder/publish.png)
-
-*发布确认弹窗*
-
-![AI 修改提案](/assets/skills/light-ai-workflow-builder/proposal.png)
-
-*AI 修改提案*
-
-## 原创交互演示
-
-<p class="demo-note">原创演示，非原作实现。数据为示例，不代表第三方产品或真实业务结果。</p>
-
-<ClientOnly>
-  <DemoWorkflow />
-</ClientOnly>
-
-
-
-<SkillToolbar skill-name="light-ai-workflow-builder" />
-
-## SKILL 原文
+> 遗留单项技能（非公开主入口）。见 [展厅首页](/)。
 
 # 浅色 AI 工作流编辑器
 

@@ -1,0 +1,9 @@
+{
+  "name": "multi-style-ui-design",
+  "title": "多风格界面设计",
+  "description": "聚合入口：风格 × 布局 × 能力，同场景多风格模板与工作台验收。",
+  "category": "ui-design/aggregate",
+  "skillSha256": "41e89eb8c6eda2b16afd9587d47722d39868d4a53e0ffd31e9bb02bc475ab61e",
+  "benchmarkId": "task-workbench-v1",
+  "styles": ["shallow-precise", "dark-command", "soft-system"]
+}
