@@ -1,0 +1,4 @@
+.verify-root/
+.playwright-mcp/
+release-artifacts/
+node_modules/

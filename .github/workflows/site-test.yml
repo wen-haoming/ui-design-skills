@@ -1,0 +1,24 @@
+name: Site test (PR)
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'site/**'
+      - 'scripts/**'
+      - 'catalog.json'
+      - 'ui-design/**'
+      - '.github/workflows/site-test.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build site
+        run: node scripts/build.mjs
+      - name: Verify
+        run: node scripts/verify.mjs

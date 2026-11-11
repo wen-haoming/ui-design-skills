@@ -52,6 +52,14 @@
 
 [![产品静帧参考](ui-design/marketing/marketing-product-ui-stills/screenshots/product-ui-collage.jpg)](ui-design/marketing/marketing-product-ui-stills/README.md)
 
+## 在线技能目录（GitHub Pages）
+
+静态站点源码位于 [`site/`](site/)，构建产物输出到 [`docs/`](docs/)（`node scripts/build.mjs`）。设计锁定与部署说明见 [`site/DESIGN.md`](site/DESIGN.md)。
+
+- **线上地址**（项目站基路径 `/ui-design-skills/`）：https://wen-haoming.github.io/ui-design-skills/
+- 功能：分类与搜索、七技能卡片、参考图 / 原创演示 / SKILL 正文切换、一键复制完整 SKILL 原文、下载 `SKILL.md`；URL 可分享（`?skill=&view=&q=&category=`）。
+- **Gitee**：可与本仓库同步同一套 `site/` + `docs/`；Gitee Pages 官方入口当前暂停，不承诺 `gitee.io` 可达。
+
 ## 索引与版权
 
 完整索引见 [catalog.json](catalog.json)。每条技能的 README 和 metadata 写明来源与证据边界。原作设计工具与技术栈若未写明，不得凭外观断言。

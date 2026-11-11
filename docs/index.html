@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UI Design Skills — 技能组件库</title>
+    <meta
+      name="description"
+      content="七个可复用 UI 设计技能：分类浏览、参考图、原创交互演示与一键复制完整 SKILL 原文。"
+    />
+    <base href="/ui-design-skills/" />
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <div id="app" class="app-shell">
+      <header class="top-bar" role="banner">
+        <div class="top-bar__brand">
+          <button type="button" class="brand-btn" id="home-btn" aria-label="返回技能目录首页">
+            UI Design Skills
+          </button>
+          <span class="brand-sub">原创演示 · 非原作实现</span>
+        </div>
+        <div class="top-bar__search">
+          <label class="visually-hidden" for="search-input">搜索技能</label>
+          <input
+            id="search-input"
+            type="search"
+            name="q"
+            autocomplete="off"
+            placeholder="搜索名称或描述…"
+            enterkeyhint="search"
+          />
+        </div>
+        <nav class="top-bar__links" aria-label="源码仓库">
+          <a id="link-github" href="https://github.com/wen-haoming/ui-design-skills" rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a id="link-gitee" href="https://gitee.com/haomingla/ui-design-skills" rel="noopener noreferrer"
+            >Gitee</a
+          >
+        </nav>
+      </header>
+
+      <div id="live" class="live-region" role="status" aria-live="polite" aria-atomic="true"></div>
+
+      <main id="main" class="main" tabindex="-1"></main>
+
+      <footer class="site-footer" role="contentinfo">
+        <p>
+          参考截图为第三方素材，见
+          <a href="COPYRIGHT.md">COPYRIGHT</a>
+          与各技能来源说明。站内演示均为示例数据。
+        </p>
+      </footer>
+    </div>
+    <script src="config.js"></script>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
