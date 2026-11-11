@@ -131,6 +131,8 @@ const groups = computed(() =>
   font-family: system-ui, sans-serif;
   font-size: 14px;
   color: #171717;
+  container-type: inline-size;
+  container-name: ss-window;
 }
 .ss-titlebar {
   display: flex;
@@ -157,9 +159,26 @@ const groups = computed(() =>
 }
 .ss-body {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
   flex: 1;
   min-height: 0;
+}
+.ss-detail-title,
+.ss-detail-desc,
+.ss-row-text {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+@container ss-window (max-width: 720px) {
+  .ss-body {
+    grid-template-columns: 1fr;
+  }
+  .ss-groups {
+    max-height: 220px;
+    overflow: auto;
+    border-right: none;
+    border-bottom: 1px solid #e4e4e7;
+  }
 }
 @media (max-width: 720px) {
   .ss-body {

@@ -148,6 +148,8 @@ const wb = useSharedWorkbench();
   border-radius: 14px;
   overflow: hidden;
   background: var(--sp-bg);
+  container-type: inline-size;
+  container-name: sp-shell;
 }
 .sp-root--compact .sp-shell {
   min-height: 360px;
@@ -278,9 +280,27 @@ const wb = useSharedWorkbench();
 }
 .sp-split {
   display: grid;
-  grid-template-columns: 1fr 220px;
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 260px);
   flex: 1;
   min-height: 0;
+}
+.sp-detail h3,
+.sp-detail p,
+.sp-table td,
+.sp-card {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+@container sp-shell (max-width: 720px) {
+  .sp-shell {
+    grid-template-columns: 1fr;
+  }
+  .sp-nav {
+    display: none;
+  }
+  .sp-split {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 720px) {
   .sp-shell {

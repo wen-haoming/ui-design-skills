@@ -110,6 +110,8 @@ const wb = useSharedWorkbench();
   color: #f5f5f5;
 }
 .dc-frame {
+  container-type: inline-size;
+  container-name: dc-frame;
   background: #0c0c0d;
   border-radius: 18px;
   border: 1px solid #2a2a2e;
@@ -181,9 +183,24 @@ const wb = useSharedWorkbench();
 }
 .dc-command {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: minmax(0, 1.2fr) minmax(200px, 0.8fr);
   flex: 1;
   min-height: 280px;
+}
+.dc-context h3,
+.dc-context p,
+.dc-ctx-line {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+@container dc-frame (max-width: 720px) {
+  .dc-command {
+    grid-template-columns: 1fr;
+  }
+  .dc-queue {
+    border-right: none;
+    border-bottom: 1px solid #2a2a2e;
+  }
 }
 @media (max-width: 720px) {
   .dc-command {
