@@ -20,6 +20,10 @@ const groups = computed(() =>
       <header class="ss-titlebar">
         <span class="ss-dots" aria-hidden="true"><i /><i /><i /></span>
         <span class="ss-win-title">{{ wb.bench.workspace.name }}</span>
+        <span class="ss-metrics" aria-live="polite">
+          进行中 {{ wb.metrics.inProgress }} · 评审 {{ wb.metrics.review }} · 已完成 {{ wb.metrics.done }} · 过期
+          {{ wb.metrics.overdue }}
+        </span>
         <span class="ss-asof">asOf {{ wb.asOf }}</span>
       </header>
       <div class="ss-body">
@@ -136,6 +140,7 @@ const groups = computed(() =>
 }
 .ss-titlebar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   padding: 10px 14px;
@@ -152,8 +157,21 @@ const groups = computed(() =>
 .ss-win-title {
   font-weight: 600;
 }
-.ss-asof {
+.ss-metrics {
   margin-left: auto;
+  margin-right: 10px;
+  font-size: 11px;
+  color: #52525b;
+  white-space: nowrap;
+}
+@media (max-width: 520px) {
+  .ss-metrics {
+    flex: 1 1 100%;
+    margin: 6px 0 0;
+    white-space: normal;
+  }
+}
+.ss-asof {
   font-size: 12px;
   color: #71717a;
 }

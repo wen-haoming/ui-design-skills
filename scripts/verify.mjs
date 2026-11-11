@@ -24,7 +24,9 @@ function benchChecks() {
   assert(counts.todo === 3 && counts.doing === 3 && counts.review === 2 && counts.done === 2, 'status counts');
   const skillSha = sha256File(path.join(ROOT, 'ui-design/aggregate/multi-style-ui-design/SKILL.md'));
   assert(skillSha.startsWith('41e89eb8'), 'canonical skill sha');
-  assert(bench.workspace.metrics.doneThisWeek === 2, 'doneThisWeek=2');
+  assert(bench.workspace.metrics.doneThisWeek === 2, 'done baseline doneThisWeek=2');
+  const doneFromStatus = bench.tasks.filter((t) => t.status === 'done').length;
+  assert(doneFromStatus === 2, 'done status count=2 (t-104,t-109)');
 }
 
 function startServer(root) {

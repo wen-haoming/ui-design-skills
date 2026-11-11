@@ -6,28 +6,22 @@ export function cloneBenchmark(data: Benchmark): Benchmark {
 
 export function computeMetrics(tasks: Task[], asOf: string): WorkbenchMetrics {
   const asOfDate = parseYmd(asOf);
-  const weekStart = addDays(asOfDate, -((asOfDate.getUTCDay() + 6) % 7));
-  const weekEnd = addDays(weekStart, 6);
-
   let inProgress = 0;
   let review = 0;
-  let doneThisWeek = 0;
+  let done = 0;
   let overdue = 0;
   let openTasks = 0;
 
   for (const t of tasks) {
     if (t.status === 'doing') inProgress++;
     if (t.status === 'review') review++;
+    if (t.status === 'done') done++;
     if (t.status !== 'done') openTasks++;
     const due = parseYmd(t.due);
     if (t.status !== 'done' && due < asOfDate) overdue++;
-    if (t.status === 'done') {
-      const doneDue = parseYmd(t.due);
-      if (doneDue >= weekStart && doneDue <= weekEnd) doneThisWeek++;
-    }
   }
 
-  return { openTasks, inProgress, review, doneThisWeek, overdue };
+  return { openTasks, inProgress, review, done, overdue };
 }
 
 function parseYmd(s: string): Date {

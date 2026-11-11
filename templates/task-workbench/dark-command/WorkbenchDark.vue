@@ -19,7 +19,7 @@ const wb = useSharedWorkbench();
           <div class="dc-kpi"><em>未结</em><strong>{{ wb.metrics.openTasks }}</strong></div>
           <div class="dc-kpi"><em>进行中</em><strong>{{ wb.metrics.inProgress }}</strong></div>
           <div class="dc-kpi"><em>评审</em><strong>{{ wb.metrics.review }}</strong></div>
-          <div class="dc-kpi dc-kpi--accent"><em>本周完成</em><strong>{{ wb.metrics.doneThisWeek }}</strong></div>
+          <div class="dc-kpi dc-kpi--accent"><em>已完成</em><strong>{{ wb.metrics.done }}</strong></div>
         </div>
       </header>
       <nav class="dc-rail" aria-label="模块">

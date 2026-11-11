@@ -48,6 +48,7 @@ export interface WorkbenchMetrics {
   openTasks: number;
   inProgress: number;
   review: number;
-  doneThisWeek: number;
+  /** 状态为 done 的任务数（非 due 推断；基准无 completedAt） */
+  done: number;
   overdue: number;
 }

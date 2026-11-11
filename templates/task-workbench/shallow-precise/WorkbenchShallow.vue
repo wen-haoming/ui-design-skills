@@ -26,7 +26,7 @@ const wb = useSharedWorkbench();
           <div class="sp-metrics" aria-live="polite">
             <div class="sp-metric"><span>进行中</span><strong>{{ wb.metrics.inProgress }}</strong></div>
             <div class="sp-metric"><span>评审</span><strong>{{ wb.metrics.review }}</strong></div>
-            <div class="sp-metric"><span>本周完成</span><strong>{{ wb.metrics.doneThisWeek }}</strong></div>
+            <div class="sp-metric"><span>已完成</span><strong>{{ wb.metrics.done }}</strong></div>
             <div class="sp-metric sp-metric--warn"><span>过期</span><strong>{{ wb.metrics.overdue }}</strong></div>
           </div>
         </header>

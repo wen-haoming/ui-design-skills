@@ -18,7 +18,7 @@ npm run docs:preview
 
 - **URL**：https://wen-haoming.github.io/ui-design-skills/
 - **canonical Skill SHA256**：`41e89eb8c6eda2b16afd9587d47722d39868d4a53e0ffd31e9bb02bc475ab61e`
-- **固定基准**：`benchmarks/task-workbench-v1.json`（`asOf=2026-11-18`，`doneThisWeek=2`）
+- **固定基准**：`benchmarks/task-workbench-v1.json`（`asOf=2026-11-18`；基准 2 条 `done`，UI 显示「已完成」= 当前 `status=done` 计数）
 
 模板可独立运行：下载 `docs/public/downloads/task-workbench-*.zip`，解压后 `npm ci && npm run dev`。
 
