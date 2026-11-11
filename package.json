@@ -1,0 +1,17 @@
+{
+  "name": "ui-design-skills",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:gen": "node scripts/generate-vitepress.mjs",
+    "docs:dev": "npm run docs:gen && vitepress dev docs",
+    "docs:build": "npm run docs:gen && vitepress build docs",
+    "docs:preview": "vitepress preview docs --port 4173",
+    "verify": "node scripts/verify.mjs",
+    "package:gitee": "node scripts/package-release-zip.mjs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  }
+}

@@ -1,21 +1,27 @@
-# 技能目录站 — 设计锁定与实现决策
+# 技能目录站 — VitePress 设计锁定
 
 ## 参考锁定（回退直建）
 
-- Refero MCP：`NO_SUBSCRIPTION`，未做 live styles 研究；不声称 Refero 检索结果。
-- 方向来源：Refero 技能中的 **craft** 原则（紧凑 B2B、截图证据边界、反 AI 同质化）+ 仓库现有 7 张第三方参考图 + 用户给定视觉 token。
-- 视觉 token：`#fafafa` 画布、`#ffffff` 面板、`#e5e5e5` 1px 边框、近黑正文/主按钮、少量语义色；圆角 6–8px；`system-ui` 单栈；无巨型 hero、无 emoji、无紫色渐变、无衬线营销换词。
+- Refero MCP：`NO_SUBSCRIPTION`，未做 live styles 研究。
+- 视觉 token：`#fafafa` 画布、`#ffffff` 面板、`#e5e5e5` 边框、近黑正文/主按钮；圆角 6–8px；`system-ui`；紧凑、无巨型 hero、无 emoji、无紫色渐变。
 
 ## 架构
 
-- **唯一数据源**：构建时读取根目录 `catalog.json`、各技能 `SKILL.md` / `README.md` / `metadata.json` 与 `screenshots/`，生成 `docs/data/skills.json` 与静态资源拷贝；站内不手写第二套文案。
-- **运行时**：无框架依赖的静态 HTML/CSS/JS；`History API` + `URLSearchParams` 同步 `q` / `category` / `skill` / `view`（`reference` | `demo` | `skill`）。
-- **子路径**：`<base href="/ui-design-skills/">`，构建注入 `config.js` 中的 `BASE_PATH`；资源与路由均相对 base。
-- **演示**：七段原创 HTML/CSS/JS 交互，页内标注「原创演示，非原作实现」；参考图标注 metadata 中的 `third-party-reference` 说明。
-- **部署**：GitHub Actions `build` → `upload-pages-artifact` → `deploy-pages`（仅 `master`）；PR 工作流只构建 + 校验，不部署。
-- **首次上线阻塞（需仓库所有者一次性操作）**：在 GitHub 仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**，然后重新运行 `Deploy GitHub Pages` 工作流。当前集成 token 无法代开 Pages（REST 返回 403/404），未启用前 `https://wen-haoming.github.io/ui-design-skills/` 将为 404。
-- **Gitee Pages**：同套 `docs/` 产物可镜像；官方 Pages 入口当前不可用，不承诺 `gitee.io` 可达，仅交付可同步源码与 manifest。
+- **框架**：官方 npm 包 [VitePress](https://vitepress.dev/)（Vue + Vite）。
+- **唯一数据源**：`scripts/generate-vitepress.mjs` 读取根目录 `catalog.json` 与各技能 `SKILL.md` / `metadata.json`，生成 `docs/skills/*.md`、`docs/.vitepress/data/skills.json`、侧边栏元数据与 `public/assets` 截图。
+- **base**：`/ui-design-skills/`（与 GitHub Pages 项目站一致）。
+- **演示**：Vue 组件 + `<ClientOnly>`，浏览器 API 仅在客户端执行。
+- **清理**：已移除上一版无框架 `site/` 与静态 `docs/index.html` 站，避免双实现漂移；七技能源树 `ui-design/` 与版权文件保留。
 
-## 可访问性
+## 命令
 
-- `focus-visible`、跳过链接、读屏标题/landmark、`aria-live` 反馈复制结果；`prefers-reduced-motion` 关闭动效；移动端单列/详情堆叠。
+```bash
+npm ci
+npm run docs:gen    # 从 catalog/SKILL 生成页面
+npm run docs:dev    # 本地开发
+npm run docs:build  # 产出 docs/.vitepress/dist
+npm run docs:preview
+npm run verify
+```
+
+Gitee 仅镜像源码与构建配置；Gitee Pages 暂停，不承诺 `gitee.io`。

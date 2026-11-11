@@ -4,10 +4,12 @@ on:
   pull_request:
     branches: [master]
     paths:
-      - 'site/**'
+      - 'docs/**'
       - 'scripts/**'
       - 'catalog.json'
       - 'ui-design/**'
+      - 'package.json'
+      - 'package-lock.json'
       - '.github/workflows/site-test.yml'
 
 permissions:
@@ -18,7 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build site
-        run: node scripts/build.mjs
-      - name: Verify
-        run: node scripts/verify.mjs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run docs:build
+      - run: npm run verify

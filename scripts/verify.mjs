@@ -2,42 +2,28 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { spawn } from 'node:child_process';
 import http from 'node:http';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const DOCS = path.join(ROOT, 'docs');
+const DIST = path.join(ROOT, 'docs', '.vitepress', 'dist');
+const DATA = path.join(ROOT, 'docs', '.vitepress', 'data', 'skills.json');
 
 function assert(cond, msg) {
   if (!cond) throw new Error(msg);
 }
 
-function readSkillsJson() {
-  const p = path.join(DOCS, 'data', 'skills.json');
-  assert(fs.existsSync(p), 'missing docs/data/skills.json — run build first');
-  const data = JSON.parse(fs.readFileSync(p, 'utf8'));
+function readSkillsData() {
+  assert(fs.existsSync(DATA), 'missing docs/.vitepress/data/skills.json — run docs:gen');
+  const data = JSON.parse(fs.readFileSync(DATA, 'utf8'));
   assert(data.skills.length === 7, `expected 7 skills, got ${data.skills.length}`);
   for (const s of data.skills) {
-    assert(s.skillMd && s.skillMd.includes('---'), `skillMd missing front matter: ${s.name}`);
-    assert(s.skillMd.length > 200, `skillMd too short: ${s.name}`);
-    for (const sh of s.screenshots) {
-      const abs = path.join(DOCS, sh.path);
-      assert(fs.existsSync(abs), `missing screenshot ${sh.path}`);
-    }
+    assert(s.skillMd?.includes('#'), `skillMd invalid: ${s.name}`);
+    const disk = fs.readFileSync(path.join(ROOT, s.path, 'SKILL.md'), 'utf8');
+    assert(disk === s.skillMd, `skillMd mismatch: ${s.name}`);
+    assert(fs.existsSync(path.join(ROOT, 'docs', 'skills', `${s.name}.md`)), `missing page ${s.name}.md`);
   }
   return data;
-}
-
-function countFiles(dir) {
-  let n = 0;
-  for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (ent.name === '.git') continue;
-    const p = path.join(dir, ent.name);
-    if (ent.isDirectory()) n += countFiles(p);
-    else n++;
-  }
-  return n;
 }
 
 function startServer(root) {
@@ -59,6 +45,8 @@ function startServer(root) {
         '.json': 'application/json',
         '.jpg': 'image/jpeg',
         '.png': 'image/png',
+        '.svg': 'image/svg+xml',
+        '.woff2': 'font/woff2',
       };
       res.setHeader('Content-Type', types[ext] || 'application/octet-stream');
       fs.createReadStream(filePath).pipe(res);
@@ -67,7 +55,8 @@ function startServer(root) {
       const port = server.address().port;
       resolve({
         port,
-        base: `http://127.0.0.1:${port}/ui-design-skills/`,
+        // GitHub Pages 项目站 URL 含 /ui-design-skills/，但 artifact 根目录即站点文件根（VitePress base 只影响产物内链接前缀）
+        base: `http://127.0.0.1:${port}/`,
         close: () => server.close(),
       });
     });
@@ -77,42 +66,22 @@ function startServer(root) {
 async function httpCheck(base) {
   const index = await fetch(base);
   assert(index.ok, `index not 200: ${index.status}`);
-  const data = await fetch(base + 'data/skills.json');
-  assert(data.ok, 'skills.json not 200');
-  const css = await fetch(base + 'css/site.css');
-  assert(css.ok, 'css not 200');
-  const js = await fetch(base + 'js/app.js');
-  assert(js.ok, 'app.js not 200');
-  const json = await data.json();
-  const firstShot = json.skills[0].screenshots[0].path;
-  const img = await fetch(base + firstShot);
-  assert(img.ok, `image not 200: ${firstShot}`);
+  const skill = await fetch(`${base}skills/light-ai-workflow-builder.html`);
+  assert(skill.ok, `skill page not 200: ${skill.status}`);
+  const asset = await fetch(`${base}assets/skills/light-ai-workflow-builder/original.jpg`);
+  assert(asset.ok, 'asset not 200');
 }
 
 async function main() {
-  console.log('verify: static assets');
-  const data = readSkillsJson();
-  const skillNames = data.skills.map((s) => s.name);
-  assert(new Set(skillNames).size === 7, 'duplicate skill names');
-
-  const staging = path.join(ROOT, '.verify-root');
-  fs.rmSync(staging, { recursive: true, force: true });
-  fs.mkdirSync(path.join(staging, 'ui-design-skills'), { recursive: true });
-  fs.cpSync(DOCS, path.join(staging, 'ui-design-skills'), { recursive: true });
-
-  const srv = await startServer(staging);
+  assert(fs.existsSync(DIST), 'missing dist — run npm run docs:build');
+  readSkillsData();
+  const srv = await startServer(DIST);
   try {
     await httpCheck(srv.base);
-    const q = await fetch(`${srv.base}?q=工作流`);
-    assert(q.ok, 'search url failed');
-    const skill = await fetch(`${srv.base}?skill=${skillNames[0]}&view=demo`);
-    assert(skill.ok, 'skill detail url failed');
-    console.log('verify: HTTP checks OK on', srv.base);
+    console.log('verify: HTTP OK', srv.base);
   } finally {
     srv.close();
   }
-
-  console.log('verify: file count in docs/', countFiles(DOCS));
   console.log('All verification checks passed.');
 }
 

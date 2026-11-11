@@ -52,13 +52,22 @@
 
 [![产品静帧参考](ui-design/marketing/marketing-product-ui-stills/screenshots/product-ui-collage.jpg)](ui-design/marketing/marketing-product-ui-stills/README.md)
 
-## 在线技能目录（GitHub Pages）
+## 在线技能目录（VitePress + GitHub Pages）
 
-静态站点源码位于 [`site/`](site/)，构建产物输出到 [`docs/`](docs/)（`node scripts/build.mjs`）。设计锁定与部署说明见 [`site/DESIGN.md`](site/DESIGN.md)。
+文档站基于官方 [VitePress](https://vitepress.dev/)（Vue + Vite），源码在 [`docs/`](docs/)，由 `catalog.json` 与各技能 `SKILL.md` 生成页面（勿手写第二套正文）。设计说明见 [`docs/DESIGN.md`](docs/DESIGN.md)。
 
-- **线上地址**（项目站基路径 `/ui-design-skills/`）：https://wen-haoming.github.io/ui-design-skills/
-- 功能：分类与搜索、七技能卡片、参考图 / 原创演示 / SKILL 正文切换、一键复制完整 SKILL 原文、下载 `SKILL.md`；URL 可分享（`?skill=&view=&q=&category=`）。
-- **Gitee**：可与本仓库同步同一套 `site/` + `docs/`；Gitee Pages 官方入口当前暂停，不承诺 `gitee.io` 可达。
+```bash
+npm ci
+npm run docs:gen     # 生成 docs/skills/*.md 与 data/skills.json
+npm run docs:dev     # 本地开发
+npm run docs:build   # 输出 docs/.vitepress/dist
+npm run verify       # 构建后校验（CI 同款）
+```
+
+- **基路径**：`/ui-design-skills/`（GitHub 项目站）
+- **预期线上 URL**：https://wen-haoming.github.io/ui-design-skills/（需仓库 Settings → Pages → Source：**GitHub Actions** 且部署成功后可达）
+- **功能**：侧栏七技能、本地搜索、首页七卡分类、参考图、原创 Vue 演示（`ClientOnly`）、复制/下载完整 `SKILL.md` 原文
+- **Gitee**：可镜像本仓库；Gitee Pages 暂停，不承诺 `gitee.io`
 
 ## 索引与版权
 

@@ -2,3 +2,5 @@
 .playwright-mcp/
 release-artifacts/
 node_modules/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
