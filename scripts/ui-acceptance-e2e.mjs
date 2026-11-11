@@ -11,7 +11,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.dirname(fileURLToPath(import.meta.url)) + '/..';
 const BASE = process.env.PREVIEW_BASE || 'https://wen-haoming.github.io/ui-design-skills/';
 const OUT = process.env.OUT || '/tmp/ui-acceptance.json';
-const CANON_SHA = '9586f8cf47a7ad060a2ed44697de69718f626e277d00baf88315229f38f9b43d';
+const CANON_SHA = '00e4aabcd149f55bdf6160d5cc4df57ff7cf9f0591c3221cfcc8f5910f9e3c5f';
 
 async function matchCount(page) {
   const bar = page.locator('.wb-bar-count').first();

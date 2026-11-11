@@ -1,0 +1,156 @@
+{
+  "id": "article-typesetting-presets-v1",
+  "version": "1.2",
+  "note": "下列数值是约定起点，来自常见中文阅读习惯，或对已读编辑长文静帧的结构观察（刊头对比、发丝、左线引用）。它们不是从截图量得的实测，也不是实验室数据。实现可在给定范围内微调，但三种预设必须仍然显著不同。",
+  "license": {
+    "allowed": [
+      "系统字体栈",
+      "可随项目分发且许可明确的开源字体，例如 SIL OFL 的 Noto Sans SC、Noto Serif SC；思源系列仅在已具备相应许可并且确实分发时写入"
+    ],
+    "forbidden": [
+      "未授权商业字体",
+      "用免费字体假冒某版权字体名称",
+      "在说明里宣称使用了并未捆绑或并未许可的字体"
+    ],
+    "fontDisplay": "swap"
+  },
+  "shared": {
+    "lineBreak": "strict-or-equivalent-punctuation-rules",
+    "noBreakInside": [
+      "line-height: 1.75",
+      "Latin words",
+      "numbers"
+    ],
+    "minSidePaddingNarrowPx": 16,
+    "narrowBreakpointPx": 390,
+    "optionalControls": {
+      "fontSizeSteps": [
+        "-1",
+        "default",
+        "+1"
+      ],
+      "lineHeightSteps": [
+        "-1",
+        "default",
+        "+1"
+      ],
+      "resetRestores": "current typography preset defaults",
+      "copyCopies": "frozen article text, not CSS and not the skill body"
+    }
+  },
+  "typographies": [
+    {
+      "id": "reading-longform",
+      "name": "长文阅读",
+      "fontFamily": "\"Noto Serif SC\", \"Source Han Serif SC\", \"Songti SC\", \"STSong\", \"SimSun\", \"Georgia\", serif",
+      "canvas": "quiet near-paper or near-white, not a workbench card wall",
+      "title": {
+        "fontSizePx": [
+          28,
+          32
+        ],
+        "lineHeight": 1.3,
+        "fontWeight": [
+          600,
+          700
+        ]
+      },
+      "heading2": {
+        "fontSizePx": [
+          20,
+          22
+        ],
+        "spaceBeforeGtAfter": true
+      },
+      "body": {
+        "fontSizePx": [
+          17,
+          18
+        ],
+        "lineHeight": 1.8,
+        "paragraphGapEm": 0.7
+      },
+      "maxMeasure": "32-40 han characters, or 36rem, whichever is shorter",
+      "quote": "left rule, slightly increased padding, same size or slightly smaller, line-height at least body",
+      "listItemGapEm": [
+        0.35,
+        0.5
+      ]
+    },
+    {
+      "id": "editorial-magazine",
+      "name": "编辑杂志",
+      "fontFamily": "display and body may use the same serif stack; kicker may use tracked sans",
+      "fontFamilyBody": "\"Noto Serif SC\", \"Source Han Serif SC\", \"Songti SC\", \"STSong\", \"SimSun\", \"Georgia\", serif",
+      "canvas": "paper or near-ivory",
+      "title": {
+        "fontSizePx": [
+          36,
+          44
+        ],
+        "lineHeight": [
+          1.15,
+          1.25
+        ],
+        "fontWeight": [
+          600,
+          700
+        ],
+        "tracking": "slightly tight",
+        "maySpanColumn": true
+      },
+      "heading2": {
+        "fontSizePx": [
+          22,
+          26
+        ],
+        "sectionRule": "optional hairline",
+        "spaceBefore": "larger than longform"
+      },
+      "body": {
+        "fontSizePx": [
+          16,
+          17
+        ],
+        "lineHeight": 1.7
+      },
+      "maxMeasure": "30-36 han characters, or 34rem, whichever is shorter",
+      "quote": "required left rule and clear padding",
+      "kicker": "optional interface label 示例文稿 only, do not add article sentences",
+      "evidence": "Structure borrows from already-read editorial stills; do not copy their article or photography."
+    },
+    {
+      "id": "compact-notes",
+      "name": "紧凑知识笔记",
+      "fontFamily": "\"Noto Sans SC\", \"Source Han Sans SC\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"Noto Sans\", sans-serif",
+      "canvas": "near-white or faint gray, not a decorative magazine sheet",
+      "title": {
+        "fontSizePx": [
+          20,
+          22
+        ],
+        "fontWeight": 600
+      },
+      "heading2": {
+        "fontSizePx": [
+          15,
+          17
+        ]
+      },
+      "body": {
+        "fontSizePx": [
+          14,
+          15
+        ],
+        "lineHeight": 1.55,
+        "paragraphGapEm": [
+          0.35,
+          0.45
+        ]
+      },
+      "maxMeasure": "40-48 han characters, or 28-32rem, whichever is shorter; never full-bleed on ultrawide",
+      "quote": "compact callout with left rule or light fill, not an enlarged magazine pull quote",
+      "inlineLatin": "sans or monospace, still unbreakable inside the token"
+    }
+  ]
+}

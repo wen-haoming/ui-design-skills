@@ -23,14 +23,17 @@ const spotlight = computed(() => publishedWorks.find((w) => w.slug === spotlight
 <template>
   <div class="gallery-home">
     <header class="gallery-hero">
-      <p class="gallery-kicker">技能作品展厅 v1.1 · 原创示例界面</p>
+      <p class="gallery-kicker">技能作品展厅 v1.2 · 原创示例界面</p>
       <h1>多风格界面设计</h1>
       <p class="gallery-lead">
         固定基准 <strong>task-workbench-v1</strong> 上已发布
         <strong>{{ publishedWorks.length }}</strong>
         个可运行组合（5 风格 list-detail + 3 种 shallow 布局变体）。首屏为真实渲染封面，live 交互见各作品页。
       </p>
-      <p class="gallery-scene-tag">场景：<strong>任务管理工作台</strong></p>
+      <p class="gallery-scene-tag">
+        场景：<strong>任务管理工作台</strong>（8 组合） ·
+        <a class="gallery-cta gallery-cta--ghost" :href="withBase('/typography')">文字排版</a>（3 预设）
+      </p>
     </header>
 
     <div class="gallery-toolbar" role="toolbar" aria-label="筛选">

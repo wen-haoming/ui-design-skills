@@ -1,6 +1,6 @@
-import WorkbenchShallow from '@templates/shallow-precise/WorkbenchShallow.vue';
-import WorkbenchDark from '@templates/dark-command/WorkbenchDark.vue';
-import WorkbenchSoft from '@templates/soft-system/WorkbenchSoft.vue';
+import WorkbenchShallow from '@templates/task-workbench/shallow-precise/WorkbenchShallow.vue';
+import WorkbenchDark from '@templates/task-workbench/dark-command/WorkbenchDark.vue';
+import WorkbenchSoft from '@templates/task-workbench/soft-system/WorkbenchSoft.vue';
 
 export const styles = [
   {

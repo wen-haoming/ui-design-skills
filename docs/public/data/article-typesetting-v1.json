@@ -1,0 +1,197 @@
+{
+  "id": "article-typesetting-v1",
+  "title": "示例文稿排版对照",
+  "locale": "zh-CN",
+  "disclaimer": "以下为固定示例文稿，仅用于同一内容的排版对照，不是真实项目说明、真实组织文档或统计结论，也不是任务管理工作台的数据。",
+  "scene": "article-typesetting",
+  "characterCount": {
+    "method": "去空白后的全部字符（含汉字、拉丁字母、数字与标点）",
+    "withoutWhitespace": 702,
+    "hanCharacters": 623,
+    "latinLettersAndDigits": 16,
+    "hanPlusLatinAndDigits": 639,
+    "whitespaceKeptInSource": 5,
+    "sourceLengthIncludingWhitespace": 707,
+    "targetRange": "600-900",
+    "inRange": true
+  },
+  "article": {
+    "title": "把文字排好，比再加一种颜色更要紧",
+    "blocks": [
+      {
+        "id": "title",
+        "type": "title",
+        "headingLevel": 1,
+        "text": "把文字排好，比再加一种颜色更要紧"
+      },
+      {
+        "id": "p-01",
+        "type": "paragraph",
+        "text": "做界面时，人们常先选颜色和组件，把段落、标题和引用留到最后才填进去。结果常常是：字号层级含糊，一行拉得过长，中英文挤在一起，读者还没看清意思，眼睛先累了。排版不是装饰，而是让文字按顺序被读完的路径。"
+      },
+      {
+        "id": "h2-01",
+        "type": "heading",
+        "headingLevel": 2,
+        "text": "先让眼睛找到路径"
+      },
+      {
+        "id": "p-02",
+        "type": "paragraph",
+        "text": "一篇讲得清楚的界面文稿，通常只需要很少的层次：先看到标题，再看见小标题，然后才进入段落、列表和引用。层次一乱，所有句子都会争抢同一视线。排的时候可以先问三件事："
+      },
+      {
+        "id": "list-01",
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "标题和正文的对比是否足够，不必靠变色取胜",
+          "一段话是否停在舒适的行长里，而不是顺着屏幕一直铺过去",
+          "列表、引用和普通段落会不会看起来像同一种灰块"
+        ]
+      },
+      {
+        "id": "p-03",
+        "type": "paragraph",
+        "text": "这三件事做对了，版面即使颜色很少，也仍然站得住。"
+      },
+      {
+        "id": "h2-02",
+        "type": "heading",
+        "headingLevel": 2,
+        "text": "中文、英文和数字要一起过日子"
+      },
+      {
+        "id": "p-04",
+        "type": "paragraph",
+        "text": "中文排版还会碰到夹排。例如在句子里写到 CSS 的 line-height: 1.75 时，英文单词和数字不应在中间被切断，标点也不该孤零零跑到行首。中文句子的停顿靠的是完整的句读，而不是把符号随便折到下一行。",
+        "inlines": [
+          {
+            "id": "inline-en-num-01",
+            "type": "latin-numeric",
+            "text": "line-height: 1.75",
+            "required": true,
+            "note": "全文唯一一处规定的行内英文与数字，须保持不断开、不增删。"
+          }
+        ]
+      },
+      {
+        "id": "quote-01",
+        "type": "quote",
+        "text": "把字距、行高和行长看成一套呼吸，而不是三个互不相干的旋钮。少调一点，让段落自己把气口留下来。"
+      },
+      {
+        "id": "p-05",
+        "type": "paragraph",
+        "text": "引用的作用是换一种口气，而不是把同一句话再加大加粗一遍。链接也应当能被认出来，并且在只显示文字时仍然说得清自己指向哪里。"
+      },
+      {
+        "id": "h2-03",
+        "type": "heading",
+        "headingLevel": 2,
+        "text": "同一篇文章，也可以换一种呼吸"
+      },
+      {
+        "id": "p-06",
+        "type": "paragraph",
+        "text": "同一份文稿可以读得慢，也可以被快速扫过。长文阅读需要更从容的行距和行长；杂志式编排可以用更大的标题对比来打开章节；紧凑的知识笔记则把列表和要点收得更近，方便对照。无论哪一种，内容应保持原样：不增删句子，不把文章拆成待办任务，也不用版式变化冒充新的事实。"
+      },
+      {
+        "id": "p-07",
+        "type": "paragraph",
+        "text": "好看的文字排版，不是再发明一套炫技样式，而是让已写好的句子，在不同阅读目的下都能被诚实地读完。"
+      }
+    ]
+  },
+  "typographies": [
+    {
+      "id": "reading-longform",
+      "name": "长文阅读"
+    },
+    {
+      "id": "editorial-magazine",
+      "name": "编辑杂志"
+    },
+    {
+      "id": "compact-notes",
+      "name": "紧凑知识笔记"
+    }
+  ],
+  "enabledCombinations": [
+    {
+      "id": "call-reading-longform",
+      "scene": "article-typesetting-v1",
+      "typography": "reading-longform"
+    },
+    {
+      "id": "call-editorial-magazine",
+      "scene": "article-typesetting-v1",
+      "typography": "editorial-magazine"
+    },
+    {
+      "id": "call-compact-notes",
+      "scene": "article-typesetting-v1",
+      "typography": "compact-notes"
+    }
+  ],
+  "features": {
+    "switchTypography": true,
+    "optionalTypeControls": [
+      "fontSize",
+      "lineHeight"
+    ],
+    "resetToPresetDefault": true,
+    "copyArticle": true,
+    "narrowScreen": "390px"
+  },
+  "invariants": [
+    "三种排版必须使用完全同一份文稿，不得增删改字、调整块顺序或把段落改写成任务",
+    "对照时只改变 typography，不得同时改变风格或布局变量",
+    "本基准与 task-workbench-v1 互相独立，不得互相填充",
+    "不得把既有工作台模板改成文章页，也不得用本文稿替换工作台封面",
+    "完成数、逾期和任务字段不适用于本场景",
+    "本版只启用上述三个组合，不声称已交付未实现的矩阵"
+  ],
+  "prompt": {
+    "id": "article-typesetting-v1-prompt",
+    "text": "使用技能「多风格界面设计」，场景 article-typesetting-v1，按给定 typography 实现同一篇示例文稿的正文排版。必须完整使用本基准中的标题、小标题、段落、列表、引用和行内英文数字；不得增删改文字，不得把文稿改成任务工作台，不得使用 task-workbench-v1。输出可运行页面或等价前端代码，并注明 typography 标识。可选提供字号或行距的有限调节、恢复默认与复制文稿。",
+    "calls": [
+      {
+        "id": "call-reading-longform",
+        "typography": "reading-longform",
+        "typographyName": "长文阅读"
+      },
+      {
+        "id": "call-editorial-magazine",
+        "typography": "editorial-magazine",
+        "typographyName": "编辑杂志"
+      },
+      {
+        "id": "call-compact-notes",
+        "typography": "compact-notes",
+        "typographyName": "紧凑知识笔记"
+      }
+    ],
+    "variableOnly": "typography",
+    "note": "三次调用只改变 typography，文稿保持一致。"
+  },
+  "traceTemplate": {
+    "skillName": "多风格界面设计",
+    "skillVersion": "1.2",
+    "input": {
+      "scene": "article-typesetting-v1",
+      "typography": "",
+      "benchmarkId": "article-typesetting-v1",
+      "articleHash": "12bb44a66c7b5eaac174e7bf9b53e519fe88f99931896dd835583e88c6e03497"
+    },
+    "outputPath": "",
+    "testTrace": "",
+    "rule": "没有真实发生的生成或测试，不要填写输出或结果。"
+  },
+  "articleHashes": {
+    "markdownFile": "article-sample.md",
+    "markdownSha256": "12bb44a66c7b5eaac174e7bf9b53e519fe88f99931896dd835583e88c6e03497",
+    "articlePayloadSha256": "73a731356fd0f982efaf1365e5a31ee969144237eb02ab735d1cf5ba1a3da86b",
+    "articlePayload": "JSON object {title, blocks} with UTF-8, compact separators (',', ':'), ensure_ascii false"
+  }
+}

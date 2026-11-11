@@ -11,6 +11,7 @@ const LEGACY_SKILLS = path.join(DOCS, 'legacy', 'skills');
 const OLD_SKILLS = path.join(DOCS, 'skills');
 const TRACE_PATH = path.join(DOCS, 'public', 'data', 'implementation-trace.json');
 const TRACE_V10_PATH = path.join(DOCS, 'public', 'data', 'implementation-trace-v1.0.json');
+const TRACE_V11_PATH = path.join(DOCS, 'public', 'data', 'implementation-trace-v1.1.json');
 
 const CATEGORY_LABELS = {
   'ui-design/workflow-builders': '工作流',
@@ -133,8 +134,17 @@ function preserveV10Trace() {
   }
 }
 
+function preserveV11Trace() {
+  if (fs.existsSync(TRACE_V11_PATH)) return;
+  const prev = JSON.parse(fs.readFileSync(TRACE_PATH, 'utf8'));
+  if (prev.skillVersion === '1.1') {
+    fs.copyFileSync(TRACE_PATH, TRACE_V11_PATH);
+  }
+}
+
 function publishStaticData() {
   fs.mkdirSync(path.join(DOCS, 'public', 'data'), { recursive: true });
+  preserveV11Trace();
   preserveV10Trace();
   const skillPath = path.join(ROOT, 'ui-design/aggregate/multi-style-ui-design/SKILL.md');
   const skillCanonical = fs.readFileSync(skillPath, 'utf8');
@@ -145,6 +155,15 @@ function publishStaticData() {
   fs.rmSync(path.join(DOCS, 'public', 'data', 'skill-full.md'), { force: true });
   fs.rmSync(path.join(DOCS, 'public', 'data', 'skill-canonical.md'), { force: true });
   fs.copyFileSync(path.join(ROOT, 'benchmarks/task-workbench-v1.json'), path.join(DOCS, 'public', 'data', 'benchmark.json'));
+  fs.copyFileSync(
+    path.join(ROOT, 'benchmarks/article-typesetting-v1.json'),
+    path.join(DOCS, 'public', 'data', 'article-typesetting-v1.json')
+  );
+  fs.copyFileSync(path.join(ROOT, 'benchmarks/article-sample.md'), path.join(DOCS, 'public', 'data', 'article-sample.md'));
+  fs.copyFileSync(
+    path.join(ROOT, 'benchmarks/typography-presets.json'),
+    path.join(DOCS, 'public', 'data', 'typography-presets.json')
+  );
   const selected = path.join(ROOT, 'design-expansion-batch2/selected-catalog.json');
   if (fs.existsSync(selected)) {
     fs.copyFileSync(selected, path.join(DOCS, 'public', 'data', 'selected-catalog.json'));
@@ -165,20 +184,35 @@ function publishStaticData() {
     }
     return { slug, style: styleId, layout: layoutId, benchmark: 'task-workbench-v1' };
   });
+  const articleSha = createHash('sha256')
+    .update(fs.readFileSync(path.join(ROOT, 'benchmarks/article-typesetting-v1.json')))
+    .digest('hex');
   const trace = {
-    skillVersion: '1.1',
+    skillVersion: '1.2',
     skillName: '多风格界面设计',
     skillSha256: skillSha,
     benchmarkId: 'task-workbench-v1',
     benchmarkSha256: benchSha,
+    articleBenchmarkId: 'article-typesetting-v1',
+    articleBenchmarkSha256: articleSha,
     generatedAt: new Date().toISOString(),
-    implementationSession:
-      'v1.1 expansion: shared composable + facet counts + 8 published work combinations',
+    implementationSession: 'v1.2: preserve workbench 8 combos + article-typesetting-v1 typography scene',
     publishedMatrixCount: 8,
+    articleTypographyCount: 3,
     calls,
-    history: { v1_0: 'implementation-trace-v1.0.json' },
+    articleCalls: ['reading-longform', 'editorial-magazine', 'compact-notes'].map((t) => ({
+      scene: 'article-typesetting-v1',
+      typography: t,
+    })),
+    history: { v1_0: 'implementation-trace-v1.0.json', v1_1: 'implementation-trace-v1.1.json' },
     sharedLogicPath: 'templates/task-workbench/shared/',
-    tests: { verifyScript: 'scripts/verify.mjs', facets: 'scripts/verify-facets.mjs', templateBuild: 'scripts/package-templates.mjs' },
+    tests: {
+      verifyScript: 'scripts/verify.mjs',
+      facets: 'scripts/verify-facets.mjs',
+      workbenchUi: 'scripts/ui-acceptance-e2e.mjs',
+      articleUi: 'scripts/ui-article-acceptance.mjs',
+      templateBuild: 'scripts/package-templates.mjs',
+    },
   };
   fs.writeFileSync(TRACE_PATH, JSON.stringify(trace, null, 2));
 }

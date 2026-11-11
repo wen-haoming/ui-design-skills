@@ -1,12 +1,12 @@
 import type { Component } from 'vue';
-import WorkbenchShallow from '@templates/shallow-precise/WorkbenchShallow.vue';
-import WorkbenchShallowBoard from '@templates/shallow-precise/WorkbenchShallowBoard.vue';
-import WorkbenchShallowReading from '@templates/shallow-precise/WorkbenchShallowReading.vue';
-import WorkbenchShallowCalendar from '@templates/shallow-precise/WorkbenchShallowCalendar.vue';
-import WorkbenchDark from '@templates/dark-command/WorkbenchDark.vue';
-import WorkbenchSoft from '@templates/soft-system/WorkbenchSoft.vue';
-import WorkbenchEditorial from '@templates/editorial-sheet/WorkbenchEditorial.vue';
-import WorkbenchAmber from '@templates/amber-ledger/WorkbenchAmber.vue';
+import WorkbenchShallow from '@templates/task-workbench/shallow-precise/WorkbenchShallow.vue';
+import WorkbenchShallowBoard from '@templates/task-workbench/shallow-precise/WorkbenchShallowBoard.vue';
+import WorkbenchShallowReading from '@templates/task-workbench/shallow-precise/WorkbenchShallowReading.vue';
+import WorkbenchShallowCalendar from '@templates/task-workbench/shallow-precise/WorkbenchShallowCalendar.vue';
+import WorkbenchDark from '@templates/task-workbench/dark-command/WorkbenchDark.vue';
+import WorkbenchSoft from '@templates/task-workbench/soft-system/WorkbenchSoft.vue';
+import WorkbenchEditorial from '@templates/task-workbench/editorial-sheet/WorkbenchEditorial.vue';
+import WorkbenchAmber from '@templates/task-workbench/amber-ledger/WorkbenchAmber.vue';
 
 export const styleMeta = {
   'shallow-precise': { title: '浅色精密工作台', subtitle: 'shallow-precise' },

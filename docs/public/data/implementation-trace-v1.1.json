@@ -1,0 +1,69 @@
+{
+  "skillVersion": "1.1",
+  "skillName": "多风格界面设计",
+  "skillSha256": "9586f8cf47a7ad060a2ed44697de69718f626e277d00baf88315229f38f9b43d",
+  "benchmarkId": "task-workbench-v1",
+  "benchmarkSha256": "dc046a826677f98d990fb8afd00b17dee69d81e950f90dfc43b1edcc173e0d89",
+  "generatedAt": "2026-11-11T13:59:22.984Z",
+  "implementationSession": "v1.1 expansion: shared composable + facet counts + 8 published work combinations",
+  "publishedMatrixCount": 8,
+  "calls": [
+    {
+      "slug": "shallow-precise-list-detail",
+      "style": "shallow-precise",
+      "layout": "list-detail",
+      "benchmark": "task-workbench-v1"
+    },
+    {
+      "slug": "dark-command-list-detail",
+      "style": "dark-command",
+      "layout": "list-detail",
+      "benchmark": "task-workbench-v1"
+    },
+    {
+      "slug": "soft-system-list-detail",
+      "style": "soft-system",
+      "layout": "list-detail",
+      "benchmark": "task-workbench-v1"
+    },
+    {
+      "slug": "editorial-sheet-list-detail",
+      "style": "editorial-sheet",
+      "layout": "list-detail",
+      "benchmark": "task-workbench-v1"
+    },
+    {
+      "slug": "amber-ledger-list-detail",
+      "style": "amber-ledger",
+      "layout": "list-detail",
+      "benchmark": "task-workbench-v1"
+    },
+    {
+      "slug": "shallow-precise-board-detail",
+      "style": "shallow-precise",
+      "layout": "board-detail",
+      "benchmark": "task-workbench-v1"
+    },
+    {
+      "slug": "shallow-precise-reading-split",
+      "style": "shallow-precise",
+      "layout": "reading-split",
+      "benchmark": "task-workbench-v1"
+    },
+    {
+      "slug": "shallow-precise-calendar-agenda",
+      "style": "shallow-precise",
+      "layout": "calendar-agenda",
+      "benchmark": "task-workbench-v1"
+    }
+  ],
+  "history": {
+    "v1_0": "implementation-trace-v1.0.json"
+  },
+  "sharedLogicPath": "templates/task-workbench/shared/",
+  "tests": {
+    "verifyScript": "scripts/verify.mjs",
+    "facets": "scripts/verify-facets.mjs",
+    "templateBuild": "scripts/package-templates.mjs"
+  }
+}

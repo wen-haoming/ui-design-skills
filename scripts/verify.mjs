@@ -8,7 +8,7 @@ import http from 'node:http';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'docs', '.vitepress', 'dist');
 
-const SKILL_SHA = '9586f8cf47a7ad060a2ed44697de69718f626e277d00baf88315229f38f9b43d';
+const SKILL_SHA = '00e4aabcd149f55bdf6160d5cc4df57ff7cf9f0591c3221cfcc8f5910f9e3c5f';
 
 const WORK_SLUGS = [
   'shallow-precise-list-detail',
@@ -43,9 +43,10 @@ function benchChecks() {
   const doneFromStatus = bench.tasks.filter((t) => t.status === 'done').length;
   assert(doneFromStatus === 2, 'done status count=2');
   const trace = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs/public/data/implementation-trace.json'), 'utf8'));
-  assert(trace.skillVersion === '1.1', 'trace v1.1');
+  assert(trace.skillVersion === '1.2', 'trace v1.2');
   assert(trace.publishedMatrixCount === 8, 'matrix count 8');
   assert(fs.existsSync(path.join(ROOT, 'docs/public/data/implementation-trace-v1.0.json')), 'v1.0 trace preserved');
+  assert(fs.existsSync(path.join(ROOT, 'docs/public/data/implementation-trace-v1.1.json')), 'v1.1 trace preserved');
 }
 
 function startServer(root) {
@@ -83,6 +84,8 @@ async function httpCheck(base) {
     'index.html',
     'compare.html',
     'compare-layout.html',
+    'typography.html',
+    'data/article-sample.md',
     'legacy/index.html',
     'data/skill-canonical.txt',
     'data/benchmark.json',
@@ -95,7 +98,7 @@ async function httpCheck(base) {
     const r = await fetch(`${base}works/${slug}.html`);
     assert(r.ok, `works/${slug}.html`);
   }
-  for (const z of ZIPS) {
+  for (const z of [...ZIPS, 'downloads/article-typesetting-v1.zip']) {
     const r = await fetch(base + z);
     assert(r.ok, z);
   }

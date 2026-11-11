@@ -9,6 +9,7 @@ import CompareLayoutPage from './components/gallery/CompareLayoutPage.vue';
 import WorkDetail from './components/gallery/WorkDetail.vue';
 import AggregateToolbar from './components/AggregateToolbar.vue';
 import SkillDoc from './components/SkillDoc.vue';
+import TypographyScenePage from './components/typography/TypographyScenePage.vue';
 
 export default {
   extends: DefaultTheme,
@@ -20,5 +21,6 @@ export default {
     app.component('WorkDetail', WorkDetail);
     app.component('AggregateToolbar', AggregateToolbar);
     app.component('SkillDoc', SkillDoc);
+    app.component('TypographyScenePage', TypographyScenePage);
   },
 } satisfies Theme;
