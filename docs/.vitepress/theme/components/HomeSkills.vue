@@ -47,7 +47,7 @@ const visible = computed(() => {
       >
         <img
           v-if="s.screenshots[0]"
-          :src="s.screenshots[0].src"
+          :src="withBase(s.screenshots[0].src)"
           :alt="s.screenshots[0].description"
           loading="lazy"
         />
