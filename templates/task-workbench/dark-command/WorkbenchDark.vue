@@ -43,6 +43,7 @@ const wb = useSharedWorkbench();
               @click="wb.selectTask(t.id)"
               @keydown.enter="wb.selectTask(t.id)"
             >
+              <span class="dc-row-id">{{ t.id }}</span>
               <span class="dc-status-tag" :data-s="t.status">{{ wb.statuses.find((s) => s.id === t.status)?.label }}</span>
               <span class="dc-row-title">{{ t.title }}</span>
               <span class="dc-row-meta" :class="{ 'dc-row-meta--bad': isOverdue(t, wb.asOf) }">{{ dueLabel(t, wb.asOf) }}</span>
