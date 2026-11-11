@@ -13,6 +13,7 @@
 - **子路径**：`<base href="/ui-design-skills/">`，构建注入 `config.js` 中的 `BASE_PATH`；资源与路由均相对 base。
 - **演示**：七段原创 HTML/CSS/JS 交互，页内标注「原创演示，非原作实现」；参考图标注 metadata 中的 `third-party-reference` 说明。
 - **部署**：GitHub Actions `build` → `upload-pages-artifact` → `deploy-pages`（仅 `master`）；PR 工作流只构建 + 校验，不部署。
+- **首次上线阻塞（需仓库所有者一次性操作）**：在 GitHub 仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**，然后重新运行 `Deploy GitHub Pages` 工作流。当前集成 token 无法代开 Pages（REST 返回 403/404），未启用前 `https://wen-haoming.github.io/ui-design-skills/` 将为 404。
 - **Gitee Pages**：同套 `docs/` 产物可镜像；官方 Pages 入口当前不可用，不承诺 `gitee.io` 可达，仅交付可同步源码与 manifest。
 
 ## 可访问性
