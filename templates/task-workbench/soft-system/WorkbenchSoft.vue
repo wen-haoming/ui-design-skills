@@ -68,19 +68,20 @@ const groups = computed(() =>
         <section class="ss-pane">
           <div class="ss-search">
             <input v-model="wb.filters.q" type="search" placeholder="搜索" aria-label="搜索" />
+            <span class="ss-facet-count" role="status">{{ wb.facets.resultCount }}/{{ wb.bench.tasks.length }}</span>
             <select v-model="wb.filters.status" aria-label="状态">
-              <option value="">状态</option>
-              <option v-for="s in wb.statuses" :key="s.id" :value="s.id">{{ s.label }}</option>
+              <option value="">全部状态 ({{ wb.facets.statusPoolSize }})</option>
+              <option v-for="s in wb.statuses" :key="s.id" :value="s.id">{{ s.label }} ({{ wb.facets.status[s.id] }})</option>
             </select>
             <select v-model="wb.filters.assignee" aria-label="负责人">
-              <option value="">负责人</option>
-              <option v-for="m in wb.members" :key="m.id" :value="m.id">{{ m.name }}</option>
+              <option value="">全部负责人</option>
+              <option v-for="m in wb.members" :key="m.id" :value="m.id">{{ m.name }} ({{ wb.facets.assignee[m.id] }})</option>
             </select>
             <select v-model="wb.filters.due" aria-label="日期">
-              <option value="all">日期</option>
-              <option value="overdue">过期</option>
-              <option value="today">今天</option>
-              <option value="week">一周</option>
+              <option value="all">全部 ({{ wb.facets.due.all }})</option>
+              <option value="overdue">过期 ({{ wb.facets.due.overdue }})</option>
+              <option value="today">今天 ({{ wb.facets.due.today }})</option>
+              <option value="week">一周 ({{ wb.facets.due.week }})</option>
             </select>
           </div>
           <p v-if="!wb.filtered.length" class="ss-empty">无匹配任务。<button type="button" @click="wb.clearFilters">清空筛选</button></p>

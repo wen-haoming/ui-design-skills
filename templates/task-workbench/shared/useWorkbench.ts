@@ -9,6 +9,7 @@ import {
   hasActiveFilters,
   memberMap,
 } from './workbench';
+import { computeFacetCounts } from './facets';
 
 const bench = cloneBenchmark(benchmarkData as Benchmark);
 
@@ -36,6 +37,7 @@ export function createWorkbench(sharedKey = 'default') {
 
   const filtered = computed(() => filterTasks(tasks.value, filters.value, asOf));
   const metrics = computed(() => computeMetrics(tasks.value, asOf));
+  const facets = computed(() => computeFacetCounts(tasks.value, filters.value, asOf, bench));
   const membersById = computed(() => memberMap(bench));
 
   const selected = computed(() => tasks.value.find((t) => t.id === selectedId.value) ?? null);
@@ -78,6 +80,7 @@ export function createWorkbench(sharedKey = 'default') {
     tasks,
     filtered,
     metrics,
+    facets,
     members,
     membersById,
     statuses,

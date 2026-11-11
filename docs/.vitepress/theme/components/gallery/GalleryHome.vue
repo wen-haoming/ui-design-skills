@@ -1,108 +1,111 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { withBase } from 'vitepress';
-import { styles, type StyleId } from '../../gallery-meta';
+import { publishedWorks, filterWorks, styleMeta, layoutMeta, type StyleId, type LayoutId } from '../../works-catalog';
 
-const styleFilter = ref<'all' | StyleId>('all');
-const spotlightId = ref<StyleId>('shallow-precise');
+const styleF = ref<'all' | StyleId>('all');
+const layoutF = ref<'all' | LayoutId>('all');
+const capF = ref<'all' | string>('all');
 
-const spotlight = computed(() => styles.find((s) => s.id === spotlightId.value)!);
 const visible = computed(() =>
-  styleFilter.value === 'all' ? styles : styles.filter((s) => s.id === styleFilter.value)
+  filterWorks({
+    style: styleF.value,
+    layout: layoutF.value,
+    capability: capF.value,
+    scene: 'task-workbench-v1',
+  })
 );
+
+const spotlightSlug = ref(publishedWorks[0].slug);
+const spotlight = computed(() => publishedWorks.find((w) => w.slug === spotlightSlug.value) ?? publishedWorks[0]);
 </script>
 
 <template>
   <div class="gallery-home">
     <header class="gallery-hero">
-      <p class="gallery-kicker">技能作品展厅 · 原创示例界面</p>
+      <p class="gallery-kicker">技能作品展厅 v1.1 · 原创示例界面</p>
       <h1>多风格界面设计</h1>
       <p class="gallery-lead">
-        同一固定基准上的三套任务工作台壳层。首屏为<strong>真实渲染截图</strong>（1280×720 视口）；完整筛选、列表/看板与状态联动请进入各风格独立页。
+        固定基准 <strong>task-workbench-v1</strong> 上已发布
+        <strong>{{ publishedWorks.length }}</strong>
+        个可运行组合（5 风格 list-detail + 3 种 shallow 布局变体）。首屏为真实渲染封面，live 交互见各作品页。
       </p>
-      <p class="gallery-scene-tag">共同场景：<strong>任务管理工作台</strong> · 10 条示例任务</p>
+      <p class="gallery-scene-tag">场景：<strong>任务管理工作台</strong></p>
     </header>
 
     <div class="gallery-toolbar" role="toolbar" aria-label="筛选">
-      <span class="gallery-toolbar-label">作品</span>
-      <button type="button" :aria-pressed="styleFilter === 'all'" @click="styleFilter = 'all'">全部</button>
+      <span class="gallery-toolbar-label">风格</span>
+      <button type="button" :aria-pressed="styleF === 'all'" @click="styleF = 'all'">全部</button>
       <button
-        v-for="s in styles"
-        :key="s.id"
+        v-for="(s, id) in styleMeta"
+        :key="id"
         type="button"
-        :aria-pressed="styleFilter === s.id"
-        @click="styleFilter = s.id"
+        :aria-pressed="styleF === id"
+        @click="styleF = id"
       >
         {{ s.title }}
       </button>
-      <a class="gallery-cta" :href="withBase('/compare')">交互对比</a>
+    </div>
+    <div class="gallery-toolbar">
+      <span class="gallery-toolbar-label">布局</span>
+      <button type="button" :aria-pressed="layoutF === 'all'" @click="layoutF = 'all'">全部</button>
+      <button
+        v-for="(l, id) in layoutMeta"
+        :key="id"
+        type="button"
+        :aria-pressed="layoutF === id"
+        @click="layoutF = id"
+      >
+        {{ l.title }}
+      </button>
+      <button type="button" :aria-pressed="capF === 'all'" @click="capF = 'all'">能力</button>
+      <button type="button" :aria-pressed="capF === 'facet-query-filter'" @click="capF = 'facet-query-filter'">
+        分面筛选
+      </button>
+    </div>
+    <div class="gallery-toolbar gallery-toolbar--links">
+      <a class="gallery-cta" :href="withBase('/compare')">风格对照</a>
+      <a class="gallery-cta gallery-cta--ghost" :href="withBase('/compare-layout')">布局对照</a>
       <a class="gallery-cta gallery-cta--ghost" :href="withBase('/skill')">Skill 正文</a>
     </div>
 
-    <section class="gallery-spotlight" aria-label="风格主预览">
-      <div class="gallery-spotlight-tabs" role="tablist" aria-label="三风格切换">
+    <p v-if="!visible.length" class="gallery-empty">
+      无匹配作品（未实现的组合不会显示）。
+      <button type="button" @click="styleF = 'all'; layoutF = 'all'; capF = 'all'">清空筛选</button>
+    </p>
+
+    <section v-if="visible.length" class="gallery-spotlight" aria-label="主预览">
+      <div class="gallery-spotlight-tabs" role="tablist">
         <button
-          v-for="s in styles"
-          :key="s.id"
+          v-for="w in visible"
+          :key="w.slug"
           type="button"
           role="tab"
-          :aria-selected="spotlightId === s.id"
-          :class="{ 'is-active': spotlightId === s.id }"
-          @click="spotlightId = s.id"
+          :class="{ 'is-active': spotlightSlug === w.slug }"
+          @click="spotlightSlug = w.slug"
         >
-          <span class="gallery-spotlight-tab-title">{{ s.title }}</span>
-          <span class="gallery-spotlight-tab-sub">{{ s.subtitle }}</span>
+          {{ w.title }}
         </button>
       </div>
       <figure class="gallery-spotlight-stage">
-        <img
-          :src="withBase(spotlight.cover)"
-          :alt="`${spotlight.title} 原创工作台预览（真实渲染）`"
-          width="1280"
-          height="720"
-          loading="eager"
-          fetchpriority="high"
-        />
+        <img :src="withBase(spotlight.cover)" :alt="spotlight.title" width="1280" height="720" />
       </figure>
-      <p class="gallery-spotlight-blurb">{{ spotlight.blurb }}</p>
       <div class="gallery-spotlight-actions">
-        <a class="gallery-cta" :href="withBase(`/works/${spotlight.id}`)">打开完整交互预览</a>
-        <a class="gallery-cta gallery-cta--ghost" :href="withBase('/compare')">切换风格对比（共享状态）</a>
+        <a class="gallery-cta" :href="withBase(`/works/${spotlight.slug}`)">打开完整交互预览</a>
       </div>
     </section>
 
-  <section class="gallery-strip" aria-label="三风格缩略图">
-      <button
-        v-for="s in styles"
-        :key="s.id"
-        type="button"
-        class="gallery-strip-item"
-        :class="{ 'is-active': spotlightId === s.id }"
-        :aria-pressed="spotlightId === s.id"
-        @click="spotlightId = s.id"
-      >
-        <img :src="withBase(s.cover)" :alt="s.title" loading="lazy" />
-        <span>{{ s.subtitle }}</span>
-      </button>
-    </section>
-
-    <section class="gallery-grid" aria-label="作品卡片">
-      <a v-for="s in visible" :key="s.id" class="gallery-card" :href="withBase(`/works/${s.id}`)">
+    <section class="gallery-grid" aria-label="作品卡">
+      <a v-for="w in visible" :key="w.slug" class="gallery-card" :href="withBase(`/works/${w.slug}`)">
         <div class="gallery-card-frame">
-          <img v-if="s.cover" :src="withBase(s.cover)" :alt="`${s.title} 原创预览`" loading="lazy" />
+          <img :src="withBase(w.cover)" :alt="w.title" loading="lazy" />
         </div>
         <div class="gallery-card-body">
-          <span class="gallery-card-style">{{ s.subtitle }}</span>
-          <h2>{{ s.title }}</h2>
-          <p>{{ s.blurb }}</p>
-          <span class="gallery-card-link">进入 live 预览</span>
+          <span class="gallery-card-style">{{ w.styleId }} · {{ w.layoutId }}</span>
+          <h2>{{ w.title }}</h2>
+          <p>{{ w.blurb }}</p>
         </div>
       </a>
     </section>
-
-    <p class="gallery-note">
-      <a :href="withBase('/legacy/')">遗留单项技能</a>
-      仍保留在仓库；公开首页不再以七个独立来源技能目录为主入口。
-    </p>
   </div>
 </template>

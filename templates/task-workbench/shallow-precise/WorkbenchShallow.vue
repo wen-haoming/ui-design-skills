@@ -1,9 +1,16 @@
 <script setup lang="ts">
 import { useSharedWorkbench } from '../shared/useWorkbench';
 import { dueLabel, isOverdue } from '../shared/workbench';
+import FilterBar from '../shared/FilterBar.vue';
 
-const props = defineProps<{ compact?: boolean }>();
+import { onMounted } from 'vue';
+
+const props = defineProps<{ compact?: boolean; boardDetail?: boolean }>();
 const wb = useSharedWorkbench();
+if (props.boardDetail) wb.view = 'board';
+onMounted(() => {
+  if (props.boardDetail) wb.view = 'board';
+});
 </script>
 
 <template>
@@ -30,34 +37,7 @@ const wb = useSharedWorkbench();
             <div class="sp-metric sp-metric--warn"><span>过期</span><strong>{{ wb.metrics.overdue }}</strong></div>
           </div>
         </header>
-        <div class="sp-filters" role="search">
-          <input
-            v-model="wb.filters.q"
-            type="search"
-            placeholder="搜索标题、描述、标签"
-            aria-label="搜索"
-          />
-          <select v-model="wb.filters.status" aria-label="状态">
-            <option value="">全部状态</option>
-            <option v-for="s in wb.statuses" :key="s.id" :value="s.id">{{ s.label }}</option>
-          </select>
-          <select v-model="wb.filters.assignee" aria-label="负责人">
-            <option value="">全部负责人</option>
-            <option v-for="m in wb.members" :key="m.id" :value="m.id">{{ m.name }}</option>
-          </select>
-          <select v-model="wb.filters.due" aria-label="日期">
-            <option value="all">全部日期</option>
-            <option value="overdue">已过期</option>
-            <option value="today">今天</option>
-            <option value="week">一周内</option>
-          </select>
-          <div class="sp-view-toggle" role="group" aria-label="视图">
-            <button type="button" :aria-pressed="wb.view === 'list'" @click="wb.view = 'list'">列表</button>
-            <button type="button" :aria-pressed="wb.view === 'board'" @click="wb.view = 'board'">看板</button>
-          </div>
-          <button type="button" class="sp-btn-ghost" @click="wb.clearFilters">清空筛选</button>
-          <button type="button" class="sp-btn-ghost" @click="wb.resetBenchmark">恢复基准</button>
-        </div>
+        <FilterBar class="sp-filters" :wb="wb" :show-view-toggle="!props.boardDetail" />
         <p class="sp-live" role="status" aria-live="polite">{{ wb.live }}</p>
         <div class="sp-split">
           <section class="sp-list" :aria-label="wb.view === 'list' ? '任务列表' : '看板'">

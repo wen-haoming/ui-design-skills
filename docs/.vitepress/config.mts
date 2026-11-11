@@ -8,13 +8,14 @@ export default defineConfig({
   base: '/ui-design-skills/',
   lang: 'zh-CN',
   title: '多风格界面设计',
-  description: '聚合 Skill 作品展厅：同一基准上的三风格任务工作台',
+  description: '聚合 Skill v1.1 作品展厅：8 个可运行组合 · task-workbench-v1',
   cleanUrls: true,
   themeConfig: {
     logo: '/favicon.svg',
     nav: [
       { text: '展厅', link: '/' },
-      { text: '对比', link: '/compare' },
+      { text: '风格对照', link: '/compare' },
+      { text: '布局对照', link: '/compare-layout' },
       { text: 'Skill', link: '/skill' },
       { text: '来源附录', link: '/sources-attribution' },
       { text: '遗留技能', link: '/legacy/' },

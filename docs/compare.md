@@ -5,4 +5,4 @@ outline: false
 title: 共同场景对比
 ---
 
-<ComparePage />
+<CompareStylePage />

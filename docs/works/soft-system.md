@@ -4,4 +4,4 @@ sidebar: false
 title: 浮动系统层
 ---
 
-<WorkDetail style-id="soft-system" />
+<WorkDetail work-slug="soft-system-list-detail" />

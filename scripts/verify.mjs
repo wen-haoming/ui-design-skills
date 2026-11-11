@@ -8,6 +8,21 @@ import http from 'node:http';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'docs', '.vitepress', 'dist');
 
+const SKILL_SHA = '9586f8cf47a7ad060a2ed44697de69718f626e277d00baf88315229f38f9b43d';
+
+const WORK_SLUGS = [
+  'shallow-precise-list-detail',
+  'dark-command-list-detail',
+  'soft-system-list-detail',
+  'editorial-sheet-list-detail',
+  'amber-ledger-list-detail',
+  'shallow-precise-board-detail',
+  'shallow-precise-reading-split',
+  'shallow-precise-calendar-agenda',
+];
+
+const ZIPS = WORK_SLUGS.map((s) => `downloads/task-workbench-${s}.zip`);
+
 function assert(cond, msg) {
   if (!cond) throw new Error(msg);
 }
@@ -23,10 +38,14 @@ function benchChecks() {
   for (const t of bench.tasks) counts[t.status]++;
   assert(counts.todo === 3 && counts.doing === 3 && counts.review === 2 && counts.done === 2, 'status counts');
   const skillSha = sha256File(path.join(ROOT, 'ui-design/aggregate/multi-style-ui-design/SKILL.md'));
-  assert(skillSha.startsWith('41e89eb8'), 'canonical skill sha');
+  assert(skillSha === SKILL_SHA, `canonical skill sha ${skillSha}`);
   assert(bench.workspace.metrics.doneThisWeek === 2, 'done baseline doneThisWeek=2');
   const doneFromStatus = bench.tasks.filter((t) => t.status === 'done').length;
-  assert(doneFromStatus === 2, 'done status count=2 (t-104,t-109)');
+  assert(doneFromStatus === 2, 'done status count=2');
+  const trace = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs/public/data/implementation-trace.json'), 'utf8'));
+  assert(trace.skillVersion === '1.1', 'trace v1.1');
+  assert(trace.publishedMatrixCount === 8, 'matrix count 8');
+  assert(fs.existsSync(path.join(ROOT, 'docs/public/data/implementation-trace-v1.0.json')), 'v1.0 trace preserved');
 }
 
 function startServer(root) {
@@ -41,7 +60,15 @@ function startServer(root) {
         return;
       }
       const ext = path.extname(filePath);
-      const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.zip': 'application/zip', '.md': 'text/plain' };
+      const types = {
+        '.html': 'text/html',
+        '.js': 'text/javascript',
+        '.css': 'text/css',
+        '.json': 'application/json',
+        '.png': 'image/png',
+        '.zip': 'application/zip',
+        '.md': 'text/plain',
+      };
       res.setHeader('Content-Type', types[ext] || 'application/octet-stream');
       fs.createReadStream(filePath).pipe(res);
     });
@@ -52,11 +79,23 @@ function startServer(root) {
 }
 
 async function httpCheck(base) {
-  for (const p of ['index.html', 'compare.html', 'works/shallow-precise.html', 'legacy/index.html', 'data/skill-full.md', 'data/benchmark.json']) {
+  for (const p of [
+    'index.html',
+    'compare.html',
+    'compare-layout.html',
+    'legacy/index.html',
+    'data/skill-canonical.txt',
+    'data/benchmark.json',
+    'data/implementation-trace-v1.0.json',
+  ]) {
     const r = await fetch(base + p);
     assert(r.ok, `${p} ${r.status}`);
   }
-  for (const z of ['downloads/task-workbench-shallow-precise.zip', 'downloads/task-workbench-dark-command.zip', 'downloads/task-workbench-soft-system.zip']) {
+  for (const slug of WORK_SLUGS) {
+    const r = await fetch(`${base}works/${slug}.html`);
+    assert(r.ok, `works/${slug}.html`);
+  }
+  for (const z of ZIPS) {
     const r = await fetch(base + z);
     assert(r.ok, z);
   }
@@ -68,6 +107,8 @@ async function main() {
   const srv = await startServer(DIST);
   try {
     await httpCheck(srv.base);
+    const skillCanon = sha256File(path.join(DIST, 'data/skill-canonical.txt'));
+    assert(skillCanon === SKILL_SHA, 'public skill-canonical md sha');
     console.log('verify OK', srv.base);
   } finally {
     srv.close();

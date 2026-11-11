@@ -4,7 +4,7 @@ import { withBase } from 'vitepress';
 
 const html = ref('');
 onMounted(async () => {
-  const text = await (await fetch(withBase('/data/skill-full.md'))).text();
+  const text = await (await fetch(withBase('/data/skill-full.txt'))).text();
   html.value = text;
 });
 </script>

@@ -12,7 +12,7 @@ const wb = useSharedWorkbench();
     <div class="am-ledger" role="application" aria-label="琥珀台账（原创示例）">
       <header class="am-head">
         <div class="am-brand">
-          <h2 class="am-title">{{ wb.bench.title }}</h2>
+          <h2 class="am-title">{{ wb.bench.workspace.name }}</h2>
           <p class="am-sub">基准 {{ wb.asOf }} · 示例数据</p>
         </div>
         <div class="am-kpi" aria-live="polite">

@@ -1,34 +1,69 @@
 {
-  "generatedAt": "2026-11-11T13:10:28.568Z",
+  "skillVersion": "1.1",
   "skillName": "多风格界面设计",
-  "skillSha256": "41e89eb8c6eda2b16afd9587d47722d39868d4a53e0ffd31e9bb02bc475ab61e",
+  "skillSha256": "9586f8cf47a7ad060a2ed44697de69718f626e277d00baf88315229f38f9b43d",
   "benchmarkId": "task-workbench-v1",
   "benchmarkSha256": "dc046a826677f98d990fb8afd00b17dee69d81e950f90dfc43b1edcc173e0d89",
-  "implementationSession": "single shared engineering session (Vue shells + shared composable); not three independent model calls",
-  "promptTextId": "task-workbench-v1-prompt",
+  "generatedAt": "2026-11-11T13:41:10.935Z",
+  "implementationSession": "v1.1 expansion: shared composable + facet counts + 8 published work combinations",
+  "publishedMatrixCount": 8,
   "calls": [
     {
-      "id": "call-shallow-precise",
+      "slug": "shallow-precise-list-detail",
       "style": "shallow-precise",
       "layout": "list-detail",
-      "sourcePath": "templates/task-workbench/shallow-precise/WorkbenchShallow.vue"
+      "benchmark": "task-workbench-v1"
     },
     {
-      "id": "call-dark-command",
+      "slug": "dark-command-list-detail",
       "style": "dark-command",
       "layout": "list-detail",
-      "sourcePath": "templates/task-workbench/dark-command/WorkbenchDark.vue"
+      "benchmark": "task-workbench-v1"
     },
     {
-      "id": "call-soft-system",
+      "slug": "soft-system-list-detail",
       "style": "soft-system",
       "layout": "list-detail",
-      "sourcePath": "templates/task-workbench/soft-system/WorkbenchSoft.vue"
+      "benchmark": "task-workbench-v1"
+    },
+    {
+      "slug": "editorial-sheet-list-detail",
+      "style": "editorial-sheet",
+      "layout": "list-detail",
+      "benchmark": "task-workbench-v1"
+    },
+    {
+      "slug": "amber-ledger-list-detail",
+      "style": "amber-ledger",
+      "layout": "list-detail",
+      "benchmark": "task-workbench-v1"
+    },
+    {
+      "slug": "shallow-precise-board-detail",
+      "style": "shallow-precise",
+      "layout": "board-detail",
+      "benchmark": "task-workbench-v1"
+    },
+    {
+      "slug": "shallow-precise-reading-split",
+      "style": "shallow-precise",
+      "layout": "reading-split",
+      "benchmark": "task-workbench-v1"
+    },
+    {
+      "slug": "shallow-precise-calendar-agenda",
+      "style": "shallow-precise",
+      "layout": "calendar-agenda",
+      "benchmark": "task-workbench-v1"
     }
   ],
+  "history": {
+    "v1_0": "implementation-trace-v1.0.json"
+  },
   "sharedLogicPath": "templates/task-workbench/shared/",
   "tests": {
     "verifyScript": "scripts/verify.mjs",
+    "facets": "scripts/verify-facets.mjs",
     "templateBuild": "scripts/package-templates.mjs"
   }
 }

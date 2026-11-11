@@ -1,0 +1,285 @@
+{
+  "batch": "design-expansion-batch2",
+  "scanned": {
+    "local_pages": 34,
+    "saved_posts": 811,
+    "complete": false,
+    "new_pagination": false,
+    "prior_coverage": "Previous selections used the first 98 posts plus six style references already locked as shallow-precise, dark-command, and soft-system. This batch looked beyond that set, using only already saved local text and media URLs.",
+    "candidates_viewed": 12,
+    "selected_count": 6,
+    "note": "This is not a full inventory of the 811 saved posts. Post created_at is not a like timestamp. Same-source repeats were not counted as extra items."
+  },
+  "refero": {
+    "status": "NO_SUBSCRIPTION previously known",
+    "action": "Did not retry live Refero style IDs and did not invent any. Direction locks come from actually read public stills, author text, and typography/color/anti-slop craft rules."
+  },
+  "rejected_after_view_summary": [
+    "A sage-tinted dashboard theme was rejected as a color reskin of a conventional light admin, not a new style.",
+    "Two light product/marketing workbench stills were too close to shallow-precise, or were pricing/modal marketing frames, not a new workbench language.",
+    "A polished light analytics window on an atmospheric field overlapped existing floating-shell plus light dashboard patterns; later collage pages in the same post were multi-product galleries and cannot lock a style.",
+    "A mobile wallet product was not used as a workbench style, because transferring it would change the shared task product."
+  ],
+  "axes": {
+    "visual_style": "Layout rhythm, density, morphology, color roles, and typographic material. Not a swatch swap.",
+    "layout": "Primary/secondary organization of the same product: list-detail, board-detail, reading-split, calendar-agenda, faceted-table.",
+    "typography": "Type scale, measure, metadata hierarchy, and reflow. Combinable with style and layout; not a fourth product.",
+    "capability": "Real, extractable interaction rules such as faceted filters. Not mixed up with style names.",
+    "scenario": "This batch remains the task workbench. A second shared scenario may be proposed later; it is not required for this implementation round."
+  },
+  "items": [
+    {
+      "id": "2110029627263709637",
+      "public_url": "https://x.com/op7418/status/2110029627263709637",
+      "author_handle": "op7418",
+      "post_created_at_utc": "2026-10-13T15:27:20.000Z",
+      "post_created_at_shanghai": "2026-10-13 23:27 Asia/Shanghai",
+      "evidence_images": [
+        "staging/refs/2110029627263709637-1.jpg",
+        "staging/refs/2110029627263709637-2.jpg",
+        "staging/refs/2110029627263709637-3.jpg",
+        "staging/refs/2110029627263709637-4.jpg"
+      ],
+      "image_read": true,
+      "axes": {
+        "visual_style": ["editorial-sheet"],
+        "layout": ["reading-split"],
+        "typography": ["measure-hierarchy"],
+        "capability": [],
+        "scenario": ["content-reading-page"]
+      },
+      "primary_use": "Primary lock for editorial-sheet, and source for the typography module (display vs body vs meta, measure, hairline sectioning, quote rules).",
+      "visible_structure": [
+        "Ivory/cream paper canvas with hairline rules instead of admin cards.",
+        "Masthead with small tracked meta (author, date, reading time) and a large high-contrast display title.",
+        "Body set to a readable measure, not edge-to-edge.",
+        "Numbered section titles, left-ruled block quotes, photo plus caption in a reading column."
+      ],
+      "borrow": "Typographic hierarchy, paper field, hairlines, controlled measure, section rhythm.",
+      "do_not_copy": "Article text, person photography, masthead labels tied to that article, or the reading-page product itself.",
+      "observation_limits": [
+        "These stills are long-form reading pages, not a task workbench. Transfer typography and sectioning, do not turn the shared benchmark into a magazine.",
+        "Photography is part of the source pages; the workbench has no photo assets and must not fake portraits. Use typography and rules, not stock faces.",
+        "Motion was not reviewed; no animation claims."
+      ],
+      "confidence": "high-for-static-typography"
+    },
+    {
+      "id": "2042482769427882400",
+      "public_url": "https://x.com/dingyi/status/2042482769427882400",
+      "author_handle": "dingyi",
+      "post_created_at_utc": "2026-04-10T06:00:14.000Z",
+      "post_created_at_shanghai": "2026-04-10 14:00 Asia/Shanghai",
+      "evidence_images": [
+        "staging/refs/2042482769427882400-1.jpg",
+        "staging/refs/2042482769427882400-2.jpg"
+      ],
+      "image_read": true,
+      "axes": {
+        "visual_style": ["amber-ledger"],
+        "layout": ["faceted-table"],
+        "typography": ["tabular-dense"],
+        "capability": [],
+        "scenario": ["instrument-dashboard"]
+      },
+      "primary_use": "Primary lock for amber-ledger, using still 1. Still 2 is only a density/accent boundary, not a product to reproduce.",
+      "visible_structure": [
+        "Still 1: warm-black canvas, gold/amber hairline grid, terse text tabs, dense numeric tables, a sharp magenta accent used on key amounts, small tabular figures.",
+        "Still 2: a tiled multi-window desktop with the same amber accent and dense monitors, plus decorative and branded elements."
+      ],
+      "borrow": "From still 1 only: instrument density, hairline partitions, typographic numbers, scarce sharp accent for key values, text-like navigation.",
+      "do_not_copy": "Product name, wordmark, model names, cost figures, pixel-game window, wallpaper, or a window-manager OS shell.",
+      "observation_limits": [
+        "Still 2 must not be used to turn the workbench into a desktop of floating app windows.",
+        "Do not replace the 10 tasks with token-cost or model metrics to make the style look denser.",
+        "Motion not reviewed."
+      ],
+      "confidence": "high-for-still-1-style; still-2-bounded"
+    },
+    {
+      "id": "2000550748694986783",
+      "public_url": "https://x.com/amirbaqian/status/2000550748694986783",
+      "author_handle": "amirbaqian",
+      "post_created_at_utc": "2025-12-15T12:57:21.000Z",
+      "post_created_at_shanghai": "2025-12-15 20:57 Asia/Shanghai",
+      "evidence_images": [
+        "staging/refs/2000550748694986783-1.jpg",
+        "staging/refs/2000550748694986783-2.jpg"
+      ],
+      "image_read": true,
+      "axes": {
+        "visual_style": [],
+        "layout": ["calendar-agenda"],
+        "typography": [],
+        "capability": [],
+        "scenario": ["schedule-workbench"]
+      },
+      "primary_use": "Primary evidence for the calendar-agenda layout module. Not a new visual style.",
+      "visible_structure": [
+        "Period chips for months, with one period filled/selected.",
+        "Week-row agenda: numbered week gutter, event tiles in the row, empty and weekend rows labeled.",
+        "Still 2 adds a side month grid plus an upcoming list, while keeping the same agenda as the primary column."
+      ],
+      "borrow": "Period chips, week-row agenda, optional side month grid and upcoming list, empty-row labeling.",
+      "do_not_copy": "School/exam copy, class numbers, pastel tile colors as a required style, avatar, or product chrome. Pastel event color is not the layout rule.",
+      "observation_limits": [
+        "The source is an exam calendar, not the shared task product. Only the organization pattern transfers.",
+        "A caption under the Exams heading refers to attendance; that inconsistency must not be copied.",
+        "No reviewed mobile reflow still in this post. Narrow-screen stacking is an acceptance rule, not an observed animation.",
+        "Motion not reviewed."
+      ],
+      "confidence": "high-for-static-calendar-layout"
+    },
+    {
+      "id": "2080136087641714900",
+      "public_url": "https://x.com/_toobug/status/2080136087641714900",
+      "author_handle": "_toobug",
+      "post_created_at_utc": "2026-07-23T03:41:05.000Z",
+      "post_created_at_shanghai": "2026-07-23 11:41 Asia/Shanghai",
+      "evidence_images": [
+        "staging/refs/2080136087641714900-1.jpg"
+      ],
+      "image_read": true,
+      "axes": {
+        "visual_style": [],
+        "layout": ["reading-split"],
+        "typography": ["measure-hierarchy"],
+        "capability": [],
+        "scenario": ["mail-reading"]
+      },
+      "primary_use": "Primary structural evidence for reading-split (nav | list | reading pane), plus typographic/alignment anti-patterns from the author's on-image critique.",
+      "visible_structure": [
+        "Three clear columns: folder/account nav, message index, typographic reading pane with a meeting header and long body.",
+        "Author annotations mark: clipped or overflowing chrome, labels cut off, icons visually larger or taller than text, same control style used for different meanings, regions without a divider, clipped shadow."
+      ],
+      "borrow": "Three-pane primary/secondary reading split; keep regions separated; keep label text fully visible; icons must not overpower text; do not use one control skin for two meanings without a second cue.",
+      "do_not_copy": "Mail product IA (compose, promotional tabs, provider lists), message content, or the red critique markup.",
+      "observation_limits": [
+        "This is a critique still, not a finished style lock. Use it for structure and failure modes.",
+        "The source scenario is mail. The shared implementation stays a task workbench.",
+        "Motion not reviewed."
+      ],
+      "confidence": "high-for-static-split-and-critique"
+    },
+    {
+      "id": "2073854411583959139",
+      "public_url": "https://x.com/mxkaske/status/2073854411583959139",
+      "author_handle": "mxkaske",
+      "post_created_at_utc": "2026-07-05T19:39:56.000Z",
+      "post_created_at_shanghai": "2026-07-06 03:39 Asia/Shanghai",
+      "evidence_images": [
+        "staging/refs/2073854411583959139-1.jpg"
+      ],
+      "image_read": true,
+      "axes": {
+        "visual_style": [],
+        "layout": ["faceted-table"],
+        "typography": ["tabular-dense"],
+        "capability": ["facet-query-filter"],
+        "scenario": ["observability-table"]
+      },
+      "primary_use": "Evidence for a denser tabular organization and for the facet-query-filter capability. Not a new visual style.",
+      "visible_structure": [
+        "Left facet column with counts, checkboxes, date and range controls.",
+        "Top query/search field, reset, and a result-count line.",
+        "A compact distribution strip above a dense table; one expanded row showing extra fields; typographic status values."
+      ],
+      "borrow": "Faceted filters with counts, visible result count, dense table as a list alternative, optional structured search tokens in addition to plain text.",
+      "do_not_copy": "Log rows, hosts, latency bars, brands, or a 2.9k-row histogram. Any distribution in our product must be computed from the 10 benchmark tasks only.",
+      "observation_limits": [
+        "Author text mentions a command palette and URL state; the palette itself is not visible in this still. A command palette is optional and must not invent unreviewed timings.",
+        "This is an observability table, not the shared task product.",
+        "Motion and infinite scroll were not reviewed."
+      ],
+      "confidence": "high-for-static-facets-and-table; palette-unseen"
+    },
+    {
+      "id": "2069073939326963883",
+      "public_url": "https://x.com/dingyi/status/2069073939326963883",
+      "author_handle": "dingyi",
+      "post_created_at_utc": "2026-06-22T15:04:03.000Z",
+      "post_created_at_shanghai": "2026-06-22 23:04 Asia/Shanghai",
+      "evidence_images": [
+        "staging/refs/2069073939326963883-1.jpg"
+      ],
+      "image_read": true,
+      "axes": {
+        "visual_style": ["editorial-sheet"],
+        "layout": ["reading-split"],
+        "typography": ["measure-hierarchy"],
+        "capability": ["status-encoding"],
+        "scenario": ["document-invoicing"]
+      },
+      "primary_use": "Secondary support for editorial-sheet and for treating the detail pane as a typographic document with labeled status. Not a third style, and not a complete IA lock.",
+      "visible_structure": [
+        "Marketing collage on a sage field: profile list, typographic invoice document, styling panel, status chips with icons and short names, document export still."
+      ],
+      "borrow": "Detail-as-document (title, meta rows, tabular figures), status as short name plus icon, paper-like reading surface.",
+      "do_not_copy": "Brand, invoice copy, sage marketing collage composition, or decorative 3D seal as a required motif.",
+      "observation_limits": [
+        "This is a feature collage, not one complete workbench information architecture.",
+        "Sage fill and window chrome are supporting clues, not enough alone to justify a separate style.",
+        "Motion not reviewed."
+      ],
+      "confidence": "medium-supporting-only"
+    }
+  ],
+  "proposed_additions": {
+    "styles": [
+      {
+        "id": "editorial-sheet",
+        "name_zh": "编辑纸页",
+        "evidence_item_ids": ["2110029627263709637", "2069073939326963883"],
+        "suitable_for_shared_workbench": true
+      },
+      {
+        "id": "amber-ledger",
+        "name_zh": "琥珀台账",
+        "evidence_item_ids": ["2042482769427882400"],
+        "suitable_for_shared_workbench": true
+      }
+    ],
+    "layouts": [
+      {
+        "id": "reading-split",
+        "name_zh": "阅读分栏",
+        "evidence_item_ids": ["2080136087641714900", "2110029627263709637", "2069073939326963883"],
+        "implement_this_round": true
+      },
+      {
+        "id": "calendar-agenda",
+        "name_zh": "日程议程",
+        "evidence_item_ids": ["2000550748694986783"],
+        "implement_this_round": true
+      },
+      {
+        "id": "faceted-table",
+        "name_zh": "分面密表",
+        "evidence_item_ids": ["2073854411583959139", "2042482769427882400"],
+        "implement_this_round": "optional-as-layout-or-as-list-density; prefer capability first if capacity is tight"
+      }
+    ],
+    "typography_modules": [
+      {
+        "id": "measure-hierarchy",
+        "name_zh": "字阶与行长",
+        "evidence_item_ids": ["2110029627263709637", "2080136087641714900", "2069073939326963883"],
+        "implement_this_round": true,
+        "note": "This is typography, not a visual style and not a component pack. It can be combined with any implemented style and layout."
+      }
+    ],
+    "capabilities": [
+      {
+        "id": "facet-query-filter",
+        "name_zh": "分面与查询筛选",
+        "evidence_item_ids": ["2073854411583959139"],
+        "implement_this_round": true
+      }
+    ],
+    "kept_existing": {
+      "styles": ["shallow-precise", "dark-command", "soft-system"],
+      "layouts": ["list-detail", "board-detail"],
+      "benchmark": "task-workbench-v1"
+    }
+  }
+}

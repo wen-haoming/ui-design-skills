@@ -6,47 +6,57 @@ import { execSync } from 'node:child_process';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url)) + '/..';
 const out = path.join(ROOT, 'docs/public/downloads');
-const styles = ['shallow-precise', 'dark-command', 'soft-system'];
-const component = {
-  'shallow-precise': 'WorkbenchShallow',
-  'dark-command': 'WorkbenchDark',
-  'soft-system': 'WorkbenchSoft',
+
+/** slug -> [styleDir, vueFile, exportName] */
+const PACKS = {
+  'shallow-precise-list-detail': ['shallow-precise', 'WorkbenchShallow.vue', 'WorkbenchShallow'],
+  'shallow-precise-board-detail': ['shallow-precise', 'WorkbenchShallowBoard.vue', 'WorkbenchShallowBoard'],
+  'shallow-precise-reading-split': ['shallow-precise', 'WorkbenchShallowReading.vue', 'WorkbenchShallowReading'],
+  'shallow-precise-calendar-agenda': ['shallow-precise', 'WorkbenchShallowCalendar.vue', 'WorkbenchShallowCalendar'],
+  'dark-command-list-detail': ['dark-command', 'WorkbenchDark.vue', 'WorkbenchDark'],
+  'soft-system-list-detail': ['soft-system', 'WorkbenchSoft.vue', 'WorkbenchSoft'],
+  'editorial-sheet-list-detail': ['editorial-sheet', 'WorkbenchEditorial.vue', 'WorkbenchEditorial'],
+  'amber-ledger-list-detail': ['amber-ledger', 'WorkbenchAmber.vue', 'WorkbenchAmber'],
 };
 
 fs.mkdirSync(out, { recursive: true });
 
-for (const id of styles) {
-  const dir = path.join(ROOT, '.template-staging', id);
+for (const [slug, [styleDir, vueFile, compName]] of Object.entries(PACKS)) {
+  const dir = path.join(ROOT, '.template-staging', slug);
   fs.rmSync(dir, { recursive: true, force: true });
   fs.mkdirSync(path.join(dir, 'src'), { recursive: true });
   fs.cpSync(path.join(ROOT, 'templates/task-workbench/shared'), path.join(dir, 'shared'), { recursive: true });
-  fs.copyFileSync(
-    path.join(ROOT, `templates/task-workbench/${id}/${component[id]}.vue`),
-    path.join(dir, 'src', `${component[id]}.vue`)
-  );
-  const vue = fs.readFileSync(path.join(dir, 'src', `${component[id]}.vue`), 'utf8').replace(
-    "'../shared/",
-    "'../shared/"
-  );
-  fs.writeFileSync(path.join(dir, 'src', `${component[id]}.vue`), vue);
+  const stylePath = path.join(ROOT, `templates/task-workbench/${styleDir}`);
+  if (styleDir === 'shallow-precise') {
+    for (const f of fs.readdirSync(stylePath)) {
+      if (f.endsWith('.vue')) {
+        fs.copyFileSync(path.join(stylePath, f), path.join(dir, 'src', f));
+      }
+    }
+  } else {
+    fs.copyFileSync(path.join(stylePath, vueFile), path.join(dir, 'src', vueFile));
+  }
   fs.writeFileSync(
     path.join(dir, 'src/App.vue'),
-    `<script setup lang="ts">\nimport ${component[id]} from './${component[id]}.vue';\n</script>\n<template><${component[id]} /></template>\n`
+    `<script setup lang="ts">\nimport ${compName} from './${vueFile}';\n</script>\n<template><${compName} /></template>\n`
   );
-  fs.writeFileSync(path.join(dir, 'src/main.ts'), `import { createApp } from 'vue';\nimport App from './App.vue';\ncreateApp(App).mount('#app');\n`);
   fs.writeFileSync(
-    path.join(dir, 'index.html'),
-    `<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>${id}</title></head><body><div id="app"></div><script type="module" src="/src/main.ts"></script></body></html>`
+    path.join(dir, 'src/main.ts'),
+    `import { createApp } from 'vue';\nimport App from './App.vue';\ncreateApp(App).mount('#app');\n`
   );
   fs.writeFileSync(
     path.join(dir, 'vite.config.js'),
-    `import { defineConfig } from 'vite';\nimport vue from '@vitejs/plugin-vue';\nexport default defineConfig({ plugins: [vue()] });\n`
+    `import { defineConfig } from 'vite';\nimport vue from '@vitejs/plugin-vue';\nimport path from 'node:path';\nexport default defineConfig({\n  plugins: [vue()],\n  resolve: {\n    alias: [{ find: '../shared', replacement: path.resolve(__dirname, 'shared') }],\n  },\n});\n`
+  );
+  fs.writeFileSync(
+    path.join(dir, 'index.html'),
+    `<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>${slug}</title></head><body><div id="app"></div><script type="module" src="/src/main.ts"></script></body></html>`
   );
   fs.writeFileSync(
     path.join(dir, 'package.json'),
     JSON.stringify(
       {
-        name: `task-workbench-${id}`,
+        name: `task-workbench-${slug}`,
         private: true,
         type: 'module',
         scripts: { dev: 'vite', build: 'vite build' },
@@ -57,9 +67,9 @@ for (const id of styles) {
       2
     )
   );
-  fs.writeFileSync(path.join(dir, 'README.md'), `# task-workbench-${id}\n\n\`\`\`bash\nnpm ci\nnpm run dev\n\`\`\`\n`);
-  console.log('packaging', id);
-  execSync(`cd "${dir}" && zip -rq "${path.join(out, `task-workbench-${id}.zip`)}" . -x node_modules/\\*`, { stdio: 'inherit' });
+  const zipName = `task-workbench-${slug}.zip`;
+  console.log('packaging', slug);
+  execSync(`cd "${dir}" && zip -rq "${path.join(out, zipName)}" . -x node_modules/\\*`, { stdio: 'inherit' });
   execSync('npm install && npm run build', { cwd: dir, stdio: 'inherit' });
 }
 

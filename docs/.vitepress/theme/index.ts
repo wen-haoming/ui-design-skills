@@ -4,7 +4,8 @@ import './custom.css';
 import './exhibition.css';
 import ExhibitionLayout from './ExhibitionLayout.vue';
 import GalleryHome from './components/gallery/GalleryHome.vue';
-import ComparePage from './components/gallery/ComparePage.vue';
+import CompareStylePage from './components/gallery/CompareStylePage.vue';
+import CompareLayoutPage from './components/gallery/CompareLayoutPage.vue';
 import WorkDetail from './components/gallery/WorkDetail.vue';
 import AggregateToolbar from './components/AggregateToolbar.vue';
 import SkillDoc from './components/SkillDoc.vue';
@@ -14,7 +15,8 @@ export default {
   Layout: ExhibitionLayout,
   enhanceApp({ app }) {
     app.component('GalleryHome', GalleryHome);
-    app.component('ComparePage', ComparePage);
+    app.component('CompareStylePage', CompareStylePage);
+    app.component('CompareLayoutPage', CompareLayoutPage);
     app.component('WorkDetail', WorkDetail);
     app.component('AggregateToolbar', AggregateToolbar);
     app.component('SkillDoc', SkillDoc);

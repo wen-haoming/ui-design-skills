@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-11-11T13:10:28.568Z",
+  "skillName": "多风格界面设计",
+  "skillSha256": "41e89eb8c6eda2b16afd9587d47722d39868d4a53e0ffd31e9bb02bc475ab61e",
+  "benchmarkId": "task-workbench-v1",
+  "benchmarkSha256": "dc046a826677f98d990fb8afd00b17dee69d81e950f90dfc43b1edcc173e0d89",
+  "implementationSession": "single shared engineering session (Vue shells + shared composable); not three independent model calls",
+  "promptTextId": "task-workbench-v1-prompt",
+  "calls": [
+    {
+      "id": "call-shallow-precise",
+      "style": "shallow-precise",
+      "layout": "list-detail",
+      "sourcePath": "templates/task-workbench/shallow-precise/WorkbenchShallow.vue"
+    },
+    {
+      "id": "call-dark-command",
+      "style": "dark-command",
+      "layout": "list-detail",
+      "sourcePath": "templates/task-workbench/dark-command/WorkbenchDark.vue"
+    },
+    {
+      "id": "call-soft-system",
+      "style": "soft-system",
+      "layout": "list-detail",
+      "sourcePath": "templates/task-workbench/soft-system/WorkbenchSoft.vue"
+    }
+  ],
+  "sharedLogicPath": "templates/task-workbench/shared/",
+  "tests": {
+    "verifyScript": "scripts/verify.mjs",
+    "templateBuild": "scripts/package-templates.mjs"
+  }
+}

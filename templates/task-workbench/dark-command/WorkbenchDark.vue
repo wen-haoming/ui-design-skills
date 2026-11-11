@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useSharedWorkbench } from '../shared/useWorkbench';
 import { dueLabel, isOverdue } from '../shared/workbench';
+import FilterBar from '../shared/FilterBar.vue';
 
 defineProps<{ compact?: boolean }>();
 const wb = useSharedWorkbench();
@@ -29,27 +30,7 @@ const wb = useSharedWorkbench();
       </nav>
       <div class="dc-command">
         <section class="dc-queue">
-          <div class="dc-queue-tools">
-            <input v-model="wb.filters.q" type="search" placeholder="搜索…" aria-label="搜索" />
-            <select v-model="wb.filters.status" aria-label="状态">
-              <option value="">状态</option>
-              <option v-for="s in wb.statuses" :key="s.id" :value="s.id">{{ s.label }}</option>
-            </select>
-            <select v-model="wb.filters.assignee" aria-label="负责人">
-              <option value="">负责人</option>
-              <option v-for="m in wb.members" :key="m.id" :value="m.id">{{ m.initials }}</option>
-            </select>
-            <select v-model="wb.filters.due" aria-label="日期">
-              <option value="all">日期</option>
-              <option value="overdue">过期</option>
-              <option value="today">今天</option>
-              <option value="week">7天</option>
-            </select>
-            <button type="button" :aria-pressed="wb.view === 'list'" @click="wb.view = 'list'">列表</button>
-            <button type="button" :aria-pressed="wb.view === 'board'" @click="wb.view = 'board'">看板</button>
-            <button type="button" class="dc-link" @click="wb.clearFilters">清空</button>
-            <button type="button" class="dc-link" @click="wb.resetBenchmark">重置</button>
-          </div>
+          <FilterBar class="dc-queue-tools" :wb="wb" />
           <p class="dc-live" role="status" aria-live="polite">{{ wb.live }}</p>
           <div v-if="!wb.filtered.length" class="dc-empty">无匹配。<button type="button" @click="wb.clearFilters">清空筛选</button></div>
           <ul v-else-if="wb.view === 'list'" class="dc-rows" role="list">

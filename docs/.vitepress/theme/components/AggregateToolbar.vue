@@ -8,7 +8,7 @@ const skillText = ref('');
 
 onMounted(async () => {
   live.value = '';
-  const res = await fetch(withBase('/data/skill-full.md'));
+  const res = await fetch(withBase('/data/skill-canonical.txt'));
   skillText.value = await res.text();
 });
 
