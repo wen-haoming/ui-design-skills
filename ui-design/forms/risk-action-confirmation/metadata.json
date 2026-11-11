@@ -1,0 +1,21 @@
+{
+  "name": "risk-action-confirmation",
+  "description": "设计涉及资金、权限、数据删除或批量变更的确认表单，让影响、限制与最终动作可核对。",
+  "category": "ui-design/forms",
+  "tags": [
+    "form",
+    "confirmation",
+    "high-risk"
+  ],
+  "source": {
+    "post": "https://x.com/nizamdesign/status/2119157942490370388",
+    "evidence": "已读退款确认静态图；跨业务与异步状态为扩展建议"
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/refund-dialog.jpg",
+      "kind": "third-party-reference",
+      "description": "退款确认弹窗参考图，非实现效果"
+    }
+  ]
+}

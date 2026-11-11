@@ -1,0 +1,21 @@
+{
+  "name": "optical-text-label-alignment",
+  "description": "审查紧凑列表、数据行和状态标签，以文字锚点组织对齐，同时保留可靠点击区与焦点提示。",
+  "category": "ui-design/typography",
+  "tags": [
+    "alignment",
+    "labels",
+    "layout"
+  ],
+  "source": {
+    "post": "https://x.com/shedsgns/status/2114582799072317610",
+    "evidence": "作者正文与已查看视频封面；视频未审，不推断动画"
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/optical-align-cover.jpg",
+      "kind": "third-party-video-cover",
+      "description": "光学对齐视频封面，视频未审"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+[
+  {
+    "path": "ui-design/workflow-builders/light-ai-workflow-builder",
+    "name": "light-ai-workflow-builder",
+    "title": "浅色 AI 工作流编辑器",
+    "description": "用于设计浅色、紧凑的 B2B SaaS 节点式工作流 UI，包含流程画布、节点配置、步骤搜索、AI 修改提案和发布确认；不用于营销落地页或纯聊天界面。",
+    "category": "ui-design/workflow-builders",
+    "source": "https://x.com/jubayer6910/status/2119054545489969346",
+    "screenshots": [
+      "ui-design/workflow-builders/light-ai-workflow-builder/screenshots/original.jpg"
+    ]
+  },
+  {
+    "path": "ui-design/forms/risk-action-confirmation",
+    "name": "risk-action-confirmation",
+    "title": "高风险操作确认表单",
+    "description": "设计涉及资金、权限、数据删除或批量变更的确认表单，让影响、限制与最终动作可核对。",
+    "category": "ui-design/forms",
+    "source": "https://x.com/nizamdesign/status/2119157942490370388",
+    "screenshots": [
+      "ui-design/forms/risk-action-confirmation/screenshots/refund-dialog.jpg"
+    ]
+  },
+  {
+    "path": "ui-design/navigation/responsive-document-navigation",
+    "name": "responsive-document-navigation",
+    "title": "响应式长文档导航",
+    "description": "设计桌面与移动端长文档的章节定位、溢出提示和可靠级联菜单，保持阅读位置与键盘可达。",
+    "category": "ui-design/navigation",
+    "source": [
+      "https://x.com/Kubai087/status/2116911391437443471",
+      "https://x.com/Kubai087/status/2114729985143677258"
+    ],
+    "screenshots": [
+      "ui-design/navigation/responsive-document-navigation/screenshots/document-nav-cover.jpg"
+    ],
+    "notes": "导航封面来自未审视频；级联菜单帖无可用截图，未伪造。"
+  },
+  {
+    "path": "ui-design/typography/optical-text-label-alignment",
+    "name": "optical-text-label-alignment",
+    "title": "紧凑界面文字与标签光学对齐",
+    "description": "审查紧凑列表、数据行和状态标签，以文字锚点组织对齐，同时保留可靠点击区与焦点提示。",
+    "category": "ui-design/typography",
+    "source": "https://x.com/shedsgns/status/2114582799072317610",
+    "screenshots": [
+      "ui-design/typography/optical-text-label-alignment/screenshots/optical-align-cover.jpg"
+    ],
+    "notes": "封面来自未审视频，不推断动画。"
+  },
+  {
+    "path": "ui-design/components/status-label-encoding",
+    "name": "status-label-encoding",
+    "title": "状态标签的清晰编码",
+    "description": "设计列表与看板中的状态标签，用简短文案、可区分图标和柔和底色同时说明状态，而不只靠颜色。",
+    "category": "ui-design/components",
+    "source": "https://x.com/AdityaSur11/status/2118734685207732631",
+    "screenshots": [
+      "ui-design/components/status-label-encoding/screenshots/status-labels.png"
+    ]
+  },
+  {
+    "path": "ui-design/dashboards/ops-command-center-hierarchy",
+    "name": "ops-command-center-hierarchy",
+    "title": "运营指挥中心的信息层次",
+    "description": "设计需要同时查看关键指标、异常和处理入口的运营总览，让范围、趋势和待办可在一屏内定位。",
+    "category": "ui-design/dashboards",
+    "source": "https://x.com/iliasconfidency/status/2118616144546603403",
+    "screenshots": [
+      "ui-design/dashboards/ops-command-center-hierarchy/screenshots/command-center.jpg"
+    ]
+  },
+  {
+    "path": "ui-design/marketing/marketing-product-ui-stills",
+    "name": "marketing-product-ui-stills",
+    "title": "营销页中的产品界面静帧",
+    "description": "为官网首屏、功能卡或 Bento 制作看起来像真实产品界面的静帧，控制信息密度、主次和裁切，避免一眼可辨的生成痕迹。",
+    "category": "ui-design/marketing",
+    "source": "https://x.com/Voxyz_ai/status/2116877927967326286",
+    "screenshots": [
+      "ui-design/marketing/marketing-product-ui-stills/screenshots/product-ui-collage.jpg"
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "name": "marketing-product-ui-stills",
+  "description": "为官网首屏、功能卡或 Bento 制作看起来像真实产品界面的静帧，控制信息密度、主次和裁切，避免一眼可辨的生成痕迹。",
+  "category": "ui-design/marketing",
+  "tags": [
+    "product-shots",
+    "landing",
+    "stills"
+  ],
+  "source": {
+    "post": "https://x.com/Voxyz_ai/status/2116877927967326286",
+    "evidence": "规则来自完整原文；配图为拼贴，不能证明构图规则已被该图示范。数量与比例仅为可选建议。"
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/product-ui-collage.jpg",
+      "kind": "third-party-reference",
+      "description": "产品界面拼贴参考图，非实现效果"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "light-ai-workflow-builder",
+  "description": "用于设计浅色、紧凑的 B2B SaaS 节点式工作流 UI，包含流程画布、节点配置、步骤搜索、AI 修改提案和发布确认；不用于营销落地页或纯聊天界面。",
+  "category": "ui-design/workflow-builders",
+  "tags": [
+    "B2B SaaS",
+    "AI",
+    "workflow-builder",
+    "node-editor",
+    "light-ui"
+  ],
+  "source": {
+    "author": "Jubayer (@jubayer6910)",
+    "post": "https://x.com/jubayer6910/status/2119054545489969346",
+    "image": "https://pbs.twimg.com/media/HWhkzh6asAAs8cr.jpg",
+    "original_tools": "unknown"
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/original.jpg",
+      "kind": "third-party-reference",
+      "description": "原帖四状态拼图"
+    },
+    {
+      "path": "screenshots/editor.png",
+      "kind": "third-party-reference-crop",
+      "description": "编辑器与节点配置"
+    },
+    {
+      "path": "screenshots/insert.png",
+      "kind": "third-party-reference-crop",
+      "description": "插入步骤搜索浮层"
+    },
+    {
+      "path": "screenshots/publish.png",
+      "kind": "third-party-reference-crop",
+      "description": "发布确认弹窗"
+    },
+    {
+      "path": "screenshots/proposal.png",
+      "kind": "third-party-reference-crop",
+      "description": "AI 修改提案"
+    }
+  ]
+}

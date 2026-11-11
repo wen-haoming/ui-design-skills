@@ -1,0 +1,21 @@
+{
+  "name": "ops-command-center-hierarchy",
+  "description": "设计需要同时查看关键指标、异常和处理入口的运营总览，让范围、趋势和待办可在一屏内定位。",
+  "category": "ui-design/dashboards",
+  "tags": [
+    "dashboard",
+    "ops",
+    "command-center"
+  ],
+  "source": {
+    "post": "https://x.com/iliasconfidency/status/2118616144546603403",
+    "evidence": "已读静态总览；未验证交互或实时刷新"
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/command-center.jpg",
+      "kind": "third-party-reference",
+      "description": "运营指挥中心参考图，非实现效果"
+    }
+  ]
+}

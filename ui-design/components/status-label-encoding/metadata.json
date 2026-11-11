@@ -1,0 +1,21 @@
+{
+  "name": "status-label-encoding",
+  "description": "设计列表与看板中的状态标签，用简短文案、可区分图标和柔和底色同时说明状态，而不只靠颜色。",
+  "category": "ui-design/components",
+  "tags": [
+    "status",
+    "badge",
+    "label"
+  ],
+  "source": {
+    "post": "https://x.com/AdityaSur11/status/2118734685207732631",
+    "evidence": "已读静态图；原文仅 Clean labels"
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/status-labels.png",
+      "kind": "third-party-reference",
+      "description": "状态标签参考图，非实现效果"
+    }
+  ]
+}

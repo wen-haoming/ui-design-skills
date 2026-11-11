@@ -1,0 +1,24 @@
+{
+  "name": "responsive-document-navigation",
+  "description": "设计桌面与移动端长文档的章节定位、溢出提示和可靠级联菜单，保持阅读位置与键盘可达。",
+  "category": "ui-design/navigation",
+  "tags": [
+    "documentation",
+    "navigation",
+    "cascade-menu"
+  ],
+  "source": {
+    "posts": [
+      "https://x.com/Kubai087/status/2116911391437443471",
+      "https://x.com/Kubai087/status/2114729985143677258"
+    ],
+    "evidence": "文档导航依据已读正文与视频封面；级联菜单仅有完整文字，无可用截图，未伪造。两则视频均未审。"
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/document-nav-cover.jpg",
+      "kind": "third-party-video-cover",
+      "description": "文档导航视频封面，视频未审，不能当作已验证交互"
+    }
+  ]
+}
