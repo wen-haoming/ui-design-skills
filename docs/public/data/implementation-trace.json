@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T12:50:22.292Z",
+  "generatedAt": "2026-11-11T12:57:35.717Z",
   "skillName": "多风格界面设计",
   "skillSha256": "41e89eb8c6eda2b16afd9587d47722d39868d4a53e0ffd31e9bb02bc475ab61e",
   "benchmarkId": "task-workbench-v1",
@@ -29,6 +29,6 @@
   "sharedLogicPath": "templates/task-workbench/shared/",
   "tests": {
     "verifyScript": "scripts/verify.mjs",
-    "templateBuild": "scripts/build-templates.mjs"
+    "templateBuild": "scripts/package-templates.mjs"
   }
 }

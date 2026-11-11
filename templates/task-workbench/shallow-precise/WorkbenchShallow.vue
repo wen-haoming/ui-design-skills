@@ -120,7 +120,7 @@ const wb = useSharedWorkbench();
             </select>
             <ul class="sp-activity">
               <li v-for="(a, i) in wb.selected.activity" :key="i">{{ a }}</li>
-              <li v-if="!wb.selected.activity.length">暂无活动（示例）</li>
+              <li v-if="!(wb.selected.activity?.length)">暂无活动（示例）</li>
             </ul>
           </aside>
         </div>

@@ -1,4 +1,4 @@
-import { ref, computed, watch } from 'vue';
+import { ref, computed, watch, reactive } from 'vue';
 import benchmarkData from './benchmark.json';
 import type { Benchmark, FilterState, Task } from './types';
 import {
@@ -11,7 +11,17 @@ import {
 } from './workbench';
 
 const bench = cloneBenchmark(benchmarkData as Benchmark);
-const seedTasks = () => cloneBenchmark(benchmarkData as Benchmark).tasks;
+
+function normalizeTasks(tasks: Task[]): Task[] {
+  return tasks.map((t) => ({
+    ...t,
+    assignees: t.assignees ?? [],
+    tags: t.tags ?? [],
+    activity: t.activity ?? [],
+  }));
+}
+
+const seedTasks = () => normalizeTasks(cloneBenchmark(benchmarkData as Benchmark).tasks);
 
 export function createWorkbench(sharedKey = 'default') {
   const tasks = ref<Task[]>(seedTasks());
@@ -63,7 +73,7 @@ export function createWorkbench(sharedKey = 'default') {
 
   const filterActive = computed(() => hasActiveFilters(filters.value));
 
-  return {
+  return reactive({
     bench,
     tasks,
     filtered,
@@ -83,7 +93,7 @@ export function createWorkbench(sharedKey = 'default') {
     resetBenchmark,
     clearFilters,
     sharedKey,
-  };
+  });
 }
 
 let sharedInstance: ReturnType<typeof createWorkbench> | null = null;

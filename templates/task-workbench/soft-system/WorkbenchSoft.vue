@@ -93,7 +93,7 @@ const groups = computed(() =>
             <h4 class="ss-log-head">活动</h4>
             <ul class="ss-log">
               <li v-for="(a, i) in wb.selected.activity" :key="i">{{ a }}</li>
-              <li v-if="!wb.selected.activity.length">（示例，暂无记录）</li>
+              <li v-if="!(wb.selected.activity?.length)">（示例，暂无记录）</li>
             </ul>
           </template>
           <p v-else class="ss-hint">从左侧选择任务</p>
