@@ -1,0 +1,93 @@
+#!/usr/bin/env node
+/**
+ * 从审阅稿生成公开 catalog-content.json（去掉内部字段与聊天协议）。
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { mergeVercelExpansion } from './merge-vercel-expansion.mjs';
+
+const ROOT = path.dirname(fileURLToPath(import.meta.url)) + '/..';
+const SRC =
+  process.env.CATALOG_SRC ||
+  path.join(ROOT, 'benchmarks/catalog-content.source.json');
+const OUT = path.join(ROOT, 'benchmarks/catalog-content.json');
+const PUBLIC = path.join(ROOT, 'docs/public/data/catalog-content.json');
+const THEME = path.join(ROOT, 'docs/.vitepress/theme/data/catalog-content.json');
+
+const ENRICH = JSON.parse(
+  fs.readFileSync(path.join(ROOT, 'benchmarks/catalog-display-enrichment.json'), 'utf8')
+);
+const STRIP_ITEM = [
+  'savedSkillId',
+  'methodReferenceId',
+  'sourcePackage',
+  'pinnedCommit',
+  'inventoryCategory',
+  'skillName',
+];
+const INTERNAL_CONSTRAINT =
+  /canonical|method-reference|examples\/|本机未能|sand-workflow|正式正文|公开包中的方法参考|savedSkillId|不要编造正式/i;
+
+function scrubCall(text) {
+  if (!text || typeof text !== 'string') return text;
+  if (/sand-workflow|grokbot:/i.test(text)) return '（内部协议已剥离；请使用方法名与公开说明。）';
+  return text;
+}
+
+function scrubItem(item) {
+  const out = { ...item };
+  for (const k of STRIP_ITEM) delete out[k];
+  out.callExample = scrubCall(out.callExample);
+  const methodEnrich = ENRICH.methods?.[out.id];
+  if (methodEnrich) {
+    if (methodEnrich.purpose) out.purpose = methodEnrich.purpose;
+    if (methodEnrich.inputOutput) out.inputOutput = methodEnrich.inputOutput;
+    if (methodEnrich.constraintsPublic?.length) {
+      out.knownConstraints = methodEnrich.constraintsPublic;
+    }
+  }
+  const workCall = ENRICH.worksSkillCall?.[out.id];
+  if (workCall) out.skillCallExample = workCall;
+  if (out.knownConstraints) {
+    out.knownConstraints = out.knownConstraints.filter((c) => !INTERNAL_CONSTRAINT.test(c));
+  }
+  if (out.kind === 'experienceable_work') {
+    out.knownConstraints = (out.knownConstraints ?? []).filter(
+      (c) => !/首屏封面须用|不能为新首页删除/.test(c)
+    );
+  }
+  return out;
+}
+
+const raw = JSON.parse(fs.readFileSync(SRC, 'utf8'));
+const pub = {
+  title: raw.title,
+  asOf: raw.asOf,
+  disclaimer:
+    '公开目录数据。各条「阅读与验证说明」写明本站读到哪一步；未实测不得标为已验证。聚合 Skill 线上仍为 v1.2。',
+  taskScenarios: raw.taskScenarios,
+  countingMethodology: raw.countingMethodology,
+  shareableUrlConvention: raw.shareableUrlConvention,
+  items: raw.items.map(scrubItem),
+};
+mergeVercelExpansion(pub);
+for (const it of pub.items) {
+  if (!it.knownConstraints?.length) continue;
+  const lic = `${it.license ?? ''} ${it.licenseNote ?? ''}`.trim();
+  it.knownConstraints = it.knownConstraints.filter((c) => {
+    const t = (c || '').trim();
+    if (!t) return false;
+    if (lic && t === lic) return false;
+    if (it.licenseNote && t === it.licenseNote) return false;
+    if (/^LICENSE.*AGPL.*README.*AGPL/i.test(t) && /agpl/i.test(lic)) return false;
+    return true;
+  });
+}
+fs.mkdirSync(path.dirname(OUT), { recursive: true });
+fs.writeFileSync(OUT, JSON.stringify(pub, null, 2));
+fs.mkdirSync(path.dirname(PUBLIC), { recursive: true });
+fs.writeFileSync(PUBLIC, JSON.stringify(pub, null, 2));
+fs.mkdirSync(path.dirname(THEME), { recursive: true });
+fs.writeFileSync(THEME, JSON.stringify(pub, null, 2));
+console.log('catalog-content.json', pub.items.length, 'items');

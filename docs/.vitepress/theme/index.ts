@@ -4,6 +4,8 @@ import './custom.css';
 import './exhibition.css';
 import ExhibitionLayout from './ExhibitionLayout.vue';
 import GalleryHome from './components/gallery/GalleryHome.vue';
+import EvidenceHome from './components/gallery/EvidenceHome.vue';
+import CatalogPage from './components/catalog/CatalogPage.vue';
 import CompareStylePage from './components/gallery/CompareStylePage.vue';
 import CompareLayoutPage from './components/gallery/CompareLayoutPage.vue';
 import WorkDetail from './components/gallery/WorkDetail.vue';
@@ -16,6 +18,8 @@ export default {
   Layout: ExhibitionLayout,
   enhanceApp({ app }) {
     app.component('GalleryHome', GalleryHome);
+    app.component('EvidenceHome', EvidenceHome);
+    app.component('CatalogPage', CatalogPage);
     app.component('CompareStylePage', CompareStylePage);
     app.component('CompareLayoutPage', CompareLayoutPage);
     app.component('WorkDetail', WorkDetail);

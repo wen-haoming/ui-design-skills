@@ -1,0 +1,78 @@
+{
+  "methods": {
+    "method:skill-1794579952207": {
+      "purpose": "把一份 Markdown 原文做成两套阅读页（纸色 / 墨色），文字逐块对照不变。适合长文交付前先锁定块结构，再渲染页面。",
+      "inputOutput": "输入：article.md 与块级标注（标题、段落、引用、列表的 ID）。输出：两套静态阅读 HTML，渲染后用正文块哈希或逐字列表验收，不改正文用词。",
+      "constraintsPublic": [
+        "未在你环境中跑通前，不要声称已通过块级验收。",
+        "若引用上游工具，遵守其许可证，不要把实现抄进自有仓库而未核对协议。"
+      ]
+    },
+    "method:skill-1794579952251": {
+      "purpose": "整理一批公开链接，写出可交付的简报：每条标明来源等级、链接与阅读日期，传闻与打不开页面不写死成事实。",
+      "inputOutput": "输入：你提供的 HTTPS 链接列表与主题。输出：分级简报（已核实 / 待核实 / 仅线索），附访问日期。",
+      "constraintsPublic": ["未逐条打开验证的链接，只能标为待核实。"]
+    },
+    "method:skill-1794579952307": {
+      "purpose": "把已完成的阅读页登记到作品索引，并用新正文生成同款 brief，便于后续「同款再排」而不重写规则。",
+      "inputOutput": "输入：成品页面路径（相对项目根）、登记字段、新正文 Markdown。输出：作品库条目 + 同款排版 brief。",
+      "constraintsPublic": ["登记路径须真实存在；brief 不得捏造未实现的版式。"]
+    },
+    "method:skill-1794579952343": {
+      "purpose": "需求已写清约束时，先做静态交接清单再动手：已给信息直接推进，只有关键缺口才提问。",
+      "inputOutput": "输入：带约束的需求说明。输出：一页交接清单（目标、已有输入、待确认项、风险），可附命令或路径。",
+      "constraintsPublic": ["涉及安全、审批、生产写库的操作仍需人工确认，清单不能代替审批。"]
+    },
+    "method:agent": {
+      "purpose": "为 Agent 设计可脚本化的 CLI：参数稳定、JSON 输出、明确退出码，便于 CI 与自动验收调用。",
+      "inputOutput": "输入：要自动化的任务边界。输出：子命令设计、--json 约定、dry-run 与错误码说明。",
+      "constraintsPublic": ["未在目标 shell 实测前不要宣称跨平台通过。"]
+    },
+    "method:skill-1794580028101": {
+      "purpose": "审查登录与凭据：argv/日志/仓库里是否泄漏 token，会话策略是否合理。",
+      "inputOutput": "输入：仓库或配置片段。输出：泄漏点列表、修复建议、可接受的登录流程草图。",
+      "constraintsPublic": ["只读审查；不把真实 secret 写进报告或剪贴板。"]
+    },
+    "method:skill-1794580028139": {
+      "purpose": "多角色协作时写清谁负责什么、如何交接，避免 Agent 与人类职责重叠或缺口。",
+      "inputOutput": "输入：团队角色与交付物。输出：职责表 + 交接检查项（输入/输出/验收）。",
+      "constraintsPublic": []
+    },
+    "method:skill-1794585588289": {
+      "purpose": "把工程约定收成可勾选的清单（目录结构、lint、测试、提交格式），新成员或 Agent 可逐项对照。",
+      "inputOutput": "输入：项目技术栈与现有脚本。输出：约定清单与对应命令（npm run …）。",
+      "constraintsPublic": ["清单须与仓库里真实存在的脚本一致，不杜撰命令。"]
+    },
+    "method:skill-1794585608162": {
+      "purpose": "写变更说明时绑证据：每条改动对应测试、截图或指标，方便审查而不是罗列 commit 标题。",
+      "inputOutput": "输入：diff 或功能列表。输出：证据型说明（做了什么、如何验证、未测项）。",
+      "constraintsPublic": ["未跑过的测试标为未测，不写「已通过」。"]
+    },
+    "method:skill-1794585632351": {
+      "purpose": "处理 GitHub issue/PR 前先只读调查，输出动作表并等人确认，避免未授权直接改仓库。",
+      "inputOutput": "输入：仓库与 issue/PR 编号。输出：现状摘要、建议动作表、需确认项。",
+      "constraintsPublic": ["未经确认不执行写操作。"]
+    },
+    "method:skill-1794585649741": {
+      "purpose": "复杂决策分轮提问：每轮只问阻塞项，收敛到可执行的共识，而不是一次抛出长问卷。",
+      "inputOutput": "输入：决策主题与已知约束。输出：分轮问题与最终共识记录。",
+      "constraintsPublic": []
+    },
+    "method:skill-1794585668865": {
+      "purpose": "怀疑某段实现多余时，用消融（去掉一段再测）验证简化是否仍满足需求。",
+      "inputOutput": "输入：待简化模块与验收标准。输出：消融实验记录与保留/删除建议。",
+      "constraintsPublic": ["消融后必须按原验收标准重测。"]
+    }
+  },
+  "worksSkillCall": {
+    "work:shallow-precise-list-detail": "使用技能「多风格界面设计」，style=shallow-precise，layout=list-detail，typography=measure-hierarchy，场景 task-workbench-v1，使用附带固定基准 task-workbench-v1，启用共同功能与分面筛选，交付可运行工作台与真实截图。",
+    "work:dark-command-list-detail": "使用技能「多风格界面设计」，style=dark-command，layout=list-detail，typography=measure-hierarchy，场景 task-workbench-v1，使用附带固定基准 task-workbench-v1，启用共同功能与分面筛选，交付可运行工作台与真实截图。",
+    "work:soft-system-list-detail": "使用技能「多风格界面设计」，style=soft-system，layout=list-detail，typography=measure-hierarchy，场景 task-workbench-v1，使用附带固定基准 task-workbench-v1，启用共同功能与分面筛选，交付可运行工作台与真实截图。",
+    "work:editorial-sheet-list-detail": "使用技能「多风格界面设计」，style=editorial-sheet，layout=list-detail，typography=measure-hierarchy，场景 task-workbench-v1，使用附带固定基准 task-workbench-v1，启用共同功能与分面筛选，交付可运行工作台与真实截图。",
+    "work:amber-ledger-list-detail": "使用技能「多风格界面设计」，style=amber-ledger，layout=list-detail，typography=measure-hierarchy，场景 task-workbench-v1，使用附带固定基准 task-workbench-v1，启用共同功能与分面筛选，交付可运行工作台与真实截图。",
+    "work:shallow-precise-board-detail": "使用技能「多风格界面设计」，style=shallow-precise，layout=board-detail，typography=measure-hierarchy，场景 task-workbench-v1，使用附带固定基准 task-workbench-v1，启用共同功能与分面筛选，交付可运行工作台与真实截图。",
+    "work:shallow-precise-reading-split": "使用技能「多风格界面设计」，style=shallow-precise，layout=reading-split，typography=measure-hierarchy，场景 task-workbench-v1，使用附带固定基准 task-workbench-v1，启用共同功能与分面筛选，交付可运行工作台与真实截图。",
+    "work:shallow-precise-calendar-agenda": "使用技能「多风格界面设计」，style=shallow-precise，layout=calendar-agenda，typography=measure-hierarchy，场景 task-workbench-v1，使用附带固定基准 task-workbench-v1，启用共同功能与分面筛选，交付可运行工作台与真实截图。",
+    "work:article-typesetting-v1": "使用技能「多风格界面设计」，scene=article-typesetting-v1，typography=reading-longform（或 editorial-magazine / compact-notes），使用附带固定文稿基准，只改排版，交付可运行排版页与真实截图。"
+  }
+}

@@ -85,6 +85,8 @@ async function httpCheck(base) {
     'compare.html',
     'compare-layout.html',
     'typography.html',
+    'catalog.html',
+    'data/catalog-content.json',
     'data/article-sample.md',
     'legacy/index.html',
     'data/skill-canonical.txt',

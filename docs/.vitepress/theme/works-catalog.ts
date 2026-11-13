@@ -149,6 +149,15 @@ export const publishedWorks: WorkEntry[] = [
 // Fix last entry download
 publishedWorks[7].download = '/downloads/task-workbench-shallow-precise-calendar-agenda.zip';
 
+export const typographyScene = {
+  slug: 'typography',
+  title: '示例文稿排版对照',
+  blurb: '同一篇固定文稿 · reading-longform / editorial-magazine / compact-notes',
+  cover: '/covers/article-typesetting-v1.png',
+  download: '/downloads/article-typesetting-v1.zip',
+  scene: 'article-typesetting-v1',
+};
+
 export function getWork(slug: string) {
   return publishedWorks.find((w) => w.slug === slug);
 }

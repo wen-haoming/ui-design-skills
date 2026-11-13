@@ -5,4 +5,6 @@ outline: false
 title: 多风格界面设计 · 展厅
 ---
 
-<GalleryHome />
+<ClientOnly>
+  <EvidenceHome />
+</ClientOnly>

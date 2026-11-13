@@ -7,19 +7,20 @@ const dir = fileURLToPath(new URL('.', import.meta.url));
 export default defineConfig({
   base: '/ui-design-skills/',
   lang: 'zh-CN',
-  title: '多风格界面设计',
+  title: '技能展厅',
   description: '聚合 Skill v1.2：工作台八组合 + 正文排版三预设 · article-typesetting-v1',
   cleanUrls: true,
   themeConfig: {
     logo: '/favicon.svg',
     nav: [
       { text: '展厅', link: '/' },
+      { text: '方法目录', link: '/catalog' },
       { text: '风格对照', link: '/compare' },
       { text: '布局对照', link: '/compare-layout' },
       { text: '文字排版', link: '/typography' },
       { text: 'Skill', link: '/skill' },
       { text: '来源附录', link: '/sources-attribution' },
-      { text: '遗留技能', link: '/legacy/' },
+      { text: '遗留', link: '/legacy/' },
     ],
     sidebar: {
       '/legacy/': [

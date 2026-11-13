@@ -1,0 +1,202 @@
+{
+  "kind": "SELF_AUTHORED_OFFLINE_TOY_CHECKS_ONLY",
+  "total": 37,
+  "passed": 37,
+  "failed": 0,
+  "upstream_sdks_run": false,
+  "network_requests": 0,
+  "live_deployments": 0,
+  "cases": [
+    {
+      "case": "url:https://example.com/doc",
+      "passed": true,
+      "scope": "自建URL主机/协议规则；不是渲染库测试"
+    },
+    {
+      "case": "url:https://docs.example.com/doc",
+      "passed": true,
+      "scope": "自建URL主机/协议规则；不是渲染库测试"
+    },
+    {
+      "case": "url:https://notexample.com",
+      "passed": true,
+      "scope": "自建URL主机/协议规则；不是渲染库测试"
+    },
+    {
+      "case": "url:https://example.com.evil.test",
+      "passed": true,
+      "scope": "自建URL主机/协议规则；不是渲染库测试"
+    },
+    {
+      "case": "url:https://example.com@evil.test",
+      "passed": true,
+      "scope": "自建URL主机/协议规则；不是渲染库测试"
+    },
+    {
+      "case": "url:javascript:alert(1)",
+      "passed": true,
+      "scope": "自建URL主机/协议规则；不是渲染库测试"
+    },
+    {
+      "case": "url:data:text/html,test",
+      "passed": true,
+      "scope": "自建URL主机/协议规则；不是渲染库测试"
+    },
+    {
+      "case": "url:http://example.com",
+      "passed": true,
+      "scope": "自建URL主机/协议规则；不是渲染库测试"
+    },
+    {
+      "case": "url:https://example.com:444",
+      "passed": true,
+      "scope": "自建URL主机/协议规则；不是渲染库测试"
+    },
+    {
+      "case": "url:https://example.com:bad",
+      "passed": true,
+      "scope": "自建URL主机/协议规则；不是渲染库测试"
+    },
+    {
+      "case": "裸endsWith反例确实误判",
+      "passed": true,
+      "scope": "仅Python字符串行为，揭示示例风险"
+    },
+    {
+      "case": "合法中文小树",
+      "passed": true,
+      "scope": "自建声明式schema"
+    },
+    {
+      "case": "未知组件",
+      "passed": true,
+      "scope": "自建声明式schema；不是上游validateSpec"
+    },
+    {
+      "case": "悬空引用",
+      "passed": true,
+      "scope": "自建声明式schema；不是上游validateSpec"
+    },
+    {
+      "case": "循环",
+      "passed": true,
+      "scope": "自建声明式schema；不是上游validateSpec"
+    },
+    {
+      "case": "不可达节点",
+      "passed": true,
+      "scope": "自建声明式schema；不是上游validateSpec"
+    },
+    {
+      "case": "共享节点非树",
+      "passed": true,
+      "scope": "自建声明式schema；不是上游validateSpec"
+    },
+    {
+      "case": "未声明动作",
+      "passed": true,
+      "scope": "自建声明式schema；不是上游validateSpec"
+    },
+    {
+      "case": "额外HTML字段",
+      "passed": true,
+      "scope": "自建声明式schema；不是上游validateSpec"
+    },
+    {
+      "case": "超长prop",
+      "passed": true,
+      "scope": "自建声明式schema；不是上游validateSpec"
+    },
+    {
+      "case": "超深树",
+      "passed": true,
+      "scope": "自建声明式schema；不是上游validateSpec"
+    },
+    {
+      "case": "畸形组件类型",
+      "passed": true,
+      "scope": "自建声明式schema；不是上游validateSpec"
+    },
+    {
+      "case": "畸形动作类型",
+      "passed": true,
+      "scope": "自建声明式schema；不是上游validateSpec"
+    },
+    {
+      "case": "无效patch保留上个有效快照",
+      "passed": true,
+      "scope": "自建提交逻辑，无流式renderer"
+    },
+    {
+      "case": "合法服务端主体与批准",
+      "passed": true,
+      "scope": "自建动作权限"
+    },
+    {
+      "case": "客户端approved不改变服务端主体",
+      "passed": true,
+      "scope": "自建动作权限"
+    },
+    {
+      "case": "旧版本批准拒绝",
+      "passed": true,
+      "scope": "自建动作权限"
+    },
+    {
+      "case": "拒绝不能执行",
+      "passed": true,
+      "scope": "自建动作权限"
+    },
+    {
+      "case": "首次逻辑效果",
+      "passed": true,
+      "scope": "串行自建账本"
+    },
+    {
+      "case": "重复业务意图复用回执",
+      "passed": true,
+      "scope": "串行自建账本"
+    },
+    {
+      "case": "同键不同payload冲突",
+      "passed": true,
+      "scope": "串行自建账本"
+    },
+    {
+      "case": "未批准不执行",
+      "passed": true,
+      "scope": "串行自建账本"
+    },
+    {
+      "case": "unknown不自动重发",
+      "passed": true,
+      "scope": "串行自建账本；不模拟远端真实提交"
+    },
+    {
+      "case": "可缓存流量分母命中率80%",
+      "passed": true,
+      "scope": "自建指标算术"
+    },
+    {
+      "case": "trace秒纳秒转毫秒",
+      "passed": true,
+      "scope": "自建单位换算"
+    },
+    {
+      "case": "有依赖请求不可并行",
+      "passed": true,
+      "scope": "两请求显式有向依赖示例，不做源码静态分析"
+    },
+    {
+      "case": "独立请求允许并行",
+      "passed": true,
+      "scope": "两请求显式有向依赖示例"
+    }
+  ],
+  "limitations": [
+    "无真实数据库/并发/事务/外部幂等窗口",
+    "无上游SDK安装、模型调用或平台API",
+    "无DOM/Markdown流式渲染/无障碍/E2E/性能测量",
+    "schema为自建子集，不是json-render validateSpec实现"
+  ]
+}
