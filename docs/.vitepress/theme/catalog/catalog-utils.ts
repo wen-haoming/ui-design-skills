@@ -27,6 +27,8 @@ export type CatalogItem = {
   reviewDepth?: string;
   demoRoutes?: string[];
   authorFilter?: string;
+  skillCallExample?: string;
+  licenseNote?: string;
 };
 
 export type CatalogData = {
@@ -46,6 +48,8 @@ export const kindLabels: Record<string, string> = {
   site_tool: '站点工具',
   index_only: '仅索引',
   install_warning: '使用警告',
+  do_not_install_here: '勿从此入口安装',
+  catalog_index_only: '仅索引',
   removed_upstream_index: '已移除·请用原上游',
   related_non_skill: '相关非 Skill 项目',
 };
@@ -74,6 +78,8 @@ export const defaultCatalogKinds = new Set([
   'install_warning',
   'removed_upstream_index',
   'saved_method_not_implemented_in_hall',
+  'do_not_install_here',
+  'catalog_index_only',
 ]);
 
 export function filterCatalogItems(
@@ -121,4 +127,24 @@ export function reviewDepthLabel(depth?: string) {
 
 export function routeToPath(route: string) {
   return route.replace(/^\/ui-design-skills/, '') || '/';
+}
+
+export function isUpstreamOfficial(item: CatalogItem) {
+  if (item.kind !== 'official_upstream' && item.kind !== 'do_not_install_here') return false;
+  const u = item.officialUrl || item.sourceUrl;
+  return Boolean(u && /^https:\/\//.test(u) && !/wen-haoming\.github\.io/i.test(u));
+}
+
+export function primaryPreviewPath(item: CatalogItem) {
+  if (item.demoRoutes?.length) return routeToPath(item.demoRoutes[0]);
+  return null;
+}
+
+export function licenseNeedsConfirm(item: CatalogItem) {
+  const lic = `${item.license ?? ''} ${item.licenseNote ?? ''}`.toLowerCase();
+  return /agpl|gpl|bsl|non.?commercial|待确认|readme.*mit.*(?!license file)/i.test(lic);
+}
+
+export function licenseConfirmText(item: CatalogItem) {
+  return '上游许可可能影响你是否能把实现并入自有仓库。使用前请阅读仓库 LICENSE 并向作者确认；本站不复制实现、不代为安装，也不提供法律意见。';
 }

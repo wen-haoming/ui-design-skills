@@ -14,6 +14,8 @@ import { filterCatalogItems, type CatalogItem } from '../../catalog/catalog-util
 
 const catalogItems = ref<CatalogItem[]>([]);
 onMounted(async () => {
+  readQuery();
+  filtersOpen.value = typeof window !== 'undefined' && window.innerWidth > 640;
   try {
     const res = await fetch(withBase('/data/catalog-content.json'));
     const data = await res.json();
@@ -27,6 +29,7 @@ const taskF = ref<'all' | 'ui-design' | 'typography'>('all');
 const styleF = ref<'all' | StyleId>('all');
 const layoutF = ref<'all' | LayoutId>('all');
 const capF = ref<'all' | string>('all');
+const filtersOpen = ref(false);
 const pickedSlug = ref<string | null>(null);
 
 function readQuery() {
@@ -53,7 +56,6 @@ function writeQuery() {
   window.history.replaceState({}, '', url.pathname + url.search);
 }
 
-onMounted(readQuery);
 watch([taskF, styleF, layoutF], writeQuery);
 
 const benchWorks = computed(() =>
@@ -101,11 +103,22 @@ function pick(slug: string) {
   <div class="evidence-home gallery-home">
     <header class="evidence-head">
       <h1>可体验作品</h1>
+      <p class="evidence-site-name">多风格界面设计 · 作品证据厅</p>
       <p class="evidence-lead">
-        固定基准上的真实界面与排版对照。8 个工作台组合 + 1 个文稿排版场景（三种预设）。方法目录在第二层。
+        8 个工作台组合 + 1 个文稿排版场景（三种 typography）。方法目录在第二层。
       </p>
     </header>
 
+    <button
+      type="button"
+      class="evidence-filter-toggle"
+      aria-expanded="filtersOpen"
+      @click="filtersOpen = !filtersOpen"
+    >
+      {{ filtersOpen ? '收起筛选' : '筛选作品' }}
+    </button>
+
+    <div class="evidence-filters" :class="{ 'is-mobile-collapsed': !filtersOpen }">
     <div class="gallery-toolbar" role="toolbar" aria-label="任务与分面">
       <span class="gallery-toolbar-label">任务</span>
       <button type="button" :aria-pressed="taskF === 'all'" @click="taskF = 'all'">全部</button>
@@ -120,16 +133,22 @@ function pick(slug: string) {
         {{ s.title }}
       </button>
     </div>
-    <div v-show="showBench" class="gallery-toolbar">
+    <div v-show="showBench" class="gallery-toolbar" aria-label="布局">
       <span class="gallery-toolbar-label">布局</span>
       <button type="button" :aria-pressed="layoutF === 'all'" @click="layoutF = 'all'">全部</button>
       <button v-for="(l, id) in layoutMeta" :key="id" type="button" :aria-pressed="layoutF === id" @click="layoutF = id">
         {{ l.title }}
       </button>
-      <button type="button" :aria-pressed="capF === 'all'" @click="capF = 'all'">能力</button>
-      <button type="button" :aria-pressed="capF === 'facet-query-filter'" @click="capF = 'facet-query-filter'">
-        分面筛选
-      </button>
+    </div>
+    <details v-show="showBench" class="evidence-capability">
+      <summary>能力（可选）</summary>
+      <div class="gallery-toolbar gallery-toolbar--inline">
+        <button type="button" :aria-pressed="capF === 'all'" @click="capF = 'all'">全部能力</button>
+        <button type="button" :aria-pressed="capF === 'facet-query-filter'" @click="capF = 'facet-query-filter'">
+          分面筛选
+        </button>
+      </div>
+    </details>
     </div>
 
     <p class="evidence-count" role="status">匹配 {{ visibleCount }} 个可体验项</p>

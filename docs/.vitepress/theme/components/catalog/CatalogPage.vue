@@ -6,6 +6,10 @@ import {
   kindLabels,
   reviewDepthLabel,
   routeToPath,
+  isUpstreamOfficial,
+  primaryPreviewPath,
+  licenseNeedsConfirm,
+  licenseConfirmText,
   type CatalogData,
   type CatalogItem,
 } from '../../catalog/catalog-utils';
@@ -76,6 +80,12 @@ watch(filtered, (list) => {
   if (!selectedId.value && list.length) selectedId.value = list[0].id;
 });
 
+watch(selectedId, async (id) => {
+  if (!id || typeof document === 'undefined') return;
+  await Promise.resolve();
+  document.querySelector('.catalog-list li.is-active')?.scrollIntoView({ block: 'nearest' });
+});
+
 function clearAll() {
   task.value = 'all';
   kind.value = 'all';
@@ -86,32 +96,52 @@ function clearAll() {
   live.value = '已清空筛选';
 }
 
-async function copyExample(item: CatalogItem) {
+function previewHref(item: CatalogItem) {
+  const p = primaryPreviewPath(item);
+  return p ? withBase(p) : null;
+}
+
+function previewAbsolute(item: CatalogItem) {
+  const p = previewHref(item);
+  if (!p || typeof window === 'undefined') return p;
+  return new URL(p, window.location.origin).href;
+}
+
+async function copyText(text: string, okMsg: string) {
   live.value = '';
-  const text = item.callExample ?? '';
   if (!text) {
-    live.value = '无可复制调用例';
+    live.value = '无内容可复制';
     return;
   }
   try {
     await navigator.clipboard.writeText(text);
-    live.value = `已复制：${item.name}`;
+    live.value = okMsg;
   } catch {
     live.value = '复制失败，请检查浏览器权限';
   }
 }
 
-function officialHref(item: CatalogItem) {
-  const u = item.officialUrl || item.sourceUrl;
-  if (!u || !/^https:\/\//.test(u)) return null;
-  return u;
+async function copyCallExample(item: CatalogItem) {
+  const text =
+    item.kind === 'experienceable_work' && item.skillCallExample
+      ? item.skillCallExample
+      : item.callExample ?? '';
+  await copyText(text, `已复制调用说明：${item.name}`);
 }
 
-const licenseWarn = (item: CatalogItem) => {
-  const lic = (item.license ?? '').toLowerCase();
-  if (/agpl|gpl|bsl|non.?commercial|不明|待确认|readme.*mit.*license/i.test(lic)) return true;
-  return (item.knownConstraints ?? []).some((c) => /许可|license|确认/i.test(c));
-};
+async function copyPreviewLink(item: CatalogItem) {
+  const url = previewAbsolute(item);
+  if (!url) {
+    live.value = '此条目无站内预览链接';
+    return;
+  }
+  await copyText(url, '已复制站内预览链接（非 Skill 调用参数）');
+}
+
+function upstreamHref(item: CatalogItem) {
+  if (!isUpstreamOfficial(item)) return null;
+  return item.officialUrl || item.sourceUrl;
+}
 </script>
 
 <template>
@@ -185,6 +215,9 @@ const licenseWarn = (item: CatalogItem) => {
       <article v-if="selected" class="catalog-detail" aria-label="详情">
         <h2>{{ selected.name }}</h2>
         <p class="catalog-kind-line">{{ kindLabels[selected.kind] ?? selected.kind }}</p>
+        <p v-if="licenseNeedsConfirm(selected)" class="catalog-license-banner" role="alert">
+          {{ licenseConfirmText(selected) }}
+        </p>
         <section>
           <h3>用途</h3>
           <p>{{ selected.purpose }}</p>
@@ -193,14 +226,35 @@ const licenseWarn = (item: CatalogItem) => {
           <h3>输入 / 输出</h3>
           <p>{{ selected.inputOutput }}</p>
         </section>
-        <section v-if="selected.callExample">
-          <h3>调用例</h3>
+        <section v-if="previewHref(selected)">
+          <h3>本站体验</h3>
+          <a
+            class="gallery-cta"
+            :href="previewHref(selected)!"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            打开完整交互预览
+          </a>
+          <p class="catalog-note">路径 {{ primaryPreviewPath(selected) }}</p>
+          <button type="button" class="gallery-cta gallery-cta--ghost" @click="copyPreviewLink(selected)">
+            复制预览链接
+          </button>
+        </section>
+        <section v-if="selected.skillCallExample || (selected.callExample && selected.kind !== 'experienceable_work')">
+          <h3>{{ selected.kind === 'experienceable_work' ? 'Skill 调用参数' : '调用例' }}</h3>
+          <pre class="catalog-call">{{ selected.skillCallExample || selected.callExample }}</pre>
+          <button type="button" class="gallery-cta" @click="copyCallExample(selected)">复制调用说明</button>
+        </section>
+        <section v-else-if="selected.callExample && selected.kind === 'experienceable_work'">
+          <h3>调用说明</h3>
           <pre class="catalog-call">{{ selected.callExample }}</pre>
-          <button type="button" class="gallery-cta" @click="copyExample(selected)">复制调用例</button>
+          <button type="button" class="gallery-cta" @click="copyCallExample(selected)">复制调用说明</button>
         </section>
         <section>
           <h3>许可与约束</h3>
-          <p :class="{ 'catalog-warn': licenseWarn(selected) }">{{ selected.license }}</p>
+          <p :class="{ 'catalog-warn': licenseNeedsConfirm(selected) }">{{ selected.license }}</p>
+          <p v-if="selected.licenseNote" class="catalog-note">{{ selected.licenseNote }}</p>
           <ul v-if="selected.knownConstraints?.length">
             <li v-for="(c, i) in selected.knownConstraints" :key="i">{{ c }}</li>
           </ul>
@@ -209,17 +263,9 @@ const licenseWarn = (item: CatalogItem) => {
           <h3>审阅说明</h3>
           <p>{{ reviewDepthLabel(selected.reviewDepth) }}</p>
         </section>
-        <section v-if="selected.demoRoutes?.length">
-          <h3>本站体验</h3>
-          <ul>
-            <li v-for="r in selected.demoRoutes" :key="r">
-              <a :href="withBase(routeToPath(r))">{{ routeToPath(r) }}</a>
-            </li>
-          </ul>
-        </section>
-        <section v-if="officialHref(selected)">
-          <h3>官方入口</h3>
-          <a :href="officialHref(selected)!" rel="noopener noreferrer" target="_blank">{{ officialHref(selected) }}</a>
+        <section v-if="upstreamHref(selected)">
+          <h3>官方上游</h3>
+          <a :href="upstreamHref(selected)!" rel="noopener noreferrer" target="_blank">{{ upstreamHref(selected) }}</a>
           <p class="catalog-note">本站不代为安装或执行上游包。</p>
         </section>
       </article>

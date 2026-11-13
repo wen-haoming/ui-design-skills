@@ -7,7 +7,7 @@ const dir = fileURLToPath(new URL('.', import.meta.url));
 export default defineConfig({
   base: '/ui-design-skills/',
   lang: 'zh-CN',
-  title: '多风格界面设计',
+  title: '技能展厅',
   description: '聚合 Skill v1.2：工作台八组合 + 正文排版三预设 · article-typesetting-v1',
   cleanUrls: true,
   themeConfig: {

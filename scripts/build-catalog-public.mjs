@@ -14,7 +14,19 @@ const OUT = path.join(ROOT, 'benchmarks/catalog-content.json');
 const PUBLIC = path.join(ROOT, 'docs/public/data/catalog-content.json');
 const THEME = path.join(ROOT, 'docs/.vitepress/theme/data/catalog-content.json');
 
-const STRIP_ITEM = ['savedSkillId', 'methodReferenceId', 'sourcePackage'];
+const ENRICH = JSON.parse(
+  fs.readFileSync(path.join(ROOT, 'benchmarks/catalog-display-enrichment.json'), 'utf8')
+);
+const STRIP_ITEM = [
+  'savedSkillId',
+  'methodReferenceId',
+  'sourcePackage',
+  'pinnedCommit',
+  'inventoryCategory',
+  'skillName',
+];
+const INTERNAL_CONSTRAINT =
+  /canonical|method-reference|examples\/|本机未能|sand-workflow|正式正文|公开包中的方法参考|savedSkillId|不要编造正式/i;
 
 function scrubCall(text) {
   if (!text || typeof text !== 'string') return text;
@@ -26,9 +38,22 @@ function scrubItem(item) {
   const out = { ...item };
   for (const k of STRIP_ITEM) delete out[k];
   out.callExample = scrubCall(out.callExample);
+  const methodEnrich = ENRICH.methods?.[out.id];
+  if (methodEnrich) {
+    if (methodEnrich.purpose) out.purpose = methodEnrich.purpose;
+    if (methodEnrich.inputOutput) out.inputOutput = methodEnrich.inputOutput;
+    if (methodEnrich.constraintsPublic?.length) {
+      out.knownConstraints = methodEnrich.constraintsPublic;
+    }
+  }
+  const workCall = ENRICH.worksSkillCall?.[out.id];
+  if (workCall) out.skillCallExample = workCall;
   if (out.knownConstraints) {
-    out.knownConstraints = out.knownConstraints.filter(
-      (c) => !/sand-workflow|grokbot/i.test(c)
+    out.knownConstraints = out.knownConstraints.filter((c) => !INTERNAL_CONSTRAINT.test(c));
+  }
+  if (out.kind === 'experienceable_work') {
+    out.knownConstraints = (out.knownConstraints ?? []).filter(
+      (c) => !/首屏封面须用|不能为新首页删除/.test(c)
     );
   }
   return out;

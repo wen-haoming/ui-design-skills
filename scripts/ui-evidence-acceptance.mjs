@@ -25,7 +25,7 @@ async function run() {
   const first = page.locator('.catalog-list li').first();
   await first.click();
   const item = await page.locator('.catalog-detail h2').innerText();
-  await page.getByRole('button', { name: '复制调用例' }).click();
+  await page.getByRole('button', { name: '复制调用说明' }).click();
   await page.waitForTimeout(500);
   let clip = '';
   try {
