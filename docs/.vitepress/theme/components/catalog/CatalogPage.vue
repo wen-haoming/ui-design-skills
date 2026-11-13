@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch, onMounted } from 'vue';
+import { ref, computed, watch, onMounted, nextTick } from 'vue';
 import { withBase } from 'vitepress';
 import {
   filterCatalogItems,
@@ -74,8 +74,27 @@ onMounted(async () => {
   const wantId = selectedId.value;
   const res = await fetch(withBase('/data/catalog-content.json'));
   data.value = await res.json();
-  if (wantId && data.value.items.some((i) => i.id === wantId)) {
+  const it = wantId ? data.value.items.find((i) => i.id === wantId) : null;
+  if (it) {
     selectedId.value = wantId;
+    await nextTick();
+    const inList = filterCatalogItems(data.value.items, {
+      task: task.value,
+      kind: kind.value,
+      author: author.value,
+      q: q.value,
+      includeNonSkill: showNonSkill.value,
+    }).some((i) => i.id === wantId);
+    if (!inList) {
+      task.value = 'all';
+      kind.value = 'all';
+      q.value = '';
+      if (it.authorFilter && it.authorFilter !== 'other') author.value = it.authorFilter;
+    }
+    await nextTick();
+    document
+      .querySelector(`.catalog-list li[data-entry-id="${CSS.escape(wantId)}"]`)
+      ?.scrollIntoView({ block: 'center' });
   }
 });
 watch([task, kind, author, q, selectedId, showNonSkill], syncToUrl);
@@ -196,17 +215,10 @@ function upstreamHref(item: CatalogItem) {
     <header class="catalog-head">
       <h1>方法与官方技能</h1>
       <p class="catalog-lead">
-        第二层目录：搜索与组合筛选。可体验作品请从<a :href="withBase('/')">展厅首页</a>进入。线上聚合 Skill 仍为
-        <strong>v1.2</strong>（<a :href="withBase('/skill')">正文</a>）；v1.3 仅作方法归纳参考。
+        第二层目录：搜索与组合筛选。可体验作品请从<a :href="withBase('/')">展厅首页</a>进入；聚合 Skill
+        <a :href="withBase('/skill')">v1.2 正文</a>未改版本。
       </p>
-      <p class="catalog-disclaimer">{{ data.disclaimer }}</p>
-      <p v-if="data.vercelExpansion" class="catalog-note catalog-vercel-count">
-        Vercel 研究包收录 {{ data.vercelExpansion.catalogRecordsInPackage }} 条目录记录（含原 20
-        精选），已与本站按 URL/名称合并；站点「官方上游技能」Vercel 行
-        {{ data.vercelExpansion.siteVercelUpstreamRowsAfterMerge }} 条，新增
-        {{ data.vercelExpansion.addedAsNewRows }} 行、并入既有
-        {{ data.vercelExpansion.mergedIntoExistingSiteRows }} 行。{{ data.vercelExpansion.note }}
-      </p>
+      <p class="catalog-disclaimer catalog-disclaimer--short">{{ data.disclaimer }}</p>
     </header>
 
     <section
@@ -214,10 +226,23 @@ function upstreamHref(item: CatalogItem) {
       class="catalog-vercel-hub"
       aria-label="Vercel 场景推荐"
     >
-      <h2 class="catalog-vercel-title">Vercel：按场景选一条 primary</h2>
-      <p class="catalog-note">
-        下列 8 项为任务入口建议；其余项用搜索与来源筛选。聚合 Skill 仍为 v1.2，本站不自动安装上游。
+      <h2 class="catalog-vercel-title">Vercel 技能索引</h2>
+      <p class="catalog-vercel-lead">
+        官方上游索引 <strong>{{ data.vercelExpansion.siteVercelUpstreamRowsAfterMerge }}</strong> 条 ·
+        <strong>8</strong> 个场景入口 · <strong>{{ data.vercelExpansion.focusInPackage }}</strong>
+        条重点精读；其余请用下方搜索与「来源 → Vercel」。本站不自动安装上游。
       </p>
+      <details v-if="data.vercelExpansion" class="catalog-vercel-meta">
+        <summary>合并与计数口径（折叠）</summary>
+        <p class="catalog-note">
+          研究包 {{ data.vercelExpansion.catalogRecordsInPackage }} 条目录记录（≠已安装技能数）；并入既有
+          {{ data.vercelExpansion.mergedIntoExistingSiteRows }} 行、新增
+          {{ data.vercelExpansion.addedAsNewRows }} 行。全站 catalog 共
+          {{ data.items.length }} 行（含作品、方法、歸藏/antfu 等，不是技能个数）。{{
+            data.vercelExpansion.note
+          }}
+        </p>
+      </details>
       <div class="catalog-vercel-chips">
         <button
           v-for="sid in SCENARIO_IDS"

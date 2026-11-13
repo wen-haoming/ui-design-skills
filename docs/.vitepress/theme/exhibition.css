@@ -850,8 +850,34 @@
 }
 
 .catalog-list li.is-active {
-  background: #f4f4f5;
+  background: #e8ecf8;
   border-left: 3px solid var(--evidence-accent);
+  box-shadow: inset 0 0 0 1px rgba(26, 92, 255, 0.12);
+}
+
+.catalog-list li.is-active .catalog-list-name {
+  font-weight: 650;
+  color: #18181b;
+}
+
+.catalog-disclaimer--short {
+  max-width: 720px;
+}
+
+.catalog-vercel-lead {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.catalog-vercel-meta {
+  margin: 0 0 10px;
+  font-size: 13px;
+}
+
+.catalog-vercel-meta summary {
+  cursor: pointer;
+  color: #52525b;
 }
 
 .catalog-list li.is-vercel-focus .catalog-list-name {
