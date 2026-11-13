@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { execSync } from 'node:child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -218,6 +219,7 @@ function publishStaticData() {
 }
 
 function main() {
+  execSync('node scripts/build-catalog-public.mjs', { cwd: ROOT, stdio: 'inherit' });
   if (fs.existsSync(OLD_SKILLS)) {
     fs.rmSync(OLD_SKILLS, { recursive: true, force: true });
   }

@@ -1,0 +1,3789 @@
+{
+  "title": "技能展厅前端内容（审阅稿）",
+  "asOf": "2026-11-14 01:34:13 Asia/Shanghai",
+  "disclaimer": "本文件整合已交付公开目录与线上展厅观察，供改版编码使用。不是新的官方技能包，也不把未精读包装条目写成已精读。公开页面不得使用 sand-workflow 或仅聊天可用的内部链接。",
+  "liveSite": {
+    "url": "https://wen-haoming.github.io/ui-design-skills/",
+    "observedVersionLabel": "技能作品展厅 v1.2",
+    "skillPageSha256": "00e4aabcd149f55bdf6160d5cc4df57ff7cf9f0591c3221cfcc8f5910f9e3c5f",
+    "skillPageNote": "该哈希与历史 v1.2 正文一致。聚合技能已保存 v1.3，但线上与仓库尚未更新。",
+    "repo": "https://github.com/wen-haoming/ui-design-skills",
+    "giteeMirror": "https://gitee.com/haomingla/ui-design-skills",
+    "giteePages": "paused",
+    "mustKeepRoutes": [
+      "/ui-design-skills/",
+      "/ui-design-skills/compare",
+      "/ui-design-skills/compare-layout",
+      "/ui-design-skills/typography",
+      "/ui-design-skills/skill",
+      "/ui-design-skills/sources-attribution",
+      "/ui-design-skills/legacy/",
+      "/ui-design-skills/works/shallow-precise-list-detail",
+      "/ui-design-skills/works/dark-command-list-detail",
+      "/ui-design-skills/works/soft-system-list-detail",
+      "/ui-design-skills/works/editorial-sheet-list-detail",
+      "/ui-design-skills/works/amber-ledger-list-detail",
+      "/ui-design-skills/works/shallow-precise-board-detail",
+      "/ui-design-skills/works/shallow-precise-reading-split",
+      "/ui-design-skills/works/shallow-precise-calendar-agenda",
+      "/ui-design-skills/downloads/article-typesetting-v1.zip",
+      "/ui-design-skills/data/article-sample.md"
+    ]
+  },
+  "taskScenarios": [
+    {
+      "id": "ui-design",
+      "label": "界面设计",
+      "when": "做或改产品界面、工作台、对照风格与布局、或查看可体验的原创示例。"
+    },
+    {
+      "id": "typography",
+      "label": "文字排版",
+      "when": "排长文、杂志风或紧凑笔记，或需要同一篇文稿切换排版。"
+    },
+    {
+      "id": "content-creation",
+      "label": "内容创作",
+      "when": "做演示稿、社交卡片、配图、海报、宣传片或中文润色。"
+    },
+    {
+      "id": "frontend-engineering",
+      "label": "前端工程",
+      "when": "处理 Vue、Vite、Vitest、pnpm、Nuxt 或工程约定、PR 与改动审查。"
+    },
+    {
+      "id": "tool-efficiency",
+      "label": "工具效率",
+      "when": "做命令行、登录与凭据策略、多角色交接、部署排障或桥接工作流。"
+    }
+  ],
+  "countingMethodology": {
+    "guizangSkillEntries": "19 条条目，含 dsh-guizang-design 插件与仅存在于插件中的 guizang-voice，不是 19 个独立仓库。来源：guizang-skills-inventory-public catalog.json。",
+    "antfuFirstParty": "16 个第一方技能：antfu/skills 手写 5 + 文档生成 9（含 README 表格未列出的 nitro）+ antfu-design + ghfs。口径以 antfu-skills-collection 为准，不以 inventory 包内过期的 antfuSkillsInRepoMain:13 覆盖。",
+    "antfuPackThirdParty": "skills-pack 策划的他人技能，collection.counts 为 24；catalog 数组里标成 curated_in_skills_pack 的是 21 条，另 3 条同名项（vue-best-practices、vue-router-best-practices、vue-testing-best-practices）已归入 formerly_vendored，去重后不重复计入第一方，也不把 21 与 24 直接相加。",
+    "antfuRemoved": "已从 antfu/skills 移除、应改用原上游的 8 个，仅作索引。",
+    "vercel": "精选 20 条。其中本资料写明完整阅读 SKILL.md 正文的记为 skill-md-body-read；其余多为 frontmatter 或官方表摘要，不得标成已精读。核心档 10 条与「完整阅读正文」并非自动等同，以各条 read_depth 为准。",
+    "selfAuthoredMethods": "已保存通用方法 12 条：歸藏研究后的 7 条 + antfu 研究后的 5 条。资料包草稿不是正式正文逐字版。",
+    "experienceableWorks": "可体验作品：8 个 task-workbench-v1 组合 + 1 个 article-typesetting-v1 场景（含 3 种 typography 预设）。对照页、Skill 正文页、来源附录、遗留技能是站点工具或遗留文档，不计入这 9 个作品。",
+    "designMethodsV13": "16 条方法 + 1 条可选强化，状态为已归纳未在展厅实现。权威是已保存 v1.3 技能，不是 local proposal。",
+    "noGrandTotal": "以上分母不同，不得加总成「全部技能共 N 条」对外展示，除非同时写明口径。"
+  },
+  "counts": {
+    "guizangSkillEntries": 19,
+    "antfuFirstPartySkills": 16,
+    "antfuHandwrittenInMainRepo": 5,
+    "antfuGeneratedIncludingNitro": 9,
+    "antfuFirstPartyOtherRepos": 2,
+    "antfuFormerlyVendoredIndex": 8,
+    "antfuSkillsPackThirdPartyInCountsField": 24,
+    "antfuSkillsPackThirdPartyRowsInCatalogArray": 21,
+    "antfuPackOverlapClassifiedAsRemoved": 3,
+    "vercelSelected": 20,
+    "vercelSkillMdBodyReadInThisDataset": 13,
+    "vercelNotCloseReadInThisDataset": 7,
+    "selfAuthoredSavedMethods": 12,
+    "experienceableWorkbenchCombos": 8,
+    "experienceableTypographyScene": 1,
+    "typographyPresetsInThatScene": 3,
+    "designMethodsSummarizedNotInHall": 16,
+    "designMethodOptionalReinforcement": 1,
+    "legacySkillPages": 7,
+    "relatedNonSkillProjectsNoted": 17,
+    "itemsInThisFile": 134
+  },
+  "shareableUrlConvention": {
+    "example": "/ui-design-skills/catalog?task=frontend-engineering&kind=official_upstream&q=vite",
+    "rules": [
+      "URL 必须反映任务、类型、关键词和当前条目，支持分享、刷新和浏览器后退。",
+      "清空筛选须有明确控件，并回到无参数或默认任务视图。",
+      "空结果须说明当前条件，并提供清空或放宽筛选。"
+    ]
+  },
+  "items": [
+    {
+      "id": "work:shallow-precise-list-detail",
+      "name": "浅色精密 · 列表详情",
+      "kind": "experienceable_work",
+      "category": "task-workbench-v1",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "窄侧栏、分面筛选与表格列表 + 详情。",
+      "inputOutput": "输入为固定基准 task-workbench-v1 的原创示例数据；输出为可交互工作台预览。完成状态以 status===done 计，不以 due 代替完成。",
+      "callExample": "打开站内作品页查看完整交互预览：/ui-design-skills/works/shallow-precise-list-detail",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/works/shallow-precise-list-detail",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/works/shallow-precise-list-detail",
+      "license": "站内原创示例；第三方参考见 /sources-attribution，不得当封面。",
+      "knownConstraints": [
+        "线上展厅与仓库仍为 v1.2 组合，不能为新首页删除这些入口或改基准数据。",
+        "首屏封面须用站内真实渲染，不得用第三方静帧充封面。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/works/shallow-precise-list-detail"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "work:dark-command-list-detail",
+      "name": "深色指挥台 · 列表详情",
+      "kind": "experienceable_work",
+      "category": "task-workbench-v1",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "指挥 KPI、任务队列与上下文分栏。",
+      "inputOutput": "输入为固定基准 task-workbench-v1 的原创示例数据；输出为可交互工作台预览。完成状态以 status===done 计，不以 due 代替完成。",
+      "callExample": "打开站内作品页查看完整交互预览：/ui-design-skills/works/dark-command-list-detail",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/works/dark-command-list-detail",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/works/dark-command-list-detail",
+      "license": "站内原创示例；第三方参考见 /sources-attribution，不得当封面。",
+      "knownConstraints": [
+        "线上展厅与仓库仍为 v1.2 组合，不能为新首页删除这些入口或改基准数据。",
+        "首屏封面须用站内真实渲染，不得用第三方静帧充封面。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/works/dark-command-list-detail"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "work:soft-system-list-detail",
+      "name": "浮动系统层 · 列表详情",
+      "kind": "experienceable_work",
+      "category": "task-workbench-v1",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "系统窗 + 分组索引与会话详情。",
+      "inputOutput": "输入为固定基准 task-workbench-v1 的原创示例数据；输出为可交互工作台预览。完成状态以 status===done 计，不以 due 代替完成。",
+      "callExample": "打开站内作品页查看完整交互预览：/ui-design-skills/works/soft-system-list-detail",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/works/soft-system-list-detail",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/works/soft-system-list-detail",
+      "license": "站内原创示例；第三方参考见 /sources-attribution，不得当封面。",
+      "knownConstraints": [
+        "线上展厅与仓库仍为 v1.2 组合，不能为新首页删除这些入口或改基准数据。",
+        "首屏封面须用站内真实渲染，不得用第三方静帧充封面。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/works/soft-system-list-detail"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "work:editorial-sheet-list-detail",
+      "name": "编辑纸页 · 列表详情",
+      "kind": "experienceable_work",
+      "category": "task-workbench-v1",
+      "taskScenarios": [
+        "ui-design",
+        "typography"
+      ],
+      "purpose": "纸色发丝线、阅读行长与元数据分层。",
+      "inputOutput": "输入为固定基准 task-workbench-v1 的原创示例数据；输出为可交互工作台预览。完成状态以 status===done 计，不以 due 代替完成。",
+      "callExample": "打开站内作品页查看完整交互预览：/ui-design-skills/works/editorial-sheet-list-detail",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/works/editorial-sheet-list-detail",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/works/editorial-sheet-list-detail",
+      "license": "站内原创示例；第三方参考见 /sources-attribution，不得当封面。",
+      "knownConstraints": [
+        "线上展厅与仓库仍为 v1.2 组合，不能为新首页删除这些入口或改基准数据。",
+        "首屏封面须用站内真实渲染，不得用第三方静帧充封面。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/works/editorial-sheet-list-detail"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "work:amber-ledger-list-detail",
+      "name": "琥珀台账 · 列表详情",
+      "kind": "experienceable_work",
+      "category": "task-workbench-v1",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "暖黑发丝格、密表数字对位与分面栏。",
+      "inputOutput": "输入为固定基准 task-workbench-v1 的原创示例数据；输出为可交互工作台预览。完成状态以 status===done 计，不以 due 代替完成。",
+      "callExample": "打开站内作品页查看完整交互预览：/ui-design-skills/works/amber-ledger-list-detail",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/works/amber-ledger-list-detail",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/works/amber-ledger-list-detail",
+      "license": "站内原创示例；第三方参考见 /sources-attribution，不得当封面。",
+      "knownConstraints": [
+        "线上展厅与仓库仍为 v1.2 组合，不能为新首页删除这些入口或改基准数据。",
+        "首屏封面须用站内真实渲染，不得用第三方静帧充封面。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/works/amber-ledger-list-detail"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "work:shallow-precise-board-detail",
+      "name": "浅色精密 · 看板详情",
+      "kind": "experienceable_work",
+      "category": "task-workbench-v1",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "默认看板列 + 共享详情与会话。",
+      "inputOutput": "输入为固定基准 task-workbench-v1 的原创示例数据；输出为可交互工作台预览。完成状态以 status===done 计，不以 due 代替完成。",
+      "callExample": "打开站内作品页查看完整交互预览：/ui-design-skills/works/shallow-precise-board-detail",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/works/shallow-precise-board-detail",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/works/shallow-precise-board-detail",
+      "license": "站内原创示例；第三方参考见 /sources-attribution，不得当封面。",
+      "knownConstraints": [
+        "线上展厅与仓库仍为 v1.2 组合，不能为新首页删除这些入口或改基准数据。",
+        "首屏封面须用站内真实渲染，不得用第三方静帧充封面。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/works/shallow-precise-board-detail"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "work:shallow-precise-reading-split",
+      "name": "浅色精密 · 阅读分栏",
+      "kind": "experienceable_work",
+      "category": "task-workbench-v1",
+      "taskScenarios": [
+        "ui-design",
+        "typography"
+      ],
+      "purpose": "索引 | 阅读栏，正文最大 42rem。",
+      "inputOutput": "输入为固定基准 task-workbench-v1 的原创示例数据；输出为可交互工作台预览。完成状态以 status===done 计，不以 due 代替完成。",
+      "callExample": "打开站内作品页查看完整交互预览：/ui-design-skills/works/shallow-precise-reading-split",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/works/shallow-precise-reading-split",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/works/shallow-precise-reading-split",
+      "license": "站内原创示例；第三方参考见 /sources-attribution，不得当封面。",
+      "knownConstraints": [
+        "线上展厅与仓库仍为 v1.2 组合，不能为新首页删除这些入口或改基准数据。",
+        "首屏封面须用站内真实渲染，不得用第三方静帧充封面。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/works/shallow-precise-reading-split"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "work:shallow-precise-calendar-agenda",
+      "name": "浅色精密 · 日程议程",
+      "kind": "experienceable_work",
+      "category": "task-workbench-v1",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "月份芯片 + 周行议程（仅 due），空槽保留。",
+      "inputOutput": "输入为固定基准 task-workbench-v1 的原创示例数据；输出为可交互工作台预览。完成状态以 status===done 计，不以 due 代替完成。",
+      "callExample": "打开站内作品页查看完整交互预览：/ui-design-skills/works/shallow-precise-calendar-agenda",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/works/shallow-precise-calendar-agenda",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/works/shallow-precise-calendar-agenda",
+      "license": "站内原创示例；第三方参考见 /sources-attribution，不得当封面。",
+      "knownConstraints": [
+        "线上展厅与仓库仍为 v1.2 组合，不能为新首页删除这些入口或改基准数据。",
+        "首屏封面须用站内真实渲染，不得用第三方静帧充封面。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/works/shallow-precise-calendar-agenda"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "work:article-typesetting-v1",
+      "name": "文字排版体验（同一篇文稿，三种 typography）",
+      "kind": "experienceable_work",
+      "category": "article-typesetting-v1",
+      "taskScenarios": [
+        "typography"
+      ],
+      "purpose": "同一篇固定示例文稿只切换 typography：reading-longform、editorial-magazine、compact-notes。与工作台八组合独立。",
+      "inputOutput": "输入为固定示例文稿 article-typesetting-v1；输出为三种排版预览。字体通过 Google Fonts 加载 Noto Serif SC / Noto Sans SC（SIL OFL），离线回退系统字体。未捆绑商业字体。",
+      "callExample": "打开 /ui-design-skills/typography，在「长文阅读 / 编辑杂志 / 紧凑知识笔记」之间切换。复制文稿与复制 Skill 正文是两个不同动作，不要混用。",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/typography",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/typography",
+      "license": "站内原创示例文稿；字体为 SIL OFL。",
+      "knownConstraints": [
+        "文稿 SHA256（markdown）12bb44a66c7b5eaac174e7bf9b53e519fe88f99931896dd835583e88c6e03497 须保持不变。",
+        "可下载排版模板包与示例文稿，但不要做成未实现的虚假下载。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/typography"
+      ],
+      "variants": [
+        {
+          "id": "reading-longform",
+          "label": "长文阅读"
+        },
+        {
+          "id": "editorial-magazine",
+          "label": "编辑杂志"
+        },
+        {
+          "id": "compact-notes",
+          "label": "紧凑知识笔记"
+        }
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "site:compare",
+      "name": "风格对照",
+      "kind": "site_tool",
+      "category": "existing-site",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "固定 list-detail，仅改 style；同一 benchmark、会话与分面筛选。",
+      "inputOutput": "站内对照或说明页，不是新的可执行技能。",
+      "callExample": "打开 /ui-design-skills/compare",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/compare",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/compare",
+      "license": "站内页面。",
+      "knownConstraints": [
+        "编码时必须保留这些路由。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/compare"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "site:compare-layout",
+      "name": "布局对照",
+      "kind": "site_tool",
+      "category": "existing-site",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "固定 shallow-precise，仅改 layout；数据与分面能力不变。",
+      "inputOutput": "站内对照或说明页，不是新的可执行技能。",
+      "callExample": "打开 /ui-design-skills/compare-layout",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/compare-layout",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/compare-layout",
+      "license": "站内页面。",
+      "knownConstraints": [
+        "编码时必须保留这些路由。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/compare-layout"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "site:skill-v1.2",
+      "name": "聚合 Skill 正文（展厅现为 v1.2）",
+      "kind": "site_tool",
+      "category": "existing-site",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "当前页声明与仓库 SKILL.md 一致，SHA256 00e4aabcd149f55bdf6160d5cc4df57ff7cf9f0591c3221cfcc8f5910f9e3c5f。已保存聚合技能为 v1.3，但线上/仓库尚未更新；不得把未上线的 proposal 当作本页正文。",
+      "inputOutput": "站内对照或说明页，不是新的可执行技能。",
+      "callExample": "打开 /ui-design-skills/skill",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/skill",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/skill",
+      "license": "站内页面。",
+      "knownConstraints": [
+        "编码时必须保留这些路由。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/skill"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "site:sources",
+      "name": "来源附录",
+      "kind": "site_tool",
+      "category": "existing-site",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "只列本批选中的公开原帖，不能当网站封面，也不能冒称作实现。",
+      "inputOutput": "站内对照或说明页，不是新的可执行技能。",
+      "callExample": "打开 /ui-design-skills/sources-attribution",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/sources-attribution",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/sources-attribution",
+      "license": "站内页面。",
+      "knownConstraints": [
+        "编码时必须保留这些路由。"
+      ],
+      "reviewDepth": "live-site-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/sources-attribution"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "legacy:light-ai-workflow-builder",
+      "name": "浅色 AI 工作流编辑器",
+      "kind": "legacy_skill_page",
+      "category": "legacy",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "仓库仍保留的遗留单项技能说明。公开展厅首页不再以此为主入口，但路由须保留。",
+      "inputOutput": "文档页，不是本轮新作品。",
+      "callExample": "打开 /ui-design-skills/legacy/skills/light-ai-workflow-builder",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/light-ai-workflow-builder",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/light-ai-workflow-builder",
+      "license": "见各页及来源附录。",
+      "knownConstraints": [
+        "版权与第三方参考图说明不变；第三方参考图不得当新站封面。"
+      ],
+      "reviewDepth": "live-site-index-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/legacy/skills/light-ai-workflow-builder",
+        "/ui-design-skills/legacy/"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "legacy:risk-action-confirmation",
+      "name": "高风险操作确认表单",
+      "kind": "legacy_skill_page",
+      "category": "legacy",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "仓库仍保留的遗留单项技能说明。公开展厅首页不再以此为主入口，但路由须保留。",
+      "inputOutput": "文档页，不是本轮新作品。",
+      "callExample": "打开 /ui-design-skills/legacy/skills/risk-action-confirmation",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/risk-action-confirmation",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/risk-action-confirmation",
+      "license": "见各页及来源附录。",
+      "knownConstraints": [
+        "版权与第三方参考图说明不变；第三方参考图不得当新站封面。"
+      ],
+      "reviewDepth": "live-site-index-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/legacy/skills/risk-action-confirmation",
+        "/ui-design-skills/legacy/"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "legacy:responsive-document-navigation",
+      "name": "响应式长文档导航",
+      "kind": "legacy_skill_page",
+      "category": "legacy",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "仓库仍保留的遗留单项技能说明。公开展厅首页不再以此为主入口，但路由须保留。",
+      "inputOutput": "文档页，不是本轮新作品。",
+      "callExample": "打开 /ui-design-skills/legacy/skills/responsive-document-navigation",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/responsive-document-navigation",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/responsive-document-navigation",
+      "license": "见各页及来源附录。",
+      "knownConstraints": [
+        "版权与第三方参考图说明不变；第三方参考图不得当新站封面。"
+      ],
+      "reviewDepth": "live-site-index-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/legacy/skills/responsive-document-navigation",
+        "/ui-design-skills/legacy/"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "legacy:optical-text-label-alignment",
+      "name": "紧凑界面文字与标签光学对齐",
+      "kind": "legacy_skill_page",
+      "category": "legacy",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "仓库仍保留的遗留单项技能说明。公开展厅首页不再以此为主入口，但路由须保留。",
+      "inputOutput": "文档页，不是本轮新作品。",
+      "callExample": "打开 /ui-design-skills/legacy/skills/optical-text-label-alignment",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/optical-text-label-alignment",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/optical-text-label-alignment",
+      "license": "见各页及来源附录。",
+      "knownConstraints": [
+        "版权与第三方参考图说明不变；第三方参考图不得当新站封面。"
+      ],
+      "reviewDepth": "live-site-index-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/legacy/skills/optical-text-label-alignment",
+        "/ui-design-skills/legacy/"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "legacy:status-label-encoding",
+      "name": "状态标签的清晰编码",
+      "kind": "legacy_skill_page",
+      "category": "legacy",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "仓库仍保留的遗留单项技能说明。公开展厅首页不再以此为主入口，但路由须保留。",
+      "inputOutput": "文档页，不是本轮新作品。",
+      "callExample": "打开 /ui-design-skills/legacy/skills/status-label-encoding",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/status-label-encoding",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/status-label-encoding",
+      "license": "见各页及来源附录。",
+      "knownConstraints": [
+        "版权与第三方参考图说明不变；第三方参考图不得当新站封面。"
+      ],
+      "reviewDepth": "live-site-index-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/legacy/skills/status-label-encoding",
+        "/ui-design-skills/legacy/"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "legacy:ops-command-center-hierarchy",
+      "name": "运营指挥中心的信息层次",
+      "kind": "legacy_skill_page",
+      "category": "legacy",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "仓库仍保留的遗留单项技能说明。公开展厅首页不再以此为主入口，但路由须保留。",
+      "inputOutput": "文档页，不是本轮新作品。",
+      "callExample": "打开 /ui-design-skills/legacy/skills/ops-command-center-hierarchy",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/ops-command-center-hierarchy",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/ops-command-center-hierarchy",
+      "license": "见各页及来源附录。",
+      "knownConstraints": [
+        "版权与第三方参考图说明不变；第三方参考图不得当新站封面。"
+      ],
+      "reviewDepth": "live-site-index-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/legacy/skills/ops-command-center-hierarchy",
+        "/ui-design-skills/legacy/"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "legacy:marketing-product-ui-stills",
+      "name": "营销页中的产品界面静帧",
+      "kind": "legacy_skill_page",
+      "category": "legacy",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "仓库仍保留的遗留单项技能说明。公开展厅首页不再以此为主入口，但路由须保留。",
+      "inputOutput": "文档页，不是本轮新作品。",
+      "callExample": "打开 /ui-design-skills/legacy/skills/marketing-product-ui-stills",
+      "sourceUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/marketing-product-ui-stills",
+      "officialUrl": "https://wen-haoming.github.io/ui-design-skills/legacy/skills/marketing-product-ui-stills",
+      "license": "见各页及来源附录。",
+      "knownConstraints": [
+        "版权与第三方参考图说明不变；第三方参考图不得当新站封面。"
+      ],
+      "reviewDepth": "live-site-index-observed-2026-11-14",
+      "demoRoutes": [
+        "/ui-design-skills/legacy/skills/marketing-product-ui-stills",
+        "/ui-design-skills/legacy/"
+      ],
+      "sourcePackage": "live-site-v1.2",
+      "authorFilter": "self"
+    },
+    {
+      "id": "method:skill-1794579952207",
+      "name": "标注驱动保真排版",
+      "kind": "self_authored_method",
+      "category": "saved-general-method",
+      "taskScenarios": [
+        "typography",
+        "content-creation"
+      ],
+      "purpose": "已保存的通用方法。公开包中的方法参考文稿经过审改前草稿，与正式正文不一定逐字相同。",
+      "inputOutput": "见方法参考与 examples/ 自拟样例；不是上游官方案例。",
+      "callExample": "请用「标注驱动保真排版」，把 article.md 按 faithful 模式排成 paper 和 ink 两套阅读页：先出带原文块标识的 annotations，再确定性渲染，并用解析后的正文块做精确比对。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "savedSkillId": "skill-1794579952207",
+      "methodReferenceId": "annotate-then-render",
+      "license": "方法参考与自拟样例供自用；引用的上游另按其许可证。",
+      "knownConstraints": [
+        "公开页面不要使用 sand-workflow 或仅聊天可用的内部链接作为入口。请展示方法名与可复制调用例。",
+        "正式正文与 method-reference 不一定相同，不要把参考文稿标成 canonical。",
+        "本机未能提供正式 body 时，不要编造正式正文。"
+      ],
+      "reviewDepth": "method-reference-and-examples-in-guizang-practical-skills-public; official body not treated as verbatim",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-practical-skills-public",
+      "authorFilter": "self"
+    },
+    {
+      "id": "method:skill-1794579952251",
+      "name": "来源分级简报",
+      "kind": "self_authored_method",
+      "category": "saved-general-method",
+      "taskScenarios": [
+        "content-creation",
+        "tool-efficiency"
+      ],
+      "purpose": "已保存的通用方法。公开包中的方法参考文稿经过审改前草稿，与正式正文不一定逐字相同。",
+      "inputOutput": "见方法参考与 examples/ 自拟样例；不是上游官方案例。",
+      "callExample": "请用「来源分级简报」，根据我给出的公开链接写一份简报：每条标明来源等级、链接和阅读日期，传闻与打不开的页面不得写成既成事实。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "savedSkillId": "skill-1794579952251",
+      "methodReferenceId": "source-tagged-brief",
+      "license": "方法参考与自拟样例供自用；引用的上游另按其许可证。",
+      "knownConstraints": [
+        "公开页面不要使用 sand-workflow 或仅聊天可用的内部链接作为入口。请展示方法名与可复制调用例。",
+        "正式正文与 method-reference 不一定相同，不要把参考文稿标成 canonical。",
+        "本机未能提供正式 body 时，不要编造正式正文。"
+      ],
+      "reviewDepth": "method-reference-and-examples-in-guizang-practical-skills-public; official body not treated as verbatim",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-practical-skills-public",
+      "authorFilter": "self"
+    },
+    {
+      "id": "method:skill-1794579952307",
+      "name": "交付入库与同款复用",
+      "kind": "self_authored_method",
+      "category": "saved-general-method",
+      "taskScenarios": [
+        "content-creation",
+        "ui-design"
+      ],
+      "purpose": "已保存的通用方法。公开包中的方法参考文稿经过审改前草稿，与正式正文不一定逐字相同。",
+      "inputOutput": "见方法参考与 examples/ 自拟样例；不是上游官方案例。",
+      "callExample": "请用「交付入库与同款复用」，把已完成的阅读页登记进作品库（路径相对项目根目录），再读取 new-body.md 生成一份同款 brief。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "savedSkillId": "skill-1794579952307",
+      "methodReferenceId": "delivery-library",
+      "license": "方法参考与自拟样例供自用；引用的上游另按其许可证。",
+      "knownConstraints": [
+        "公开页面不要使用 sand-workflow 或仅聊天可用的内部链接作为入口。请展示方法名与可复制调用例。",
+        "正式正文与 method-reference 不一定相同，不要把参考文稿标成 canonical。",
+        "本机未能提供正式 body 时，不要编造正式正文。"
+      ],
+      "reviewDepth": "method-reference-and-examples-in-guizang-practical-skills-public; official body not treated as verbatim",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-practical-skills-public",
+      "authorFilter": "self"
+    },
+    {
+      "id": "method:skill-1794579952343",
+      "name": "需求工具与证据闭环",
+      "kind": "self_authored_method",
+      "category": "saved-general-method",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "已保存的通用方法。公开包中的方法参考文稿经过审改前草稿，与正式正文不一定逐字相同。",
+      "inputOutput": "见方法参考与 examples/ 自拟样例；不是上游官方案例。",
+      "callExample": "请用「需求工具与证据闭环」，根据这份已经写清约束的需求做一页静态交接清单：已给信息直接推进，只有实质关键缺口才提问；领域规则不能覆盖安全审批。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "savedSkillId": "skill-1794579952343",
+      "methodReferenceId": "ask-survey-check-loop",
+      "license": "方法参考与自拟样例供自用；引用的上游另按其许可证。",
+      "knownConstraints": [
+        "公开页面不要使用 sand-workflow 或仅聊天可用的内部链接作为入口。请展示方法名与可复制调用例。",
+        "正式正文与 method-reference 不一定相同，不要把参考文稿标成 canonical。",
+        "本机未能提供正式 body 时，不要编造正式正文。"
+      ],
+      "reviewDepth": "method-reference-and-examples-in-guizang-practical-skills-public; official body not treated as verbatim",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-practical-skills-public",
+      "authorFilter": "self"
+    },
+    {
+      "id": "method:agent",
+      "name": "Agent友好命令行设计",
+      "kind": "self_authored_method",
+      "category": "saved-general-method",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "已保存的通用方法。公开包中的方法参考文稿经过审改前草稿，与正式正文不一定逐字相同。",
+      "inputOutput": "见方法参考与 examples/ 自拟样例；不是上游官方案例。",
+      "callExample": "请用「Agent友好命令行设计」评审 briefctl.py：全部输入用 flag 且不含秘密，补 --help、幂等、dry-run 和错误证据；--yes 不得替代平台审批。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "savedSkillId": "agent",
+      "methodReferenceId": "agent-cli-surface",
+      "license": "方法参考与自拟样例供自用；引用的上游另按其许可证。",
+      "knownConstraints": [
+        "公开页面不要使用 sand-workflow 或仅聊天可用的内部链接作为入口。请展示方法名与可复制调用例。",
+        "正式正文与 method-reference 不一定相同，不要把参考文稿标成 canonical。",
+        "本机未能提供正式 body 时，不要编造正式正文。"
+      ],
+      "reviewDepth": "method-reference-and-examples-in-guizang-practical-skills-public; official body not treated as verbatim",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-practical-skills-public",
+      "authorFilter": "self"
+    },
+    {
+      "id": "method:skill-1794580028101",
+      "name": "凭据泄漏检查与登录策略审查",
+      "kind": "self_authored_method",
+      "category": "saved-general-method",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "已保存的通用方法。公开包中的方法参考文稿经过审改前草稿，与正式正文不一定逐字相同。",
+      "inputOutput": "见方法参考与 examples/ 自拟样例；不是上游官方案例。",
+      "callExample": "请用「凭据泄漏检查与登录策略审查」，为「核对已公开文档标题」写策略和小范围泄漏扫描。优先用已连接的平台登录；不要做真实登录测试。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "savedSkillId": "skill-1794580028101",
+      "methodReferenceId": "credential-isolated-login",
+      "license": "方法参考与自拟样例供自用；引用的上游另按其许可证。",
+      "knownConstraints": [
+        "公开页面不要使用 sand-workflow 或仅聊天可用的内部链接作为入口。请展示方法名与可复制调用例。",
+        "正式正文与 method-reference 不一定相同，不要把参考文稿标成 canonical。",
+        "本机未能提供正式 body 时，不要编造正式正文。"
+      ],
+      "reviewDepth": "method-reference-and-examples-in-guizang-practical-skills-public; official body not treated as verbatim",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-practical-skills-public",
+      "authorFilter": "self"
+    },
+    {
+      "id": "method:skill-1794580028139",
+      "name": "多角色职责与交接章程",
+      "kind": "self_authored_method",
+      "category": "saved-general-method",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "已保存的通用方法。公开包中的方法参考文稿经过审改前草稿，与正式正文不一定逐字相同。",
+      "inputOutput": "见方法参考与 examples/ 自拟样例；不是上游官方案例。",
+      "callExample": "请用「多角色职责与交接章程」，为研究员、写作者、核对者写一份逻辑角色章程（演示，非真并行），并校验路径重叠与 deferred 不得被分派。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "savedSkillId": "skill-1794580028139",
+      "methodReferenceId": "multi-agent-role-charter",
+      "license": "方法参考与自拟样例供自用；引用的上游另按其许可证。",
+      "knownConstraints": [
+        "公开页面不要使用 sand-workflow 或仅聊天可用的内部链接作为入口。请展示方法名与可复制调用例。",
+        "正式正文与 method-reference 不一定相同，不要把参考文稿标成 canonical。",
+        "本机未能提供正式 body 时，不要编造正式正文。"
+      ],
+      "reviewDepth": "method-reference-and-examples-in-guizang-practical-skills-public; official body not treated as verbatim",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-practical-skills-public",
+      "authorFilter": "self"
+    },
+    {
+      "id": "method:skill-1794585588289",
+      "name": "可检查的工程约定清单",
+      "kind": "self_authored_method",
+      "category": "saved-general-method",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "从 antfu 公开工作流提炼并已保存的通用方法。正式正文经审改，与资料包 drafts/ 不一定逐字相同。",
+      "inputOutput": "输入为当前仓库或改动；输出为可检查清单、说明、分诊表或简化建议。需要完整脚本或上游附件时仍用官方仓库。",
+      "callExample": "请用「可检查的工程约定清单」审查当前仓库的工具链约定，逐项给出可检查结论；不要把他的 ESLint 配置或 starter 写成团队强制项。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "savedSkillId": "skill-1794585588289",
+      "relatedUpstreamId": "upstream:antfu:antfu",
+      "license": "自拟通用方法供自用；上游 antfu 技能为 MIT，使用上游须遵守其许可证。",
+      "knownConstraints": [
+        "公开页面不要使用 sand-workflow 链接。",
+        "「与已有技能同类、不必再写」是去重组建议，不代表该方法未保存。",
+        "未实际运行上游 Skill。"
+      ],
+      "reviewDepth": "antfu-skills-collection drafts and catalog; official saved body not copied",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "self"
+    },
+    {
+      "id": "method:skill-1794585608162",
+      "name": "可审查的证据型变更说明",
+      "kind": "self_authored_method",
+      "category": "saved-general-method",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "从 antfu 公开工作流提炼并已保存的通用方法。正式正文经审改，与资料包 drafts/ 不一定逐字相同。",
+      "inputOutput": "输入为当前仓库或改动；输出为可检查清单、说明、分诊表或简化建议。需要完整脚本或上游附件时仍用官方仓库。",
+      "callExample": "请用「可审查的证据型变更说明」为当前改动写一份可评审说明：约定式标题、证据和必要的前后对比。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "savedSkillId": "skill-1794585608162",
+      "relatedUpstreamId": "upstream:antfu:antfu-create-pr",
+      "license": "自拟通用方法供自用；上游 antfu 技能为 MIT，使用上游须遵守其许可证。",
+      "knownConstraints": [
+        "公开页面不要使用 sand-workflow 链接。",
+        "「与已有技能同类、不必再写」是去重组建议，不代表该方法未保存。",
+        "未实际运行上游 Skill。"
+      ],
+      "reviewDepth": "antfu-skills-collection drafts and catalog; official saved body not copied",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "self"
+    },
+    {
+      "id": "method:skill-1794585632351",
+      "name": "先只读再确认的议题分诊",
+      "kind": "self_authored_method",
+      "category": "saved-general-method",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "从 antfu 公开工作流提炼并已保存的通用方法。正式正文经审改，与资料包 drafts/ 不一定逐字相同。",
+      "inputOutput": "输入为当前仓库或改动；输出为可检查清单、说明、分诊表或简化建议。需要完整脚本或上游附件时仍用官方仓库。",
+      "callExample": "请用「先只读再确认的议题分诊」只读调查当前仓库的 issue 与 PR，先给出动作表并等待确认，不要直接改仓库。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "savedSkillId": "skill-1794585632351",
+      "relatedUpstreamId": "upstream:antfu:antfu-issue-triage",
+      "license": "自拟通用方法供自用；上游 antfu 技能为 MIT，使用上游须遵守其许可证。",
+      "knownConstraints": [
+        "公开页面不要使用 sand-workflow 链接。",
+        "「与已有技能同类、不必再写」是去重组建议，不代表该方法未保存。",
+        "未实际运行上游 Skill。"
+      ],
+      "reviewDepth": "antfu-skills-collection drafts and catalog; official saved body not copied",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "self"
+    },
+    {
+      "id": "method:skill-1794585649741",
+      "name": "分轮决策提问直到共识",
+      "kind": "self_authored_method",
+      "category": "saved-general-method",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "从 antfu 公开工作流提炼并已保存的通用方法。正式正文经审改，与资料包 drafts/ 不一定逐字相同。",
+      "inputOutput": "输入为当前仓库或改动；输出为可检查清单、说明、分诊表或简化建议。需要完整脚本或上游附件时仍用官方仓库。",
+      "callExample": "请用「分轮决策提问直到共识」，先用已给信息推进，只在关键缺口提问，直到形成可执行共识。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "savedSkillId": "skill-1794585649741",
+      "relatedUpstreamId": "upstream:antfu:antfu-query",
+      "license": "自拟通用方法供自用；上游 antfu 技能为 MIT，使用上游须遵守其许可证。",
+      "knownConstraints": [
+        "公开页面不要使用 sand-workflow 链接。",
+        "「与已有技能同类、不必再写」是去重组建议，不代表该方法未保存。",
+        "未实际运行上游 Skill。"
+      ],
+      "reviewDepth": "antfu-skills-collection drafts and catalog; official saved body not copied",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "self"
+    },
+    {
+      "id": "method:skill-1794585668865",
+      "name": "用消融验证简化改动",
+      "kind": "self_authored_method",
+      "category": "saved-general-method",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "从 antfu 公开工作流提炼并已保存的通用方法。正式正文经审改，与资料包 drafts/ 不一定逐字相同。",
+      "inputOutput": "输入为当前仓库或改动；输出为可检查清单、说明、分诊表或简化建议。需要完整脚本或上游附件时仍用官方仓库。",
+      "callExample": "请用「用消融验证简化改动」审查当前改动或 PR，只保留能证明必要的部分。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "savedSkillId": "skill-1794585668865",
+      "relatedUpstreamId": "upstream:antfu:antfu-simplify",
+      "license": "自拟通用方法供自用；上游 antfu 技能为 MIT，使用上游须遵守其许可证。",
+      "knownConstraints": [
+        "公开页面不要使用 sand-workflow 链接。",
+        "「与已有技能同类、不必再写」是去重组建议，不代表该方法未保存。",
+        "未实际运行上游 Skill。"
+      ],
+      "reviewDepth": "antfu-skills-collection drafts and catalog; official saved body not copied",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "self"
+    },
+    {
+      "id": "upstream:guizang:guizang-ppt-skill",
+      "name": "歸藏 PPT Skill",
+      "skillName": "guizang-ppt-skill",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "需要把分享、演讲或发布会内容做成可左右翻页的单文件 HTML 演示稿，并可选配图、多平台封面和演讲者模式。",
+      "inputOutput": "输入：主题、受众、时长、素材、风格与硬约束。输出：单文件 HTML 演示稿，可选配图、封面和演讲备注。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/guizang-ppt-skill --skill guizang-ppt-skill\n安装后请按官方技能名「guizang-ppt-skill」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/guizang-ppt-skill",
+      "officialUrl": "https://github.com/op7418/guizang-ppt-skill",
+      "pinnedCommit": "93d21bf4a73a851907a6eb00acbf30618236667a",
+      "license": "AGPL-3.0",
+      "licenseNote": "仓库 LICENSE 与 README 均为 AGPL-3.0。商业合作说明见社交卡片仓库的系列说明，本仓库根目录未见独立 COMMERCIAL_LICENSING.md。",
+      "knownConstraints": [
+        "仓库 LICENSE 与 README 均为 AGPL-3.0。商业合作说明见社交卡片仓库的系列说明，本仓库根目录未见独立 COMMERCIAL_LICENSING.md。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:guizang-social-card-skill",
+      "name": "歸藏社交图文卡片 Skill",
+      "skillName": "guizang-social-card-skill",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "把文章、脚本、截图或产品说明做成小红书图文、公众号 21:9/1:1 封面或其他平台缩略图，也可做 Live Photo 动图卡片。",
+      "inputOutput": "输入：正文或素材、目标平台与画幅。输出：卡片图组或封面套装，以及可选动图包装。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/guizang-social-card-skill --skill guizang-social-card-skill\n安装后请按官方技能名「guizang-social-card-skill」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/guizang-social-card-skill",
+      "officialUrl": "https://github.com/op7418/guizang-social-card-skill",
+      "pinnedCommit": "64d02d435fb092d3b403455a875e842fc8f29b8b",
+      "license": "AGPL-3.0",
+      "licenseNote": "LICENSE 为 AGPL-3.0；另有 COMMERCIAL_LICENSING.md，说明系列能力可按合作协议接入平台，但不替代 AGPL，也不把版权转让给合作方。本地已安装副本不要改模板。",
+      "knownConstraints": [
+        "LICENSE 为 AGPL-3.0；另有 COMMERCIAL_LICENSING.md，说明系列能力可按合作协议接入平台，但不替代 AGPL，也不把版权转让给合作方。本地已安装副本不要改模板。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:guizang-page-skill",
+      "name": "歸藏 Page Skill",
+      "skillName": "guizang-page-skill",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "typography",
+        "content-creation"
+      ],
+      "purpose": "把 Markdown 文档、文章或笔记排成克制、内容优先的单文件 HTML 页面，并由脚本导出 PDF 或长图。官方说明不提供公众号导出。",
+      "inputOutput": "输入：Markdown 原文。中间：标注数据。输出：单文件 HTML，可选 PDF/长图。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/guizang-pages-skill --skill guizang-page-skill\n安装后请按官方技能名「guizang-page-skill」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/guizang-pages-skill",
+      "officialUrl": "https://github.com/op7418/guizang-pages-skill",
+      "pinnedCommit": "74de431034d587f95f528c9e15ef6a3798b986f8",
+      "license": "AGPL-3.0",
+      "licenseNote": "独立仓库 LICENSE 为 AGPL-3.0。DeepSeek Harness 插件中的快照提交为 bb39103c94c286ea8e729daf40e5ed9348ac608e，落后于当前 main。",
+      "knownConstraints": [
+        "独立仓库 LICENSE 为 AGPL-3.0。DeepSeek Harness 插件中的快照提交为 bb39103c94c286ea8e729daf40e5ed9348ac608e，落后于当前 main。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:humanizer-zh",
+      "name": "Humanizer-zh",
+      "skillName": "humanizer-zh",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "润色已有中文文章、评论或文档，去掉空话、重复和模板化表达，同时保留事实、确定程度和作者声音。",
+      "inputOutput": "输入：待编辑中文文本与必须保留的事实。输出：更自然的修订稿，不新增未提供的事实。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/Humanizer-zh.git\n安装后请按官方技能名「humanizer-zh」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/Humanizer-zh",
+      "officialUrl": "https://github.com/op7418/Humanizer-zh",
+      "pinnedCommit": "f4518a8eab97b8bfebc66a89d34320a89bef6930",
+      "license": "MIT",
+      "licenseNote": "LICENSE 为 MIT。README 写明基于 blader/humanizer 等结构修订。不用于鉴定作者身份，也不保证通过 AI 检测器。",
+      "knownConstraints": [
+        "LICENSE 为 MIT。README 写明基于 blader/humanizer 等结构修订。不用于鉴定作者身份，也不保证通过 AI 检测器。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:guizang-product-video-skill",
+      "name": "歸藏产品视频 Skill",
+      "skillName": "guizang-product-video-skill",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "用代码制作软件产品宣传片或版本更新片，画面从真实产品组件和设计语言推导，而不是套通用模板。",
+      "inputOutput": "输入：产品或仓库、发布渠道、时长画幅、语言与是否允许外链。输出：可播放的宣传片工程与成片，以及方向说明。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/guizang-product-video-skill --skill guizang-product-video-skill\n安装后请按官方技能名「guizang-product-video-skill」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/guizang-product-video-skill",
+      "officialUrl": "https://github.com/op7418/guizang-product-video-skill",
+      "pinnedCommit": "18842e0f49a9eb2b8c00cc065ec37b314e235aaa",
+      "license": "AGPL-3.0 + 部分资产 BSL-1.1",
+      "licenseNote": "主许可证 AGPL-3.0，另有 COMMERCIAL_LICENSING.md。assets/fallback/ 中改编自 CodePilot 的组件与样式仍适用 Business Source License 1.1，并未被重新授权为 MIT。使用默认样式前需阅读上游 SOURCE.md 与 LICENSE.CodePilot。",
+      "knownConstraints": [
+        "主许可证 AGPL-3.0，另有 COMMERCIAL_LICENSING.md。assets/fallback/ 中改编自 CodePilot 的组件与样式仍适用 Business Source License 1.1，并未被重新授权为 MIT。使用默认样式前需阅读上游 SOURCE.md 与 LICENSE.CodePilot。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:guizang-game-skill",
+      "name": "歸藏 Game Skill",
+      "skillName": "guizang-game-skill",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "要从零做能在浏览器里玩、最后打成单文件 HTML 的 3D 动作游戏，并需要可验证的制作流程。",
+      "inputOutput": "输入：参考游戏或视频、题材与范围。输出：可在浏览器游玩的单文件 HTML 游戏及素材清单。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\ngit clone https://github.com/op7418/guizang-game-skill ~/.claude/skills/guizang-game-skill\n安装后请按官方技能名「guizang-game-skill」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/guizang-game-skill",
+      "officialUrl": "https://github.com/op7418/guizang-game-skill",
+      "pinnedCommit": "6001e56e1eaa60be49e5aa4ef81d08b746a1b4e2",
+      "license": "AGPL-3.0；演示内容另有版权",
+      "licenseNote": "Skill 文档与脚本为 AGPL-3.0。README 写明演示游戏《雾锁山门》在 gh-pages 的美术、模型、配音、配乐和文案为作者保留权利，可试玩和分享链接，未经许可请勿转载、改名再发布或商用。本批未试玩、未观看演示视频。",
+      "knownConstraints": [
+        "Skill 文档与脚本为 AGPL-3.0。README 写明演示游戏《雾锁山门》在 gh-pages 的美术、模型、配音、配乐和文案为作者保留权利，可试玩和分享链接，未经许可请勿转载、改名再发布或商用。本批未试玩、未观看演示视频。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:claude-to-im",
+      "name": "Claude-to-IM Skill",
+      "skillName": "claude-to-im",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "希望在 Telegram、Discord、飞书/Lark、QQ 或微信里继续当前 Claude Code / Codex 会话。",
+      "inputOutput": "输入：目标 IM 平台与授权配置（经环境变量或安全存储）。输出：可收发的桥接服务状态、日志与会话转发。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add op7418/Claude-to-IM-skill\n安装后请按官方技能名「claude-to-im」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/Claude-to-IM-skill",
+      "officialUrl": "https://github.com/op7418/Claude-to-IM-skill",
+      "pinnedCommit": "536908f5e9bd65a151ca4cb4b08d3fedc1a43b4d",
+      "license": "MIT",
+      "licenseNote": "LICENSE 为 MIT。姊妹仓库 Claude-to-IM 同为 MIT，是宿主无关的桥接实现。本次提交日期接口曾 403，提交 SHA 由 git ref 钉住，仓库 pushed_at 见上。",
+      "knownConstraints": [
+        "LICENSE 为 MIT。姊妹仓库 Claude-to-IM 同为 MIT，是宿主无关的桥接实现。本次提交日期接口曾 403，提交 SHA 由 git ref 钉住，仓库 pushed_at 见上。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:youtube-clipper",
+      "name": "YouTube Clipper Skill",
+      "skillName": "youtube-clipper",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "下载 YouTube 视频和字幕，按细章节选择片段，剪出带中英双语字幕的短视频并生成总结。",
+      "inputOutput": "输入：视频链接或本地文件、拟保留的章节。输出：剪辑后的视频、双语字幕和总结文案。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/Youtube-clipper-skill\n安装后请按官方技能名「youtube-clipper」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/Youtube-clipper-skill",
+      "officialUrl": "https://github.com/op7418/Youtube-clipper-skill",
+      "pinnedCommit": "f31f077ee0905c95a510a6f34bbd0c3c85b15129",
+      "license": "MIT",
+      "licenseNote": "LICENSE 为 MIT。",
+      "knownConstraints": [
+        "LICENSE 为 MIT。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:document-illustrator",
+      "name": "Document Illustrator Skill",
+      "skillName": "document-illustrator",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "根据文档结构归纳主题，为文章或笔记批量生成配图，支持封面和 16:9、3:4 等比例。",
+      "inputOutput": "输入：文档与比例/风格偏好。输出：多张配图及与主题的对应关系。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/Document-illustrator-skill\n安装后请按官方技能名「document-illustrator」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/Document-illustrator-skill",
+      "officialUrl": "https://github.com/op7418/Document-illustrator-skill",
+      "pinnedCommit": "8344815d407cc25cc04c327557f36ed839f0aaef",
+      "license": "MIT",
+      "licenseNote": "LICENSE 为 MIT。",
+      "knownConstraints": [
+        "LICENSE 为 MIT。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:fit-ride-studio",
+      "name": "Sports / FIT Ride Studio",
+      "skillName": "fit-ride-studio",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "content-creation",
+        "tool-efficiency"
+      ],
+      "purpose": "分析骑行、跑步或徒步的 FIT/KML 轨迹，生成有证据的单次或汇总报告，并导出可分享图像或视频。",
+      "inputOutput": "输入：FIT/KML 文件或官方合成演示数据。输出：报告页、可选 PNG 或 H.264 分享素材。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/guizang-sports-skill --skill fit-ride-studio\n安装后请按官方技能名「fit-ride-studio」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/guizang-sports-skill",
+      "officialUrl": "https://github.com/op7418/guizang-sports-skill",
+      "pinnedCommit": "f165bf2993c4eafd5dd91581317c8993230f84e1",
+      "license": "AGPL-3.0",
+      "licenseNote": "LICENSE 与 README 均为 AGPL-3.0。",
+      "knownConstraints": [
+        "LICENSE 与 README 均为 AGPL-3.0。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:ai-desk-card",
+      "name": "AI Desk Card",
+      "skillName": "ai-desk-card",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "用 M5Paper 墨水屏做桌面 AI 副屏，显示待办、日历、天气等可扫视信息。",
+      "inputOutput": "输入：设备连接方式与要展示的数据源。输出：墨水屏画面帧，以及守护进程与网络配置状态。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/ai-desk-card --skill ai-desk-card\n安装后请按官方技能名「ai-desk-card」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/ai-desk-card",
+      "officialUrl": "https://github.com/op7418/ai-desk-card",
+      "pinnedCommit": "dc3b498e73493a9d26ac779df113034bc20196ee",
+      "license": "GPL-3.0（附加署名条款）",
+      "licenseNote": "README 写明 GPL-3.0 with attribution clause。LICENSE 正文以 GNU GPL v3 授权，并额外要求衍生作品保留可见署名且以 GPL-3.0（或更新）公开源码。GitHub 许可证字段为 NOASSERTION，多半因附加条款。同文件仍带 m5-paper-buddy 标题，应视为从该前任项目沿用。字体等第三方组件适用各自许可。",
+      "knownConstraints": [
+        "README 写明 GPL-3.0 with attribution clause。LICENSE 正文以 GNU GPL v3 授权，并额外要求衍生作品保留可见署名且以 GPL-3.0（或更新）公开源码。GitHub 许可证字段为 NOASSERTION，多半因附加条款。同文件仍带 m5-paper-buddy 标题，应视为从该前任项目沿用。字体等第三方组件适用各自许可。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:dsh-guizang-design",
+      "name": "歸藏设计（DeepSeek Harness 插件）",
+      "skillName": "dsh-guizang-design",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "content-creation",
+        "typography"
+      ],
+      "purpose": "在 DeepSeek Harness 里一次性使用歸藏的网页 PPT、图文卡片、网页排版、去 AI 味，并使用作品库、内容生产工作流和个人语气档案。",
+      "inputOutput": "输入：DSH 环境中的文档、卡片或演示需求，以及可选的个人样本。输出：与各上游技能相应的页面/PPT/卡片/润色结果，以及本地语气档案的读写。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\ngit clone https://github.com/op7418/dsh-guizang-design.git 后按插件 README 接入 DeepSeek Harness。不要把快照目录当成需要再维护的源仓库；改技能应改各自上游再按官方脚本更新快照。\n安装后请按官方技能名「dsh-guizang-design」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/dsh-guizang-design",
+      "officialUrl": "https://github.com/op7418/dsh-guizang-design",
+      "pinnedCommit": "e275f1e4d4a81bd4875c251d33c643c242a8a8fd",
+      "license": "插件 AGPL-3.0；打包技能保留各自许可",
+      "licenseNote": "插件 LICENSE 与 package.json 为 AGPL-3.0。README 写明打包的 skill 各自保留 LICENSE：其中 humanizer-zh 为 MIT，page/ppt/social-card 快照为 AGPL-3.0。own-skills/guizang-voice 未见独立 LICENSE 文件，未另作声明时应视为插件仓库的一部分，使用须遵守插件 AGPL-3.0，除非作者另行说明。",
+      "knownConstraints": [
+        "插件 LICENSE 与 package.json 为 AGPL-3.0。README 写明打包的 skill 各自保留 LICENSE：其中 humanizer-zh 为 MIT，page/ppt/social-card 快照为 AGPL-3.0。own-skills/guizang-voice 未见独立 LICENSE 文件，未另作声明时应视为插件仓库的一部分，使用须遵守插件 AGPL-3.0，除非作者另行说明。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:guizang-voice",
+      "name": "个人语气档案（guizang-voice）",
+      "skillName": "guizang-voice",
+      "kind": "official_upstream",
+      "category": "use_upstream",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "希望 Agent 先学习用户本人的写作口吻，再代写或改 PPT 讲稿、卡片文案等。",
+      "inputOutput": "输入：用户自己的样本与修改意见。输出：本地语气档案，以及按档案生成的文案。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\n随 dsh-guizang-design 插件提供，不是独立 GitHub 仓库。\n安装后请按官方技能名「guizang-voice」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/dsh-guizang-design 路径 own-skills/guizang-voice/",
+      "officialUrl": "https://github.com/op7418/dsh-guizang-design",
+      "pinnedCommit": "e275f1e4d4a81bd4875c251d33c643c242a8a8fd",
+      "license": "未见独立 LICENSE；位于 AGPL-3.0 插件仓库",
+      "licenseNote": "只有 SKILL.md，没有单独许可证文件。谨慎按插件 AGPL-3.0 理解，使用前再核对其官方说明。",
+      "knownConstraints": [
+        "只有 SKILL.md，没有单独许可证文件。谨慎按插件 AGPL-3.0 理解，使用前再核对其官方说明。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "use_upstream"
+    },
+    {
+      "id": "upstream:guizang:guizang-material-illustration",
+      "name": "歸藏材质插画 Skill",
+      "skillName": "guizang-material-illustration",
+      "kind": "official_upstream",
+      "category": "license_unclear",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "从文章、笔记、数据或截图生成带字解释图、材质化图表和偏编辑感的说明配图。",
+      "inputOutput": "输入：原文、数据表或截图，以及要解释的结论。输出：出图提示计划与（在可用图像生成时）栅格图。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/guizang-material-illustration --skill guizang-material-illustration\n安装后请按官方技能名「guizang-material-illustration」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/guizang-material-illustration",
+      "officialUrl": "https://github.com/op7418/guizang-material-illustration",
+      "pinnedCommit": "cf26e194ce075cd205329abab29cc71fda3e78b2",
+      "license": "未解决",
+      "licenseNote": "仓库根目录无 LICENSE 文件，README 与 PRODUCT.md 也没有许可条款。不得臆造为 MIT 或 AGPL。",
+      "knownConstraints": [
+        "仓库根目录无 LICENSE 文件，README 与 PRODUCT.md 也没有许可条款。不得臆造为 MIT 或 AGPL。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "license_unclear"
+    },
+    {
+      "id": "upstream:guizang:yingzao",
+      "name": "营造 · Yingzao",
+      "skillName": "yingzao",
+      "kind": "official_upstream",
+      "category": "license_unclear",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "把真实中国建筑与在地文化照片转译为有主体、背景和字体设计的编辑海报，或可选的多图场景与对照。",
+      "inputOutput": "输入：建筑或场所照片及约束。输出：编辑海报或拼图，以及分析阶段的方案记录。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/guizang-yingzao-skill --skill yingzao\n安装后请按官方技能名「yingzao」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/guizang-yingzao-skill",
+      "officialUrl": "https://github.com/op7418/guizang-yingzao-skill",
+      "pinnedCommit": "58c9b8738858bae0ab2c669d0a0fead90d4a80c9",
+      "license": "未解决",
+      "licenseNote": "根目录和 yingzao/ 下均无 LICENSE 文件，README 也无许可条款。入口在 yingzao/SKILL.md。",
+      "knownConstraints": [
+        "根目录和 yingzao/ 下均无 LICENSE 文件，README 也无许可条款。入口在 yingzao/SKILL.md。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "license_unclear"
+    },
+    {
+      "id": "upstream:guizang:logo-generator",
+      "name": "Logo Generator Skill",
+      "skillName": "logo-generator",
+      "kind": "official_upstream",
+      "category": "license_unclear",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "为产品或品牌生成 SVG Logo 概念，并制作多种背景的展示图。",
+      "inputOutput": "输入：产品名称、定位与约束。输出：SVG/PNG Logo 变体与展示图。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/logo-generator-skill.git\n安装后请按官方技能名「logo-generator」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/logo-generator-skill",
+      "officialUrl": "https://github.com/op7418/logo-generator-skill",
+      "pinnedCommit": "bf4e9ac4d4428bda261afcfe981871ceb92d94e6",
+      "license": "README 声称 MIT，未见 LICENSE 文件",
+      "licenseNote": "README 中英文均写 “MIT License”，但仓库树中无 LICENSE 文件，GitHub 许可证字段为空。不能把 README 一句当作已落地的 SPDX 文件。",
+      "knownConstraints": [
+        "README 中英文均写 “MIT License”，但仓库树中无 LICENSE 文件，GitHub 许可证字段为空。不能把 README 一句当作已落地的 SPDX 文件。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "license_unclear"
+    },
+    {
+      "id": "upstream:guizang:video-wrapper",
+      "name": "Video Wrapper Skill",
+      "skillName": "video-wrapper",
+      "kind": "official_upstream",
+      "category": "license_unclear",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "给已有访谈视频加综艺风格视觉包装（花字、人物条、章节标题等），先出建议再渲染。",
+      "inputOutput": "输入：视频、字幕，可选配置。输出：审批后的包装视频。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/op7418/Video-Wrapper-Skills\n安装后请按官方技能名「video-wrapper」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/Video-Wrapper-Skills",
+      "officialUrl": "https://github.com/op7418/Video-Wrapper-Skills",
+      "pinnedCommit": "029974a7ad4e40499eb5f6f46d1599aa0d242d01",
+      "license": "README 指向 MIT LICENSE，但文件缺失",
+      "licenseNote": "README 与中文说明均写 MIT，并链接 ./LICENSE，但当前 main 仓库树中没有 LICENSE 文件。按许可不明处理。",
+      "knownConstraints": [
+        "README 与中文说明均写 MIT，并链接 ./LICENSE，但当前 main 仓库树中没有 LICENSE 文件。按许可不明处理。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "license_unclear"
+    },
+    {
+      "id": "upstream:guizang:seedance-prompt",
+      "name": "Seedance 产品动画提示词",
+      "skillName": "seedance-prompt",
+      "kind": "official_upstream",
+      "category": "license_unclear",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "为 Seedance 2.0 写约 15 秒一镜到底的产品运动图形提示词，可选垫图，并可接到即梦 CLI。",
+      "inputOutput": "输入：产品定位、风格偏好与可选参考图。输出：可提交给视频模型的提示词（及可选 CLI 调用）。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add op7418/Seedance-Product-Video -a claude-code\n安装后请按官方技能名「seedance-prompt」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/Seedance-Product-Video",
+      "officialUrl": "https://github.com/op7418/Seedance-Product-Video",
+      "pinnedCommit": "dbd123a47f7b1621dd46a3ad4690687361b40a0c",
+      "license": "README 写 MIT，未见 LICENSE 文件",
+      "licenseNote": "README 仅有 “License: MIT” 一行，仓库无 LICENSE 文件。",
+      "knownConstraints": [
+        "README 仅有 “License: MIT” 一行，仓库无 LICENSE 文件。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "license_unclear"
+    },
+    {
+      "id": "upstream:guizang:nanobanana-ppt",
+      "name": "NanoBanana PPT Skills",
+      "skillName": "ppt-generator-pro",
+      "kind": "official_upstream",
+      "category": "license_unclear",
+      "taskScenarios": [
+        "content-creation"
+      ],
+      "purpose": "用 AI 图像和视频模型生成 PPT 页面图，并合成带转场的演示视频。",
+      "inputOutput": "输入：演示大纲与风格。输出：PPT 图片页和可选视频。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\ngit clone https://github.com/op7418/NanoBanana-PPT-Skills.git ~/.claude/skills/ppt-generator\n安装后请按官方技能名「ppt-generator-pro」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/op7418/NanoBanana-PPT-Skills",
+      "officialUrl": "https://github.com/op7418/NanoBanana-PPT-Skills",
+      "pinnedCommit": "0c18b9abde04ad42f4f62c7e9ead346b7bb39260",
+      "license": "README 内嵌 MIT 文本，未见 LICENSE 文件",
+      "licenseNote": "README 徽章和文末贴了 MIT 许可文本，但仓库树无 LICENSE 文件，GitHub 许可证字段为空。较早的图片/视频 PPT 方案，与后来的 HTML 网页 PPT 技能不是同一产物。",
+      "knownConstraints": [
+        "README 徽章和文末贴了 MIT 许可文本，但仓库树无 LICENSE 文件，GitHub 许可证字段为空。较早的图片/视频 PPT 方案，与后来的 HTML 网页 PPT 技能不是同一产物。",
+        "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
+        "星标不是效果验证。"
+      ],
+      "reviewDepth": "inherited-from-guizang-skills-inventory-public-catalog; this pass did not re-read full upstream SKILL.md",
+      "demoRoutes": [],
+      "sourcePackage": "guizang-skills-inventory-public",
+      "authorFilter": "guizang",
+      "inventoryCategory": "license_unclear"
+    },
+    {
+      "id": "upstream:antfu:antfu",
+      "name": "antfu",
+      "skillName": "antfu",
+      "kind": "official_upstream",
+      "category": "handwritten",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "搭建或调整 JS/TS 项目工具链，或用户明确提到要按 Anthony Fu 的偏好工作时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill antfu    # 也被 @antfu/skills 包装收录\n安装后请按官方技能名「antfu」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/antfu",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/antfu",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills）",
+      "knownConstraints": [
+        "完整配置见上游 references。本目录草稿：drafts/可检查的工程约定清单.md",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "handwritten"
+    },
+    {
+      "id": "upstream:antfu:antfu-create-pr",
+      "name": "antfu-create-pr",
+      "skillName": "antfu-create-pr",
+      "kind": "official_upstream",
+      "category": "handwritten",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "需要从当前分支准备或打开发可审查的 GitHub PR 时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill antfu-create-pr\n安装后请按官方技能名「antfu-create-pr」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/antfu-create-pr",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/antfu-create-pr",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills）。上游注明改编自 moeru-ai/airi 的 create-pr。",
+      "knownConstraints": [
+        "含 references 与 upload-github-attachment.sh，残缺仿写会丢附件步骤。草稿：drafts/可审查的证据型变更说明.md",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "handwritten"
+    },
+    {
+      "id": "upstream:antfu:antfu-issue-triage",
+      "name": "antfu-issue-triage",
+      "skillName": "antfu-issue-triage",
+      "kind": "official_upstream",
+      "category": "handwritten",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "需要整理当前仓库的开放议题和 PR，查找已修复、重复或垃圾项，并提出处理建议时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill antfu-issue-triage\n安装后请按官方技能名「antfu-issue-triage」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/antfu-issue-triage",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/antfu-issue-triage",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills）",
+      "knownConstraints": [
+        "草稿：drafts/先只读调查再确认的议题分诊.md",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "handwritten"
+    },
+    {
+      "id": "upstream:antfu:antfu-query",
+      "name": "antfu-query",
+      "skillName": "antfu-query",
+      "kind": "official_upstream",
+      "category": "handwritten",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "需要把方案或决策问清楚，或用户要求持续追问直到达成共识时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill antfu-query\n安装后请按官方技能名「antfu-query」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/antfu-query",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/antfu-query",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills）。改编自 mattpocock/skills 的 grilling（MIT）。",
+      "knownConstraints": [
+        "包装里同时有 grilling/grill-me，不要重复安装同目的技能。草稿：drafts/分轮决策提问直到共识.md",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "handwritten"
+    },
+    {
+      "id": "upstream:antfu:antfu-simplify",
+      "name": "antfu-simplify",
+      "skillName": "antfu-simplify",
+      "kind": "official_upstream",
+      "category": "handwritten",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "需要简化当前 PR 或工作区改动，去掉未被证明必要的抽象和代码时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill antfu-simplify\n安装后请按官方技能名「antfu-simplify」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/antfu-simplify",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/antfu-simplify",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills）",
+      "knownConstraints": [
+        "草稿：drafts/用消融验证简化改动.md",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "handwritten"
+    },
+    {
+      "id": "upstream:antfu:antfu-design",
+      "name": "antfu-design",
+      "skillName": "antfu-design",
+      "kind": "official_upstream",
+      "category": "handwritten",
+      "taskScenarios": [
+        "ui-design",
+        "frontend-engineering"
+      ],
+      "purpose": "在依赖 @antfu/design 的 Vue 3 devtools 风格界面里生成或审查 UI 时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\nnpx skills add https://github.com/antfu/design --skill antfu-design    # 或安装 @antfu/design 后用 skills-npm。该技能已从 antfu/skills 迁出。\n安装后请按官方技能名「antfu-design」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/design/tree/2df66b0830c6e51f0087caeee6ee3de401172199/skills/antfu-design",
+      "officialUrl": "https://github.com/antfu/design/tree/2df66b0830c6e51f0087caeee6ee3de401172199/skills/antfu-design",
+      "pinnedCommit": "2df66b0830c6e51f0087caeee6ee3de401172199",
+      "license": "MIT（antfu/design）。README 还注明部分模式改编自 Leonxlnx/taste-skill 与 jakubkrehel/make-interfaces-feel-better，再分发前需核对这些上游许可。",
+      "knownConstraints": [
+        "与「多风格界面设计」部分重叠。token 和组件目录必须用原技能，不在本目录仿写。",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "handwritten"
+    },
+    {
+      "id": "upstream:antfu:ghfs",
+      "name": "ghfs",
+      "skillName": "ghfs",
+      "kind": "official_upstream",
+      "category": "handwritten",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "通过 .ghfs 镜像批量查看或修改 GitHub 议题和 PR，需要同步、排队 execute 操作或预览后再应用时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/ghfs    # 或 pnpm i -D @ghfs/cli 后 skills-npm\n安装后请按官方技能名「ghfs」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/ghfs/tree/6dce9c1a30a9b3b55beee9c6454df675e9538d6d/skills/ghfs",
+      "officialUrl": "https://github.com/antfu/ghfs/tree/6dce9c1a30a9b3b55beee9c6454df675e9538d6d/skills/ghfs",
+      "pinnedCommit": "6dce9c1a30a9b3b55beee9c6454df675e9538d6d",
+      "license": "MIT（antfu/ghfs）",
+      "knownConstraints": [
+        "这是工具操作手册，不适合改写成与 ghfs 无关的通用技能。",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "handwritten"
+    },
+    {
+      "id": "upstream:antfu:vue",
+      "name": "vue",
+      "skillName": "vue",
+      "kind": "official_upstream",
+      "category": "generated_from_official_docs",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "写 Vue SFC、script setup 宏、响应式 API 或内置组件时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill vue    # 注意：@antfu/skills 包装不收录这些生成技能\n安装后请按官方技能名「vue」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/vue",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/vue",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills 对生成结果与脚本的许可）。源文档另有各自上游许可，引用原文时需遵守对应项目许可。",
+      "knownConstraints": [
+        "需要实践规范时，另用 vuejs-ai/skills，不要和这份文档索引混成一个技能。",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed; documentation-generated skill, official current docs still take precedence",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "generated_from_official_docs"
+    },
+    {
+      "id": "upstream:antfu:nuxt",
+      "name": "nuxt",
+      "skillName": "nuxt",
+      "kind": "official_upstream",
+      "category": "generated_from_official_docs",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "做 Nuxt 应用、路由、useFetch、服务端路由、模块或混合渲染时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill nuxt    # 注意：@antfu/skills 包装不收录这些生成技能\n安装后请按官方技能名「nuxt」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/nuxt",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/nuxt",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills 对生成结果与脚本的许可）。源文档另有各自上游许可，引用原文时需遵守对应项目许可。",
+      "knownConstraints": [
+        "钉在预发布版本说明上，使用前对照当前官方文档。Nuxt 模块开发也可看 onmax/nuxt-skills 的 nuxt-modules。",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed; documentation-generated skill, official current docs still take precedence",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "generated_from_official_docs"
+    },
+    {
+      "id": "upstream:antfu:pinia",
+      "name": "pinia",
+      "skillName": "pinia",
+      "kind": "official_upstream",
+      "category": "generated_from_official_docs",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "在 Vue 应用里定义 store、使用 state/getters/actions 或写 store 插件时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill pinia    # 注意：@antfu/skills 包装不收录这些生成技能\n安装后请按官方技能名「pinia」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/pinia",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/pinia",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills 对生成结果与脚本的许可）。源文档另有各自上游许可，引用原文时需遵守对应项目许可。",
+      "knownConstraints": [
+        "实践向内容另见 vuejs-ai 的 vue-pinia-best-practices。",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed; documentation-generated skill, official current docs still take precedence",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "generated_from_official_docs"
+    },
+    {
+      "id": "upstream:antfu:vite",
+      "name": "vite",
+      "skillName": "vite",
+      "kind": "official_upstream",
+      "category": "generated_from_official_docs",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "写 vite.config、插件、SSR、库模式，或处理 Vite 8 / Rolldown 相关配置时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill vite    # 注意：@antfu/skills 包装不收录这些生成技能\n安装后请按官方技能名「vite」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/vite",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/vite",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills 对生成结果与脚本的许可）。源文档另有各自上游许可，引用原文时需遵守对应项目许可。",
+      "knownConstraints": [
+        "版本较新，确认项目实际 Vite 主版本后再调用。",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed; documentation-generated skill, official current docs still take precedence",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "generated_from_official_docs"
+    },
+    {
+      "id": "upstream:antfu:vitepress",
+      "name": "vitepress",
+      "skillName": "vitepress",
+      "kind": "official_upstream",
+      "category": "generated_from_official_docs",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "用 VitePress 写文档站、主题或在 Markdown 里用 Vue 组件时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill vitepress    # 注意：@antfu/skills 包装不收录这些生成技能\n安装后请按官方技能名「vitepress」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/vitepress",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/vitepress",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills 对生成结果与脚本的许可）。源文档另有各自上游许可，引用原文时需遵守对应项目许可。",
+      "knownConstraints": [
+        "钉在 alpha，可能落后于当前文档。",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed; documentation-generated skill, official current docs still take precedence",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "generated_from_official_docs"
+    },
+    {
+      "id": "upstream:antfu:vitest",
+      "name": "vitest",
+      "skillName": "vitest",
+      "kind": "official_upstream",
+      "category": "generated_from_official_docs",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "写单元测试、mock、覆盖率，或配置 Vitest 时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill vitest    # 注意：@antfu/skills 包装不收录这些生成技能\n安装后请按官方技能名「vitest」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/vitest",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/vitest",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills 对生成结果与脚本的许可）。源文档另有各自上游许可，引用原文时需遵守对应项目许可。",
+      "knownConstraints": [
+        "钉在 beta，使用前对照项目和官方稳定文档。",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed; documentation-generated skill, official current docs still take precedence",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "generated_from_official_docs"
+    },
+    {
+      "id": "upstream:antfu:unocss",
+      "name": "unocss",
+      "skillName": "unocss",
+      "kind": "official_upstream",
+      "category": "generated_from_official_docs",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "配置 UnoCSS、写规则/快捷方式/预设，或项目已使用 UnoCSS 时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill unocss    # 注意：@antfu/skills 包装不收录这些生成技能\n安装后请按官方技能名「unocss」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/unocss",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/unocss",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills 对生成结果与脚本的许可）。源文档另有各自上游许可，引用原文时需遵守对应项目许可。",
+      "knownConstraints": [
+        "",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed; documentation-generated skill, official current docs still take precedence",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "generated_from_official_docs"
+    },
+    {
+      "id": "upstream:antfu:pnpm",
+      "name": "pnpm",
+      "skillName": "pnpm",
+      "kind": "official_upstream",
+      "category": "generated_from_official_docs",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "使用 pnpm 命令、工作区、catalogs、patches、overrides 或全局 store 时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill pnpm    # 注意：@antfu/skills 包装不收录这些生成技能\n安装后请按官方技能名「pnpm」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/pnpm",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/pnpm",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills 对生成结果与脚本的许可）。源文档另有各自上游许可，引用原文时需遵守对应项目许可。",
+      "knownConstraints": [
+        "源地址在仓库内不一致，以 meta.ts 为准。",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed; documentation-generated skill, official current docs still take precedence",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "generated_from_official_docs"
+    },
+    {
+      "id": "upstream:antfu:nitro",
+      "name": "nitro",
+      "skillName": "nitro",
+      "kind": "official_upstream",
+      "category": "generated_from_official_docs",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "写独立 Nitro 服务、nitro.config、路由规则、缓存、存储、任务，或 Nuxt 服务端已进入 Nitro v3 语义时。",
+      "inputOutput": "输入多为当前代码或配置问题；输出为符合该项目文档或约定的建议。本站不复制技能正文。",
+      "callExample": "官方安装命令（本站只提供复制，不会替你执行）：\npnpx skills add antfu/skills --skill nitro    # 注意：@antfu/skills 包装不收录这些生成技能\n安装后请按官方技能名「nitro」调用。不要把本页当成已安装证明。",
+      "sourceUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/nitro",
+      "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/nitro",
+      "pinnedCommit": "d524ed287eef22757297827ce42e3cad88abd20c",
+      "license": "MIT（antfu/skills 对生成结果与脚本的许可）。源文档另有各自上游许可，引用原文时需遵守对应项目许可。",
+      "knownConstraints": [
+        "存在于 meta.ts 和 skills/nitro，但当前 README 技能表未列出。钉在 beta，使用前先读其 migration 参考。",
+        "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
+        "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
+        "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
+      ],
+      "reviewDepth": "inherited-from-antfu-skills-collection-catalog; upstream not executed; documentation-generated skill, official current docs still take precedence",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "antfu",
+      "origin": "generated_from_official_docs"
+    },
+    {
+      "id": "index:antfu-removed:slidev",
+      "name": "slidev",
+      "kind": "catalog_index_only",
+      "category": "removed-from-antfu-skills",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "曾被同步进 antfu/skills，现已移除，应使用原上游，不要从 antfu/skills 安装。",
+      "inputOutput": "索引项，不是本站精读的新技能正文。",
+      "callExample": "请到原项目的官方技能或文档入口使用，不要根据过期的 skills.sh 列表从 antfu/skills 安装。",
+      "sourceUrl": "https://github.com/slidevjs/slidev/tree/main/skills/slidev",
+      "officialUrl": "https://github.com/slidevjs/slidev/tree/main/skills/slidev",
+      "license": "MIT（slidevjs/slidev，Copyright Anthony Fu）",
+      "knownConstraints": [
+        "未在本轮当作已精读正文。",
+        "与精选包中的同名项去重，不重复计数为第一方技能。"
+      ],
+      "reviewDepth": "collection-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "formerly_vendored"
+    },
+    {
+      "id": "index:antfu-removed:tsdown",
+      "name": "tsdown",
+      "kind": "catalog_index_only",
+      "category": "removed-from-antfu-skills",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "曾被同步进 antfu/skills，现已移除，应使用原上游，不要从 antfu/skills 安装。",
+      "inputOutput": "索引项，不是本站精读的新技能正文。",
+      "callExample": "请到原项目的官方技能或文档入口使用，不要根据过期的 skills.sh 列表从 antfu/skills 安装。",
+      "sourceUrl": "https://github.com/rolldown/tsdown/tree/main/skills/tsdown",
+      "officialUrl": "https://github.com/rolldown/tsdown/tree/main/skills/tsdown",
+      "license": "MIT（VoidZero Inc. 与 Kevin Deng 等）",
+      "knownConstraints": [
+        "未在本轮当作已精读正文。",
+        "与精选包中的同名项去重，不重复计数为第一方技能。"
+      ],
+      "reviewDepth": "collection-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "formerly_vendored"
+    },
+    {
+      "id": "index:antfu-removed:turborepo",
+      "name": "turborepo",
+      "kind": "catalog_index_only",
+      "category": "removed-from-antfu-skills",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "曾被同步进 antfu/skills，现已移除，应使用原上游，不要从 antfu/skills 安装。",
+      "inputOutput": "索引项，不是本站精读的新技能正文。",
+      "callExample": "请到原项目的官方技能或文档入口使用，不要根据过期的 skills.sh 列表从 antfu/skills 安装。",
+      "sourceUrl": "https://github.com/vercel/turborepo/tree/main/skills/turborepo",
+      "officialUrl": "https://github.com/vercel/turborepo/tree/main/skills/turborepo",
+      "license": "MIT 风格许可，Copyright (c) 2026 Vercel, Inc",
+      "knownConstraints": [
+        "未在本轮当作已精读正文。",
+        "与精选包中的同名项去重，不重复计数为第一方技能。"
+      ],
+      "reviewDepth": "collection-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "formerly_vendored"
+    },
+    {
+      "id": "index:antfu-removed:vueuse-functions",
+      "name": "vueuse-functions",
+      "kind": "catalog_index_only",
+      "category": "removed-from-antfu-skills",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "曾被同步进 antfu/skills，现已移除，应使用原上游，不要从 antfu/skills 安装。",
+      "inputOutput": "索引项，不是本站精读的新技能正文。",
+      "callExample": "请到原项目的官方技能或文档入口使用，不要根据过期的 skills.sh 列表从 antfu/skills 安装。",
+      "sourceUrl": "https://github.com/vueuse/skills/tree/main/skills/vueuse-functions",
+      "officialUrl": "https://github.com/vueuse/skills/tree/main/skills/vueuse-functions",
+      "license": "SKILL.md 声明 MIT；VueUse 仓库亦为 MIT",
+      "knownConstraints": [
+        "未在本轮当作已精读正文。",
+        "与精选包中的同名项去重，不重复计数为第一方技能。"
+      ],
+      "reviewDepth": "collection-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "formerly_vendored"
+    },
+    {
+      "id": "index:antfu-removed:vue-best-practices",
+      "name": "vue-best-practices",
+      "kind": "catalog_index_only",
+      "category": "removed-from-antfu-skills",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "曾被同步进 antfu/skills，现已移除，应使用原上游，不要从 antfu/skills 安装。",
+      "inputOutput": "索引项，不是本站精读的新技能正文。",
+      "callExample": "请到原项目的官方技能或文档入口使用，不要根据过期的 skills.sh 列表从 antfu/skills 安装。",
+      "sourceUrl": "https://github.com/vuejs-ai/skills/tree/main/skills/vue-best-practices",
+      "officialUrl": "https://github.com/vuejs-ai/skills/tree/main/skills/vue-best-practices",
+      "license": "MIT（vuejs-ai/skills）",
+      "knownConstraints": [
+        "未在本轮当作已精读正文。",
+        "与精选包中的同名项去重，不重复计数为第一方技能。"
+      ],
+      "reviewDepth": "collection-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "formerly_vendored"
+    },
+    {
+      "id": "index:antfu-removed:vue-router-best-practices",
+      "name": "vue-router-best-practices",
+      "kind": "catalog_index_only",
+      "category": "removed-from-antfu-skills",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "曾被同步进 antfu/skills，现已移除，应使用原上游，不要从 antfu/skills 安装。",
+      "inputOutput": "索引项，不是本站精读的新技能正文。",
+      "callExample": "请到原项目的官方技能或文档入口使用，不要根据过期的 skills.sh 列表从 antfu/skills 安装。",
+      "sourceUrl": "https://github.com/vuejs-ai/skills/tree/main/skills/vue-router-best-practices",
+      "officialUrl": "https://github.com/vuejs-ai/skills/tree/main/skills/vue-router-best-practices",
+      "license": "MIT（vuejs-ai/skills）",
+      "knownConstraints": [
+        "未在本轮当作已精读正文。",
+        "与精选包中的同名项去重，不重复计数为第一方技能。"
+      ],
+      "reviewDepth": "collection-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "formerly_vendored"
+    },
+    {
+      "id": "index:antfu-removed:vue-testing-best-practices",
+      "name": "vue-testing-best-practices",
+      "kind": "catalog_index_only",
+      "category": "removed-from-antfu-skills",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "曾被同步进 antfu/skills，现已移除，应使用原上游，不要从 antfu/skills 安装。",
+      "inputOutput": "索引项，不是本站精读的新技能正文。",
+      "callExample": "请到原项目的官方技能或文档入口使用，不要根据过期的 skills.sh 列表从 antfu/skills 安装。",
+      "sourceUrl": "https://github.com/vuejs-ai/skills/tree/main/skills/vue-testing-best-practices",
+      "officialUrl": "https://github.com/vuejs-ai/skills/tree/main/skills/vue-testing-best-practices",
+      "license": "MIT（vuejs-ai/skills）",
+      "knownConstraints": [
+        "未在本轮当作已精读正文。",
+        "与精选包中的同名项去重，不重复计数为第一方技能。"
+      ],
+      "reviewDepth": "collection-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "formerly_vendored"
+    },
+    {
+      "id": "index:antfu-removed:web-design-guidelines",
+      "name": "web-design-guidelines",
+      "kind": "catalog_index_only",
+      "category": "removed-from-antfu-skills",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "曾被同步进 antfu/skills，现已移除，应使用原上游，不要从 antfu/skills 安装。",
+      "inputOutput": "索引项，不是本站精读的新技能正文。",
+      "callExample": "请到原项目的官方技能或文档入口使用，不要根据过期的 skills.sh 列表从 antfu/skills 安装。",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines",
+      "officialUrl": "https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines",
+      "license": "根目录 LICENSE 本轮 404，许可未钉死，使用前再核对",
+      "knownConstraints": [
+        "未在本轮当作已精读正文。",
+        "与精选包中的同名项去重，不重复计数为第一方技能。"
+      ],
+      "reviewDepth": "collection-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "formerly_vendored"
+    },
+    {
+      "id": "index:antfu-pack:grill-me",
+      "name": "grill-me",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "对计划或设计做持续追问。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/productivity/grill-me/SKILL.md",
+      "officialUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/productivity/grill-me/SKILL.md",
+      "license": "MIT（Matt Pocock）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:grilling",
+      "name": "grilling",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "持续追问计划或决策，antfu-query 的直接上游。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/productivity/grilling/SKILL.md",
+      "officialUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/productivity/grilling/SKILL.md",
+      "license": "MIT（Matt Pocock）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:handoff",
+      "name": "handoff",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "把当前对话压成交接文档给下一个 agent。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/productivity/handoff/SKILL.md",
+      "officialUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/productivity/handoff/SKILL.md",
+      "license": "MIT（Matt Pocock）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:to-questionnaire",
+      "name": "to-questionnaire",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "把暂时答不完的决策做成给他人填写的问卷。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/productivity/to-questionnaire/SKILL.md",
+      "officialUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/productivity/to-questionnaire/SKILL.md",
+      "license": "MIT（Matt Pocock）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:writing-for-agents",
+      "name": "writing-for-agents",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "编写给 agent 读的文档、技能或 AGENTS.md。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/productivity/writing-for-agents/SKILL.md",
+      "officialUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/productivity/writing-for-agents/SKILL.md",
+      "license": "MIT（Matt Pocock）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:teach",
+      "name": "teach",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "在当前工作区里教用户一项技能或概念。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/productivity/teach/SKILL.md",
+      "officialUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/productivity/teach/SKILL.md",
+      "license": "MIT（Matt Pocock）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:code-review",
+      "name": "code-review",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "从标准符合度和规格符合度两条轴审查自某基线以来的改动。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/engineering/code-review/SKILL.md",
+      "officialUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/engineering/code-review/SKILL.md",
+      "license": "MIT（Matt Pocock）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:codebase-design",
+      "name": "codebase-design",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "深模块设计的共用词汇。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/engineering/codebase-design/SKILL.md",
+      "officialUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/engineering/codebase-design/SKILL.md",
+      "license": "MIT（Matt Pocock）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:research",
+      "name": "research",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "按高信任源调查问题并写成仓库内 Markdown。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/engineering/research/SKILL.md",
+      "officialUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/engineering/research/SKILL.md",
+      "license": "MIT（Matt Pocock）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:tdd",
+      "name": "tdd",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "测试驱动开发或先写集成测试时。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/engineering/tdd/SKILL.md",
+      "officialUrl": "https://github.com/mattpocock/skills/blob/HEAD/skills/engineering/tdd/SKILL.md",
+      "license": "MIT（Matt Pocock）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:improve",
+      "name": "improve",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "以顾问视角给代码库做可交给其他模型执行的改进计划。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/shadcn/improve/blob/HEAD/skills/improve/SKILL.md",
+      "officialUrl": "https://github.com/shadcn/improve/blob/HEAD/skills/improve/SKILL.md",
+      "license": "本轮未读到许可文件",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:dry-refactoring",
+      "name": "dry-refactoring",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "按 jscpd 检测结果消除重复代码。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/kucherenko/jscpd/blob/HEAD/skills/dry-refactoring/SKILL.md",
+      "officialUrl": "https://github.com/kucherenko/jscpd/blob/HEAD/skills/dry-refactoring/SKILL.md",
+      "license": "MIT（Andrey Kucherenko，仓库许可）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:simple-english",
+      "name": "simple-english",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "用简短、主动、一词一义的英文改写，降低空话。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/AminBlg/SimpleEnglish/blob/HEAD/skills/simple-english/SKILL.md",
+      "officialUrl": "https://github.com/AminBlg/SimpleEnglish/blob/HEAD/skills/simple-english/SKILL.md",
+      "license": "MIT（AminBlg）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:unslop",
+      "name": "unslop",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "包装说明为去掉写作中的 AI 痕迹，并称应始终应用。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/cursor/plugins/blob/HEAD/pstack/skills/unslop/SKILL.md",
+      "officialUrl": "https://github.com/cursor/plugins/blob/HEAD/pstack/skills/unslop/SKILL.md",
+      "license": "本轮 raw 请求 429，许可与正文未读",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:i-have-adhd",
+      "name": "i-have-adhd",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "让输出更适合注意力易分散的读者：先写下一步、分步编号、跨轮复述状态。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/ayghri/i-have-adhd/blob/HEAD/skills/i-have-adhd/SKILL.md",
+      "officialUrl": "https://github.com/ayghri/i-have-adhd/blob/HEAD/skills/i-have-adhd/SKILL.md",
+      "license": "MIT（Ayoub Ghriss）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:vue-pinia-best-practices",
+      "name": "vue-pinia-best-practices",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "Pinia 实践，不只是 API 索引。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/vuejs-ai/skills/blob/HEAD/skills/vue-pinia-best-practices/SKILL.md",
+      "officialUrl": "https://github.com/vuejs-ai/skills/blob/HEAD/skills/vue-pinia-best-practices/SKILL.md",
+      "license": "MIT（vuejs-ai/skills；该 SKILL.md 亦声明 MIT）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:vue-debug-guides",
+      "name": "vue-debug-guides",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "Vue 3 运行时错误、警告、异步失败和 SSR/hydration 问题。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/vuejs-ai/skills/blob/HEAD/skills/vue-debug-guides/SKILL.md",
+      "officialUrl": "https://github.com/vuejs-ai/skills/blob/HEAD/skills/vue-debug-guides/SKILL.md",
+      "license": "MIT（vuejs-ai/skills）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:create-adaptable-composable",
+      "name": "create-adaptable-composable",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "编写可接受 MaybeRef / getter 的库级 composable。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/vuejs-ai/skills/blob/HEAD/skills/create-adaptable-composable/SKILL.md",
+      "officialUrl": "https://github.com/vuejs-ai/skills/blob/HEAD/skills/create-adaptable-composable/SKILL.md",
+      "license": "MIT（vuejs-ai/skills）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:nuxt-modules",
+      "name": "nuxt-modules",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "创建、测试和发布 Nuxt 模块时。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/onmax/nuxt-skills/blob/HEAD/skills/nuxt-modules/SKILL.md",
+      "officialUrl": "https://github.com/onmax/nuxt-skills/blob/HEAD/skills/nuxt-modules/SKILL.md",
+      "license": "SKILL.md 与仓库 README 均写 MIT",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:frontend-design",
+      "name": "frontend-design",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "做新界面或改版时追求有意识、有辨识度的视觉设计。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/anthropics/skills/blob/HEAD/skills/frontend-design/SKILL.md",
+      "officialUrl": "https://github.com/anthropics/skills/blob/HEAD/skills/frontend-design/SKILL.md",
+      "license": "仓库 README 称许多技能为 Apache 2.0；该技能单独许可文件本轮未打开",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:antfu-pack:agent-browser",
+      "name": "agent-browser",
+      "kind": "catalog_index_only",
+      "category": "antfu-skills-pack-third-party",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "需要用该 CLI 让 agent 浏览、填表、截图或做页面自动化时。",
+      "inputOutput": "索引项。包装表与独立仓库出现同一技能时只保留一条索引，并指向原上游。",
+      "callExample": "按各自上游许可与安装说明使用。本站不代为安装，也不把包装清单写成已精读。",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser/blob/HEAD/skills/agent-browser/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/agent-browser/blob/HEAD/skills/agent-browser/SKILL.md",
+      "license": "Apache License 2.0（已打开仓库 LICENSE）",
+      "knownConstraints": [
+        "reviewDepth 仅为包装目录级，不是全文精读。",
+        "不要算进 antfu 第一方 16 条。"
+      ],
+      "reviewDepth": "skills-pack-table-index-only-not-close-read",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "other-upstream",
+      "origin": "curated_in_skills_pack"
+    },
+    {
+      "id": "index:not-antfu:find-skills",
+      "name": "find-skills",
+      "kind": "do_not_install_here",
+      "category": "false-attribution",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "不是他的原创技能，不要从 antfu/skills-cli 安装。",
+      "inputOutput": "警告条目。",
+      "callExample": "不要从 antfu/skills-cli 安装 find-skills。如需官方 CLI，请核对其当前权威仓库。",
+      "sourceUrl": "官方应指向 https://github.com/vercel-labs/skills ；不要用 https://github.com/antfu/skills-cli",
+      "officialUrl": "官方应指向 https://github.com/vercel-labs/skills ；不要用 https://github.com/antfu/skills-cli",
+      "license": "官方 CLI 仓库 LICENSE 为 MIT，Copyright (c) 2026 Vercel, Inc.。fork 根目录未见 LICENSE 文件。",
+      "knownConstraints": [
+        "不计入第一方技能。"
+      ],
+      "reviewDepth": "collection-index-only",
+      "demoRoutes": [],
+      "sourcePackage": "antfu-skills-collection",
+      "authorFilter": "exclude",
+      "origin": "stale_fork_of_official_cli"
+    },
+    {
+      "id": "upstream:vercel:vercel-react-best-practices",
+      "name": "vercel-react-best-practices",
+      "kind": "official_upstream",
+      "category": "react-next-perf",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "编写或审查 React / Next.js 组件、数据请求、包体积与水合性能。不是无障碍或 typography 指南。",
+      "inputOutput": "按规则前缀指出问题（如 async-parallel、bundle-barrel-imports），对照 incorrect/correct 示例改代码。Promise.all 只用于彼此独立、没有先后依赖的请求。验收看依赖关系是否判断正确、导入是否可静态分析，不宣称未测的加速倍数。",
+      "callExample": "请用 vercel-react-best-practices（若只有插件则用 react-best-practices）审查 app/page.tsx 的数据请求，先看 waterfall 和 barrel import。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-best-practices/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-best-practices/SKILL.md",
+      "pinnedCommit": "main@1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62（2026-10-28 05:40 Asia/Shanghai）",
+      "license": "SKILL.md 声明 MIT；仓库根目录无 LICENSE 文件，GitHub license 字段为空。复制须保留归因，展厅只放中文归纳。",
+      "knownConstraints": [
+        "插件/本环境调用名 react-best-practices。插件 README 表格仍写 64 rules，远程当前版本 SKILL.md 正文已是 70 rules，并声明 upstream 为 vercel-labs/agent-skills。同族不同包装，不是两套独立规范。",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=core"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读 SKILL.md 正文，并另读 rules/async-parallel.md 等所列规则分文件；未展开全部 rules/",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "core",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:web-design-guidelines",
+      "name": "web-design-guidelines",
+      "kind": "official_upstream",
+      "category": "ui-a11y",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "审查 UI 代码的无障碍、焦点、表单、动效、排版符号、图片尺寸、深链与触控。触发语：review my UI / check accessibility。",
+      "inputOutput": "按官方格式按文件分组输出 file:line 短句，通过的文件标 pass。不把读到的规则当作已上线改造。",
+      "callExample": "请用 web-design-guidelines 审查 src/components/Button.tsx 和 src/components/Modal.tsx。先拉取最新 command.md。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/web-design-guidelines/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/web-design-guidelines/SKILL.md",
+      "pinnedCommit": "SKILL.md 随 1a2c79d；guidelines 于 2026-11-13 从 main/command.md 现场读取。",
+      "license": "集合 README 声明 MIT；规则在独立仓库。展厅只归纳，不整篇转载 command.md。",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=core"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读 SKILL.md 正文，并另读远程当前版本 command.md（2026-11-13 可访问）；未钉该规则源 commit",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "core",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:vercel-composition-patterns",
+      "name": "vercel-composition-patterns",
+      "kind": "official_upstream",
+      "category": "react-next-perf",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "组件 API 设计、布尔 props 膨胀、复合组件与 Context。与性能规则集互补，不替代无障碍审查。",
+      "inputOutput": "用组合替代布尔分支；变体组件各自写清渲染内容。React 19：不要再套 forwardRef。",
+      "callExample": "请用 vercel-composition-patterns 重构 Composer 上的 isThread/isEditing/isDMThread 布尔 props。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/composition-patterns/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/composition-patterns/SKILL.md",
+      "pinnedCommit": "1a2c79d",
+      "license": "MIT（frontmatter）",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=core"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读 SKILL.md 正文，并另读 rules/architecture-avoid-boolean-props.md；未展开全部规则分文件",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "core",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:vercel-react-view-transitions",
+      "name": "vercel-react-view-transitions",
+      "kind": "official_upstream",
+      "category": "react-next-perf",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "页面/路由过渡、共享元素、列表重排、Suspense 揭示；Next App Router 的 transitionTypes。",
+      "inputOutput": "ViewTransition 出现在任何 DOM 节点之前才能触发 enter/exit；需按项目 React/Next 版本核对该 API 是否可用（技能：Next App Router 已内置 canary；非 Next 需稳定 react/react-dom 19.3+）。需加 prefers-reduced-motion。router.back() 不带 transition types。不要把这些写成所有 React 版本都已具备该 API。",
+      "callExample": "请按 vercel-react-view-transitions 为列表到详情加共享元素过渡，并加上 reduced-motion。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-view-transitions/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-view-transitions/SKILL.md",
+      "pinnedCommit": "1a2c79d（此前 6ec2693 将非 Next 推荐改为稳定 React 19.3）",
+      "license": "MIT（frontmatter）",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=core"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读 SKILL.md 正文；参考文件路径已记录，AGENTS.md 未全部展开",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "core",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:ai-sdk",
+      "name": "ai-sdk",
+      "kind": "official_upstream",
+      "category": "ai-sdk-agents",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "聊天、流式输出、结构化结果、tool calling、Agent 循环、embeddings。官方 agent-skills 集合不含此技能。",
+      "inputOutput": "先核对该项目已安装的 `ai` 包版本，并对照 node_modules/ai/docs（或该版本文档）。远程当前技能正文对较新主版本列出了 useChat({ api })、generateObject、maxSteps、CoreMessage 等迁移提示；这不是「所有版本统一禁用旧 API」。旧项目是否迁移以已安装版本文档为准。改完跑项目 type check。",
+      "callExample": "/vercel-plugin:ai-sdk  给这个 Next 应用加一个流式聊天 API，先读 node_modules/ai/docs，不要用记忆中的 useChat({ api })。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/ai-sdk/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/ai-sdk/SKILL.md",
+      "pinnedCommit": "插件 main@b004b4098274bb1b3a0290623260e23432437b4b，package.json 0.55.1（提交于 2026-11-13 02:56 Asia/Shanghai）",
+      "license": "插件 Apache-2.0；上游 vercel/ai 另有其许可证，展厅只归纳。",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=core"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读远程当前版本的 SKILL.md 正文（含校验规则与版本约束）；未展开上游 vercel/ai 的全部文档树",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "core",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:deploy-to-vercel",
+      "name": "deploy-to-vercel",
+      "kind": "official_upstream",
+      "category": "deploy-troubleshoot",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "把应用部署到 Vercel：优先已链接项目的 git push，其次 CLI，无登录时才用临时部署。默认预览，除非用户明确要求生产。",
+      "inputOutput": "给出建议路径与（若已部署）部署 URL。技能原文写不要用 curl/fetch 部署 URL 做「是否上线」的代替验证，但上游这类部署建议不能覆盖项目必要的测试与验收。无登录临时部署要同时给出 claim URL 与过期时间，且不要分享 claim 链接。本轮未运行部署命令。",
+      "callExample": "请按 deploy-to-vercel 先做只读状态检查（git remote、.vercel/project.json 或 repo.json、是否已登录），给出应走哪条路径。不要推送，不要部署。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/deploy-to-vercel/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/deploy-to-vercel/SKILL.md",
+      "pinnedCommit": "1a2c79d（含 vercel deploy --temporary 无登录回退）",
+      "license": "README 声明 MIT",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=core"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读该技能 SKILL.md 正文；未展开其 references/ 或 AGENTS.md，除非本条另有注明",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "core",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:vercel-optimize",
+      "name": "vercel-optimize",
+      "kind": "official_upstream",
+      "category": "deploy-troubleshoot",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "已部署项目的成本、缓存、函数用量、慢路由审计。先采集 Vercel 指标，再只调查指标指向的文件。",
+      "inputOutput": "排名建议必须能追溯到 signals 与核对过的文件/文档版本。对客户文案只用成本量级用语，不要编造 $N 节省。本轮未跑审计。",
+      "callExample": "在已 link 的项目里用 vercel-optimize 做指标优先审计。先确认团队与项目，未确认不要采指标。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/vercel-optimize/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/vercel-optimize/SKILL.md",
+      "pinnedCommit": "1a2c79d",
+      "license": "README 声明 MIT",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=core"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读该技能 SKILL.md 正文；references/（doctrine、data-collection、voice 等）未全部展开",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "core",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:deployments-cicd",
+      "name": "deployments-cicd",
+      "kind": "official_upstream",
+      "category": "deploy-troubleshoot",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "CI 里 build/promote/rollback、--prebuilt、Deployment Checks。与 deploy-to-vercel（本地/交互部署决策）互补，不是重复。",
+      "inputOutput": "预览与生产命令分开；promote 应针对已暂存的生产构建，而不是拿预览直接当生产。流水线仍须保留必要测试门闩；不能因为技能示例里有一条发布命令就省略测试。本轮未部署。",
+      "callExample": "请用 deployments-cicd 设计：main 上先 vercel build --prod，再 vercel deploy --prebuilt --prod --skip-domain，测试通过后 vercel promote <url>。不要写入真实 token。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/deployments-cicd/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/deployments-cicd/SKILL.md",
+      "pinnedCommit": "plugin 0.55.1 / b004b40（远程当前 main，提交于 2026-11-13 02:56 Asia/Shanghai）",
+      "license": "Apache-2.0",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=core"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读远程当前版本的 SKILL.md 正文；references/ 下的 deployment-checks 等分文件未全部展开",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "core",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:env-vars",
+      "name": "env-vars",
+      "kind": "official_upstream",
+      "category": "config-data-security",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": ".env 层级、vercel env、Secret/Config 类型、本地 OIDC 续期。",
+      "inputOutput": "NEXT_PUBLIC_ 不得放密钥；生产 Secret 不会被 vercel env pull 拉回；.env.local 不入库。",
+      "callExample": "请用 env-vars 说明如何把 DATABASE_URL 加成 production Secret，以及本地如何 pull 到 .env.local。不要索要真实值。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/env-vars/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/env-vars/SKILL.md",
+      "pinnedCommit": "plugin 0.55.1 / b004b40（远程当前 main，提交于 2026-11-13 02:56 Asia/Shanghai）",
+      "license": "Apache-2.0",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=core"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读远程当前版本的 SKILL.md 正文；未另开全部官方 env 文档页",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "core",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:verification",
+      "name": "verification",
+      "kind": "official_upstream",
+      "category": "deploy-troubleshoot",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "功能「差不多能用」或 dev server 起来后，按完整用户故事核对浏览器→API→数据→回写。",
+      "inputOutput": "Verification Report 表：每个边界有证据。同一检查不超过两次。不把读文档当成已验证部署。",
+      "callExample": "请用 verification 核对「提交表单后列表出现新记录」这条故事，先写故事再取证。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/verification/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/verification/SKILL.md",
+      "pinnedCommit": "plugin 0.55.1 / b004b40（远程当前 main，提交于 2026-11-13 02:56 Asia/Shanghai）",
+      "license": "Apache-2.0",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=core"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读远程当前版本的 SKILL.md 正文；未展开 references/",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "core",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:next-dev-loop",
+      "name": "next-dev-loop",
+      "kind": "official_upstream",
+      "category": "next-fullstack",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "在运行中的 next dev 上做改完即验：结合 Next MCP 与浏览器/Web Vitals。插件明确不自带 Next.js 技能。",
+      "inputOutput": "用 /_next/mcp（编译、路由、服务端错误）与 agent-browser（DOM、控制台、网络、React 树）交叉核对改动在运行时成立，而不是只看 typecheck。技能要求保存 .next、核对会话，并在两套视图不一致时先怀疑工具会话。本轮未实际启动 dev server 或安装 agent-browser。",
+      "callExample": "在已满足 Next 16.3+ / Turbopack / 正在运行的 next dev 时：用 next-dev-loop 在每次编辑后做运行时核对。若版本不足，先说明条件，不要擅自升级或安装 agent-browser。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/next.js/blob/d2defa02a2887f94b99a573cf17efbef112218fd/skills/next-dev-loop/SKILL.md",
+      "officialUrl": "https://github.com/vercel/next.js/blob/d2defa02a2887f94b99a573cf17efbef112218fd/skills/next-dev-loop/SKILL.md",
+      "pinnedCommit": "仓库路径 skills/next-dev-loop/SKILL.md；canary 上该文件最近一次变更提交 d2defa02a2887f94b99a573cf17efbef112218fd（2026-11-04T15:19:30Z = 2026-11-04 23:19:30 Asia/Shanghai）。2026-11-13 经 GitHub 只读读取默认分支正文。",
+      "license": "以 Next.js 仓库许可证为准；本轮未另开 LICENSE 文件。",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=situational"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 2026-11-13 只读读取仓库内 SKILL.md 全文；未展开其引用的 agent-browser 用法指南或 Next MCP 工具模式以外的参考。",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "situational",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:vercel-functions",
+      "name": "vercel-functions",
+      "kind": "official_upstream",
+      "category": "next-fullstack",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "配置或排障 Vercel Functions：运行时、时长、包体、流式、Cron 迁移等。",
+      "inputOutput": "按该项目 Next/函数文档限制配置。不把训练数据或单一摘要写成所有版本统一禁用某种 runtime。本轮以插件 description 与官方技能表为主，未逐行精读 900+ 行全文。",
+      "callExample": "请用 vercel-functions 核对这个 route handler 的时长与运行时设置，不要改回 edge runtime，除非文档证明仍适用。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-functions",
+      "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-functions",
+      "pinnedCommit": "plugin 0.55.1 / b004b40（远程当前 main，提交于 2026-11-13 02:56 Asia/Shanghai）",
+      "license": "Apache-2.0",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=situational"
+      ],
+      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方插件文档/README 摘要；未全文精读",
+      "reviewDepthBucket": "not-close-read-frontmatter-or-index",
+      "tier": "situational",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:auth",
+      "name": "auth",
+      "kind": "official_upstream",
+      "category": "config-data-security",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "Next.js 上接入 Clerk、Better Auth、Descope、Auth0，以及 Sign in with Vercel 等。保护路由与部署访问。",
+      "inputOutput": "会话与受保护路由可核对；密钥不进仓库。本轮读了 description/frontmatter 与官方插件技能表，未全文精读 600+ 行正文。",
+      "callExample": "请用 auth 技能，按我们已选定的 Better Auth，列出 App Router 下受保护路由需要的文件，不要改用别的供应商。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/auth",
+      "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/auth",
+      "pinnedCommit": "plugin 0.55.1 / b004b40（远程当前 main，提交于 2026-11-13 02:56 Asia/Shanghai）",
+      "license": "Apache-2.0",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=situational"
+      ],
+      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方技能表；正文未全文精读",
+      "reviewDepthBucket": "not-close-read-frontmatter-or-index",
+      "tier": "situational",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:build-agents",
+      "name": "build-agents",
+      "kind": "official_upstream",
+      "category": "ai-sdk-agents",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "从零搭建「一个 Agent 应用」（工具、频道、日程、Slack）。默认导向 eve，不是通用 AI SDK 聊天功能的第一选择。",
+      "inputOutput": "不要把 Vercel Agent（平台代码审查产品）当成通用 agent 框架。不要在生成项目里硬编码密钥。本轮完整阅读了远程当前版本的 SKILL.md 正文。",
+      "callExample": "如果要做一个可在 Slack 里跑的长期 agent，用 build-agents；如果只是网页里的流式聊天，用 ai-sdk。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/build-agents/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/build-agents/SKILL.md",
+      "pinnedCommit": "plugin 0.55.1 / b004b40（远程当前 main，提交于 2026-11-13 02:56 Asia/Shanghai）",
+      "license": "Apache-2.0",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=situational"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读远程当前版本的 SKILL.md 正文；未展开 eve 包内全部文档",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "situational",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:runtime-cache",
+      "name": "runtime-cache",
+      "kind": "official_upstream",
+      "category": "next-fullstack",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "函数/中间件/构建之间共享的按区域临时 KV 缓存与按 tag 失效。",
+      "inputOutput": "明确失效策略。本轮依据官方技能表与 description，未全文精读。",
+      "callExample": "请用 runtime-cache 为这个需要跨 function 共享、按 tag 失效的短缓存给出写法，不要改成 CDN ISR。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/runtime-cache",
+      "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/runtime-cache",
+      "pinnedCommit": "plugin 0.55.1 / b004b40（远程当前 main，提交于 2026-11-13 02:56 Asia/Shanghai）",
+      "license": "Apache-2.0",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=situational"
+      ],
+      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方技能表",
+      "reviewDepthBucket": "not-close-read-frontmatter-or-index",
+      "tier": "situational",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:cdn-caching",
+      "name": "cdn-caching",
+      "kind": "official_upstream",
+      "category": "deploy-troubleshoot",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "排查 CDN 命中率、过期内容、ISR/PPR、cacheReason。",
+      "inputOutput": "解释 x-vercel-cache / cacheReason，而不是空喊「清缓存」。本轮未全文精读。",
+      "callExample": "请用 cdn-caching 解释为什么这个路径一直 MISS，先对照缓存响应头，不要先 purge。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/cdn-caching",
+      "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/cdn-caching",
+      "pinnedCommit": "plugin 0.55.1 / b004b40（远程当前 main，提交于 2026-11-13 02:56 Asia/Shanghai）",
+      "license": "Apache-2.0",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=situational"
+      ],
+      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方技能表",
+      "reviewDepthBucket": "not-close-read-frontmatter-or-index",
+      "tier": "situational",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:flags-sdk",
+      "name": "flags-sdk",
+      "kind": "official_upstream",
+      "category": "config-data-security",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "在 Next.js/SvelteKit 代码里声明 flag()、适配器、precompute、Flags Explorer。",
+      "inputOutput": "旗标求值与代码声明一致。本轮未全文精读。",
+      "callExample": "请用 flags-sdk 在这个 Next 页面加一个 flag() 声明，不要改去讲 vercel flags CLI。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/flags-sdk",
+      "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/flags-sdk",
+      "pinnedCommit": "plugin 0.55.1 / b004b40（远程当前 main，提交于 2026-11-13 02:56 Asia/Shanghai）",
+      "license": "插件 Apache-2.0；上游另计",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=situational"
+      ],
+      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方技能表",
+      "reviewDepthBucket": "not-close-read-frontmatter-or-index",
+      "tier": "situational",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:access-protected-vercel-deployment",
+      "name": "access-protected-vercel-deployment",
+      "kind": "official_upstream",
+      "category": "deploy-troubleshoot",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "预览/生产开启 Deployment Protection 后，自动化请求遇到登录墙、401/403 或 TRUSTED_SOURCES_ENVIRONMENT_MISMATCH。",
+      "inputOutput": "能用文档所述方式通过保护墙读取页面，而不是关掉保护。本轮未全文精读。",
+      "callExample": "预览 URL 返回 401 时，用 access-protected-vercel-deployment 选择 vercel curl 还是 OIDC，不要把保护关掉。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/access-protected-vercel-deployment",
+      "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/access-protected-vercel-deployment",
+      "pinnedCommit": "plugin 0.55.1 / b004b40（远程当前 main，提交于 2026-11-13 02:56 Asia/Shanghai）",
+      "license": "Apache-2.0",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=situational"
+      ],
+      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方技能表",
+      "reviewDepthBucket": "not-close-read-frontmatter-or-index",
+      "tier": "situational",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:vercel-storage",
+      "name": "vercel-storage",
+      "kind": "official_upstream",
+      "category": "config-data-security",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "在 Blob、Global Config（原 Edge Config）、Neon、Upstash 等之间选型与配置。",
+      "inputOutput": "选型理由与官方产品边界一致。本轮未全文精读。",
+      "callExample": "请用 vercel-storage 为用户上传图片和每请求功能开关分别选型，不要都塞进一份 Postgres。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-storage",
+      "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-storage",
+      "pinnedCommit": "plugin 0.55.1 / b004b40（远程当前 main，提交于 2026-11-13 02:56 Asia/Shanghai）",
+      "license": "Apache-2.0",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=situational"
+      ],
+      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方技能表",
+      "reviewDepthBucket": "not-close-read-frontmatter-or-index",
+      "tier": "situational",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "upstream:vercel:vercel-cli-with-tokens",
+      "name": "vercel-cli-with-tokens",
+      "kind": "official_upstream",
+      "category": "deploy-troubleshoot",
+      "taskScenarios": [
+        "tool-efficiency"
+      ],
+      "purpose": "非交互/CI 场景用环境变量里的 token 跑 CLI。日常本机交互部署应优先 deploy-to-vercel。",
+      "inputOutput": "预览默认；git push 仍需批准。本轮精读完整 SKILL.md，未执行 CLI。",
+      "callExample": "在 CI 里用 vercel-cli-with-tokens：确认 VERCEL_TOKEN 已在环境中，然后 vercel deploy -y --no-wait。不要把 token 写进命令参数。\n本站不代为执行安装或部署。",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/vercel-cli-with-tokens/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/vercel-cli-with-tokens/SKILL.md",
+      "pinnedCommit": "1a2c79d",
+      "license": "集合 README 声明 MIT；该 SKILL.md 无 license 字段",
+      "knownConstraints": [
+        "",
+        "路由名 vercel 已保存不代表本机已安装全部官方包。",
+        "tier=situational"
+      ],
+      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读该技能 SKILL.md 正文；未展开其 references/ 或 AGENTS.md，除非本条另有注明",
+      "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
+      "tier": "situational",
+      "demoRoutes": [],
+      "sourcePackage": "vercel-skills-collection",
+      "authorFilter": "vercel"
+    },
+    {
+      "id": "design-method:in-context-work-modal",
+      "name": "上下文作业弹层",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "forms",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「上下文作业弹层」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "first-wave",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:obligation-timeline",
+      "name": "到期义务时间线与例外标记",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "data",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「到期义务时间线与例外标记」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "summarized",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:guided-external-task",
+      "name": "站外任务分步向导",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "interaction",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「站外任务分步向导」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "summarized",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:collapsible-nav-search",
+      "name": "可折叠导航与菜单内搜索",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "navigation",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「可折叠导航与菜单内搜索」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "first-wave",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:tree-index-with-counts",
+      "name": "带计数的树形索引",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "navigation",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「带计数的树形索引」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "summarized",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:multi-actor-swimlane",
+      "name": "多角色过程泳道",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "data",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「多角色过程泳道」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "summarized",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:motion-budget-by-frequency",
+      "name": "按出现频率分配动效预算",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "interaction",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「按出现频率分配动效预算」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "first-wave",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:split-stacked-diff",
+      "name": "并排或堆叠对照",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "data",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「并排或堆叠对照」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "summarized",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:review-walkthrough",
+      "name": "分步审阅路径",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "data",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「分步审阅路径」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "summarized",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:css-grid-lanes",
+      "name": "CSS 原生砌体/车道布局",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "layout",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「CSS 原生砌体/车道布局」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "summarized",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:named-scroll-behaviors",
+      "name": "具名滚动行为",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "interaction",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「具名滚动行为」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "first-wave",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:measured-skeleton",
+      "name": "按实尺寸骨架屏",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "interaction",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「按实尺寸骨架屏」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "first-wave",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:quiet-and-time-scrollbar",
+      "name": "克制滚动条与时间刻度滚动",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "interaction",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「克制滚动条与时间刻度滚动」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "summarized",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:resource-schedule",
+      "name": "资源行时间表",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "layout",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「资源行时间表」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "summarized-not-required-as-5th-layout",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:date-range-time-picker",
+      "name": "日期范围与时间点选择",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "forms",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「日期范围与时间点选择」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "summarized",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:url-persisted-variant-switch",
+      "name": "用 URL 保持对照切换",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "tooling",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「用 URL 保持对照切换」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "summarized",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": false
+    },
+    {
+      "id": "design-method:container-query-reflow",
+      "name": "容器查询重排",
+      "kind": "saved_method_not_implemented_in_hall",
+      "category": "layout",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "已保存到聚合技能 v1.3 的方法归纳，展厅与仓库仍为 v1.2，尚未做成可体验作品。",
+      "inputOutput": "方法说明，不是已交付的新示例。",
+      "callExample": "需要该方法时，按已保存的「多风格界面设计」规则使用「容器查询重排」。公开页只提供方法名与说明，不使用内部聊天链接，也不把未实现示例标成已上线。",
+      "sourceUrl": null,
+      "officialUrl": null,
+      "license": "归纳参考，不是上游或已保存正文的逐字版。",
+      "knownConstraints": [
+        "方法已整理，效果尚未在展厅或仓库实现。未实现方法不得标成已交付。",
+        "本目录是本批归纳与调用参考，不是已保存 Skill 的逐字正文。完整规则以 Skill 入口为准。本轮未更新展厅或代码仓库，也未开发新示例。",
+        "不得拿 local proposal 冒充 canonical。",
+        "第三方来源帖只作附录，不得当封面。"
+      ],
+      "reviewDepth": "inherited-from-ui-design-methods-v1.3-public-catalog; summarized-not-implemented",
+      "demoRoutes": [],
+      "priority": "optional-reinforcement",
+      "sourcePackage": "ui-design-methods-v1.3-public",
+      "authorFilter": "self",
+      "optional": true
+    }
+  ],
+  "relatedNonSkillProjects": [
+    {
+      "id": "related:guizang:guizang-s-prompt",
+      "name": "歸藏的提示词仓库",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/guizang-s-prompt",
+      "license": "MIT",
+      "note": "MIT 许可的提示词储存库，不是 Agent Skill（无 SKILL.md）。按主题取用即可，不要整库复制进自有技能。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:codepilot",
+      "name": "CodePilot",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/CodePilot",
+      "license": "Business Source License 1.1（Change Date 2029-03-16，Change License Apache-2.0）",
+      "note": "多模型 AI Agent 桌面客户端，主页 https://www.codepilot.sh/。BSL 允许非商业等 Additional Use Grant 范围内使用；超过 100 人组织的内部使用或向第三方收费提供，需另行商业许可（上游说明联系 X @op7418）。skills.sh 在该条目下列出的 9 个飞书技能位于仓库 资料/feishu-openclaw-plugin/，是第三方资料包，不是歸藏原创 Skill 系列，各自还有独立 LICENSE。不要把 CodePilot 或这些飞书技能写成自有技能。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:claude-to-im-lib",
+      "name": "Claude-to-IM（实现库）",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/Claude-to-IM",
+      "license": "MIT",
+      "note": "与 Claude-to-IM-skill 配套的宿主无关桥接实现，不是单独的技能目录。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:ai-claude-start",
+      "name": "ai-claude-start",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/ai-claude-start",
+      "license": "MIT",
+      "note": "多配置 Claude Code 启动器，强调凭据隔离。无 SKILL.md。方法层已由「凭据泄漏检查与登录策略审查」覆盖，直接参考或使用该工具即可，不必新写技能。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:m5-paper-buddy",
+      "name": "M5 Paper Buddy",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/m5-paper-buddy",
+      "license": "GPL-3.0（附加署名条款）",
+      "note": "AI Desk Card 的前任实体搭档项目。新需求优先 ai-desk-card。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:pilot-harness",
+      "name": "Pilot Harness",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/pilot-harness",
+      "license": "MIT",
+      "note": "受 CodePilot 启发、衍生自 DeepSeek Harness 的社区桌面客户端。不是歸藏 Skill 系列。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:generative-ui-mcp",
+      "name": "Generative UI MCP",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/Generative-UI-MCP",
+      "license": "README 写 MIT，未见 LICENSE 文件",
+      "note": "让模型生成图表和交互可视化的 MCP 服务，不是 Skill。许可声明不完整。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:guizang-tv",
+      "name": "歸藏电视",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/guizang-tv",
+      "license": "MIT；壁纸另有 Unsplash 等来源",
+      "note": "面向小米电视的 Android 桌面，不是 Agent Skill。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:malfoy-desktop",
+      "name": "马尔福桌面",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/malfoy-desktop",
+      "license": "PolyForm Noncommercial 1.0.0",
+      "note": "非商业许可，不能商用。不是 Skill。不宜复制到自有技能包。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:night-patrol",
+      "name": "Night Patrol",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/Night-Patrol",
+      "license": "CC BY-NC 4.0",
+      "note": "非商业授权。不是 Skill。提交日期未取到，SHA 由 git ref 钉住。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:redalert2-claude",
+      "name": "Red Alert 2 Claude Sounds",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/RedAlert2-Claude",
+      "license": "代码 MIT；音效需核对其来源",
+      "note": "给 Claude Code 挂钩经典音效，无 SKILL.md。不要把音效素材默认视为可任意再分发。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:am-native",
+      "name": "AM Native",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/AM-Native",
+      "license": "MIT；第三方品牌素材除外",
+      "note": "非官方鼠标设置工具，不是 Skill。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:twitter-to-flomo",
+      "name": "Twitter-to-Flomo",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/Twitter-to-Flomo",
+      "license": "未解决",
+      "note": "无 LICENSE、无 SKILL.md 的早期浏览器扩展。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:comfyui-workflow",
+      "name": "Comfyui-workflow",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/Comfyui-workflow",
+      "license": "未解决",
+      "note": "未见 README/LICENSE。个人简介当作图像工作流入口，不是 Skill。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:reading-pages",
+      "name": "reading-pages",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/reading-pages",
+      "license": "未解决",
+      "note": "阅读页静态站点，无 SKILL.md，可能是 Page Skill 的产出示例，不是技能本身。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:nexttoken-topics",
+      "name": "nexttoken-topics",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/nexttoken-topics",
+      "license": "未解决",
+      "note": "Next Token 播客选题页，不是 Skill。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    },
+    {
+      "id": "related:guizang:awesome-dsh-plugin",
+      "name": "awesome-dsh-plugin",
+      "kind": "related_non_skill",
+      "sourceUrl": "https://github.com/op7418/awesome-dsh-plugin",
+      "license": "CC0-1.0",
+      "note": "Fork。DeepSeek Harness 插件列表，不是歸藏原创技能。",
+      "sourcePackage": "guizang-skills-inventory-public"
+    }
+  ]
+}
