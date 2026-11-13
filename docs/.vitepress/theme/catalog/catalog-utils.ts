@@ -29,6 +29,26 @@ export type CatalogItem = {
   authorFilter?: string;
   skillCallExample?: string;
   licenseNote?: string;
+  vercelCatalogId?: string;
+  vercelScenarioPick?: boolean;
+  vercelFocus?: boolean;
+  vercelNewlyIndexed?: boolean;
+  vercelCommit?: string;
+  vercelRepository?: string;
+};
+
+export type VercelExpansionMeta = {
+  package?: string;
+  catalogRecordsInPackage?: number;
+  newlyIndexedInPackage?: number;
+  scenarioPicks?: number;
+  focusInPackage?: number;
+  mergedIntoExistingSiteRows?: number;
+  addedAsNewRows?: number;
+  siteVercelUpstreamRowsAfterMerge?: number;
+  note?: string;
+  downloadPath?: string;
+  notAnInstaller?: boolean;
 };
 
 export type CatalogData = {
@@ -36,6 +56,7 @@ export type CatalogData = {
   items: CatalogItem[];
   countingMethodology?: Record<string, string>;
   disclaimer?: string;
+  vercelExpansion?: VercelExpansionMeta;
 };
 
 export const kindLabels: Record<string, string> = {
@@ -113,7 +134,49 @@ export function filterCatalogItems(
       }
       return true;
     })
-    .sort((a, b) => (kindSort[a.kind] ?? 99) - (kindSort[b.kind] ?? 99) || a.name.localeCompare(b.name, 'zh'));
+    .sort((a, b) => {
+      const vercelBoost =
+        opts.author === 'vercel'
+          ? (b.vercelFocus ? 1 : 0) - (a.vercelFocus ? 1 : 0) ||
+            (b.vercelScenarioPick ? 1 : 0) - (a.vercelScenarioPick ? 1 : 0)
+          : 0;
+      if (vercelBoost) return vercelBoost;
+      return (kindSort[a.kind] ?? 99) - (kindSort[b.kind] ?? 99) || a.name.localeCompare(b.name, 'zh');
+    });
+}
+
+export function publicConstraints(item: CatalogItem) {
+  const lic = `${item.license ?? ''} ${item.licenseNote ?? ''}`.trim();
+  return (item.knownConstraints ?? []).filter((c) => {
+    const t = (c || '').trim();
+    if (!t) return false;
+    if (item.licenseNote && t === item.licenseNote) return false;
+    if (lic && t === lic) return false;
+    return true;
+  });
+}
+
+export const vercelScenarioLabels: Record<string, string> = {
+  'building-components': '组件 API 与键盘焦点',
+  'json-render/vue': 'Vue 生成式 UI',
+  streamdown: 'React 流式中文 Markdown',
+  'chat-sdk': '跨平台聊天机器人',
+  queues: '异步扇出与缓冲',
+  workflow: '持久多步任务',
+  'cdn-caching': 'CDN 缓存旧内容',
+  'vercel-tracing': '慢服务端链路追踪',
+};
+
+export function itemIdForSelect(item: CatalogItem) {
+  return item.id;
+}
+
+export function findVercelItem(items: CatalogItem[], catalogId: string) {
+  return (
+    items.find((i) => i.vercelCatalogId === catalogId) ??
+    items.find((i) => i.id === `upstream:vercel-exp:${catalogId}`) ??
+    items.find((i) => i.id === `upstream:vercel:${catalogId.replace(/\//g, '-')}`)
+  );
 }
 
 export function reviewDepthLabel(depth?: string) {

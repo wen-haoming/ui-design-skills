@@ -10,9 +10,24 @@ import {
   primaryPreviewPath,
   licenseNeedsConfirm,
   licenseConfirmText,
+  publicConstraints,
+  vercelScenarioLabels,
+  findVercelItem,
   type CatalogData,
   type CatalogItem,
 } from '../../catalog/catalog-utils';
+
+// scenario ids exported from build script mirror — keep in sync
+const SCENARIO_IDS = [
+  'building-components',
+  'json-render/vue',
+  'streamdown',
+  'chat-sdk',
+  'queues',
+  'workflow',
+  'cdn-caching',
+  'vercel-tracing',
+];
 
 const data = ref<CatalogData>({ taskScenarios: [], items: [], disclaimer: '' });
 
@@ -56,8 +71,12 @@ function syncToUrl() {
 
 onMounted(async () => {
   syncFromUrl();
+  const wantId = selectedId.value;
   const res = await fetch(withBase('/data/catalog-content.json'));
   data.value = await res.json();
+  if (wantId && data.value.items.some((i) => i.id === wantId)) {
+    selectedId.value = wantId;
+  }
 });
 watch([task, kind, author, q, selectedId, showNonSkill], syncToUrl);
 
@@ -74,16 +93,44 @@ const filtered = computed(() =>
 const selected = computed(() => data.value.items.find((i) => i.id === selectedId.value) ?? null);
 
 watch(filtered, (list) => {
+  if (!list.length) return;
+  if (selectedId.value && list.some((i) => i.id === selectedId.value)) return;
   if (selectedId.value && !list.find((i) => i.id === selectedId.value)) {
     selectedId.value = list[0]?.id ?? null;
+  } else if (!selectedId.value) {
+    selectedId.value = list[0].id;
   }
-  if (!selectedId.value && list.length) selectedId.value = list[0].id;
 });
 
 watch(selectedId, async (id) => {
   if (!id || typeof document === 'undefined') return;
   await Promise.resolve();
-  document.querySelector('.catalog-list li.is-active')?.scrollIntoView({ block: 'nearest' });
+  const el = document.querySelector(`.catalog-list li[data-entry-id="${CSS.escape(id)}"]`);
+  el?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+});
+
+const vercelFocusItems = computed(() =>
+  data.value.items.filter((i) => i.authorFilter === 'vercel' && i.vercelFocus)
+);
+
+const showVercelPanel = computed(
+  () => author.value === 'vercel' || author.value === 'all'
+);
+
+function pickScenario(catalogId: string) {
+  const it = findVercelItem(data.value.items, catalogId);
+  if (it) selectedId.value = it.id;
+  author.value = 'vercel';
+}
+
+function pickFocus(id: string) {
+  selectedId.value = id;
+  author.value = 'vercel';
+}
+
+const vercelDownloadHref = computed(() => {
+  const p = data.value.vercelExpansion?.downloadPath;
+  return p ? withBase(p) : null;
 });
 
 function clearAll() {
@@ -153,7 +200,48 @@ function upstreamHref(item: CatalogItem) {
         <strong>v1.2</strong>（<a :href="withBase('/skill')">正文</a>）；v1.3 仅作方法归纳参考。
       </p>
       <p class="catalog-disclaimer">{{ data.disclaimer }}</p>
+      <p v-if="data.vercelExpansion" class="catalog-note catalog-vercel-count">
+        Vercel 研究包收录 {{ data.vercelExpansion.catalogRecordsInPackage }} 条目录记录（含原 20
+        精选），已与本站按 URL/名称合并；站点「官方上游技能」Vercel 行
+        {{ data.vercelExpansion.siteVercelUpstreamRowsAfterMerge }} 条，新增
+        {{ data.vercelExpansion.addedAsNewRows }} 行、并入既有
+        {{ data.vercelExpansion.mergedIntoExistingSiteRows }} 行。{{ data.vercelExpansion.note }}
+      </p>
     </header>
+
+    <section
+      v-if="showVercelPanel && data.vercelExpansion"
+      class="catalog-vercel-hub"
+      aria-label="Vercel 场景推荐"
+    >
+      <h2 class="catalog-vercel-title">Vercel：按场景选一条 primary</h2>
+      <p class="catalog-note">
+        下列 8 项为任务入口建议；其余项用搜索与来源筛选。聚合 Skill 仍为 v1.2，本站不自动安装上游。
+      </p>
+      <div class="catalog-vercel-chips">
+        <button
+          v-for="sid in SCENARIO_IDS"
+          :key="sid"
+          type="button"
+          class="catalog-vercel-chip"
+          @click="pickScenario(sid)"
+        >
+          {{ vercelScenarioLabels[sid] ?? sid }}
+        </button>
+      </div>
+      <details class="catalog-vercel-focus">
+        <summary>18 条重点调用与验收（点击展开）</summary>
+        <ul class="catalog-vercel-focus-list">
+          <li v-for="it in vercelFocusItems" :key="it.id">
+            <button type="button" @click="pickFocus(it.id)">{{ it.name }}</button>
+          </li>
+        </ul>
+      </details>
+      <p v-if="vercelDownloadHref" class="catalog-note">
+        <a :href="vercelDownloadHref" download rel="noopener">下载公开研究包（zip）</a>
+        — 仅供查阅与复核，不是安装包，不含自动运行。
+      </p>
+    </section>
 
     <div class="catalog-filters" role="search">
       <label class="catalog-field">
@@ -200,7 +288,11 @@ function upstreamHref(item: CatalogItem) {
         <li
           v-for="item in filtered"
           :key="item.id"
-          :class="{ 'is-active': selectedId === item.id }"
+          :data-entry-id="item.id"
+          :class="{
+            'is-active': selectedId === item.id,
+            'is-vercel-focus': item.vercelFocus,
+          }"
           role="option"
           :aria-selected="selectedId === item.id"
           tabindex="0"
@@ -208,6 +300,8 @@ function upstreamHref(item: CatalogItem) {
           @keydown.enter="selectedId = item.id"
         >
           <span class="catalog-kind-tag">{{ kindLabels[item.kind] ?? item.kind }}</span>
+          <span v-if="item.vercelScenarioPick" class="catalog-vercel-tag">场景</span>
+          <span v-else-if="item.vercelFocus" class="catalog-vercel-tag">重点</span>
           <span class="catalog-list-name">{{ item.name }}</span>
         </li>
       </ul>
@@ -254,13 +348,25 @@ function upstreamHref(item: CatalogItem) {
         <section>
           <h3>许可与约束</h3>
           <p :class="{ 'catalog-warn': licenseNeedsConfirm(selected) }">{{ selected.license }}</p>
-          <p v-if="selected.licenseNote" class="catalog-note">{{ selected.licenseNote }}</p>
-          <ul v-if="selected.knownConstraints?.length">
-            <li v-for="(c, i) in selected.knownConstraints" :key="i">{{ c }}</li>
+          <p
+            v-if="selected.licenseNote && selected.licenseNote !== selected.license"
+            class="catalog-note"
+          >
+            {{ selected.licenseNote }}
+          </p>
+          <ul v-if="publicConstraints(selected).length">
+            <li v-for="(c, i) in publicConstraints(selected)" :key="i">{{ c }}</li>
           </ul>
         </section>
+        <section v-if="selected.vercelCommit || selected.vercelRepository">
+          <h3>版本与来源</h3>
+          <p class="catalog-note">
+            研究包快照 commit：{{ selected.vercelCommit?.slice(0, 7) ?? '未钉' }} · 仓库
+            {{ selected.vercelRepository ?? '见下方链接' }}
+          </p>
+        </section>
         <section>
-          <h3>审阅说明</h3>
+          <h3>阅读与验证说明</h3>
           <p>{{ reviewDepthLabel(selected.reviewDepth) }}</p>
         </section>
         <section v-if="upstreamHref(selected)">

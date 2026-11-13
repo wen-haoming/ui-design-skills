@@ -1,0 +1,93 @@
+{
+  "checked_at": "2026-11-14T02:11:25+08:00",
+  "timezone": "Asia/Shanghai",
+  "kind": "STRUCTURAL_AND_HEURISTIC_PRIVACY_CHECK_ONLY",
+  "passed": 20,
+  "total": 20,
+  "checks": [
+    {
+      "check": "JSON:source-observations.json",
+      "passed": true
+    },
+    {
+      "check": "JSON:catalog.json",
+      "passed": true
+    },
+    {
+      "check": "JSON:discovery.json",
+      "passed": true
+    },
+    {
+      "check": "JSON:offline/results.json",
+      "passed": true
+    },
+    {
+      "check": "catalog_unique_89",
+      "passed": true
+    },
+    {
+      "check": "baseline20_covered",
+      "passed": true
+    },
+    {
+      "check": "focus18_14full_4section",
+      "passed": true
+    },
+    {
+      "check": "focus15_new_3_deepened",
+      "passed": true
+    },
+    {
+      "check": "all_source_commits_40hex",
+      "passed": true
+    },
+    {
+      "check": "all_focus_have_usage_acceptance_versions_license",
+      "passed": true
+    },
+    {
+      "check": "react_alias_collapsed",
+      "passed": true
+    },
+    {
+      "check": "2_original_drafts",
+      "passed": true
+    },
+    {
+      "check": "draft_frontmatter_and_body:声明式生成界面的能力边界.md",
+      "passed": true
+    },
+    {
+      "check": "draft_frontmatter_and_body:可重放任务的副作用账本.md",
+      "passed": true
+    },
+    {
+      "check": "no_tool_wrappers",
+      "passed": true
+    },
+    {
+      "check": "no_private_absolute_paths",
+      "passed": true
+    },
+    {
+      "check": "no_credential_shapes",
+      "passed": true
+    },
+    {
+      "check": "37_toy_cases_all_passed",
+      "passed": true
+    },
+    {
+      "check": "public_discovery525_not_treated_as_skill_total",
+      "passed": true
+    },
+    {
+      "check": "no_wrong_old_35_count",
+      "passed": true
+    }
+  ],
+  "limits": "隐私/凭据是正则启发式，不是保证；不验证平台成功或离线模型与真实库等价。所有实际下载上游原文件仅留本地研究区，未放入公开包。",
+  "notes": [
+    "首次扫描将一条公开GitHub评测路径里的workspace/片段误判为本机绝对路径；已改为绝对路径边界匹配，保留公开来源路径原貌。"
+  ]
+}

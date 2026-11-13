@@ -1,0 +1,90 @@
+{
+  "observed_interval_start": "2026-11-14T01:57:29+08:00",
+  "recorded_at": "2026-11-14T02:02:42+08:00",
+  "timezone": "Asia/Shanghai",
+  "pins": {
+    "vercel/vercel-plugin": {
+      "commit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "commit_time": "2026-11-13T02:56:37+08:00",
+      "pin_kind": "HEAD",
+      "license": "Apache-2.0",
+      "version": "0.55.1"
+    },
+    "vercel-labs/agent-skills": {
+      "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "commit_time": "2026-10-28T05:40:02+08:00",
+      "pin_kind": "HEAD",
+      "license": "MIT（README 声明；根 LICENSE 未在本轮重查）"
+    },
+    "vercel/next.js": {
+      "commit": "0cf3769051fbc0e09346624f1f5bd26159df5875",
+      "commit_time": "2026-11-09T18:38:48+08:00",
+      "pin_kind": "canary 的 skills/ 最近变更提交，非整个仓库 HEAD",
+      "license": "MIT"
+    },
+    "vercel-labs/json-render": {
+      "commit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "commit_time": "2026-11-13T17:14:23+08:00",
+      "pin_kind": "HEAD",
+      "license": "Apache-2.0"
+    },
+    "vercel/components.build": {
+      "commit": "0861fbcfe4f78c50eaafc202f5fb7661d641ddff",
+      "commit_time": "2026-11-10T20:50:17+08:00",
+      "pin_kind": "HEAD",
+      "license": "Apache-2.0"
+    },
+    "vercel/streamdown": {
+      "commit": "db1a468ac81ba7b440a2ea31fe2294bba8cae276",
+      "commit_time": "2026-11-14T01:35:10+08:00",
+      "pin_kind": "HEAD",
+      "license": "Apache-2.0"
+    },
+    "vercel/ai-elements": {
+      "commit": "ca8be600bfd01b3131f9bf6134b51602a71f4374",
+      "commit_time": "2026-10-15T01:02:55+08:00",
+      "pin_kind": "HEAD",
+      "license": "Apache-2.0"
+    },
+    "vercel-labs/agent-browser": {
+      "commit": "4720bc3dd73f2c8f7c84f415adfa560330b924c4",
+      "commit_time": "2026-11-13T14:09:22+08:00",
+      "pin_kind": "HEAD",
+      "license": "Apache-2.0"
+    },
+    "vercel-labs/skills": {
+      "commit": "b716f9dc2ba36b6aa8f0080615e5a3a6caeac63b",
+      "commit_time": "2026-11-13T07:25:22+08:00",
+      "pin_kind": "HEAD",
+      "license": "MIT"
+    }
+  },
+  "path_change_evidence": {
+    "vercel/next.js skills/next-dev-loop/SKILL.md": {
+      "commit": "d2defa02a2887f94b99a573cf17efbef112218fd",
+      "time": "2026-11-04T23:19:30+08:00"
+    },
+    "vercel/streamdown skills/streamdown": {
+      "commit": "096a06bc965bd4d7420bc770fdb1d44662459cb4",
+      "time": "2026-11-10T23:57:31+08:00"
+    },
+    "vercel-labs/json-render skills/": {
+      "commit": "13c9786164139fae424e6449cd36ecea7641fe4d",
+      "time": "2026-11-13T05:32:27+08:00"
+    },
+    "vercel/components.build skills/": {
+      "commit": "787c75a5ca81167e70825cc3fdcfa2ddb46b23f2",
+      "time": "2026-02-12T09:04:25+08:00"
+    }
+  },
+  "url_checks": [
+    {
+      "url": "https://nextjs.org/docs/app/guides/ai-agents",
+      "status": "WebFetch正文成功"
+    },
+    {
+      "url": "https://skills.sh/vercel-labs/agent-skills",
+      "status": "WebFetch正文成功；显示16 skills但只见9个当前目录和旧vercel-deploy，索引不作分母"
+    }
+  ]
+}

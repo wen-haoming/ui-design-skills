@@ -6,8 +6,10 @@ const BASE = process.env.PREVIEW_BASE || 'http://127.0.0.1:4173/ui-design-skills
 async function run() {
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
-  await page.goto(`${BASE}`, { waitUntil: 'networkidle' });
-  await page.getByRole('heading', { name: '可体验作品' }).waitFor();
+  await page.goto(`${BASE}`, { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => document.querySelector('.evidence-home h1'), null, {
+    timeout: 120_000,
+  });
   const cards = await page.locator('.evidence-card').count();
   if (cards < 9) throw new Error(`home cards ${cards} expected >=9`);
   await page.locator('[aria-label="任务与分面"]').getByRole('button', { name: '文字排版' }).click();
@@ -21,7 +23,7 @@ async function run() {
   const n = await page.locator('.catalog-list li').count();
   if (n < 1) throw new Error('catalog empty for vite');
   const depth = await page.locator('.catalog-detail').innerText();
-  if (!depth.includes('审阅')) throw new Error('detail missing review');
+  if (!depth.includes('阅读与验证')) throw new Error('detail missing verification section');
   const first = page.locator('.catalog-list li').first();
   await first.click();
   const item = await page.locator('.catalog-detail h2').innerText();
@@ -34,6 +36,14 @@ async function run() {
     clip = '';
   }
   if (clip && /sand-workflow|grokbot/i.test(clip)) throw new Error('clipboard has internal protocol');
+  await page.goto(`${BASE}catalog?author=vercel&id=upstream:vercel-exp:ai-gateway`, {
+    waitUntil: 'networkidle',
+  });
+  await page.waitForSelector('.catalog-vercel-hub');
+  const vercelText = await page.locator('.catalog-detail').innerText();
+  if (!vercelText.includes('ai-gateway') && !vercelText.includes('AI Gateway')) {
+    throw new Error('vercel focus detail missing');
+  }
   await page.goto(`${BASE}catalog?task=zzzz&kind=all&q=__no_match__`, { waitUntil: 'networkidle' });
   await page.getByText('无匹配条目').waitFor();
   await browser.close();

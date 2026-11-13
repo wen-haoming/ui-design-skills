@@ -54,4 +54,20 @@ await empty.goto(`${BASE}catalog?task=frontend-engineering&kind=official_upstrea
 await empty.waitForSelector('.gallery-empty');
 await snap(empty, 'catalog-empty-1280.png', { locator: '.catalog-page' });
 
+const vercelDesk = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+await vercelDesk.goto(`${BASE}catalog?author=vercel&id=upstream:vercel-exp:ai-gateway`, {
+  waitUntil: 'networkidle',
+});
+await vercelDesk.waitForSelector('.catalog-vercel-hub');
+await snap(vercelDesk, 'catalog-vercel-1280-viewport.png', { meta: '1280x800 viewport vercel' });
+await vercelDesk.close();
+
+const vercelMob = await browser.newPage({ viewport: { width: 390, height: 844 } });
+await vercelMob.goto(`${BASE}catalog?author=vercel&id=upstream:vercel-exp:ai-gateway`, {
+  waitUntil: 'networkidle',
+});
+await vercelMob.waitForSelector('.catalog-detail');
+await snap(vercelMob, 'catalog-vercel-390-viewport.png', { meta: '390x844 viewport vercel detail' });
+await vercelMob.close();
+
 await browser.close();

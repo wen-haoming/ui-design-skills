@@ -32,6 +32,13 @@
 
 .vp-exhibition .VPNavBarMenuLink {
   font-size: 14px;
+  border: none !important;
+  border-bottom: none !important;
+  background-image: none !important;
+}
+
+.vp-exhibition .VPNavBarMenu .divider {
+  display: none !important;
 }
 
 .vp-exhibition .VPLocalNav {
@@ -845,6 +852,84 @@
 .catalog-list li.is-active {
   background: #f4f4f5;
   border-left: 3px solid var(--evidence-accent);
+}
+
+.catalog-list li.is-vercel-focus .catalog-list-name {
+  font-weight: 600;
+}
+
+.catalog-vercel-hub {
+  margin: 12px 0 20px;
+  padding: 14px 16px;
+  border: 1px solid var(--evidence-border);
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.catalog-vercel-title {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.catalog-vercel-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.catalog-vercel-chip {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #d4d4d8;
+  background: #fff;
+  cursor: pointer;
+}
+
+.catalog-vercel-chip:focus-visible {
+  outline: 2px solid var(--evidence-accent);
+  outline-offset: 2px;
+}
+
+.catalog-vercel-focus summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.catalog-vercel-focus-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 6px;
+}
+
+.catalog-vercel-focus-list button {
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #e4e4e7;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.catalog-vercel-tag {
+  font-size: 10px;
+  color: #1d4ed8;
+  margin-right: 4px;
+}
+
+.catalog-vercel-count {
+  max-width: 720px;
+  line-height: 1.5;
 }
 
 .catalog-kind-tag {

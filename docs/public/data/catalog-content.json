@@ -1,7 +1,7 @@
 {
   "title": "技能展厅前端内容（审阅稿）",
   "asOf": "2026-11-14 01:34:13 Asia/Shanghai",
-  "disclaimer": "公开目录数据。条目审阅深度见各条 reviewDepth；未运行不得标为已验证。聚合 Skill 线上仍为 v1.2。",
+  "disclaimer": "公开目录数据。各条「阅读与验证说明」写明本站读到哪一步；未实测不得标为已验证。聚合 Skill 线上仍为 v1.2。",
   "taskScenarios": [
     {
       "id": "ui-design",
@@ -38,7 +38,9 @@
     "selfAuthoredMethods": "已保存通用方法 12 条：歸藏研究后的 7 条 + antfu 研究后的 5 条。资料包草稿不是正式正文逐字版。",
     "experienceableWorks": "可体验作品：8 个 task-workbench-v1 组合 + 1 个 article-typesetting-v1 场景（含 3 种 typography 预设）。对照页、Skill 正文页、来源附录、遗留技能是站点工具或遗留文档，不计入这 9 个作品。",
     "designMethodsV13": "16 条方法 + 1 条可选强化，状态为已归纳未在展厅实现。权威是已保存 v1.3 技能，不是 local proposal。",
-    "noGrandTotal": "以上分母不同，不得加总成「全部技能共 N 条」对外展示，除非同时写明口径。"
+    "noGrandTotal": "以上分母不同，不得加总成「全部技能共 N 条」对外展示，除非同时写明口径。",
+    "vercelExpansion20261114": "研究包 89 catalog 记录 = 原精选 20 + 新收录 69（去 React 包装别名重复）；与站点条目按 URL/名称合并，站点总行数不是简单 134+69。",
+    "siteCatalogRows": "items 数组长度含作品/方法/上游/索引等全部类型；不要用单行总数代表「技能个数」。"
   },
   "shareableUrlConvention": {
     "example": "/ui-design-skills/catalog?task=frontend-engineering&kind=official_upstream&q=vite",
@@ -803,7 +805,6 @@
       "license": "AGPL-3.0",
       "licenseNote": "仓库 LICENSE 与 README 均为 AGPL-3.0。商业合作说明见社交卡片仓库的系列说明，本仓库根目录未见独立 COMMERCIAL_LICENSING.md。",
       "knownConstraints": [
-        "仓库 LICENSE 与 README 均为 AGPL-3.0。商业合作说明见社交卡片仓库的系列说明，本仓库根目录未见独立 COMMERCIAL_LICENSING.md。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -827,7 +828,6 @@
       "license": "AGPL-3.0",
       "licenseNote": "LICENSE 为 AGPL-3.0；另有 COMMERCIAL_LICENSING.md，说明系列能力可按合作协议接入平台，但不替代 AGPL，也不把版权转让给合作方。本地已安装副本不要改模板。",
       "knownConstraints": [
-        "LICENSE 为 AGPL-3.0；另有 COMMERCIAL_LICENSING.md，说明系列能力可按合作协议接入平台，但不替代 AGPL，也不把版权转让给合作方。本地已安装副本不要改模板。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -852,7 +852,6 @@
       "license": "AGPL-3.0",
       "licenseNote": "独立仓库 LICENSE 为 AGPL-3.0。DeepSeek Harness 插件中的快照提交为 bb39103c94c286ea8e729daf40e5ed9348ac608e，落后于当前 main。",
       "knownConstraints": [
-        "独立仓库 LICENSE 为 AGPL-3.0。DeepSeek Harness 插件中的快照提交为 bb39103c94c286ea8e729daf40e5ed9348ac608e，落后于当前 main。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -876,7 +875,6 @@
       "license": "MIT",
       "licenseNote": "LICENSE 为 MIT。README 写明基于 blader/humanizer 等结构修订。不用于鉴定作者身份，也不保证通过 AI 检测器。",
       "knownConstraints": [
-        "LICENSE 为 MIT。README 写明基于 blader/humanizer 等结构修订。不用于鉴定作者身份，也不保证通过 AI 检测器。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -900,7 +898,6 @@
       "license": "AGPL-3.0 + 部分资产 BSL-1.1",
       "licenseNote": "主许可证 AGPL-3.0，另有 COMMERCIAL_LICENSING.md。assets/fallback/ 中改编自 CodePilot 的组件与样式仍适用 Business Source License 1.1，并未被重新授权为 MIT。使用默认样式前需阅读上游 SOURCE.md 与 LICENSE.CodePilot。",
       "knownConstraints": [
-        "主许可证 AGPL-3.0，另有 COMMERCIAL_LICENSING.md。assets/fallback/ 中改编自 CodePilot 的组件与样式仍适用 Business Source License 1.1，并未被重新授权为 MIT。使用默认样式前需阅读上游 SOURCE.md 与 LICENSE.CodePilot。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -924,7 +921,6 @@
       "license": "AGPL-3.0；演示内容另有版权",
       "licenseNote": "Skill 文档与脚本为 AGPL-3.0。README 写明演示游戏《雾锁山门》在 gh-pages 的美术、模型、配音、配乐和文案为作者保留权利，可试玩和分享链接，未经许可请勿转载、改名再发布或商用。本批未试玩、未观看演示视频。",
       "knownConstraints": [
-        "Skill 文档与脚本为 AGPL-3.0。README 写明演示游戏《雾锁山门》在 gh-pages 的美术、模型、配音、配乐和文案为作者保留权利，可试玩和分享链接，未经许可请勿转载、改名再发布或商用。本批未试玩、未观看演示视频。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -948,7 +944,6 @@
       "license": "MIT",
       "licenseNote": "LICENSE 为 MIT。姊妹仓库 Claude-to-IM 同为 MIT，是宿主无关的桥接实现。本次提交日期接口曾 403，提交 SHA 由 git ref 钉住，仓库 pushed_at 见上。",
       "knownConstraints": [
-        "LICENSE 为 MIT。姊妹仓库 Claude-to-IM 同为 MIT，是宿主无关的桥接实现。本次提交日期接口曾 403，提交 SHA 由 git ref 钉住，仓库 pushed_at 见上。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -972,7 +967,6 @@
       "license": "MIT",
       "licenseNote": "LICENSE 为 MIT。",
       "knownConstraints": [
-        "LICENSE 为 MIT。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -996,7 +990,6 @@
       "license": "MIT",
       "licenseNote": "LICENSE 为 MIT。",
       "knownConstraints": [
-        "LICENSE 为 MIT。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -1021,7 +1014,6 @@
       "license": "AGPL-3.0",
       "licenseNote": "LICENSE 与 README 均为 AGPL-3.0。",
       "knownConstraints": [
-        "LICENSE 与 README 均为 AGPL-3.0。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -1045,7 +1037,6 @@
       "license": "GPL-3.0（附加署名条款）",
       "licenseNote": "README 写明 GPL-3.0 with attribution clause。LICENSE 正文以 GNU GPL v3 授权，并额外要求衍生作品保留可见署名且以 GPL-3.0（或更新）公开源码。GitHub 许可证字段为 NOASSERTION，多半因附加条款。同文件仍带 m5-paper-buddy 标题，应视为从该前任项目沿用。字体等第三方组件适用各自许可。",
       "knownConstraints": [
-        "README 写明 GPL-3.0 with attribution clause。LICENSE 正文以 GNU GPL v3 授权，并额外要求衍生作品保留可见署名且以 GPL-3.0（或更新）公开源码。GitHub 许可证字段为 NOASSERTION，多半因附加条款。同文件仍带 m5-paper-buddy 标题，应视为从该前任项目沿用。字体等第三方组件适用各自许可。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -1070,7 +1061,6 @@
       "license": "插件 AGPL-3.0；打包技能保留各自许可",
       "licenseNote": "插件 LICENSE 与 package.json 为 AGPL-3.0。README 写明打包的 skill 各自保留 LICENSE：其中 humanizer-zh 为 MIT，page/ppt/social-card 快照为 AGPL-3.0。own-skills/guizang-voice 未见独立 LICENSE 文件，未另作声明时应视为插件仓库的一部分，使用须遵守插件 AGPL-3.0，除非作者另行说明。",
       "knownConstraints": [
-        "插件 LICENSE 与 package.json 为 AGPL-3.0。README 写明打包的 skill 各自保留 LICENSE：其中 humanizer-zh 为 MIT，page/ppt/social-card 快照为 AGPL-3.0。own-skills/guizang-voice 未见独立 LICENSE 文件，未另作声明时应视为插件仓库的一部分，使用须遵守插件 AGPL-3.0，除非作者另行说明。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -1094,7 +1084,6 @@
       "license": "未见独立 LICENSE；位于 AGPL-3.0 插件仓库",
       "licenseNote": "只有 SKILL.md，没有单独许可证文件。谨慎按插件 AGPL-3.0 理解，使用前再核对其官方说明。",
       "knownConstraints": [
-        "只有 SKILL.md，没有单独许可证文件。谨慎按插件 AGPL-3.0 理解，使用前再核对其官方说明。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -1118,7 +1107,6 @@
       "license": "未解决",
       "licenseNote": "仓库根目录无 LICENSE 文件，README 与 PRODUCT.md 也没有许可条款。不得臆造为 MIT 或 AGPL。",
       "knownConstraints": [
-        "仓库根目录无 LICENSE 文件，README 与 PRODUCT.md 也没有许可条款。不得臆造为 MIT 或 AGPL。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -1142,7 +1130,6 @@
       "license": "未解决",
       "licenseNote": "根目录和 yingzao/ 下均无 LICENSE 文件，README 也无许可条款。入口在 yingzao/SKILL.md。",
       "knownConstraints": [
-        "根目录和 yingzao/ 下均无 LICENSE 文件，README 也无许可条款。入口在 yingzao/SKILL.md。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -1166,7 +1153,6 @@
       "license": "README 声称 MIT，未见 LICENSE 文件",
       "licenseNote": "README 中英文均写 “MIT License”，但仓库树中无 LICENSE 文件，GitHub 许可证字段为空。不能把 README 一句当作已落地的 SPDX 文件。",
       "knownConstraints": [
-        "README 中英文均写 “MIT License”，但仓库树中无 LICENSE 文件，GitHub 许可证字段为空。不能把 README 一句当作已落地的 SPDX 文件。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -1190,7 +1176,6 @@
       "license": "README 指向 MIT LICENSE，但文件缺失",
       "licenseNote": "README 与中文说明均写 MIT，并链接 ./LICENSE，但当前 main 仓库树中没有 LICENSE 文件。按许可不明处理。",
       "knownConstraints": [
-        "README 与中文说明均写 MIT，并链接 ./LICENSE，但当前 main 仓库树中没有 LICENSE 文件。按许可不明处理。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -1214,7 +1199,6 @@
       "license": "README 写 MIT，未见 LICENSE 文件",
       "licenseNote": "README 仅有 “License: MIT” 一行，仓库无 LICENSE 文件。",
       "knownConstraints": [
-        "README 仅有 “License: MIT” 一行，仓库无 LICENSE 文件。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -1238,7 +1222,6 @@
       "license": "README 内嵌 MIT 文本，未见 LICENSE 文件",
       "licenseNote": "README 徽章和文末贴了 MIT 许可文本，但仓库树无 LICENSE 文件，GitHub 许可证字段为空。较早的图片/视频 PPT 方案，与后来的 HTML 网页 PPT 技能不是同一产物。",
       "knownConstraints": [
-        "README 徽章和文末贴了 MIT 许可文本，但仓库树无 LICENSE 文件，GitHub 许可证字段为空。较早的图片/视频 PPT 方案，与后来的 HTML 网页 PPT 技能不是同一产物。",
         "本站不复制上游代码、主题、模板或品牌图，也不自动安装作者包。",
         "星标不是效果验证。"
       ],
@@ -1587,7 +1570,6 @@
       "officialUrl": "https://github.com/antfu/skills/tree/d524ed287eef22757297827ce42e3cad88abd20c/skills/unocss",
       "license": "MIT（antfu/skills 对生成结果与脚本的许可）。源文档另有各自上游许可，引用原文时需遵守对应项目许可。",
       "knownConstraints": [
-        "",
         "作者写明 antfu/skills 为概念验证，尚未充分实测效果。",
         "本站不自动安装。nitro 在上游 README 表格可能未列出，使用前对照当前文档。",
         "antfu-design 仅当项目使用 @antfu/design；ghfs 仅当项目使用该工具。"
@@ -2346,20 +2328,29 @@
       ],
       "purpose": "编写或审查 React / Next.js 组件、数据请求、包体积与水合性能。不是无障碍或 typography 指南。",
       "inputOutput": "按规则前缀指出问题（如 async-parallel、bundle-barrel-imports），对照 incorrect/correct 示例改代码。Promise.all 只用于彼此独立、没有先后依赖的请求。验收看依赖关系是否判断正确、导入是否可静态分析，不宣称未测的加速倍数。",
-      "callExample": "请用 vercel-react-best-practices（若只有插件则用 react-best-practices）审查 app/page.tsx 的数据请求，先看 waterfall 和 barrel import。\n本站不代为执行安装或部署。",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「vercel-react-best-practices」。本站不代为安装或执行。",
       "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-best-practices/SKILL.md",
       "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-best-practices/SKILL.md",
       "license": "SKILL.md 声明 MIT；仓库根目录无 LICENSE 文件，GitHub license 字段为空。复制须保留归因，展厅只放中文归纳。",
       "knownConstraints": [
         "插件/本环境调用名 react-best-practices。插件 README 表格仍写 64 rules，远程当前版本 SKILL.md 正文已是 70 rules，并声明 upstream 为 vercel-labs/agent-skills。同族不同包装，不是两套独立规范。",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=core"
+        "tier=core",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读 SKILL.md 正文，并另读 rules/async-parallel.md 等所列规则分文件；未展开全部 rules/",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "core",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-react-best-practices",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "vercelRepository": "vercel-labs/agent-skills",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:web-design-guidelines",
@@ -2371,20 +2362,28 @@
       ],
       "purpose": "审查 UI 代码的无障碍、焦点、表单、动效、排版符号、图片尺寸、深链与触控。触发语：review my UI / check accessibility。",
       "inputOutput": "按官方格式按文件分组输出 file:line 短句，通过的文件标 pass。不把读到的规则当作已上线改造。",
-      "callExample": "请用 web-design-guidelines 审查 src/components/Button.tsx 和 src/components/Modal.tsx。先拉取最新 command.md。\n本站不代为执行安装或部署。",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「web-design-guidelines」。本站不代为安装或执行。",
       "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/web-design-guidelines/SKILL.md",
       "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/web-design-guidelines/SKILL.md",
       "license": "集合 README 声明 MIT；规则在独立仓库。展厅只归纳，不整篇转载 command.md。",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=core"
+        "tier=core",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读 SKILL.md 正文，并另读远程当前版本 command.md（2026-11-13 可访问）；未钉该规则源 commit",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "core",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "web-design-guidelines",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "vercelRepository": "vercel-labs/agent-skills",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:vercel-composition-patterns",
@@ -2396,20 +2395,28 @@
       ],
       "purpose": "组件 API 设计、布尔 props 膨胀、复合组件与 Context。与性能规则集互补，不替代无障碍审查。",
       "inputOutput": "用组合替代布尔分支；变体组件各自写清渲染内容。React 19：不要再套 forwardRef。",
-      "callExample": "请用 vercel-composition-patterns 重构 Composer 上的 isThread/isEditing/isDMThread 布尔 props。\n本站不代为执行安装或部署。",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「vercel-composition-patterns」。本站不代为安装或执行。",
       "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/composition-patterns/SKILL.md",
       "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/composition-patterns/SKILL.md",
       "license": "MIT（frontmatter）",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=core"
+        "tier=core",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读 SKILL.md 正文，并另读 rules/architecture-avoid-boolean-props.md；未展开全部规则分文件",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "core",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-composition-patterns",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "vercelRepository": "vercel-labs/agent-skills",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:vercel-react-view-transitions",
@@ -2421,20 +2428,28 @@
       ],
       "purpose": "页面/路由过渡、共享元素、列表重排、Suspense 揭示；Next App Router 的 transitionTypes。",
       "inputOutput": "ViewTransition 出现在任何 DOM 节点之前才能触发 enter/exit；需按项目 React/Next 版本核对该 API 是否可用（技能：Next App Router 已内置 canary；非 Next 需稳定 react/react-dom 19.3+）。需加 prefers-reduced-motion。router.back() 不带 transition types。不要把这些写成所有 React 版本都已具备该 API。",
-      "callExample": "请按 vercel-react-view-transitions 为列表到详情加共享元素过渡，并加上 reduced-motion。\n本站不代为执行安装或部署。",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「vercel-react-view-transitions」。本站不代为安装或执行。",
       "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-view-transitions/SKILL.md",
       "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-view-transitions/SKILL.md",
       "license": "MIT（frontmatter）",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=core"
+        "tier=core",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读 SKILL.md 正文；参考文件路径已记录，AGENTS.md 未全部展开",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "core",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-react-view-transitions",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "vercelRepository": "vercel-labs/agent-skills",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:ai-sdk",
@@ -2446,20 +2461,28 @@
       ],
       "purpose": "聊天、流式输出、结构化结果、tool calling、Agent 循环、embeddings。官方 agent-skills 集合不含此技能。",
       "inputOutput": "先核对该项目已安装的 `ai` 包版本，并对照 node_modules/ai/docs（或该版本文档）。远程当前技能正文对较新主版本列出了 useChat({ api })、generateObject、maxSteps、CoreMessage 等迁移提示；这不是「所有版本统一禁用旧 API」。旧项目是否迁移以已安装版本文档为准。改完跑项目 type check。",
-      "callExample": "/vercel-plugin:ai-sdk  给这个 Next 应用加一个流式聊天 API，先读 node_modules/ai/docs，不要用记忆中的 useChat({ api })。\n本站不代为执行安装或部署。",
+      "callExample": "请在上游仓库阅读「ai-sdk」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill ai-sdk",
       "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/ai-sdk/SKILL.md",
       "officialUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/ai-sdk/SKILL.md",
       "license": "插件 Apache-2.0；上游 vercel/ai 另有其许可证，展厅只归纳。",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=core"
+        "tier=core",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读远程当前版本的 SKILL.md 正文（含校验规则与版本约束）；未展开上游 vercel/ai 的全部文档树",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "core",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "ai-sdk",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:deploy-to-vercel",
@@ -2471,20 +2494,28 @@
       ],
       "purpose": "把应用部署到 Vercel：优先已链接项目的 git push，其次 CLI，无登录时才用临时部署。默认预览，除非用户明确要求生产。",
       "inputOutput": "给出建议路径与（若已部署）部署 URL。技能原文写不要用 curl/fetch 部署 URL 做「是否上线」的代替验证，但上游这类部署建议不能覆盖项目必要的测试与验收。无登录临时部署要同时给出 claim URL 与过期时间，且不要分享 claim 链接。本轮未运行部署命令。",
-      "callExample": "请按 deploy-to-vercel 先做只读状态检查（git remote、.vercel/project.json 或 repo.json、是否已登录），给出应走哪条路径。不要推送，不要部署。\n本站不代为执行安装或部署。",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「deploy-to-vercel」。本站不代为安装或执行。",
       "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/deploy-to-vercel/SKILL.md",
       "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/deploy-to-vercel/SKILL.md",
       "license": "README 声明 MIT",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=core"
+        "tier=core",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读该技能 SKILL.md 正文；未展开其 references/ 或 AGENTS.md，除非本条另有注明",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "core",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "deploy-to-vercel",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "vercelRepository": "vercel-labs/agent-skills",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:vercel-optimize",
@@ -2496,20 +2527,28 @@
       ],
       "purpose": "已部署项目的成本、缓存、函数用量、慢路由审计。先采集 Vercel 指标，再只调查指标指向的文件。",
       "inputOutput": "排名建议必须能追溯到 signals 与核对过的文件/文档版本。对客户文案只用成本量级用语，不要编造 $N 节省。本轮未跑审计。",
-      "callExample": "在已 link 的项目里用 vercel-optimize 做指标优先审计。先确认团队与项目，未确认不要采指标。\n本站不代为执行安装或部署。",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「vercel-optimize」。本站不代为安装或执行。",
       "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/vercel-optimize/SKILL.md",
       "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/vercel-optimize/SKILL.md",
       "license": "README 声明 MIT",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=core"
+        "tier=core",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读该技能 SKILL.md 正文；references/（doctrine、data-collection、voice 等）未全部展开",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "core",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-optimize",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "vercelRepository": "vercel-labs/agent-skills",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:deployments-cicd",
@@ -2521,20 +2560,28 @@
       ],
       "purpose": "CI 里 build/promote/rollback、--prebuilt、Deployment Checks。与 deploy-to-vercel（本地/交互部署决策）互补，不是重复。",
       "inputOutput": "预览与生产命令分开；promote 应针对已暂存的生产构建，而不是拿预览直接当生产。流水线仍须保留必要测试门闩；不能因为技能示例里有一条发布命令就省略测试。本轮未部署。",
-      "callExample": "请用 deployments-cicd 设计：main 上先 vercel build --prod，再 vercel deploy --prebuilt --prod --skip-domain，测试通过后 vercel promote <url>。不要写入真实 token。\n本站不代为执行安装或部署。",
+      "callExample": "请在上游仓库阅读「deployments-cicd」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill deployments-cicd",
       "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/deployments-cicd/SKILL.md",
       "officialUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/deployments-cicd/SKILL.md",
       "license": "Apache-2.0",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=core"
+        "tier=core",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读远程当前版本的 SKILL.md 正文；references/ 下的 deployment-checks 等分文件未全部展开",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "core",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "deployments-cicd",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:env-vars",
@@ -2546,20 +2593,28 @@
       ],
       "purpose": ".env 层级、vercel env、Secret/Config 类型、本地 OIDC 续期。",
       "inputOutput": "NEXT_PUBLIC_ 不得放密钥；生产 Secret 不会被 vercel env pull 拉回；.env.local 不入库。",
-      "callExample": "请用 env-vars 说明如何把 DATABASE_URL 加成 production Secret，以及本地如何 pull 到 .env.local。不要索要真实值。\n本站不代为执行安装或部署。",
+      "callExample": "请在上游仓库阅读「env-vars」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill env-vars",
       "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/env-vars/SKILL.md",
       "officialUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/env-vars/SKILL.md",
       "license": "Apache-2.0",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=core"
+        "tier=core",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读远程当前版本的 SKILL.md 正文；未另开全部官方 env 文档页",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "core",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "env-vars",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:verification",
@@ -2571,20 +2626,28 @@
       ],
       "purpose": "功能「差不多能用」或 dev server 起来后，按完整用户故事核对浏览器→API→数据→回写。",
       "inputOutput": "Verification Report 表：每个边界有证据。同一检查不超过两次。不把读文档当成已验证部署。",
-      "callExample": "请用 verification 核对「提交表单后列表出现新记录」这条故事，先写故事再取证。\n本站不代为执行安装或部署。",
+      "callExample": "请在上游仓库阅读「verification」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill verification",
       "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/verification/SKILL.md",
       "officialUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/verification/SKILL.md",
       "license": "Apache-2.0",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=core"
+        "tier=core",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读远程当前版本的 SKILL.md 正文；未展开 references/",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "core",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "verification",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:next-dev-loop",
@@ -2596,20 +2659,28 @@
       ],
       "purpose": "在运行中的 next dev 上做改完即验：结合 Next MCP 与浏览器/Web Vitals。插件明确不自带 Next.js 技能。",
       "inputOutput": "用 /_next/mcp（编译、路由、服务端错误）与 agent-browser（DOM、控制台、网络、React 树）交叉核对改动在运行时成立，而不是只看 typecheck。技能要求保存 .next、核对会话，并在两套视图不一致时先怀疑工具会话。本轮未实际启动 dev server 或安装 agent-browser。",
-      "callExample": "在已满足 Next 16.3+ / Turbopack / 正在运行的 next dev 时：用 next-dev-loop 在每次编辑后做运行时核对。若版本不足，先说明条件，不要擅自升级或安装 agent-browser。\n本站不代为执行安装或部署。",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「next-dev-loop」。本站不代为安装或执行。",
       "sourceUrl": "https://github.com/vercel/next.js/blob/d2defa02a2887f94b99a573cf17efbef112218fd/skills/next-dev-loop/SKILL.md",
       "officialUrl": "https://github.com/vercel/next.js/blob/d2defa02a2887f94b99a573cf17efbef112218fd/skills/next-dev-loop/SKILL.md",
       "license": "以 Next.js 仓库许可证为准；本轮未另开 LICENSE 文件。",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=situational"
+        "tier=situational",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 2026-11-13 只读读取仓库内 SKILL.md 全文；未展开其引用的 agent-browser 用法指南或 Next MCP 工具模式以外的参考。",
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "situational",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "next-dev-loop",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "0cf3769051fbc0e09346624f1f5bd26159df5875",
+      "vercelRepository": "vercel/next.js",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:vercel-functions",
@@ -2621,20 +2692,28 @@
       ],
       "purpose": "配置或排障 Vercel Functions：运行时、时长、包体、流式、Cron 迁移等。",
       "inputOutput": "按该项目 Next/函数文档限制配置。不把训练数据或单一摘要写成所有版本统一禁用某种 runtime。本轮以插件 description 与官方技能表为主，未逐行精读 900+ 行全文。",
-      "callExample": "请用 vercel-functions 核对这个 route handler 的时长与运行时设置，不要改回 edge runtime，除非文档证明仍适用。\n本站不代为执行安装或部署。",
-      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-functions",
+      "callExample": "请在上游仓库阅读「vercel-functions」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill vercel-functions",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-functions/SKILL.md",
       "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-functions",
       "license": "Apache-2.0",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=situational"
+        "tier=situational",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方插件文档/README 摘要；未全文精读",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "not-close-read-frontmatter-or-index",
       "tier": "situational",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-functions",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:auth",
@@ -2646,20 +2725,28 @@
       ],
       "purpose": "Next.js 上接入 Clerk、Better Auth、Descope、Auth0，以及 Sign in with Vercel 等。保护路由与部署访问。",
       "inputOutput": "会话与受保护路由可核对；密钥不进仓库。本轮读了 description/frontmatter 与官方插件技能表，未全文精读 600+ 行正文。",
-      "callExample": "请用 auth 技能，按我们已选定的 Better Auth，列出 App Router 下受保护路由需要的文件，不要改用别的供应商。\n本站不代为执行安装或部署。",
-      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/auth",
+      "callExample": "请在上游仓库阅读「auth」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill auth",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/auth/SKILL.md",
       "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/auth",
       "license": "Apache-2.0",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=situational"
+        "tier=situational",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方技能表；正文未全文精读",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "not-close-read-frontmatter-or-index",
       "tier": "situational",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "auth",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:build-agents",
@@ -2671,20 +2758,28 @@
       ],
       "purpose": "从零搭建「一个 Agent 应用」（工具、频道、日程、Slack）。默认导向 eve，不是通用 AI SDK 聊天功能的第一选择。",
       "inputOutput": "不要把 Vercel Agent（平台代码审查产品）当成通用 agent 框架。不要在生成项目里硬编码密钥。本轮完整阅读了远程当前版本的 SKILL.md 正文。",
-      "callExample": "如果要做一个可在 Slack 里跑的长期 agent，用 build-agents；如果只是网页里的流式聊天，用 ai-sdk。\n本站不代为执行安装或部署。",
+      "callExample": "请在上游仓库阅读「build-agents」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill build-agents",
       "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/build-agents/SKILL.md",
       "officialUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/build-agents/SKILL.md",
       "license": "Apache-2.0",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=situational"
+        "tier=situational",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读远程当前版本的 SKILL.md 正文；未展开 eve 包内全部文档",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "situational",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "build-agents",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:runtime-cache",
@@ -2695,21 +2790,34 @@
         "frontend-engineering"
       ],
       "purpose": "函数/中间件/构建之间共享的按区域临时 KV 缓存与按 tag 失效。",
-      "inputOutput": "明确失效策略。本轮依据官方技能表与 description，未全文精读。",
-      "callExample": "请用 runtime-cache 为这个需要跨 function 共享、按 tag 失效的短缓存给出写法，不要改成 CDN ISR。\n本站不代为执行安装或部署。",
-      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/runtime-cache",
+      "inputOutput": "不适用：不是持久DB、跨区域一致状态或用户私有数据的无隔离共享仓库\n输入：数据更新频率、租户/项目key命名、TTL、tag、允许陈旧时间、未命中回源策略",
+      "callExample": "用 runtime-cache 为公共分类列表设计缓存。明确区域与项目命名空间、TTL和细tag，保留0/false/空数组值；不给用户会话数据加共享缓存。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/runtime-cache/SKILL.md",
       "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/runtime-cache",
       "license": "Apache-2.0",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=situational"
+        "tier=situational",
+        "规则：区域缓存、LRU可驱逐、跨deploy保留不代表持久保证；业务必须容忍miss。",
+        "规则：namespace含项目/租户边界；私有请求不能只用同一URL做key。",
+        "规则：cache.expireTag只管Runtime；CDN/ISR与Runtime不同，不假设一次失效全层生效。",
+        "规则：cached判断用实际null约定，不照抄if(cached)丢掉0/false等有效缓存值；并发回源需另考虑stampede。",
+        "验收参考：不同项目/租户不串值；false/0/空数组仍命中；驱逐后可回源。",
+        "验收参考：CMS变更后只失效相关数据；跨区一致性与生效延迟需实环境另测。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。"
       ],
-      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方技能表",
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
       "reviewDepthBucket": "not-close-read-frontmatter-or-index",
       "tier": "situational",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "runtime-cache",
+      "vercelScenarioPick": false,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:cdn-caching",
@@ -2720,21 +2828,34 @@
         "tool-efficiency"
       ],
       "purpose": "排查 CDN 命中率、过期内容、ISR/PPR、cacheReason。",
-      "inputOutput": "解释 x-vercel-cache / cacheReason，而不是空喊「清缓存」。本轮未全文精读。",
-      "callExample": "请用 cdn-caching 解释为什么这个路径一直 MISS，先对照缓存响应头，不要先 purge。\n本站不代为执行安装或部署。",
-      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/cdn-caching",
+      "inputOutput": "不适用：不是函数内数据库结果缓存；不能把所有BYPASS当问题，也不能用traces解释纯CDN命中\n输入：时间窗、路由、状态/Cache-Control/Vary/Set-Cookie、cache_result、cacheReason、ISR units",
+      "callExample": "用 cdn-caching 只读分析文章列表旧内容：区分浏览器/CDN/ISR/Runtime层，按可缓存流量算命中率，解释stale_error；不purge、不改配置。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/cdn-caching/SKILL.md",
       "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/cdn-caching",
       "license": "Apache-2.0",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=situational"
+        "tier=situational",
+        "规则：命中率分母排除BYPASS与not set；STALE可能是正常SWR，stale_error才提示刷新失败。",
+        "规则：cacheReason和ppr_state来自Logs/metrics，内部响应头不能靠curl拿到；公开Cache-Control等仍可HTTP检查。",
+        "规则：PPR是渲染策略不是新缓存层；shell命中仍可能运行动态holes，不能把函数调用都判MISS。",
+        "规则：标签粗粒度会扩大失效范围；先看证据再缩tag，不默认全站purge。",
+        "规则：注意上游示例分子命令漏PRERENDER，且ISR write_units是8KB计费单位不是重建次数；本包不照抄其“每次再生读数”比率结论。",
+        "验收参考：自拟HIT60/STALE10/PRERENDER10/MISS20/BYPASS100时可缓存命中率80%，不是40%。",
+        "验收参考：不同地区/部署/实验variant可解释冷key；无指标权限时不编造成本节省。"
       ],
-      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方技能表",
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
       "reviewDepthBucket": "not-close-read-frontmatter-or-index",
       "tier": "situational",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "cdn-caching",
+      "vercelScenarioPick": true,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:flags-sdk",
@@ -2746,20 +2867,28 @@
       ],
       "purpose": "在 Next.js/SvelteKit 代码里声明 flag()、适配器、precompute、Flags Explorer。",
       "inputOutput": "旗标求值与代码声明一致。本轮未全文精读。",
-      "callExample": "请用 flags-sdk 在这个 Next 页面加一个 flag() 声明，不要改去讲 vercel flags CLI。\n本站不代为执行安装或部署。",
-      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/flags-sdk",
+      "callExample": "请在上游仓库阅读「flags-sdk」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill flags-sdk",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/flags-sdk/SKILL.md",
       "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/flags-sdk",
       "license": "插件 Apache-2.0；上游另计",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=situational"
+        "tier=situational",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方技能表",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "not-close-read-frontmatter-or-index",
       "tier": "situational",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "flags-sdk",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:access-protected-vercel-deployment",
@@ -2771,20 +2900,28 @@
       ],
       "purpose": "预览/生产开启 Deployment Protection 后，自动化请求遇到登录墙、401/403 或 TRUSTED_SOURCES_ENVIRONMENT_MISMATCH。",
       "inputOutput": "能用文档所述方式通过保护墙读取页面，而不是关掉保护。本轮未全文精读。",
-      "callExample": "预览 URL 返回 401 时，用 access-protected-vercel-deployment 选择 vercel curl 还是 OIDC，不要把保护关掉。\n本站不代为执行安装或部署。",
-      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/access-protected-vercel-deployment",
+      "callExample": "请在上游仓库阅读「access-protected-vercel-deployment」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill access-protected-vercel-deployment",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/access-protected-vercel-deployment/SKILL.md",
       "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/access-protected-vercel-deployment",
       "license": "Apache-2.0",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=situational"
+        "tier=situational",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方技能表",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "not-close-read-frontmatter-or-index",
       "tier": "situational",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "access-protected-vercel-deployment",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:vercel-storage",
@@ -2795,21 +2932,34 @@
         "tool-efficiency"
       ],
       "purpose": "在 Blob、Global Config（原 Edge Config）、Neon、Upstash 等之间选型与配置。",
-      "inputOutput": "选型理由与官方产品边界一致。本轮未全文精读。",
-      "callExample": "请用 vercel-storage 为用户上传图片和每请求功能开关分别选型，不要都塞进一份 Postgres。\n本站不代为执行安装或部署。",
-      "sourceUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-storage",
+      "inputOutput": "不适用：不要把所有合作数据库叫Vercel自研；不用Blob当关系DB，不用Global Config做会话或高频写\n输入：文件敏感性/大小、读写频率、一致性与权限、已有provider、预算、环境隔离",
+      "callExample": "用 vercel-storage 比较“公开封面、私有原稿、文章关系数据、低频站点配置”四类存储。先选型和权限方案；不创建store、数据库或付费集成。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-storage/SKILL.md",
       "officialUrl": "https://github.com/vercel/vercel-plugin/tree/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-storage",
       "license": "Apache-2.0",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=situational"
+        "tier=situational",
+        "规则：Blob是第一方文件、Global Config是第一方低频配置；Neon/Upstash/Supabase等是合作供应商。",
+        "规则：私有Blob经已鉴权route读取或短期授权；access:private不自动证明当前用户有权读文件。",
+        "规则：Marketplace install可能创建资源、连接项目、拉env甚至装供应商skills，不是无副作用查询。",
+        "规则：资源创建成功但skill同步失败，不要重跑整个provision命令导致第二份DB；先读状态再精确恢复。",
+        "验收参考：公开封面可读，原稿匿名拒绝；上传校验大小/类型/所有者，不靠扩展名。",
+        "验收参考：重试只补缺失步骤不重复开库；迁移有数据校验和回滚；本轮不触发计费。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。"
       ],
-      "reviewDepth": "not-close-read-frontmatter-or-index; inherited: frontmatter + 官方技能表",
+      "reviewDepth": "未在本站安装或运行上游",
       "reviewDepthBucket": "not-close-read-frontmatter-or-index",
       "tier": "situational",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-storage",
+      "vercelScenarioPick": false,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "upstream:vercel:vercel-cli-with-tokens",
@@ -2821,20 +2971,28 @@
       ],
       "purpose": "非交互/CI 场景用环境变量里的 token 跑 CLI。日常本机交互部署应优先 deploy-to-vercel。",
       "inputOutput": "预览默认；git push 仍需批准。本轮精读完整 SKILL.md，未执行 CLI。",
-      "callExample": "在 CI 里用 vercel-cli-with-tokens：确认 VERCEL_TOKEN 已在环境中，然后 vercel deploy -y --no-wait。不要把 token 写进命令参数。\n本站不代为执行安装或部署。",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「vercel-cli-with-tokens」。本站不代为安装或执行。",
       "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/vercel-cli-with-tokens/SKILL.md",
       "officialUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/vercel-cli-with-tokens/SKILL.md",
       "license": "集合 README 声明 MIT；该 SKILL.md 无 license 字段",
       "knownConstraints": [
-        "",
         "路由名 vercel 已保存不代表本机已安装全部官方包。",
-        "tier=situational"
+        "tier=situational",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
       ],
-      "reviewDepth": "skill-md-body-read-references-not-always-expanded; inherited: 完整阅读该技能 SKILL.md 正文；未展开其 references/ 或 AGENTS.md，除非本条另有注明",
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
       "reviewDepthBucket": "skill-md-body-read-references-not-always-expanded",
       "tier": "situational",
       "demoRoutes": [],
-      "authorFilter": "vercel"
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-cli-with-tokens",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": false,
+      "vercelCommit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "vercelRepository": "vercel-labs/agent-skills",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权"
     },
     {
       "id": "design-method:in-context-work-modal",
@@ -3260,6 +3418,2118 @@
       "priority": "optional-reinforcement",
       "authorFilter": "self",
       "optional": true
+    },
+    {
+      "id": "upstream:vercel-exp:vercel-react-native-skills",
+      "name": "vercel-react-native-skills",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「vercel-react-native-skills」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-native-skills/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/agent-skills",
+      "license": "MIT（README 声明；根 LICENSE 未在本轮重查）",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-react-native-skills",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "vercelRepository": "vercel-labs/agent-skills"
+    },
+    {
+      "id": "upstream:vercel-exp:writing-guidelines",
+      "name": "writing-guidelines",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「writing-guidelines」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/writing-guidelines/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/agent-skills",
+      "license": "MIT（README 声明；根 LICENSE 未在本轮重查）",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "writing-guidelines",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "vercelRepository": "vercel-labs/agent-skills"
+    },
+    {
+      "id": "upstream:vercel-exp:ai-gateway",
+      "name": "ai-gateway",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "应用模型路由、fallback、认证、预算/观测，模型信息高频变化",
+      "inputOutput": "不适用：不是对所有应用强制迁移；prompt缓存不等于HTTP响应缓存；不承诺免费额度\n输入：模态/工具/结构化要求、模型指定、数据保留/地区、现有认证、预算与fallback边界",
+      "callExample": "用 ai-gateway 给应用做模型接入审查：只读列model发现步骤、数据地区与fallback取舍，给预算耗尽/无provider的错误UI；不建key、不改budget、不发付费请求。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/ai-gateway/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：默认路由已有provider失效切换，没业务约束别擅加only/order/sort；only硬过滤会失去列表外failover。",
+        "规则：Gateway请求认证与BYOK供应商凭据不同；服务端OIDC、CI等认证路径按实际环境选，禁止输出密钥。",
+        "规则：fallback模型也须满足模态、工具、地区与数据策略；不是字符串随便替换。",
+        "规则：caching:auto是供应商prompt cache；不承诺缓存整段回复、不把reporting user/tags当rate limit。",
+        "验收参考：不存在model在发请求前拒绝；only不可用时清晰失败，不偷偷越出许可范围。",
+        "验收参考：测试记录区分typecheck、一次授权请求、dashboard确认；没有实调用不写成功。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "ai-gateway",
+      "vercelScenarioPick": false,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:bootstrap",
+      "name": "bootstrap",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "Project bootstrapping orchestrator — linking, env provisioning, db setup, first-run commands",
+      "callExample": "请在上游仓库阅读「bootstrap」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill bootstrap",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/bootstrap/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "bootstrap",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:chat-sdk",
+      "name": "chat-sdk",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "服务端跨Slack/Teams/Discord等平台机器人；含Nuxt/Hono等模板线索",
+      "inputOutput": "不适用：不是网页聊天useChat组件；不要为单平台成熟集成无故迁移；不承诺每个适配器都同能力\n输入：目标平台、事件类型、bot或user身份、订阅/去重、部署框架、审批要求",
+      "callExample": "用 chat-sdk 设计一个Discord知识问答机器人，后端沿用Nuxt。先核对适配器能力、webhook验签和状态存储，给事件fixture与权限表；不创建应用、不发消息。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/chat-sdk/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：入口区分提及、订阅消息、交互回调；thread状态和分布式锁不是内存变量能替代的。",
+        "规则：适配器catalog替代已deprecated的chat/adapters发现入口，不能根据平台名字猜包和权限。",
+        "规则：跨平台统一抽象不代表流式和cards行为完全相同；先查getFeatureSupport。",
+        "规则：长等待/人类批准交给workflow；供应商OAuth同意和一次业务操作的批准必须分开。",
+        "验收参考：重复事件不重复副作用；验签失败无业务执行；未知平台功能有回退。",
+        "验收参考：批准超时/拒绝后无写动作；UI回执与最终业务结果一致。部署/真实平台发送本轮未测。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "chat-sdk",
+      "vercelScenarioPick": true,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:create-a-backend",
+      "name": "create-a-backend",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "Backend product and framework selection — Functions, Services, containers, Workflow, Queues, and databases",
+      "callExample": "请在上游仓库阅读「create-a-backend」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill create-a-backend",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/create-a-backend/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "create-a-backend",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:custom-metrics",
+      "name": "custom-metrics",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "函数内数值业务/应用指标与聚合查询",
+      "inputOutput": "不适用：不是浏览器Web Vitals或用户点击事件；不把所有日志详情塞tag\n输入：指标名/单位、sum或duration分位数、有限tag集合、重试逻辑、项目/环境/time window",
+      "callExample": "用 custom-metrics 设计导出任务的成功数与duration_ms。把attempt和logical success分开，拒绝用户ID/邮箱/raw URL tag；只出schema和fixture。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/custom-metrics/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：metric同步返回void；计数发1后sum，时长发实测值后p95/avg，不把累计值反复当增量。",
+        "规则：固定点分名带单位；禁用reserved vercel.；tag低基数无隐私，schema查询实际维度。",
+        "规则：至少一次消费重试会多次attempt，成功逻辑事件要与尝试分开，防高估吞吐。",
+        "规则：记录实际函数执行与ingestion后查证，缺套餐/延迟要如实报告。",
+        "验收参考：fixture中重试3次最终成功计attempt=3、success=1；duration是样本不是计数。",
+        "验收参考：拒绝email/user_id等高基数敏感tag；真实采集本轮未测。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "custom-metrics",
+      "vercelScenarioPick": false,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:daemons",
+      "name": "daemons",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "Vercel Daemons — long-running Dockerfile-built workers declared under `daemons` in vercel.json, instances per region, SIGTERM, Queues poll mode",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「daemons」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/daemons/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "daemons",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:domains",
+      "name": "domains",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "Public domain search and pricing, CLI and Registrar API operations, project domains, DNS, transfers, and renewals",
+      "callExample": "请在上游仓库阅读「domains」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill domains",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/domains/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "domains",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:eve",
+      "name": "eve",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "[vercel/eve](https://github.com/vercel/eve)",
+      "callExample": "请在上游仓库阅读「eve」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill eve",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/eve/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "eve",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:is-agentic",
+      "name": "is-agentic",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "vercel-labs/is-agentic (private); public copy at [is-agentic.com](https://is-agentic.com/.well-known/agent-skills/is-agentic/SKILL.md)",
+      "callExample": "请在上游仓库阅读「is-agentic」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill is-agentic",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/is-agentic/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "is-agentic",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:knowledge-update",
+      "name": "knowledge-update",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "Knowledge update guidance for the plugin",
+      "callExample": "请在上游仓库阅读「knowledge-update」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill knowledge-update",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/knowledge-update/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "knowledge-update",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:marketplace",
+      "name": "marketplace",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "Integration discovery and installation (`vercel integration add` / `vercel install`), provider agent skills, auto-provisioned env vars, unified billing",
+      "callExample": "请在上游仓库阅读「marketplace」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill marketplace",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/marketplace/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "marketplace",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:microfrontends",
+      "name": "microfrontends",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "Multi-zone and microfrontend architecture, routing, deployment boundaries, and shared dependencies",
+      "callExample": "请在上游仓库阅读「microfrontends」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill microfrontends",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/microfrontends/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "microfrontends",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:offload-to-sandbox",
+      "name": "offload-to-sandbox",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "Offload heavy builds, test suites, and parallel agent work to Vercel Sandboxes with the `vercel sandbox` CLI: base snapshots, sharding, cleanup",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「offload-to-sandbox」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/offload-to-sandbox/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "offload-to-sandbox",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:queues",
+      "name": "queues",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "异步任务缓冲、消息扇出与独立consumer group；Nuxt/Nitro同样可用",
+      "inputOutput": "不适用：不是构建队列排队故障；多步审批别手写一串topic代替workflow\n输入：topic/payload schema、消费组、业务幂等范围、留存/延迟、毒消息处理和可观测指标",
+      "callExample": "用 queues 设计“文章保存后生成两个独立格式”的后台任务。假设重复投递，给业务幂等键、重试/毒消息表和Nuxt接入检查；不发布消息。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/queues/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：at-least-once是投递语义，不是exactly-once业务效果；生产者idempotencyKey窗口有限，消费者也要幂等。",
+        "规则：handleCallback返回即确认、抛错重试；注册experimentalTriggers才会有push投递。",
+        "规则：毒消息不能静默ack当成功：先留失败记录/告警与恢复策略，再达到阈值确认终止。",
+        "规则：留存TTL决定可重放窗口；延迟不得超TTL；按需分consumer group而非让单组争抢却期待各自收到。",
+        "验收参考：同一业务事件重复消息只产一次逻辑结果；不同业务事件不能误去重。",
+        "验收参考：永久失败停止重试且可追踪，暂时失败可恢复；缺trigger可由配置检查发现。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "queues",
+      "vercelScenarioPick": true,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:routing-middleware",
+      "name": "routing-middleware",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "平台级缓存前rewrite/redirect/header，覆盖多框架",
+      "inputOutput": "不适用：重数据库逻辑或唯一鉴权层不应放此；Vue项目不照抄Next proxy.ts约定\n输入：路径矩阵、公开/私有边界、locale/geo行为、静态资源例外、缓存key、已有项目级路由",
+      "callExample": "用 routing-middleware 只读审Nuxt站点/API代理。列缓存前执行范围、matcher、redirect和rewrite区别；给路径正反例，不发布路由。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/routing-middleware/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：先分清平台Routing Middleware、Next Proxy与普通Functions；遵循当前框架产物，避免双重配置。",
+        "规则：matcher只命中目标路径，排除静态资源；重写要防回环/开放代理，redirect保留合适状态码。",
+        "规则：平台项目级routes可无需deploy即时生效，因此publish仍是外部写入需要明确授权。",
+        "规则：轻量身份提示不能替代后端对数据/动作的真正授权。",
+        "验收参考：/api允许路径正确转发，未知目标拒绝；资源路径不被改写；不产生自循环。",
+        "验收参考：两个不同身份不能因缓存/重写共享私有响应；已批准的审计不被扩大为publish。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "routing-middleware",
+      "vercelScenarioPick": false,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:vercel-agent",
+      "name": "vercel-agent",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "Vercel Agent chat (dashboard, Slack), code review, investigations, approved actions, product installation",
+      "callExample": "请在上游仓库阅读「vercel-agent」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill vercel-agent",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-agent/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-agent",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:vercel-cli",
+      "name": "vercel-cli",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "[vercel/vercel](https://github.com/vercel/vercel)",
+      "callExample": "请在上游仓库阅读「vercel-cli」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill vercel-cli",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-cli/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-cli",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:vercel-connect",
+      "name": "vercel-connect",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "应用按用户/应用主体获取短期第三方凭据，避免长期provider key落env",
+      "inputOutput": "不适用：不是Grok Bot自身连接器安装流程；用户OAuth同意不是发消息/改资源的业务批准\n输入：服务端session身份、app/user行为、最小scope、connector UID/安装实例、环境隔离、操作批准",
+      "callExample": "用 vercel-connect 审核应用读取GitHub数据的身份链。主体从服务端session派生，列connector/installation/环境权限，禁止浏览器拿token；只给审计，不连接账户。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-connect/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：subject.id来自已认证server session，不能信请求body里的userId；getToken和MCP auth provider留server。",
+        "规则：创建connector、项目环境attach、provider安装/用户同意、一次业务操作审批是不同层。",
+        "规则：项目link不隔离同connector的provider installations；生产与预览真要隔离时用分离connector策略。",
+        "规则：按需即时取最小权限token，让SDK缓存刷新；不记录token，不凭CLI猜SDK专属flags。",
+        "验收参考：篡改客户端userId不切换主体；preview不能获得production installation能力。",
+        "验收参考：无业务批准的写操作，即使OAuth已同意也拒绝；token不出现在日志/浏览器。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "未在本站安装或运行上游",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-connect",
+      "vercelScenarioPick": false,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:vercel-firewall",
+      "name": "vercel-firewall",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "DDoS protection, WAF rules, rate limiting, bot filtering, and IP controls",
+      "callExample": "请在上游仓库阅读「vercel-firewall」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill vercel-firewall",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-firewall/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-firewall",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:vercel-flags",
+      "name": "vercel-flags",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "[vercel/flags](https://github.com/vercel/flags)",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「vercel-flags」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-flags/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-flags",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:vercel-sandbox",
+      "name": "vercel-sandbox",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "隔离运行用户/模型生成代码，限制网络/寿命/凭据",
+      "inputOutput": "不适用：不是安全授权替代品；不是默认免费执行环境；平台微VM不能保证应用层不泄漏已授予的数据\n输入：代码可信度、输入文件、允许网络、所需凭据、预算/TTL、结果导出与销毁要求",
+      "callExample": "用 vercel-sandbox 给不可信脚本做隔离执行方案。默认deny-all，不注入长效密钥，列命令/内存/超时/输出与清理策略；不创建sandbox。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-sandbox/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：先deny-all，确需联网才给域名/方法/路径最小允许；避免示例里的通配\"*\"扩大权限。",
+        "规则：凭据尽量broker注入在受控请求端，不把真实密钥写到执行文件、环境快照或日志。",
+        "规则：v2停止会快照并可自动resume；如果任务要求无留存，要明确persistent策略、导出允许内容及删除授权，不能把stop当擦除。",
+        "规则：超时/AbortSignal、退出码、输出大小、磁盘与费用分别有限制；不用SDK名字推定资源已清理。",
+        "验收参考：计划包含恶意联网/读取凭据/超长输出/超时反例，策略默认拒绝。",
+        "验收参考：执行失败也进入清理路径；输出视为不可信，不自动执行其中指令。真实微VM网络和计费本轮未测。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "未在本站安装或运行上游",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-sandbox",
+      "vercelScenarioPick": false,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:vercel-schedules",
+      "name": "vercel-schedules",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "Vercel Schedules — static `schedules` in vercel.json, private `schedule/v1beta` functions, dynamic `@vercel/schedules`, one-time runs, Cron Jobs migration",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「vercel-schedules」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-schedules/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-schedules",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:vercel-services",
+      "name": "vercel-services",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "Multiple frontends and backends in one project, with public rewrites and private service bindings",
+      "callExample": "请在上游仓库阅读「vercel-services」SKILL.md 后再调用；本站不代为安装。\nnpx skills add <官方仓库URL> --skill vercel-services",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-services/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-services",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:vercel-tracing",
+      "name": "vercel-tracing",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "服务端慢API/失败链路的OpenTelemetry与span查询",
+      "inputOutput": "不适用：静态页/CDN HIT/前端动画或LCP别只查server trace；少量span不能当完整p95分布\n输入：目标路由、环境、输入、时间窗、已有provider与span、采样设置和可访问部署",
+      "callExample": "用 vercel-tracing 为慢导出API设计量测计划：保留当前OTel provider，只补未观测操作。列关键路径、样本数和前后同条件比较；不部署不改采样。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/vercel-tracing/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：只能观测确实运行server code的请求；先区分缓存/纯静态/浏览器瓶颈。",
+        "规则：一个启动hook注册一次provider；扩展既有而非重复registerOTel。",
+        "规则：先标注疑似操作span，再看关键路径；最长span与其它span重叠时，不一定是最值得修的。",
+        "规则：search可跨team项目，linked目录不自动缩到一个项目；显式scope/project与时间窗，不把空采样当没发生。",
+        "规则：search duration毫秒、inspect JSON可为[seconds,nanoseconds]；单位统一后比较，检查分页。",
+        "验收参考：前后同输入/环境/负载/采样/请求数；报告总请求和关键span变化及错误率。",
+        "验收参考：数据库或远程请求只有独立时才并行；源代码推断不称实测加速，暂无trace明示未测。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "vercel-tracing",
+      "vercelScenarioPick": true,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:workflow",
+      "name": "workflow",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "审批/长等待/重试/跨请求持久的多步任务；支持多框架集成",
+      "inputOutput": "不适用：短同步请求或单次后台任务不要强加workflow；不是用户已授权发布内容\n输入：状态机、外部副作用、幂等键、审批人、超时、重试分类、事件规模",
+      "callExample": "用 workflow 审阅“生成草稿→等待我批准→导出文件”的状态机。只设计，列step边界、批准身份校验、超时/拒绝/重复回调反例；不启动真实run。",
+      "sourceUrl": "https://github.com/vercel/vercel-plugin/blob/b004b4098274bb1b3a0290623260e23432437b4b/skills/workflow/SKILL.md",
+      "officialUrl": "https://github.com/vercel/vercel-plugin",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：workflow函数只编排；网络/Node模块与副作用放step，等待用durable sleep/hooks而非setTimeout。",
+        "规则：step结果持久化不等于外部副作用恰好一次；处理“远端成功、checkpoint失败”要幂等/事务。",
+        "规则：创建hook的token不是授权本身：resume入口验签、核对session审批人和任务版本、拒绝过期和重放。",
+        "规则：批量并发有界；子run界定失败/历史，不自动降低扇出；Promise.all只用于独立工作，allSettled要检查每个失败。",
+        "规则：测试分step单测与@workflow/vitest集成；不可把vi.mock能拦截所有VM代码作为前提。",
+        "验收参考：拒绝/超时终止；错误主体或旧版本批准无效；回调重放只产生一次逻辑结果。",
+        "验收参考：模拟步骤崩溃后恢复不重发不可重复写入；有计划验证持久化恢复而非只单测函数。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。"
+      ],
+      "reviewDepth": "未在本站安装或运行上游",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "workflow",
+      "vercelScenarioPick": true,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b004b4098274bb1b3a0290623260e23432437b4b",
+      "vercelRepository": "vercel/vercel-plugin"
+    },
+    {
+      "id": "upstream:vercel-exp:next-bundle-optimizer",
+      "name": "next-bundle-optimizer",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "Next浏览器首载JS/重复依赖/可延后交互功能的证据型审计",
+      "inputOutput": "不适用：不适用Vue/Vite小程序；build attribution不是浏览器网络字节或耗时；不是一上来大改代码\n输入：Next版本、全站或指定route、audit/fix授权、snapshot、行为与时序契约、包图覆盖范围",
+      "callExample": "用 next-bundle-optimizer 只审计、不改源码/依赖/lockfile。给所有同步import路径、size attribution和unverified边界，不把Server Action stub叫泄漏。先核对CLI能力。",
+      "sourceUrl": "https://github.com/vercel/next.js/blob/0cf3769051fbc0e09346624f1f5bd26159df5875/skills/next-bundle-optimizer/SKILL.md",
+      "officialUrl": "https://github.com/vercel/next.js",
+      "license": "MIT",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：默认audit，fix要明确授权；before/after snapshot唯一命名，export管道启用pipefail，gzip有效也可能上游导出失败而只得到半包。",
+        "规则：从installed Next解析schema，流式处理导出，区分source path/module identity，重复记录只计一次。",
+        "规则：lazy import要检查所有root到target的同步路径及mount preloading；改一条边不代表依赖已脱离首载。",
+        "规则：source扫描只是启发式：公开schema/可编辑prompt/引用型Server Action stub不是自动泄漏；不确定列unverified。",
+        "规则：上游“sandbox不支持端口则在外面跑”的建议不能绕过环境限制；只报告需要用户批准的支持环境，不自行逃出sandbox。",
+        "验收参考：audit不修改app/lock；对同scope/metric比较，未完整导出不出结论。",
+        "验收参考：fix另授权后还需真实交互/E2E和可访问性，不能拿typecheck/build代替运行行为。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "next-bundle-optimizer",
+      "vercelScenarioPick": false,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "0cf3769051fbc0e09346624f1f5bd26159df5875",
+      "vercelRepository": "vercel/next.js"
+    },
+    {
+      "id": "upstream:vercel-exp:next-cache-components-adoption",
+      "name": "next-cache-components-adoption",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「next-cache-components-adoption」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel/next.js/blob/0cf3769051fbc0e09346624f1f5bd26159df5875/skills/next-cache-components-adoption/SKILL.md",
+      "officialUrl": "https://github.com/vercel/next.js",
+      "license": "MIT",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "next-cache-components-adoption",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "0cf3769051fbc0e09346624f1f5bd26159df5875",
+      "vercelRepository": "vercel/next.js"
+    },
+    {
+      "id": "upstream:vercel-exp:next-cache-components-optimizer",
+      "name": "next-cache-components-optimizer",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「next-cache-components-optimizer」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel/next.js/blob/0cf3769051fbc0e09346624f1f5bd26159df5875/skills/next-cache-components-optimizer/SKILL.md",
+      "officialUrl": "https://github.com/vercel/next.js",
+      "license": "MIT",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "next-cache-components-optimizer",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "0cf3769051fbc0e09346624f1f5bd26159df5875",
+      "vercelRepository": "vercel/next.js"
+    },
+    {
+      "id": "upstream:vercel-exp:next-partial-prefetching-adoption",
+      "name": "next-partial-prefetching-adoption",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「next-partial-prefetching-adoption」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel/next.js/blob/0cf3769051fbc0e09346624f1f5bd26159df5875/skills/next-partial-prefetching-adoption/SKILL.md",
+      "officialUrl": "https://github.com/vercel/next.js",
+      "license": "MIT",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "next-partial-prefetching-adoption",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "0cf3769051fbc0e09346624f1f5bd26159df5875",
+      "vercelRepository": "vercel/next.js"
+    },
+    {
+      "id": "upstream:vercel-exp:next-partial-prefetching-optimizer",
+      "name": "next-partial-prefetching-optimizer",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「next-partial-prefetching-optimizer」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel/next.js/blob/0cf3769051fbc0e09346624f1f5bd26159df5875/skills/next-partial-prefetching-optimizer/SKILL.md",
+      "officialUrl": "https://github.com/vercel/next.js",
+      "license": "MIT",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "next-partial-prefetching-optimizer",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "0cf3769051fbc0e09346624f1f5bd26159df5875",
+      "vercelRepository": "vercel/next.js"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/chat",
+      "name": "json-render/chat",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/chat」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/chat/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/chat",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/codegen",
+      "name": "json-render/codegen",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/codegen」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/codegen/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/codegen",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/core",
+      "name": "core",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "AI产出受约束的声明式UI规格/表单/仪表盘；先定schema与catalog",
+      "inputOutput": "不适用：不是任意代码生成器；不保证内容审美、语义完整或业务授权\n输入：允许的组件、props schema、动作白名单、初始状态、最大节点/深度、错误回退要求",
+      "callExample": "用 json-render 的 core 帮我把生成式表单限定在 Card/Text/Input/Button 四类。先给catalog与合法/越权反例，所有提交仍由服务端授权，不调用模型。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/core/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：Schema定结构、Catalog定组件与动作能力、Spec是数据；三者不可混为可信代码。",
+        "规则：用validateSpec检查引用与条件；autoFixSpec区分lossless/lossy，丢子节点不应静默变成“成功”。",
+        "规则：流式JSONL patch不是每个chunk都可直接JSON.parse；保留最后有效快照与取消状态。",
+        "规则：结构校验不等于权限校验；客户端visibility和action名称不能授予服务端写权限。",
+        "验收参考：未知组件、悬空引用、循环/超深树被拒；默认值和schema转换另有测试。",
+        "验收参考：即使生成了“删除”按钮，未批准的动作也不能执行；有损修复显示缺项而非伪装完整。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/core",
+      "vercelScenarioPick": false,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/devtools-react",
+      "name": "json-render/devtools-react",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/devtools-react」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/devtools-react/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/devtools-react",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/devtools-solid",
+      "name": "json-render/devtools-solid",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/devtools-solid」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/devtools-solid/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/devtools-solid",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/devtools-svelte",
+      "name": "json-render/devtools-svelte",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/devtools-svelte」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/devtools-svelte/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/devtools-svelte",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/devtools-vue",
+      "name": "json-render/devtools-vue",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/devtools-vue」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/devtools-vue/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/devtools-vue",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/devtools",
+      "name": "json-render/devtools",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/devtools」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/devtools/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/devtools",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/directives",
+      "name": "json-render/directives",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/directives」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/directives/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/directives",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/image",
+      "name": "json-render/image",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/image」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/image/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/image",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/ink",
+      "name": "json-render/ink",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/ink」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/ink/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/ink",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/jotai",
+      "name": "json-render/jotai",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/jotai」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/jotai/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/jotai",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/json-render-shadcn",
+      "name": "json-render/json-render-shadcn",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/json-render-shadcn」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/json-render-shadcn/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/json-render-shadcn",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/mcp",
+      "name": "json-render/mcp",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/mcp」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/mcp/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/mcp",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/next",
+      "name": "json-render/next",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/next」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/next/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/next",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/react-email",
+      "name": "json-render/react-email",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/react-email」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/react-email/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/react-email",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/react-native",
+      "name": "json-render/react-native",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/react-native」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/react-native/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/react-native",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/react-pdf",
+      "name": "json-render/react-pdf",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/react-pdf」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/react-pdf/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/react-pdf",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/react-three-fiber",
+      "name": "json-render/react-three-fiber",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/react-three-fiber」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/react-three-fiber/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/react-three-fiber",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/react",
+      "name": "json-render/react",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/react」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/react/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/react",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/redux",
+      "name": "json-render/redux",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/redux」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/redux/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/redux",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/remotion-best-practices",
+      "name": "json-render/remotion-best-practices",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/remotion-best-practices」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/remotion-best-practices/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "未在本站安装或运行上游",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/remotion-best-practices",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/remotion",
+      "name": "json-render/remotion",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/remotion」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/remotion/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/remotion",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/shadcn-svelte",
+      "name": "json-render/shadcn-svelte",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/shadcn-svelte」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/shadcn-svelte/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/shadcn-svelte",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/skill-creator",
+      "name": "json-render/skill-creator",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/skill-creator」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/skill-creator/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/skill-creator",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/solid",
+      "name": "json-render/solid",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/solid」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/solid/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/solid",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/svelte",
+      "name": "json-render/svelte",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/svelte」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/svelte/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/svelte",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/tanstack-start",
+      "name": "json-render/tanstack-start",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/tanstack-start」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/tanstack-start/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/tanstack-start",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/vue",
+      "name": "vue",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "Vue3/Vite里的JSON驱动表单和交互UI，最贴合本用户的非React增量",
+      "inputOutput": "不适用：不是微信小程序renderer；也不是让普通VitePress文章接入整套生成UI的理由\n输入：已有Vue组件、catalog、state路径、事件到动作的映射、Pinia/外部store接口",
+      "callExample": "用 json-render 的 vue 技能把一个只读订单卡片和可编辑筛选表单接到现有Vue3项目。列出slot、ref和双向绑定契约；先给草图与fixture，不装包。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/vue/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：defineRegistry映射到可信Vue组件，children对应默认slot，顶层slots只放具名slot。",
+        "规则：状态路径用JSON Pointer；$state是读、$bindState放在自然value/checked属性以写回，别发明statePath prop。",
+        "规则：useStateStore().state是ShallowRef，要读state.value；外部StateStore可接Pinia但需核订阅/快照行为。",
+        "规则：组件emit事件，经ActionProvider受控派发；不能从模型文本直接构造执行函数。",
+        "验收参考：修改输入只更新指定路径；默认slot/具名slot都呈现且不重复。",
+        "验收参考：取消流式响应保留上次有效spec；非法action被服务端拒绝；Vue类型检查与交互E2E另跑。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/vue",
+      "vercelScenarioPick": true,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/xstate",
+      "name": "json-render/xstate",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/xstate」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/xstate/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/xstate",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/yaml",
+      "name": "json-render/yaml",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/yaml」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/yaml/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/yaml",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:json-render/zustand",
+      "name": "json-render/zustand",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "待任务匹配再读上游；不是全量安装建议",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「json-render/zustand」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/json-render/blob/f5c12405a19c45be5e0e90778ef888ed541b208f/skills/zustand/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/json-render",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "仅目录或 README 索引，未读 SKILL 正文",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "json-render/zustand",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "f5c12405a19c45be5e0e90778ef888ed541b208f",
+      "vercelRepository": "vercel-labs/json-render"
+    },
+    {
+      "id": "upstream:vercel-exp:building-components",
+      "name": "building-components",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "ui-design"
+      ],
+      "purpose": "设计系统中的可访问组件/API；React参考的工程原则也可迁移Vue",
+      "inputOutput": "不适用：不是视觉灵感检索；不能把React hook/as-child原样贴到Vue、小程序\n输入：组件职责、交互状态、父级控制方式、键盘契约、现有token与primitive",
+      "callExample": "用 building-components 设计一个可受控/非受控的筛选弹窗。先读 accessibility/state 对应参考，给API与键盘契约；沿用项目框架，不安装依赖、不发布组件。",
+      "sourceUrl": "https://github.com/vercel/components.build/blob/0861fbcfe4f78c50eaafc202f5fb7661d641ddff/skills/building-components/SKILL.md",
+      "officialUrl": "https://github.com/vercel/components.build",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：先选语义元素，再做ARIA增强；区分props/slots组合与继承。",
+        "规则：受控模式父级是单一真源；非受控模式只读default值初始化，不制造两份互相同步的状态。",
+        "规则：在打开、关闭、卸载和内容变化时定义焦点去向；恢复到触发器，不能只测试视觉出现。",
+        "规则：上游focus trap代码是教学片段，未覆盖所有动态/禁用元素；不要复制全局outline:none或自制陷阱当成已合规，优先成熟primitive并测试。",
+        "验收参考：Tab/Shift+Tab可用，Escape关闭，焦点回到正确触发器；读屏名称存在。",
+        "验收参考：父级改value会立即反映；defaultValue不抢受控状态；中文长文、200%缩放和明暗主题不溢出。",
+        "验收参考：自动化无障碍检查只补充真实键盘/读屏验证，不声称WCAG认证。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "building-components",
+      "vercelScenarioPick": true,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "0861fbcfe4f78c50eaafc202f5fb7661d641ddff",
+      "vercelRepository": "vercel/components.build"
+    },
+    {
+      "id": "upstream:vercel-exp:streamdown",
+      "name": "streamdown",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "content-creation",
+        "typography"
+      ],
+      "purpose": "React流式Markdown、中文/公式/代码/图表呈现，兼顾内容创作",
+      "inputOutput": "不适用：不是Vue/VitePress原生renderer，不是完整文字版式规范；不保证默认配置满足你的安全策略\n输入：分块Markdown样本、允许链接/图片域、是否允许HTML、样式扫描路径、加载/停止状态",
+      "callExample": "用 streamdown 检查中文流式文章：分块代码围栏、粗体、公式和外链。先读security参考，列严格域名规则和Tailwind扫描项，保留链接确认，不接真实模型。",
+      "sourceUrl": "https://github.com/vercel/streamdown/blob/db1a468ac81ba7b440a2ea31fe2294bba8cae276/skills/streamdown/SKILL.md",
+      "officialUrl": "https://github.com/vercel/streamdown",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：流式中isAnimating与caret配合；静态文章明确mode=static，不把每次重绘误作流。",
+        "规则：Tailwind4的@source与v3 content不同；只加已装插件的扫描路径；公式还需KaTeX CSS。",
+        "规则：security参考比简介更谨慎：协议/前缀默认宽松，Link Safety弹窗不是清洗器。自定义rehype链需重建sanitize/harden。",
+        "规则：上游示例hostname.endsWith(domain)会把notexample.com当可信example.com；改为host===d或host.endsWith(\".\"+d)，同时核对协议、端口与子域是否确实允许。",
+        "验收参考：中文粗体与括号跨chunk仍收束；围栏未闭合期间布局稳定，结束/取消后无永久动画。",
+        "验收参考：javascript/data等策略外URL被拒；notexample.com、example.com.evil.test不误入白名单；自定义HTML不绕清洗。",
+        "验收参考：本轮只测自建URL规则，不声称验证Streamdown组件安全。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "streamdown",
+      "vercelScenarioPick": true,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "db1a468ac81ba7b440a2ea31fe2294bba8cae276",
+      "vercelRepository": "vercel/streamdown"
+    },
+    {
+      "id": "upstream:vercel-exp:ai-elements",
+      "name": "ai-elements",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "ui-design",
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "React/Next AI聊天界面的消息、输入、工具结果与对话组件",
+      "inputOutput": "不适用：Vue、小程序不要直接装；UI组件不负责鉴权或模型工具审批\n输入：现有聊天协议、message parts、工具生命周期、主题和组件目录归属",
+      "callExample": "用 ai-elements 为已有聊天页设计文本/工具等待/批准/失败/完成六态UI。先审组件文件与AI SDK版本，复用message.parts，不运行CLI、不接付费模型。",
+      "sourceUrl": "https://github.com/vercel/ai-elements/blob/ca8be600bfd01b3131f9bf6134b51602a71f4374/skills/ai-elements/SKILL.md",
+      "officialUrl": "https://github.com/vercel/ai-elements",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "规则：组件是源码分发，会向工程写文件和依赖，不是纯导入一个黑盒；安装前看将修改的文件。",
+        "规则：消息按parts分型处理；文本、工具调用/结果及失败状态不可一律当字符串。",
+        "规则：工具授权由业务服务端与明确审批决定，按钮显示“已批准”并不构成实际授权。",
+        "规则：上游Node18、主题data-theme等描述需与项目当前实现核对；不把这些当所有shadcn项目的统一事实。",
+        "验收参考：用静态消息fixture覆盖流中/失败/重试/拒绝；拒绝后不继续显示执行成功。",
+        "验收参考：键盘可提交/停止，焦点不丢失；工具结果不渲染任意HTML；窄屏及中文长消息可读。",
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "ai-elements",
+      "vercelScenarioPick": false,
+      "vercelFocus": true,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "ca8be600bfd01b3131f9bf6134b51602a71f4374",
+      "vercelRepository": "vercel/ai-elements"
+    },
+    {
+      "id": "upstream:vercel-exp:agent-browser",
+      "name": "agent-browser",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "tool-efficiency",
+        "frontend-engineering"
+      ],
+      "purpose": "Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to \"open a websit",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「agent-browser」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser/blob/4720bc3dd73f2c8f7c84f415adfa560330b924c4/skills/agent-browser/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/agent-browser",
+      "license": "Apache-2.0",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "未在本站安装或运行上游",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "agent-browser",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "4720bc3dd73f2c8f7c84f415adfa560330b924c4",
+      "vercelRepository": "vercel-labs/agent-browser"
+    },
+    {
+      "id": "upstream:vercel-exp:find-skills",
+      "name": "find-skills",
+      "kind": "official_upstream",
+      "category": "vercel-expansion-2026-11-14",
+      "taskScenarios": [
+        "frontend-engineering"
+      ],
+      "purpose": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist a",
+      "callExample": "请阅读上游 SKILL 后再按项目配置调用「find-skills」。本站不代为安装或执行。",
+      "sourceUrl": "https://github.com/vercel-labs/skills/blob/b716f9dc2ba36b6aa8f0080615e5a3a6caeac63b/skills/find-skills/SKILL.md",
+      "officialUrl": "https://github.com/vercel-labs/skills",
+      "license": "MIT",
+      "licenseNote": "仓库级；第三方依赖/图片/品牌/平台条款不随之授权",
+      "knownConstraints": [
+        "上游未在本站实跑；公开包内离线规则检查不等于 SDK 运行通过。",
+        "调用前请核对目标项目 package.json / lockfile 中的实际版本。"
+      ],
+      "reviewDepth": "已阅读上游 SKILL.md 正文（本数据集标注，非本站实跑）",
+      "demoRoutes": [],
+      "authorFilter": "vercel",
+      "vercelCatalogId": "find-skills",
+      "vercelScenarioPick": false,
+      "vercelFocus": false,
+      "vercelNewlyIndexed": true,
+      "vercelCommit": "b716f9dc2ba36b6aa8f0080615e5a3a6caeac63b",
+      "vercelRepository": "vercel-labs/skills"
+    },
+    {
+      "id": "method:vercel-expansion:replay-safe-effects-ledger",
+      "name": "可重放任务的副作用账本",
+      "purpose": "用于消息重复投递、工作流恢复或审批回调可能重放的任务，设计副作用幂等与未知结果恢复；不授予发送、支付、发布或资源变更权限。",
+      "inputOutput": "不适用：无副作用纯计算、或没有远端/存储配合却要求“恰好一次”。输入：业务操作与对象版本、外部副作用步骤、重试来源、持久存储与幂等能力、审批边界。",
+      "callExample": "审查这个任务的重复交付与崩溃窗口，只给幂等账本和反例，不执行外部副作用。尤其覆盖远端成功、checkpoint 失败的 unknown 状态。",
+      "license": "本站通用方法草稿（非官方 Skill，未安装）",
+      "licenseNote": "综合公开 workflow、queues 等思路整理的原创归纳；不含可下载正式 canonical，不冒充上游包。",
+      "knownConstraints": [
+        "纯 Python 离线示例仅验证自建规则，不是平台 SDK 认证。",
+        "不能在没有远端幂等与原子存储时保证恰好一次。"
+      ],
+      "reviewDepth": "基于公开材料整理的通用草稿，未在本站安装运行",
+      "kind": "self_authored_method",
+      "category": "vercel-expansion-general-methods",
+      "taskScenarios": [
+        "frontend-engineering",
+        "tool-efficiency"
+      ],
+      "authorFilter": "self",
+      "demoRoutes": []
+    },
+    {
+      "id": "method:vercel-expansion:constrained-generated-ui-boundary",
+      "name": "声明式生成界面的能力边界",
+      "purpose": "用于模型生成 JSON 表单、组件树或仪表盘规格时，在渲染前限制结构和可用能力，并将动作授权留在服务端；不代替设计研究、业务审批或安全审计。",
+      "inputOutput": "不适用：直接可信的静态页面；不把“合法 JSON”当安全代码。输入：组件目录、树约束、状态路径、动作白名单、服务端权限与回退方案。",
+      "callExample": "让 AI 只能在这四个组件内组合表单，先给 catalog、树约束、状态路径与动作权限表，列出越权与有损修复反例，不调用模型或执行提交。",
+      "license": "本站通用方法草稿（非官方 Skill，未安装）",
+      "licenseNote": "参考 json-render、Streamdown 安全说明的原创归纳；上游 Apache-2.0 仅适用于其仓库，本草稿不复制实现。",
+      "knownConstraints": [
+        "自建离线 schema 示例不是 json-render / Streamdown 库实现或安全认证。",
+        "未跑浏览器、生成器、生产权限或平台 API。"
+      ],
+      "reviewDepth": "基于公开 SKILL 与参考章节整理的通用草稿，未在本站安装运行",
+      "kind": "self_authored_method",
+      "category": "vercel-expansion-general-methods",
+      "taskScenarios": [
+        "frontend-engineering",
+        "tool-efficiency"
+      ],
+      "authorFilter": "self",
+      "demoRoutes": []
     }
-  ]
+  ],
+  "vercelExpansion": {
+    "package": "vercel-skills-expansion-2026-11-14",
+    "catalogRecordsInPackage": 89,
+    "baselineSelectedInPackage": 20,
+    "newlyIndexedInPackage": 69,
+    "scenarioPicks": 8,
+    "focusInPackage": 18,
+    "mergedIntoExistingSiteRows": 20,
+    "skippedBaselineWithoutSiteRow": 0,
+    "addedAsNewRows": 69,
+    "siteVercelUpstreamRowsAfterMerge": 89,
+    "note": "89 条为研究包目录记录（含 React 别名折叠），不是 89 个已安装技能；3 个基线源在 11/13 无证实新发布；未把收录当发布。",
+    "downloadPath": "/downloads/vercel-skills-expansion-2026-11-14.zip",
+    "notAnInstaller": true
+  }
 }

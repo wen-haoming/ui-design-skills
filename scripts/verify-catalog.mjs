@@ -27,4 +27,9 @@ for (const it of pub.items) {
   if (it.callExample) assert(!/sand-workflow|grokbot:/i.test(it.callExample), `sand in ${it.id}`);
 }
 
+if (pub.vercelExpansion) {
+  assert(pub.vercelExpansion.addedAsNewRows === 69, 'vercel added rows');
+  assert(pub.vercelExpansion.mergedIntoExistingSiteRows === 20, 'vercel merged baseline');
+  assert(pub.vercelExpansion.siteVercelUpstreamRowsAfterMerge === 89, 'vercel upstream rows');
+}
 console.log('verify-catalog OK', { items: pub.items.length, works: works.length });

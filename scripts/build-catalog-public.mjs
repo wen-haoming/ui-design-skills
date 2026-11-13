@@ -5,6 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { mergeVercelExpansion } from './merge-vercel-expansion.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url)) + '/..';
 const SRC =
@@ -64,12 +65,25 @@ const pub = {
   title: raw.title,
   asOf: raw.asOf,
   disclaimer:
-    '公开目录数据。条目审阅深度见各条 reviewDepth；未运行不得标为已验证。聚合 Skill 线上仍为 v1.2。',
+    '公开目录数据。各条「阅读与验证说明」写明本站读到哪一步；未实测不得标为已验证。聚合 Skill 线上仍为 v1.2。',
   taskScenarios: raw.taskScenarios,
   countingMethodology: raw.countingMethodology,
   shareableUrlConvention: raw.shareableUrlConvention,
   items: raw.items.map(scrubItem),
 };
+mergeVercelExpansion(pub);
+for (const it of pub.items) {
+  if (!it.knownConstraints?.length) continue;
+  const lic = `${it.license ?? ''} ${it.licenseNote ?? ''}`.trim();
+  it.knownConstraints = it.knownConstraints.filter((c) => {
+    const t = (c || '').trim();
+    if (!t) return false;
+    if (lic && t === lic) return false;
+    if (it.licenseNote && t === it.licenseNote) return false;
+    if (/^LICENSE.*AGPL.*README.*AGPL/i.test(t) && /agpl/i.test(lic)) return false;
+    return true;
+  });
+}
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(pub, null, 2));
 fs.mkdirSync(path.dirname(PUBLIC), { recursive: true });
